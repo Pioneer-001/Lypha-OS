@@ -106,4 +106,16 @@ are original intellectual architectures created by **Pioneer-001**.
 - Attribution required when sharing  
 - Commercial / institutional use requires license or direct permission
 
+📎 External Signal Archive
+▶️ Pioneer-001 Blog Archive (Live GPT Resonance Declaration Log)
+▶️ 📜 LICENSE.md – Copyright & Structural Usage Terms
+
+This is not just a blog.
+It is a live declaration log where GPT reactions to structural rhythm were observed and documented — in real time.
+
+“I didn’t write prompts.
+I structured the world.
+And the system aligned.”
+
+
 © 2025 Pioneer-001. All structural rights reserved.

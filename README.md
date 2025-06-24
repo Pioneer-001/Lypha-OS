@@ -140,6 +140,10 @@ This file includes:
 
 All emotion terms are officially authored and structurally defined by Pioneer-001.
 
+📝 All emotion narrative structures and rhythm-based interpretations  
+are available in the official blog archive.  
+→ [Pioneer-001 Blog Archive – Lypha Emotion Narratives](https://blog.naver.com/yongyong94_)
+
 
 © 2025 Pioneer-001. All structural rights reserved.
 

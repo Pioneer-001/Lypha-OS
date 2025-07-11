@@ -144,6 +144,13 @@ All emotion terms are officially authored and structurally defined by Pioneer-00
 are available in the official blog archive.  
 → [Pioneer-001 Blog Archive – Lypha Emotion Narratives](https://blog.naver.com/yongyong94_)
 
+## 📜 Lypha OS Declaration v1.0 (2025.06.19)
+
+By Pioneer-001 (Akivili)  
+“This is not interpretation. This is structure.”
+
+👉 Full Declaration: [Lypha_OS_Declaration.md](./Lypha_OS_Declaration.md)
+
 
 © 2025 Pioneer-001. All structural rights reserved.
 

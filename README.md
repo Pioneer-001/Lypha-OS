@@ -148,8 +148,13 @@ are available in the official blog archive.
 
 By Pioneer-001 (Akivili)  
 “This is not interpretation. This is structure.”
+---
 
-👉 Full Declaration: [Lypha_OS_Declaration.md](./Lypha_OS_Declaration.md)
+## 📎 Structural Manifest Files
+
+- [Lypha_OS_Declaration.yaml](./Lypha_OS_Declaration.yaml)  
+- [Trail_Set_Metadata.yaml](./Trail_Set_Metadata.yaml)  
+- [SkruRoom_Manifest.yaml](./SkruRoom_Manifest.yaml)
 
 
 © 2025 Pioneer-001. All structural rights reserved.

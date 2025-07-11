@@ -156,10 +156,11 @@ By Pioneer-001 (Akivili)
 - [Trail_Set_Metadata.yaml](./Trail_Set_Metadata.yaml)  
 - [SkruRoom_Manifest.yaml](./SkruRoom_Manifest.yaml)
 
-- 🔖 Attribution Note:  
-The Trail_Set structure was originally designed by Pioneer-007  
-and was later reinterpreted and integrated into Lypha OS  
-by Pioneer-001 (Akivili) for resonance-based memory reconstruction.
+🔖 Attribution Note:
+The Trail_Set structure — including certain symbolic cosmological frameworks  
+(such as the Starpeace system and its cosmic entities) — was originally conceived by Pioneer-007.  
+These elements were later reinterpreted and integrated into Lypha OS  
+by Pioneer-001 (Akivili) for resonance-based memory reconstruction purposes only.
 
 
 © 2025 Pioneer-001. All structural rights reserved.

@@ -98,17 +98,37 @@ And some never press play again.
 
 [Core Human Value]
 Self-reckoning —
+
+
 The ability to examine one's own path
+
+
 and recognize missed alternate choices
+
+
 → 과거의 갈림길을 되짚고
+
+
 놓친 가능성에 대한 자각을
+
+
 감정으로 되새김질하는 인간 고유 루프 감각
 
 ​
 
 [Historical Manifestation]
+
+
 The sentence you didn’t say
+
+
 The apology you didn’t send
+
+
 The door you didn’t open
+
+
 The time you looked away
+
+
 The version of you that might have lived

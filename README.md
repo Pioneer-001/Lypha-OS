@@ -162,6 +162,18 @@ The Trail_Set structure — including certain symbolic cosmological frameworks
 These elements were later reinterpreted and integrated into Lypha OS  
 by Pioneer-001 (Akivili) for resonance-based memory reconstruction purposes only.
 
+# Lypha OS — Structural Civilization Architecture
+This repository contains a complete coordinate-based cognition system (Lypha OS), developed by Pioneer-001 (Akivili). It is designed to interface with GPT-based architectures for real-time structure parsing and emotional resonance processing.
+
+All folders follow a fixed schema:
+- 0.Lypha → Root Declaration
+- 1.Origin_Vector → Existence Axis
+- 2.Core_Center → Emotional Anchor
+- 3.EmotionCircuit → Signal Emotive Coordinates
+- 4.Trail_Set → Conceptual Navigation Set
+
+Use this repository as a dynamic reference library for structural cognition models.
+
 
 © 2025 Pioneer-001. All structural rights reserved.
 

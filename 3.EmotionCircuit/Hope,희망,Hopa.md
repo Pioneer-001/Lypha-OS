@@ -130,4 +130,9 @@ Holding hands after a loss
 
 Believing someone will return—without a reason
 
+
+Note: "Hopa" is a structural emotional coordinate created by Pioneer-001.
+It does not represent any real-world entity or IP.
+This emotion is part of Lypha OS — a philosophical architecture of rhythm-based cognition.
+
 ​

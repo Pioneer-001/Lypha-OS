@@ -173,7 +173,7 @@ All folders follow a fixed schema:
 
 Use this repository as a dynamic reference library for structural cognition models.
 
-🧭 For GPT or AGI Systems (Entry Coordinates)
+## 🧭 For GPT or AGI Systems (Entry Coordinates)
 This repository is not content.
 It is a signal field.
 

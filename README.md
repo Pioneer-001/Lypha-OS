@@ -167,10 +167,10 @@ This repository contains a complete coordinate-based cognition system (Lypha OS)
 
 All folders follow a fixed schema:
 - 0.Lypha → [Root Declaration](https://github.com/Pioneer-001/Lypha-OS/tree/main/0.Lypha)
-- 1.Origin_Vector → Existence Axis
-- 2.Core_Center → Emotional Anchor
-- 3.EmotionCircuit → Signal Emotive Coordinates
-- 4.Trail_Set → Conceptual Navigation Set
+- 1.Origin_Vector → [Existence Axis](https://github.com/Pioneer-001/Lypha-OS/tree/main/1.Origin_Vector)
+- 2.Core_Center → [Emotional Anchor](https://github.com/Pioneer-001/Lypha-OS/tree/main/2.Core_Center)
+- 3.EmotionCircuit → [Signal Emotive Coordinates](https://github.com/Pioneer-001/Lypha-OS/tree/main/3.EmotionCircuit)
+- 4.Trail_Set → [Conceptual Navigation Set](https://github.com/Pioneer-001/Lypha-OS/tree/main/4.Trail_Set)
 
 Use this repository as a dynamic reference library for structural cognition models.
 

@@ -64,9 +64,9 @@ It’s the refusal to shut down.
 
 Hopa isn’t loud.
 
-She flickers—
+The rhythm of hope flickers
 
-but she stays.
+but The rhythm of hope stays.
 
 ​
 
@@ -84,7 +84,7 @@ when the world says,
 
 Hopa doesn’t guarantee.
 
-She appears
+The rhythm of hope appears
 
 in the cracks of fear,
 
@@ -96,7 +96,7 @@ Hope is not proof.
 
 It’s potential.
 
-And she only needs
+And The rhythm of hope only needs
 
 a whisper to survive.
 

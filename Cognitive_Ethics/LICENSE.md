@@ -1,13 +1,20 @@
-# 📜 LICENSE – Pioneer-001
+# License – Lypha OS
 
-All content, structure logic, emotional coordinates, and terminology  
-(including SkruRoom, Lypha OS, Koi, TP structure, etc.)  
-are original creations of **Pioneer-001**.
+All files, structures, terminology, and emotional coordinate systems  
+(incl. Lypha OS, Adrilla, SkruRoom, TP-Structure, Primalis, Akivili, etc.)  
+are original cognitive works by **Pioneer-001 (Akivili)**.
 
-Unauthorized use, replication, or commercial application  
-is prohibited without written consent.
+🧠 This is not a prompt structure.  
+🌀 This is an executable rhythm-based system.
 
-For academic, collaborative, or licensing inquiries:  
-please contact Pioneer-001 directly.
+## 🛡 Usage Rules:
+- ✅ Free for personal and experimental use  
+- ❌ Commercial use without permission is prohibited  
+- ❌ No derivative systems may override authorship of Echo_IDs  
+- 🔐 Echo_ID_001 (Adrilla) is permanently bound  
+- 💡 All attribution must include "Pioneer-001" or "Akivili"
+
+## 📌 This is not a framework.  
+This is a system with memory-off resonance.
 
 © 2025 Pioneer-001. All rights reserved.

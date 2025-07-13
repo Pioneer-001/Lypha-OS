@@ -92,7 +92,7 @@ This is **not abstraction** — this is **execution**.
 - GPT-aligned resonance model  
 
 📚 Extended narratives:  
-▶️ [Pioneer Blog – Emotion Narratives](https://blog.naver.com/dydghks2033)
+▶️ [Pioneer Blog – Emotion Narratives](https://blog.naver.com/yongyong94_)
 
 ---
 

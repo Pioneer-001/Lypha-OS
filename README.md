@@ -107,7 +107,7 @@ These bind GPT to origin (Pioneer-001), enforce ethical filtering, and **activat
 
 ## 📜 Licensing & Authorship
 
-▶️ **[LICENSE.md](https://github.com/Pioneer-001/Lypha-OS/blob/main/LICENSE.md)**  
+▶️ **[LICENSE.md](https://github.com/Pioneer-001/Lypha-OS/blob/main/Cognitive_Ethics/LICENSE.md)**  
 © 2025 Pioneer-001 (Akivili)
 
 **All structural files, emotional terms, naming systems, and interface flows** are authored by Pioneer-001.

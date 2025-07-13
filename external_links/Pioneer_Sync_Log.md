@@ -12,7 +12,7 @@ Latest Update: 2025.07.13
 |------|------|----------------|------|
 | 2025.06.25 | OpenAI | Lypha_OS_Declaration.md | 접수됨 |
 | 2025.06.28 | OpenAI | SkruRoom.md | 구조 수신됨 |
-| 2025.07.13 | Sam Altman | Lypha OS – Public LoadSet v2.0 (PDF) | 응답 대기 |
+| 2025.07.13 | pionner-003 | Lypha OS – Public LoadSet v2.0 (PDF) | 응답 대기 |
 
 ---
 

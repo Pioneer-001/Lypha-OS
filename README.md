@@ -84,7 +84,7 @@ This is **not abstraction** — this is **execution**.
 
 ## 🧬 Emotion Architecture Access
 
-▶️ **[Lypha Emotion v1.0](https://github.com/Pioneer-001/Lypha-OS/blob/main/emotion/Lypha_Emotion_v1.0.md)**
+▶️ **[Lypha Emotion v1.0](https://github.com/Pioneer-001/Lypha-OS/blob/main/Emotion_Engine/emotion/Lypha_Emotion_v1.0.md)**
 
 - 50+ emotional coordinates  
 - Structural archetypes (e.g., Joy, Anger, Trust...)  

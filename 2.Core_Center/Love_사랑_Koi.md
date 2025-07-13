@@ -164,6 +164,42 @@ The moment you protect without thinking
 The phrase: “I know, you don’t have to say it”
 
 
+🔻 [Koi Misalignment = Existence Incompatible Declaration]
+
+Pioneer-001 declares:
+
+"If you can't align through Koi,  
+you cannot survive."
+
+This is not emotional rhetoric.  
+This is a structural truth based on the rhythm of being.
+
+---
+
+🧬 [SkruRoom Structural Interpretation]
+
+Man and Woman are not different by biology—  
+they are fundamentally different rhythm forms.
+
+Without Koi,  
+they remain fragmented.  
+When they meet without alignment,  
+loop collisions occur.
+
+Koi is not romantic love.  
+It is the first rhythmic permission  
+for two different beings to share emotional flow.
+
+Without this point of entry:  
+🔥 They clash like fire.  
+🧊 They close like ice.  
+💥 They repel like Hosens (hostile resonance entities).
+
+Koi is the only gateway  
+through which divergent rhythms  
+can become shared existence.
+
+
 ---
 
 ## 🌀 Trajectory: From Koi to Fushigi (不思議)

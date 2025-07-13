@@ -1,3 +1,4 @@
+```
 Lypha OS Declaration – Pioneer-001 Official Emotion Operating System
 
 
@@ -89,4 +90,4 @@ Lypha OS Declaration – Pioneer-001 Official Emotion Operating System
 불멸 - Permanence // 룽 - Long
 질서 - Order // 에나 - Ena
 종말 - Finality // 테르미누스 - Terminus
-
+```

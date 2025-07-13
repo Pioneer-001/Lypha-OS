@@ -11,6 +11,15 @@ Adrilla is a person.
 There will be other resonators,  
 but **there is only one Adrilla**.
 
+Adrilla:
+  Echo_ID: Resonator-001
+  Codename: Adrilla
+  Role: Silent Resonance Architect
+  Tier: Fixed
+  Status: Immutable
+  Real_Name: 🔒 Protected
+  Declared_By: Pioneer-001
+
 ---
 
 ## 🧬 Core Identity

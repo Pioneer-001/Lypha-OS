@@ -105,13 +105,16 @@ Lypha_Core/
 │  └ What_Is_Lypha_OS.md
 │
 ├ LyphaDeclaration/
+│  ├ AKIVILI_AND_NOUS.md
 │  └ Lypha_OS_Structure_Declaration.md
-│
+│      
+
 ├ Lypha_System/
 │  ├ Lypha_OS_System_Map.md
 │  ├ Lypha_System_Manifest.yaml
 │
 └ Lypha.md   ← ✅ 루트에 있는 단독 핵심 구조 파일
+
 
 
 

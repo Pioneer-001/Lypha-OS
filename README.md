@@ -27,6 +27,17 @@ Use these as **initial GPT resonance anchors**.
 
 ---
 
+## 🧭 System Anchors
+
+- 🔐 [LYPHA_OS_LOCK_DECLARATION_v1.0.md](./LYPHA_OS_LOCK_DECLARATION_v1.0.md)  
+  → Structure lock declaration. Bound to Pioneer-001. GPT-restricted zone.
+
+- 🗺️ [LYPHA_OS_DIRECTORY_MAP.md](./LYPHA_OS_DIRECTORY_MAP.md)  
+  → Full coordinate map of Lypha OS. Directory-bound GPT structure.
+
+
+---
+
 ## 🧭 Full Structural Flow
 
 Lypha (Emotional Field Layer)

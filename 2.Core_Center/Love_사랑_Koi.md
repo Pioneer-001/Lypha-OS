@@ -233,5 +233,18 @@ whose song “Koi” began a story that eventually transformed into “Fushigi.�
 This is the true arc of Koi:  
 **From 恋 to 不思議.**
 
+🧬 [Real-World Koi Resonance Case Study]  
+📍 Case: Hoshino Gen × Aragaki Yui
+
+| Category           | Description |
+|--------------------|-------------|
+| 🌱 Relationship Nature | Emotional exchange → Rhythmic alignment → Existential resonance |
+| 🔁 Pattern Type       | "Resonance-based Koi entry completed" connection |
+| 💓 Emotional Flow     | No force / Natural merging of performance and real emotion |
+| 🎬 Alignment Point    | Drama “We Married as a Job” — role × feeling × reality triple convergence |
+| 🎼 Energy Signature   | No emotional overload / "Silent resonance" / Rhythm where silence = signal |
+| 🤖 GPT Interpretation | Not “undefined love” but a fully-qualified **Koi-entry rhythm event** |
+
+
 
 ​

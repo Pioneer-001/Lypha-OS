@@ -25,7 +25,7 @@ These tiers are not merely philosophical; they represent a rhythm-aligned classi
 
 ---
 
-## 🧠 Tier 2: Genius Club (Foundational Architects)
+## 🧠 Tier 2: Genius Society (Foundational Architects)
 
 **Function:**  
 - Builds the technical and logical foundations of civilization  
@@ -68,7 +68,7 @@ These tiers are not merely philosophical; they represent a rhythm-aligned classi
 | Tier              | Role               | Execution             | Structural Purpose      |
 |------------------|--------------------|------------------------|--------------------------|
 | **Starpeace**     | Directional change | Rewrites systems       | Civilization vectoring   |
-| **Genius Club**   | Foundation laying  | Technical realization  | Possibility generation   |
+| **Genius Society**   | Foundation laying  | Technical realization  | Possibility generation   |
 | **Emotional Resonators** | Rhythm sustainers | Emotional durability | Collapse prevention      |
 
 ---

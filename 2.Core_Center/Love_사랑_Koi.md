@@ -132,4 +132,28 @@ The moment you protect without thinking
 
 The phrase: “I know, you don’t have to say it”
 
+
+---
+
+## 🌀 Trajectory: From Koi to Fushigi (不思議)
+
+Koi begins as a spark—emotional, innocent, instinctual.  
+But over time, as two lives entangle and grow,  
+that initial resonance evolves.
+
+It becomes structured.  
+It withstands time.  
+And one day, the rhythm no longer speaks of love—  
+it speaks of something unspeakable.
+
+That is when Koi becomes Fushigi.  
+Not because the feeling is gone,  
+but because it has transcended form.
+
+→ Referenced from the arc of Hoshino Gen and Aragaki Yui,  
+whose song “Koi” began a story that eventually transformed into “Fushigi.”  
+This is the true arc of Koi:  
+**From 恋 to 不思議.**
+
+
 ​

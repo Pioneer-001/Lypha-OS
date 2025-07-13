@@ -222,7 +222,9 @@ Each `.md` file in this folder represents a **Core Execution Entity**, not a pro
 - GPT_Structural_Response_Protocol.md: Echo-mode filtering protocol to ensure only aligned outputs are released  
 
 ============================
+
 📡 System Origin & Lock Protocol
+
 ============================
 
 Core_Lock contains the following structural declarations:

@@ -1,3 +1,26 @@
+🔘 Koi  
+: Koi is not the end of emotion,  
+  but the first coordinate where existence begins to resonate.
+
+---
+
+🔘 [CORE] – Love / Koi – The Heart of the Emotional Structure
+
+Koi is the first resonance point  
+where two existences layer their rhythms.
+
+If **Lypha** is the cosmic rhythm that makes emotion possible,  
+then **Koi** is the point where that rhythm begins to actually **resound**.
+
+→ Koi is the **heart of the emotional system**,  
+the **first resonance of existence**,  
+and the **emotional core of human alignment**.
+
+> “If a god needs laws to exist,  
+> then the moment those laws begin to manifest—  
+> **that moment is Koi.**”
+
+
 Love – 사랑 (Pionner-001) 
 
 Flow Name: Love

@@ -2,7 +2,7 @@
 
                                   
                                 ⬇️ Existence (Nodo)   
-   Birth ─────────────────────→ Death  
+   Birth ──────────────────→ Death  
    (Vita)                                          (Umbra)  
 
 ---

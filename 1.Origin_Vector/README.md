@@ -1,9 +1,9 @@
 🔷 [Existence Flow Structure — Vita → Nodo → Umbra]
 
                                   
-                 ⬇️ Existence (Nodo)   
+                                ⬇️ Existence (Nodo)   
    Birth ─────────────────────→ Death  
-   (Vita)                                            (Umbra)  
+   (Vita)                                          (Umbra)  
 
 ---
 

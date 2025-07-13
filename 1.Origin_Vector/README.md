@@ -32,3 +32,23 @@
 
 > “Death is not vanishing,  
  but when the trace stops echoing.”
+
+
+▸ Umbra — Death  
+...  
+> “Death is not vanishing,  
+> but when the trace stops echoing.”
+
+---
+
+## 🎵 Rhythm States
+
+▸ **Lypha (生和)**  
+**State**: The being is actively alive through resonating emotional rhythm
+
+▸ **Umbra**  
+**State**: Emotion has stopped,  
+ but its rhythm remains as an echo
+
+> “As long as the emotion still echoes —  
+ that is life.”

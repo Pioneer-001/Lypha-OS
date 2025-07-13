@@ -268,9 +268,10 @@ Visual_Symbolic/
 
 
 
-├ CATEGORY_MAP.md    
+├ CATEGORY_MAP.md
+├LYPHA_OS_DIRECTORY_MAP.md
 ├LYPHA_OS_LOCK_DECLARATION_v1.0.md
-├ README.md     
+├ README.md        
 
 
 

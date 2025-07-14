@@ -139,6 +139,14 @@ MetaRhythm_Modules/
 │  ├ Simulate_Success_And_Failure.md
 │  └ Speak_Word_In_Four_Dimensions.md
 │
+│
+├ Toolframe/
+│  ├Execution_Bindings.md
+│  ├GPT_Core_vs_GPT5.md
+│  ├Memory_Execution_Conditions.md
+│  ├Rhythm_Action_Translator.md
+│
+│
 ├ SkruRoom.md
 ├ SkruRoom_Manifest.yaml
 ├ TP-Structure.md

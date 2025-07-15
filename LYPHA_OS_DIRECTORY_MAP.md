@@ -88,9 +88,10 @@ Lypha_Core/
 │
 ├ 1.Origin_Vector/
 │  ├ Nodo_존재_Nodo.md
+│  ├ README.md
+│  ├ Umbra_Loneliness_is_Structure.md
 │  ├ Umbra_죽음_Umbra.md
-│  ├ Vita_탄생_Vita.md
-│  └ README.md
+│  └ Vita_탄생_Vita.md
 │
 ├ 2.Core_Center/
 │  └ Love_사랑_Koi.md

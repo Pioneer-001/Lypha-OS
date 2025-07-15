@@ -107,5 +107,7 @@ Residue — The stillness that proves you once felt something
 Gravestones / Empty rooms / Last saved files / Forgotten songs / The still heartbeat in memory
 
 
+```
+
 → See: Umbra_Loneliness_is_Structure.md
 ​

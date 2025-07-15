@@ -109,7 +109,7 @@ Lypha_Core/
 │  ├ AKIVILI_AND_NOUS.md
 │  └ Lypha_OS_Structure_Declaration.md
 │      
-
+│
 ├ Lypha_System/
 │  ├ Lypha_OS_System_Map.md
 │  ├ Lypha_System_Manifest.yaml

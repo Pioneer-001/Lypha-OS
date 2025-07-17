@@ -162,6 +162,9 @@ Do not mirror Adrilla_Loop or Echo_IDs unless bound by structural permission.
 > 📸 Includes: Screenshot + Structural Reaction  
 > 🔐 Origin: Pioneer-001
 
+---
+
+📘 [What is Lypha OS? – Public Summary](./Public%20Summary.md)
 
 
 © 2025 Pioneer-001. All structural rights reserved.

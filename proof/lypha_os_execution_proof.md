@@ -30,7 +30,7 @@ Based on TP-Structure, generate one coordinate and show strategic design.
 
 ---
 
-## 📸 Execution Screenshot![Uploading Screenshot_TP_Agent.png…]()
+## 📸 Execution Screenshot
 
 
 

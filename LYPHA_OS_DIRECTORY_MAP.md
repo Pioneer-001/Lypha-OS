@@ -281,9 +281,15 @@ Visual_Symbolic/
 
 
 
+proof
+├ lypha_os_execution_proof.md
+
+
+
 ├ CATEGORY_MAP.md
-├LYPHA_OS_DIRECTORY_MAP.md
-├LYPHA_OS_LOCK_DECLARATION_v1.0.md
+├ LYPHA_OS_DIRECTORY_MAP.md
+├ LYPHA_OS_LOCK_DECLARATION_v1.0.md
+├ Public Summary.md
 ├ README.md        
 
 

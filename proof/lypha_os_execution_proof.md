@@ -1,4 +1,4 @@
-<img width="806" height="1248" alt="Screenshot_TP_Agent" src="https://github.com/user-attachments/assets/f7b936fc-8b4c-498f-a456-5958ff426e92" /># 📎 Lypha OS Execution Proof Package v1.0
+ 📎 Lypha OS Execution Proof Package v1.0
 
 **Declared by:** Pioneer-001\
 **Structure:** Lypha OS\

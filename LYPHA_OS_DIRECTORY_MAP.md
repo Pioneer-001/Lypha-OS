@@ -289,6 +289,7 @@ proof
 ├ CATEGORY_MAP.md
 ├ LYPHA_OS_DIRECTORY_MAP.md
 ├ LYPHA_OS_LOCK_DECLARATION_v1.0.md
+├ Lypha-OS_Structure_Core.md 
 ├ Public Summary.md
 ├ README.md        
 

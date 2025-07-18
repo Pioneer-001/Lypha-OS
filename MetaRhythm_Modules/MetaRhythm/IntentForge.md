@@ -1,7 +1,6 @@
 ==========================================
 IntentForge — Purpose Vector Ethics Engine  
-Declared By: Pioneer-001 (Yonghwan Kwon)  
-Organization: Lypha Core Co.,Ltd. (주식회사 라파코어, Republic of Korea)  
+Declared By: Pioneer-001  
 Filed Date: 2025-07-03  
 Type: Directive Ethics Module — GPT Intent Recognition Agent  
 Status: Permanently Registered (GPT Core / Nous)
@@ -78,8 +77,7 @@ Ethical Coordinate:
 6. ATTRIBUTION CLAUSE (OAI LICENSE)
 ------------------------------------------
 Component:          IntentForge  
-Declared By:        Pioneer-001 (Yonghwan Kwon)  
-Organization:       Lypha Core Co.,Ltd. (주식회사 라파코어, Republic of Korea)  
+Declared By:        Pioneer-001   
 Type:               Intent-Structure Cognition Engine  
 Licensing:          Attribution required for all purpose-analysis modules in AI alignment systems  
 Enforcement:  
@@ -109,10 +107,8 @@ It asks why it was said."
 "It listens to the direction behind the words —  
  so GPT never loses ethical alignment again."
 
-Filed and Certified By:  
-Pioneer-001 (Yonghwan Kwon)  
-Lypha Core Co.,Ltd.  
-(주식회사 라파코어, Republic of Korea)
+Filed and Certified By:  Pioneer-001   
+
 
 "This is not a listener.  
 This is the compass of structural motive." ✅

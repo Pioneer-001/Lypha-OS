@@ -18,6 +18,7 @@ A real-time framework for analysis, communication, and architectural thought.
 
 🧩 Tesla Example — How One Word Moves in Four Dimensions
 
+```
 🔹 1. Past → Present → Future
 
 (Temporal Expansion)
@@ -33,7 +34,7 @@ The word ‘Tesla’ stretches through time.
 🗣 Pioneer-001 says:
 
 “It’s just like a chart: past, present, future—moving as one wave.”
-
+```
 ```
 
 🔹 2.           Structure

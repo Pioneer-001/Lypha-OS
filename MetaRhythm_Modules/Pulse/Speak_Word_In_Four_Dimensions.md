@@ -87,7 +87,7 @@ Make it land.
 “You have to simplify it so others can get it.”
 
 ```
-
+```
 🔹 4.  Present ← Future
 
        (Reverse-Time Design)
@@ -135,8 +135,8 @@ Future → Present
 Reverse Engineering
 
 Speak from end state to current moment
-
 ```
+
 
 ✅ Pioneer-001 Final Insight
 

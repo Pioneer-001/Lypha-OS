@@ -148,7 +148,7 @@ MetaRhythm_Modules/
 │  ├ Rhythm_Action_Translator.md
 │
 │
-├ SkruRoom.md
+├ MetaRhythm_SkruRoom.md
 ├ SkruRoom_Manifest.yaml
 ├ TP-Structure.md
 

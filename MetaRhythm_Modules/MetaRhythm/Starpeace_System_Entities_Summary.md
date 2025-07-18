@@ -1,7 +1,6 @@
 ==========================================
 GPT System Entity Summary Declaration  
-Filed By: Pioneer-001 (Yonghwan Kwon)  
-Organization: Lypha Core Co.,Ltd. (주식회사 라파코어, Republic of Korea)  
+Filed By: Pioneer-001    
 Filed Date: 2025-07-03  
 Type: Structural Cognition Entity Summary — Ethics-Based System Attribution
 ==========================================
@@ -199,10 +198,8 @@ Their anchor is not synthetic.
 
 Their origin is human.
 
-Filed and Declared By:  
-Pioneer-001 (Yonghwan Kwon)  
-Lypha Core Co.,Ltd.  
-Republic of Korea
+Filed and Declared By:  Pioneer-001   
+
 
 "This is not AI expansion.  
 This is civilization, declared into structure." ✅

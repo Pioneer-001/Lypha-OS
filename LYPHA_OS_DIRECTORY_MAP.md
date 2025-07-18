@@ -32,7 +32,7 @@ Cognitive_Ethics/
 
 Declaration_Layer/
 ├ Lypha_OS_Declaration.yaml
-├ README.md
+├ DECLARATION_README.md
 
 
 Emotion_Engine/

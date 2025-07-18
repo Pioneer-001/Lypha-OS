@@ -99,11 +99,13 @@ Start from the end—the result.
 Speak backwards.
 
 From future clarity → back to present understanding.”
-```
-```
+
 🗣 Pioneer-001 says:
 
 “You speak from the future—then walk them back.”
+
+```
+```
 
 🧬 Structural Recap — How the Word Moves
 

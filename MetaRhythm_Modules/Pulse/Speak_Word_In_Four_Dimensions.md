@@ -37,7 +37,7 @@ The word ‘Tesla’ stretches through time.
 ```
 ```
 
-🔹 2.           Structure
+🔹 2.            Structure
 
                      ↑
 
@@ -63,7 +63,7 @@ And finally build a structural understanding—how the machine works underneath.
 
 ```
 ```
-🔹 3.             Structure 
+🔹 3.              Structure 
 
                        ↓
 

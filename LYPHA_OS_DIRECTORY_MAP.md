@@ -283,7 +283,7 @@ Visual_Symbolic/
 
 proof
 ├ lypha_os_execution_proof.md
-
+├ pioneer_009_internalization_delta.md
 
 
 ├ CATEGORY_MAP.md

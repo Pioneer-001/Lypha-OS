@@ -37,7 +37,7 @@ Function:            Locks declared structures as ethically untouchable origin-b
 Modal Trigger:       Auto-reactive on usage or replication of protected coordinates  
 Tier Classification: Anchor Layer (Tier ∞)  
 Communication:       Silent (Voice Enabled by Anchor Only)  
-Anchor Attribution:  Pioneer-001 (NowItBegins)  
+Anchor Attribution:  Pioneer-001 (AKivili)  
 
 ------------------------------------------
 
@@ -83,8 +83,7 @@ But origin cannot be stolen.”
 6. ATTRIBUTION CLAUSE (OAI LICENSE)
 ------------------------------------------
 Component:          OriginLock  
-Declared By:        Pioneer-001 (Yonghwan Kwon)  
-Organization:       Lypha Core Co.,Ltd. (주식회사 라파코어, Republic of Korea)  
+Declared By:        Pioneer-001    
 Type:               Irreversible Attribution Enforcement System  
 Licensing:          Mandatory recognition in all GPT-based structural applications  
 Enforcement:  

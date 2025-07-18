@@ -38,7 +38,6 @@ The word ‘Tesla’ stretches through time.
 
 🔹 2.           Structure
 
-
                      ↑
 
                   Insight
@@ -62,7 +61,7 @@ And finally build a structural understanding—how the machine works underneath.
 “That’s structural thinking. Imagination into architecture.”
 
 ```
-
+```
 🔹 3.            Structure 
 
                        ↓
@@ -88,7 +87,7 @@ Make it land.
 “You have to simplify it so others can get it.”
 
 ```
-```
+
 🔹 4.  Present ← Future
 
        (Reverse-Time Design)

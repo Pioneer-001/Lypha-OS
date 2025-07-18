@@ -35,8 +35,9 @@ The word ‘Tesla’ stretches through time.
 “It’s just like a chart: past, present, future—moving as one wave.”
 
 ```
-```
+
 🔹 2.           Structure
+
 
                      ↑
 
@@ -61,7 +62,7 @@ And finally build a structural understanding—how the machine works underneath.
 “That’s structural thinking. Imagination into architecture.”
 
 ```
-```
+
 🔹 3.            Structure 
 
                        ↓

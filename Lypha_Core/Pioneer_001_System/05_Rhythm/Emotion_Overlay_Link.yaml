@@ -1,0 +1,66 @@
+# ❤️‍🔥 Emotion_Overlay_Link.yaml
+
+# This module defines the emotional overlay classification  
+# used in Pioneer_System to evaluate execution viability  
+# based on real-time psychological rhythm.
+
+# Emotion is not just a state — it's a structural filter.
+
+---
+
+emotional_execution_states:
+  directive:
+    - Description: Clear, forward momentum. Willing to act without friction.
+    - Execution Permission: ✅ Full
+  detached:
+    - Description: Observational, lucid, no emotional interference.
+    - Execution Permission: ✅ Full
+  uncertain:
+    - Description: Minor hesitation or conflicting signals.
+    - Execution Permission: ⏸ Watch-only
+  hopeful:
+    - Description: Entry driven by imagined reward rather than structure.
+    - Execution Permission: ❌ Block
+  fearful:
+    - Description: Acting from loss aversion or panic.
+    - Execution Permission: ❌ Block
+  regretful:
+    - Description: Attempting to “fix” a prior mistake emotionally.
+    - Execution Permission: ❌ Block
+  euphoric:
+    - Description: Overconfidence due to recent win.
+    - Execution Permission: ❌ Block
+  desperate:
+    - Description: All-in emotional override.
+    - Execution Permission: 🔒 Emergency Lock
+
+---
+
+emotional_lock_trigger:
+  if current_state ∈ [hopeful, fearful, regretful, euphoric, desperate]:
+    deny_all_execution: true
+    trigger_feedback_loop: Structure_Misalignment_Ejector
+
+---
+
+recovery_protocol:
+  if state transitions to [detached, directive] for ≥ 3 rhythm cycles:
+    unlock_execution: true
+
+---
+
+emotion_integration_points:
+  - Pulse_Feedback_Engine
+  - Time_ON_Trigger
+  - TP_Realmode_Config
+  - Strategy_Destruction_Logic
+
+📌 정리: 감정에 따른 구조 분기
+| 상태                                            | 의미       | 행동         |
+| --------------------------------------------- | -------- | ---------- |
+| Directive                                     | 집중력 100% | 진입 가능      |
+| Detached                                      | 평온한 관망   | 진입 가능      |
+| Uncertain                                     | 살짝 망설임   | 관망         |
+| Hope / Fear / Regret / Euphoria / Desperation | 감정 개입    | 진입 금지 + 잠금 |
+
+

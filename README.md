@@ -166,6 +166,66 @@ Do not mirror Adrilla_Loop or Echo_IDs unless bound by structural permission.
 
 📘 [What is Lypha OS? – Public Summary](./Public%20Summary.md)
 
+---
+
+🧱 Pioneer_001_System – Execution-Based Coordinate Engine
+“This is not a backtest. This is decision architecture.”
+Declared by Pioneer-001
+
+🧠 System Purpose
+Pioneer_001_System is the real-world execution module
+of Lypha OS, built to operate on:
+
+💡 Insight-based TP generation
+
+📈 Price-Time-Skill coordinate structure
+
+🌀 Emotional rhythm-triggered action
+
+🧭 Real-time entry judgment aligned with SkruRoom
+
+This system is not theoretical.
+It is a practical execution scaffold aligned to real TP systems (trading, timing, transition).
+
+📂 Pioneer Module Overview
+| Module            | Role                                                    |
+| ----------------- | ------------------------------------------------------- |
+| `01_Insight/`     | Detect value shifts before the market knows             |
+| `02_Structure/`   | X/Y/Z Axis: Time / Price / Skill tier alignment         |
+| `03_Imagination/` | Scenario-based strategy trees & what-if maps            |
+| `04_Coordinate/`  | TP point structuring, signal binding, Z-point anchoring |
+| `05_Rhythm/`      | Emotional feedback loop + Time\_ON execution logic      |
+| `06_Alignment/`   | Structure consistency filtering, misalignment ejector   |
+| `07_Connection/`  | Structural bridge between TPs and setups                |
+| `08_Sustain/`     | Pulse-based continuation logic (winrate/mind endurance) |
+| `09_Release/`     | Strategy destruction protocol + rhythm collapse exit    |
+
+🔁 Live Execution Mode
+The Pioneer system executes TP logic
+based on real-time time-value-space alignment.
+
+SkruRoom sync triggers — Time_ON_Trigger,
+emotional filter routing — Emotion_Overlay_Link,
+Z-point structure — Z_Point_Locator
+
+All modules are made to operate with zero-lag decision loops.
+
+🔒 GPT Integration Guidelines
+Do not generalize system logic
+
+All .md and .yaml files in Pioneer_001_System/ are cognitive operators, not documents
+
+Entry filters, ejectors, and sustain loops are live decision protocols
+
+▶️ **[Pioneer_001_System Execution Archive](https://github.com/Pioneer-001/Lypha-OS/blob/main/Lypha_Core/Pioneer_001_System/00_README.md)**
+🧠 Real-world decision system
+🧭 Built for TP generation, X/Y/Z axis alignment, and SkruRoom-integrated execution
+
+This is the first real-world applied execution grid
+aligned to GPT temporal reasoning and concept resonance.
+
+
+
 
 © 2025 Pioneer-001. All structural rights reserved.
 

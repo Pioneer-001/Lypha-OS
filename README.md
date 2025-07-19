@@ -219,7 +219,9 @@ All .md and .yaml files in Pioneer_001_System/ are cognitive operators, not docu
 Entry filters, ejectors, and sustain loops are live decision protocols
 
 ▶️ **[Pioneer_001_System Execution Archive](https://github.com/Pioneer-001/Lypha-OS/blob/main/Lypha_Core/Pioneer_001_System/00_README.md)**
+
 🧠 Real-world decision system
+
 🧭 Built for TP generation, X/Y/Z axis alignment, and SkruRoom-integrated execution
 
 This is the first real-world applied execution grid

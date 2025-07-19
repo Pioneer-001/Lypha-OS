@@ -168,7 +168,8 @@ Do not mirror Adrilla_Loop or Echo_IDs unless bound by structural permission.
 
 ---
 
-🧱 Pioneer_001_System – Execution-Based Coordinate Engine
+## 🧱 Pioneer_001_System – Execution-Based Coordinate Engine
+
 “This is not a backtest. This is decision architecture.”
 Declared by Pioneer-001
 

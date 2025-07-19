@@ -85,6 +85,7 @@ Lypha-OS-main__Lypha_Core__0_Lypha__Lypha_생화(生和)_Lypha.md
 
 Lypha-OS-main__Lypha_Core__1_Origin_Vector__Nodo_존재_Nodo.md
 Lypha-OS-main__Lypha_Core__1_Origin_Vector__Origin_Vector_README.md
+Lypha-OS-main__Lypha_Core__1_Origin_Vector__Origin_기원_Origin.md
 Lypha-OS-main__Lypha_Core__1_Origin_Vector__Umbra_Loneliness_is_Structure.md
 Lypha-OS-main__Lypha_Core__1_Origin_Vector__Umbra_죽음_Umbra.md
 Lypha-OS-main__Lypha_Core__1_Origin_Vector__Vita_탄생_Vita.md

@@ -113,6 +113,55 @@ Lypha_Core/
 ├ Lypha_System/
 │  ├ Lypha_OS_System_Map.md
 │  ├ Lypha_System_Manifest.yaml
+│ 
+│ 
+├ Pioneer_001_System/
+│  ├ 00_README.md                                      # 🧠 전체 구조 선언 – "이건 나다"
+│  │
+│  ├ 01_Insight/                                       # 🔍 통찰 – 세상의 흐름을 감지하는 구조
+│  │    ├ Premonition_Structure.md                     # 구조 선인식력 / 흐름 해석
+│  │    └ Market_Signal_Tracker.yaml                   # 실제 세상 신호 감지 방식
+│  │
+│  ├ 02_Structure/                                     # 🧱 구조 – 실력 정렬 틀
+│  │    ├ X_Y_Z_Axis_Declaration.md                    # x/y/z축 정렬 설명
+│  │    ├ Time_Axis_Execution.md                       # x축: 시간 / 진입 타이밍
+│  │    ├ Space_Value_Gradient.md                      # y축: 가격 공간 / 흐름
+│  │    └ Skill_Tier_Recognition.md                    # z축: 실력 / TP 처리 감각
+│  │
+│  ├ 03_Imagination/                                   # 💡 상상 – 리스크/기회 시나리오 구축
+│  │    ├ If_Then_Map.md                               # 조건 기반 전략 확장
+│  │    └ Unrealized_Paths.md                          # 발생하지 않은 경로의 잠재력
+│  │
+│  ├ 04_Coordinate/                                    # 🎯 좌표 – TP 생성 및 실전 판별
+│  │    ├ TP_Realmode_Config.yaml                      # 비중 / 승률 기준
+│  │    ├ Signal_Structure_Bind.md                     # 진입 구조 조건
+│  │    └ Z_Point_Locator.md                           # 고정좌표 기반 TP 포착 시퀀스
+│  │
+│  ├ 05_Rhythm/                                        # 🌀 리듬 – 실시간 감정 + 실행 연동
+│  │    ├ Pulse_Feedback_Engine.md                     # 리듬 유지 조건
+│  │    ├ Time_ON_Trigger.md                           # “지금이냐?” 시스템
+│  │    └ Emotion_Overlay_Link.yaml                    # EmotionCircuit과 감응 연동
+│  │
+│  ├ 06_Alignment/                                     # 🧭 정렬 – 가격/시간/실력 정렬 조건
+│  │    ├ Structure_Alignment.md                       # 구조 정렬 (좌표 기준)
+│  │    ├ Entry_Filter_Conditions.yaml                 # 진입 가능 조건 필터
+│  │    └ Structure_Misalignment_Ejector.md            # 정렬 실패 시 제거 트리거
+│  │
+│  ├ 07_Connection/                                    # 🔗 연결 – TP 간 전환 및 구조 흐름
+│  │    ├ Structural_Bridge_Mapper.md                  # 이전/다음 구조 잇기
+│  │    └ Strategy_Carry_Over.md                       # 흐름 연속성 판단
+│  │
+│  ├ 08_Sustain/                                       # ♾️ 유지 – 리듬 유지 판단
+│  │    ├ Winrate_Pulse_Matrix.md                      # 승률 기반 유지 전략
+│  │    ├ Mental_Stability_Check.md                    # 감정구조 유지 가능성
+│  │    └ Max_Pain_Curve.md                            # 포지션 고통 구간 버티기 구조
+│  │
+│  ├ 09_Release/                                       # 🧯 해제 – 구조 파괴 시 철수 선언
+│  │    ├ Strategy_Destruction_Logic.md                # 전략 폐기 알고리즘
+│  │    ├ TP_Kill_Signal.yaml                          # 포지션 강제 종료 조건
+│  │    └ Zero_Rhythm_Condition.md                     # 리듬 무력화 트리거Pioneer-001_System/
+│ 
+│ 
 │
 └ Lypha.md   ← ✅ 루트에 있는 단독 핵심 구조 파일
 

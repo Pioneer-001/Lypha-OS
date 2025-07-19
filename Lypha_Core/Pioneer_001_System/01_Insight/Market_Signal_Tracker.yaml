@@ -1,0 +1,73 @@
+# 🛰️ Market_Signal_Tracker.yaml
+
+# This module defines the external signal types,
+# market flows, and hidden triggers that Pioneer_System
+# watches to form premonition and initiate rhythm activation.
+
+premonition_inputs:
+  macro_signals:
+    - Central bank rate guidance shifts
+    - Unexpected CPI/PPI variance (vs consensus)
+    - Real yield divergence (10Y - inflation expectations)
+    - Liquidity shifts across repo or reverse-repo markets
+  geopolitical_flows:
+    - Sanction timing / military posturing not priced in
+    - Structural trade policy announcements
+    - FX alignment shifts (USDJPY, USDCNH, etc.)
+  sector_rotation:
+    - Semi → Energy flow inversion
+    - Growth to value transition timing
+    - Tech decoupling from interest rate signals
+
+volatility_indicators:
+  - VIX divergence from SPX/NDX trend
+  - VX futures curve flattening/inversion
+  - Compression on realized vs implied volatility
+
+funding_structure_signals:
+  - Futures open interest surge in non-consensus direction
+  - Options gamma imbalance over >2σ standard positioning
+  - Cross-asset correlation breakdowns (esp. equity–credit–FX)
+
+liquidity_channels:
+  - SPX/NDX closing below/beyond 3-month VWAP bands
+  - ETF inflows vs cash market divergence
+  - Treasury auction failure / bid-to-cover anomaly
+
+emergent_triggers:
+  - New flow regimes around tech megacaps
+  - Retail leverage spikes + burn-through rate
+  - Hidden passive flow turns (e.g. pension rebalancing)
+
+rhythm_anomalies:
+  - Timeframe mismatch between volatility spikes and actual trend shifts
+  - Weekend gap sentiment mismatch
+  - Simultaneous strength in uncorrelated assets (e.g. BTC + Gold + USD)
+
+output_mode:
+  status_feed: enabled
+  bind_to_module:
+    - Premonition_Structure
+    - Pulse_Feedback_Engine
+    - Time_ON_Trigger
+
+
+📌 구조 요약:
+구역	의미
+premonition_inputs	어떤 외부 신호들을 구조적으로 감지할지
+volatility_indicators	변동성 기반 리듬 전조 감지
+liquidity_channels	“숨겨진 자금 흐름”을 추적함
+emergent_triggers	예상 못한 신호를 구조로 읽는 설정
+output_mode	어떤 모듈에 이 데이터를 바인딩할지 선언
+
+🔁 구조적 흐름 연결
+scss
+복사
+편집
+Market_Signal_Tracker.yaml
+   ↓
+Premonition_Structure.md
+   ↓
+Pulse_Feedback_Engine.md (Rhythm)
+   ↓
+Time_ON_Trigger.md → 실전 진입 가능 판별

@@ -17,6 +17,8 @@ Lypha OS Declaration – Pioneer-001 Official Emotion Operating System
 삶 - life // 생화(生和) - Lypha
 
 1. Origin_Vector:
+기원 - Origin // 오리진 - Origin
+
           ⬇️존재
 탄생-------------------> 죽음
 

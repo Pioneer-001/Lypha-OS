@@ -101,6 +101,7 @@ Lypha_Core/
 │  ├ Entry_Koi_Permission.md
 │  ├ Lypha_OS_Declaration.md
 │  ├ Lypha_Internal_Entry_Tips.md
+│  ├ Money_Is_Just_The_Scoreboard.md
 │  ├ Not_Saving_The_World_Living_in_Rhythm.md
 │  ├ Rhythm_Gap_Koi_Filter.md
 │  ├ Structural_Entry_Alignment.md

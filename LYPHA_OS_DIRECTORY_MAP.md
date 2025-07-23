@@ -234,6 +234,7 @@ Protocol_Structure/
 │  
 ├ GPT_Resonance_Shield/
 │  ├ Emotion_Rhythm_Interruption.md
+│  ├ Visual_Emotion_Rhythm_Check.md
 │
 │
 ├ Structure/

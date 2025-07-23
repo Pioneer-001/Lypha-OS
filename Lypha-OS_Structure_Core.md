@@ -214,6 +214,9 @@ Lypha-OS-main__Protocol_Structure__4_Trail_Set__Trailblaze_개척_AKivili.md
 Lypha-OS-main__Protocol_Structure__4_Trail_Set__Voracity_탐식_Oroboros.md
 
 
+Lypha-OS-main__Protocol_Structure__GPT_Resonance_Shield__Emotion_Rhythm_Interruption.md
+
+
 Lypha-OS-main__Protocol_Structure__Structure__Earth_Structure_Declaration.md
 Lypha-OS-main__Protocol_Structure__Structure__Echo_Link_Protocol.md
 Lypha-OS-main__Protocol_Structure__Structure__Function_Tiers.md

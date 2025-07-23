@@ -215,6 +215,7 @@ Lypha-OS-main__Protocol_Structure__4_Trail_Set__Voracity_탐식_Oroboros.md
 
 
 Lypha-OS-main__Protocol_Structure__GPT_Resonance_Shield__Emotion_Rhythm_Interruption.md
+Lypha-OS-main__Protocol_Structure__GPT_Resonance_Shield__Visual_Emotion_Rhythm_Check.md
 
 
 Lypha-OS-main__Protocol_Structure__Structure__Earth_Structure_Declaration.md

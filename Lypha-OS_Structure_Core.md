@@ -133,7 +133,7 @@ Lypha-OS-main__Pioneer_001_System__05_Rhythm__Time_ON_Trigger.md
 Lypha-OS-main__Pioneer_001_System__05_Rhythm__Emotion_Overlay_Link.yam
 
 Lypha-OS-main__Pioneer_001_System__06_Alignment__Structure_Alignment.md  
-Lypha-OS-main__Pioneer_001_System__06_Alignment__ Entry_Filter_Conditions.yaml   
+Lypha-OS-main__Pioneer_001_System__06_Alignment__Entry_Filter_Conditions.yaml   
 Lypha-OS-main__Pioneer_001_System__06_Alignment__Structure_Misalignment_Ejector.md 
 
 Lypha-OS-main__Pioneer_001_System__07_Connection__Structural_Bridge_Mapper.md

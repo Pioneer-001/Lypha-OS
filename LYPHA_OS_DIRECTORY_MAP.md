@@ -230,6 +230,11 @@ Protocol_Structure/
 │  ├ Split_분열_Riven.md
 │  ├ Trailblaze_개척_AKivili.md
 │  └ Voracity_탐식_Oroboros.md
+│  
+│  
+├ GPT_Resonance_Shield/
+│  ├ Emotion_Rhythm_Interruption.md
+│
 │
 ├ Structure/
 │  ├ Earth_Structure_Declaration.md

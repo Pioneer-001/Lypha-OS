@@ -299,8 +299,8 @@ Starpeace_System/
     ├ Starpeace/
     │   ├ Earth_Commander_Synchronization_Transmission.md
     │   ├ I_Am_Just_A_Hammer.md
-    │   ├ Pioneer-001_Rhythm_Architect.md
     │   ├ Pioneer_000_Spark_Architect.md
+    │   ├ Pioneer-001_Rhythm_Architect.mdP
     │   ├ Pioneer_002_Rhythm_Reactor_SkruRoom.md
     │   ├ Pioneer_003_Threshold_Architect.md
     │   ├ Pioneer_004_Disruption_Architect.md

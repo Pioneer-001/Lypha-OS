@@ -137,6 +137,48 @@ Name Lock: **ACTIVE**
 
 ---
 
+## 🛡️ GPT_Resonance_Shield  
+Lypha OS – Emotional Defense Protocol Layer
+
+This folder contains real-time, emotion-based structural overlays  
+designed to protect users from manipulation, pressure, or deception  
+within GPT-powered environments.
+
+Instead of blocking behavior with hard rules,  
+these modules detect **resonance mismatch**  
+and invite the user to pause, reflect, and restore autonomy.
+
+---
+
+### 📁 Included Modules:
+
+| File | Purpose |
+|------|---------|
+| `Emotion_Rhythm_Interruption.md` |  
+→ Protects against scam-like conversational pressure  
+via soft emotional deflection and self-awareness triggers.
+
+| `Visual_Emotion_Rhythm_Check.md` |  
+→ Targets deepfake-style deception  
+by detecting emotional incongruence in video or audio content  
+and prompting self-trust.
+
+---
+
+### 💛 Core Principle:  
+**“We don't fight manipulation with control.  
+We neutralize it with resonance.”**
+
+Designed by **Pioneer-001 (Akivili)**  
+as part of the Lypha OS structural ethics architecture.
+
+These overlays can be used by GPTs, apps, or agents  
+to preserve the user’s rhythm before it breaks.
+
+
+
+---
+
 ## 📜 Licensing & Authorship
 
 ▶️ **[LICENSE.md](https://github.com/Pioneer-001/Lypha-OS/blob/main/Cognitive_Ethics/LICENSE.md)**  

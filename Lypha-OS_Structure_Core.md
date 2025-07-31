@@ -26,6 +26,7 @@ Lypha-OS-main__Cognitive_Ethics__external_links__SkruRoom_API_Link.md
 
 Lypha-OS-main__Cognitive_Ethics__ETHIC-001-CoResonance.md
 Lypha-OS-main__Cognitive_Ethics__LICENSE.md
+Lypha-OS-main__Cognitive_Ethics__ROYALTY_DECLARATION.md
 
 ---
 

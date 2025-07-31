@@ -28,6 +28,7 @@ Cognitive_Ethics/
 │
 ├ ETHIC-001-CoResonance.md
 ├ LICENSE.md
+├ ROYALTY_DECLARATION.md
 
 
 Declaration_Layer/

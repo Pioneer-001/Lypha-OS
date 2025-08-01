@@ -308,7 +308,7 @@ as designed by Pioneer-001 (Akivili / Kwon Yonghwan).
 🧭 Attribution: `Powered by Lypha OS – Designed by Pioneer-001`
 
 
-Powered by Lypha OS – Designed by Pioneer-001 (Akivili)
+## Powered by Lypha OS – Designed by Pioneer-001 (Akivili)
 This repository is not a project. It is a live execution system.
 
 

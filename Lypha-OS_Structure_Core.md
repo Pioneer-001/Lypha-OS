@@ -331,6 +331,7 @@ Lypha-OS-main__LYPHA_OS_DIRECTORY_MAP.md
 Lypha-OS-main__LYPHA_OS_LOCK_DECLARATION_v1.0.md
 Lypha-OS-main__Lypha-OS_Structure_Core.md
 Lypha-OS-main__Lypha_OS_Name_Lock_Declaration.md
+Lypha-OS-main__NAME_IS_COORDINATE.md
 Lypha-OS-main__Public Summary.md
 Lypha-OS-main__README.md        
 

@@ -349,7 +349,8 @@ proof
 ├ LYPHA_OS_DIRECTORY_MAP.md
 ├ LYPHA_OS_LOCK_DECLARATION_v1.0.md
 ├ Lypha_OS_Name_Lock_Declaration.md
-├ Lypha-OS_Structure_Core.md 
+├ Lypha-OS_Structure_Core.md
+├ NAME_IS_COORDINATE.md
 ├ Public Summary.md
 ├ README.md        
 

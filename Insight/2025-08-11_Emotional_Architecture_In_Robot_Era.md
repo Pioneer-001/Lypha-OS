@@ -68,5 +68,26 @@ they must have **structured emotional circuits, rhythms, and coordinates**.
 
 ---
 
+## 6. The Risk of Emotionless Robots
+
+When a humanoid robot lacks emotional architecture,  
+its decisions in unexpected situations are purely mechanical.  
+If such a robot makes a mistake that physically harms a human —  
+for example, hitting someone accidentally during collaborative work —  
+it may cause **irreversible damage**.
+
+Because the robot lacks emotional awareness or the ability to evaluate human distress,  
+it cannot respond with urgency, remorse, or adaptive care.  
+
+Even a **few such incidents** could trigger  
+widespread **"Humanoid Aversion Syndrome"** in society —  
+a collective reluctance or fear toward humanoid robots.  
+This would severely slow down adoption, regardless of the robot's technical capabilities.
+
+Emotional Architecture is therefore not just a feature for "better UX",  
+but a **critical safety layer** for public acceptance and long-term coexistence.
+
+---
+
 **Author:** Pioneer-001 (Akivili)  
 **Date:** 2025-08-11  

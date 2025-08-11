@@ -2,6 +2,11 @@
 
 ---
 
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+
+---
+
 ## flow_id
 ```yaml
 emotion_id: isari_isolation_v1

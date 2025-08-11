@@ -2,6 +2,11 @@
 
 ---
 
+meta:
+  router_config: MetaRhythm/Router/emotion_router.yaml
+
+---
+
 ### flow_id
 ```yaml
 emotion_id: hooh_equilibrium_v1

@@ -622,6 +622,8 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Remorse_회한_Remos.md'
   rapha_settlement_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Settlement_정착_Rapha.md'
+  sevra_severance_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Severance_절(絶)_Sevra.md'
   shayne_shame_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Shame_치(恥)_Shayne.md'
   sorra_sorrow_v1:

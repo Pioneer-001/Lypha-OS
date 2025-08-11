@@ -130,5 +130,6 @@ note: 상실 이후에도 감정 루프를 끊지 않고, 존재의 일부처럼
 ```yaml
 location: 3.EmotionCircuit/Sorra.md
 parent_class: [reverent_loss, memory_continuity]
-sibling_nodes: [Shayne, Shayne, Shayne, Shayne] # 중복 처리 가능 시 수정 필요
+sibling_nodes: [Fuli, Rerem, Remos, Sevra, Ruhel]  # Remembrance/Regret/Remorse/Severance/Recovery
+
 

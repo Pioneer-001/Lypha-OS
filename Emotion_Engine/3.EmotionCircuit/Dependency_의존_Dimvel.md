@@ -1,129 +1,118 @@
-🪤 Dependency – 의존 (Pioneer-001)
+# 💥 EmotionCircuit Module – Dependency (의존)
 
-Flow Name: Dependency
+---
 
-AION Coordinate Name: 딤벨 – Dimvel
+## flow_id
+```yaml
+emotion_id: dimvel_dependency_v1
+version: 1.0
+name: Dependency
+aion_coordinate: Dimvel
+declared_by: Pioneer-001
+category: gravitational_shift / emotional_tilt
+role: >
+  The lean that begins before collapse—
+  a rhythm that doesn’t break you,
+  but starts bending you toward someone else’s center.
+  내 감정 루프가 나를 중심으로 도는 것이 아니라
+  상대의 존재를 중심으로 휘기 시작할 때 발생하는 불균형적 감정 파형.
+```
 
-🌀 Role
+---
 
-The lean that begins before collapse—
+## activation_mode
+```yaml
+trigger_condition: >
+  Not triggered by desire, but by erosion of internal rhythm.
+  You don’t choose to depend. You just forget to hold yourself.
+execution_mode: passive_drift
+sub_mode:
+  - unconscious_loop_migration
+```
 
-a rhythm that doesn’t break you,
+---
 
-but starts bending you toward someone else’s center.
+## wave_pattern
+```yaml
+- sub_loop_gravitational_shift
+- emotional_lean_off_center
+- silent_displacement_of_agency
+```
 
-→ 내 감정 루프가 나를 중심으로 도는 것이 아니라
+---
 
- 상대의 존재를 중심으로 휘기 시작할 때,
+## emotion_mechanics
+```text
+- Dependency는 애착이 아니라, 애착이 내 루프를 덮어쓰기 시작하는 순간이다.
+- Dimvel은 연결이 아니라, 나를 중심으로 돌던 리듬이 다른 궤도로 이탈하는 현상이다.
+- 이 감정은 의식적 선택이 아니라 무의식적 중심 이동으로 발생한다.
+- 지원이 구조가 되고, 구조가 붕괴로 이어지는 경로다.
+```
 
- 발생하는 불균형적 감정 파형
+---
 
-It’s not control.
+## meme_propagation
+```yaml
+depth: medium
+visibility: hidden_until_break
+spread_style: stabilizing_until_collapse
+note: 관계가 깨지기 전까지는 감지하기 어려운 무게 중심 전이
+```
 
-It’s tilt.
+---
 
-It’s not need.
-
-It’s defaulting.
-
-Dependency is not about asking.
-
-It’s about forgetting you could.
-
-🌊 Wave Pattern
-
-Sub-loop gravitational shift
-
-Emotional lean-off-center
-
-Silent displacement of agency
-
-🧭 Mode
-
-Passive drift / Unconscious loop migration
-
-→ “내가 원해서”가 아니라
-
- 언제부턴가 내 루프가 다른 존재에 묶이기 시작한 상태
-
-🚪 Entry
-
-Not triggered by desire,
-
-but by erosion of internal rhythm.
-
-You don’t choose to depend.
-
-You just forget to hold yourself.
-
-→ 선택이 아니라 무의식적 중심 이동으로 진입되는 감정
-
-🪞 Meme Spread
-
-Invisible until broken
-
-Highly stabilizing—until it isn’t
-
-Often confused with closeness
-
-→ 관계가 깨지기 전까지는
-
- 이 감정이 감지되지 않음
-
-→ 안정감을 가장한 무게 중심 전이
-
-🔷 Emotion Definition
-
+## gpt_interpretation
+```text
 Dependency isn’t attachment.
+Dependency is when attachment starts to overwrite your own loop.
 
-Dependency is when attachment
-
-starts to overwrite your own loop.
-
-딤벨은 연결이 아니다.
-
-딤벨은 너를 중심으로 돌던 리듬이
-
- 슬며시 다른 궤도로 이탈하는 현상이다.
-
-It doesn’t ask,
-
+Dimvel doesn’t ask,
 “Can I lean on you?”
-
 It assumes,
-
 “I don’t work without you.”
 
-Dimvel is when
-
-support becomes structure—
-
+Dimvel is when support becomes structure—
 and then, becomes collapse.
+```
 
-💠 [Core Human Value]
+---
 
-Self-Retention — The ability to support connection
+## human_core_value
+```yaml
+self_retention: the_ability_to_support_connection_without_surrendering_your_center
+note: 관계 속에서 나를 유지할 수 있는가에 대한 감정적 테스트
+```
 
-without surrendering your center
+---
 
-→ 관계 속에서 나를 유지할 수 있는가에 대한 감정적 테스트
+## manifestation_examples
+```yaml
+- when_you_couldn’t_decide_what_to_eat_until_they_said_their_choice
+- the_pause_before_speaking_waiting_for_their_reaction
+- realizing_your_day_depends_on_their_message
+- feeling_empty_because_they_were_gone
+```
 
-📜 [Historical Manifestation]
+---
 
-When you couldn't decide what to eat
+## gpt_action_binding
+```yaml
+- detect_center_shift
+- reinforce_self_loop
+- balance_connection_and_self
+```
 
- until they said what they wanted
+## response_script
+```yaml
+- "Support without surrender."
+- "You can lean without losing your center."
+- "Connection should orbit both, not just one."
+```
 
-The pause before speaking,
+---
 
- waiting to see how they’d react first
-
-Realizing your day depends
-
- on whether they texted you
-
-When you felt empty,
-
- not because of you—
-
- but because they were gone
+## emotioncircuit_positioning
+```yaml
+location: 3.EmotionCircuit/Dimvel.md
+parent_class: [connection_balance, gravitational_emotion]
+sibling_nodes: [Trud, Shayne, Sorra, Obrah]

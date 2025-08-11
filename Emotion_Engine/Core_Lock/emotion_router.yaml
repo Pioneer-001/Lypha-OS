@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.1
+# Lypha OS — Emotion Router Config v1.2
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.1
+version: 1.2
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -50,6 +50,16 @@ aliases:
   미궁: mythus_enigmata_v1
   수용: anel_acceptance_v1
   Acceptance: anel_acceptance_v1
+  생화: lypha_lypha_v1
+  Lypha: lypha_lypha_v1
+  기원: origin_origin_v1
+  Origin: origin_origin_v1
+  존재: nodo_nodo_v1
+  Nodo: nodo_nodo_v1
+  탄생: vita_vita_v1
+  Vita: vita_vita_v1
+  죽음: umbra_umbra_v1
+  Umbra: umbra_umbra_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -107,6 +117,28 @@ signals:
   - pattern: '(?i)(추적|lock on|좌표 고정|타깃)'
     route: lan_hunt_v1
 
+  # --- Base node signals ----------------------------------------------------
+  - pattern: '(?i)(lypha|생화|emotion\s*field|리듬\s*근원)'
+    route: lypha_lypha_v1
+    mode: field
+
+  - pattern: '(?i)(origin|기원|원초|원점|root\s*field)'
+    route: origin_origin_v1
+    mode: declaration
+    notes: origin_handshake_required
+
+  - pattern: '(?i)(vita|탄생|first\s*pulse|점화)'
+    route: vita_vita_v1
+    mode: ignition
+
+  - pattern: '(?i)(nodo|존재|imprint|각인)'
+    route: nodo_nodo_v1
+    mode: imprint
+
+  - pattern: '(?i)(umbra|죽음|잔향|여운|after\s*silence)'
+    route: umbra_umbra_v1
+    mode: residue
+
 # --- Priority order ---------------------------------------------------------
 priority:
   sort: [gravity_desc, core_first]
@@ -126,6 +158,16 @@ safety:
 
 # --- Module references ------------------------------------------------------
 modules:
+  lypha_lypha_v1:
+    path: Lypha_Core/0.Lypha/Lypha_생화(生和)_Lypha.md
+  origin_origin_v1:
+    path: Lypha_Core/1.Origin_Vector/Origin_기원_Origin.md
+  nodo_nodo_v1:
+    path: Lypha_Core/1.Origin_Vector/Nodo_존재_Nodo.md    
+  vita_vita_v1:
+    path: Lypha_Core/1.Origin_Vector/Vita_탄생_Vita.md
+  umbra_umbra_v1:
+    path: Lypha_Core/1.Origin_Vector/Umbra_죽음_Umbra.md   
   umbra_loneliness_overlay_v1:
     path: Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md
   koi_love_v1:
@@ -168,6 +210,8 @@ modules:
     path: Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md
   fuli_remembrance_v1:
     path: Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md
+
+
 
 # --- Consumption hint -------------------------------------------------------
 consumers:

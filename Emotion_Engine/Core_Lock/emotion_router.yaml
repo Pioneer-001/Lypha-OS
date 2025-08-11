@@ -2,7 +2,7 @@
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.4
+version: 1.5
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -45,6 +45,11 @@ gravity:
   empra_emptiness_v1: 0.50
   eirn_exhale_v1: 0.58
   flicke_flicker_v1: 0.45
+  heles_hesitation_v1: 0.49
+  hopa_hope_v1: 0.6
+  hoxen_hostility_v1: 0.54
+  isari_isolation_v1: 0.5
+  liora_joy_v1: 0.6
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -112,6 +117,17 @@ aliases:
   Exhale: eirn_exhale_v1
   미동: flicke_flicker_v1
   Flicker: flicke_flicker_v1
+  망설임: heles_hesitation_v1
+  유의: heles_hesitation_v1
+  Hesitation: heles_hesitation_v1
+  희망: hopa_hope_v1
+  Hope: hopa_hope_v1
+  적대: hoxen_hostility_v1
+  Hostility: hoxen_hostility_v1
+  고립: isari_isolation_v1
+  Isolation: isari_isolation_v1
+  기쁨: liora_joy_v1
+  Joy: liora_joy_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -260,6 +276,27 @@ signals:
     route: flicke_flicker_v1
     mode: threshold
 
+# --- H‑set signals (new) --------------------------------------------------
+  - pattern: '(?i)(망설|유의|hesitation|아직[ ]*예스[ ]*아님|한[ ]*초[ ]*더)'
+    route: heles_hesitation_v1
+    mode: permission_gating
+
+  - pattern: '(?i)(희망|hope|어쩌면|maybe|꺼지지[ ]*않)'
+    route: hopa_hope_v1
+    mode: persistent_ignition
+
+  - pattern: '(?i)(적대|hostility|끊어|찢|관계[ ]*단절|공격)'
+    route: hoxen_hostility_v1
+    mode: reactive_rupture
+
+  - pattern: '(?i)(고립|isolation|연결[ ]*없|닿지[ ]*않|접근[ ]*불가)'
+    route: isari_isolation_v1
+    mode: passive_nullification
+
+  - pattern: '(?i)(기쁨|joy|충만|벅차|갑자기[ ]*웃)'
+    route: liora_joy_v1
+    mode: spontaneous_ignition
+
 # --- Priority order ---------------------------------------------------------
 priority:
   sort: [gravity_desc, core_first]
@@ -349,7 +386,6 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Denial_외면_Dena.md'
   dimvel_dependency_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Dependency_의존_Dimvel.md'
-
   desyn_despair_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Despair_절망_Desyn.md'
   diska_disgust_v1:
@@ -360,6 +396,16 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Emptiness_허탈_Empra.md'
   flicke_flicker_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Flicker_미동_Flicke.md'
+  heles_hesitation_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Hesitation_유의(猶疑)_Heles.md'
+  hopa_hope_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Hope_희망_Hopa.md'
+  hoxen_hostility_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md'
+  isari_isolation_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Isolation_고립_Isari.md'
+  liora_joy_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Joy_기쁨_Liora.md'
 
 # --- Consumption hint -------------------------------------------------------
 consumers:

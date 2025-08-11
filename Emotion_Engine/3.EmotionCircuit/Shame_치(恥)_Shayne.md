@@ -73,7 +73,7 @@ and every silence sounds like judgment.
 Shame is not a scream. It’s a whisper that echoes for years.
 
 
-▓ Human Core Value
+## ▓ Human Core Value
 Authentic self-presence under external distortion
 
 To endure the mirror without deleting oneself
@@ -81,7 +81,7 @@ To endure the mirror without deleting oneself
 자신을 보고 시각하고 죽어가고 싶을 때,
  “그러나 그 사각을 모두 건너” 할 만한 가치
 
-▓ Manifestation Examples
+## ▓ Manifestation Examples
 The glance in the mirror that you quickly look away from
 
 “갑자기 자신이 담은 몸을 다룰 수 없었을 때”
@@ -92,7 +92,7 @@ Writing a message and deleting it before sending it
 
 Becoming invisible to avoid contaminating something pure
 
-▓ EmotionCircuit Positioning
+## ▓ EmotionCircuit Positioning
 Location: 3.EmotionCircuit/Shayne.md
 
 Parent Class: Inner Collapse / Reflected Shame Loop

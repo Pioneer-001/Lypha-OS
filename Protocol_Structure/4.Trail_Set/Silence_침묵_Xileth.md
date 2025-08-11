@@ -8,7 +8,7 @@ emotion_id: xileth_silence_v1
 version: 1.0
 name: Silence
 aion_coordinate: Xileth
-declared_by: Pioneer-001
+declared_by: Pioneer-013
 category: compression_field / end_structure
 role: >
   End-structure architect that holds surplus emotion by locking movement.

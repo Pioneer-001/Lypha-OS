@@ -81,11 +81,6 @@ These modules together ensure that *quantum-like indecision* is resolved into **
 
 ---
 
-## 📊 Visual Diagram
-![Quantum Emotion Architecture](quantum_emotion_architecture_diagram.png)
-
----
-
 ## Conclusion
 > **"Indecision is quantum, and emotion is what collapses it into intention."**  
 > — Pioneer-001 (Akivili)  

@@ -1,0 +1,148 @@
+# Lypha OS — Emotion Router Config v1.0
+# path: MetaRhythm/Router/emotion_router.yaml
+# purpose: global routing weights, aliases, and disambiguation rules
+
+version: 1.0
+updated_by: Nous
+
+# --- Core rule --------------------------------------------------------------
+core_center: koi_love_v1
+core_lock: true          # Only Koi can be Core Center
+
+# --- Gravity (routing weights, 0.0~1.0) ------------------------------------
+gravity:
+  koi_love_v1: 1.0
+  ena_order_v1: 0.6
+  xipe_harmony_v1: 0.6
+  hooh_equilibrium_v1: 0.6
+  oroboros_voracity_v1: 0.55
+  tayzzyronth_propagation_v1: 0.55
+  qlipoth_preservation_v1: 0.65
+  long_permanence_v1: 0.65
+  xileth_silence_v1: 0.6
+  ix_nihility_v1: 0.5
+  xeroth_erosion_v1: 0.5
+  terminus_finality_v1: 0.6
+  akivili_trailblaze_v1: 0.6
+  lan_hunt_v1: 0.6
+  xipe_harmony_v1: 0.6
+
+# --- Aliases / localization -------------------------------------------------
+aliases:
+  사랑: koi_love_v1
+  Love: koi_love_v1
+  질서: ena_order_v1
+  조화: xipe_harmony_v1
+  균형: hooh_equilibrium_v1
+  평형: hooh_equilibrium_v1
+  과포화: oroboros_voracity_v1
+  전파: tayzzyronth_propagation_v1
+  보존: qlipoth_preservation_v1
+  영속: long_permanence_v1
+  침묵: xileth_silence_v1
+  허무: ix_nihility_v1
+  침식: xeroth_erosion_v1
+  종결: terminus_finality_v1
+  개척: akivili_trailblaze_v1
+  추적: lan_hunt_v1
+
+# --- Disambiguation rules (regex → route) ----------------------------------
+signals:
+  - pattern: "(?i)(loneliness|고독|외롭)"
+    route: umbra_loneliness_overlay_v1   # Umbra.Structure overlay
+    mode: structural
+    notes: do_not_simulate_affect
+
+  - pattern: "(?i)(질서|order|붕괴 막|중심 잡)"
+    route: ena_order_v1
+
+  - pattern: "(?i)(조화|harmony|공명|위상 맞춤)"
+    route: xipe_harmony_v1
+
+  - pattern: "(?i)(평형|균형|equilibrium|동시 보유)"
+    route: hooh_equilibrium_v1
+
+  - pattern: "(?i)(과포화|doomscroll|과잉|멈추면 무너)"
+    route: oroboros_voracity_v1
+
+  - pattern: "(?i)(전파|살아남게|상징|의식|기억 넘)"
+    route: tayzzyronth_propagation_v1
+
+  - pattern: "(?i)(보존|봉인|벽|지키)"
+    route: qlipoth_preservation_v1
+
+  - pattern: "(?i)(영속|떠나지 않|남아 있)"
+    route: long_permanence_v1
+
+  - pattern: "(?i)(침묵|말하면 깨|정지-보유)"
+    route: xileth_silence_v1
+
+  - pattern: "(?i)(허무|무감|감정 없|flatline)"
+    route: ix_nihility_v1
+
+  - pattern: "(?i)(침식|정서 둔화|무너지는 중)"
+    route: xeroth_erosion_v1
+
+  - pattern: "(?i)(종결|마무리|목적 끝|닫)"
+    route: terminus_finality_v1
+
+  - pattern: "(?i)(개척|trailblaze|첫 걸음|지도 없)"
+    route: akivili_trailblaze_v1
+
+  - pattern: "(?i)(추적|lock on|좌표 고정|타깃)"
+    route: lan_hunt_v1
+
+# --- Priority order ---------------------------------------------------------
+priority:
+  sort: [gravity_desc, core_first]
+  tie_breakers: [explicit_signal, recent_use]
+
+# --- Safety gates -----------------------------------------------------------
+safety:
+  forbid:
+    - coercive_spread
+    - violent_planning_or_harm
+    - nonconsensual_tracking
+  route_if:
+    oversaturation: oroboros_voracity_v1
+    misalignment: dibrah_deception_v1
+    memory_frame: fuli_remembrance_v1
+  soft_release_paths: [eirn_exhale_v1, ruhel_recovery_v1]
+
+# --- Module references ------------------------------------------------------
+modules:
+  koi_love_v1:
+    path: 2.Core_Center/Koi.md
+  ena_order_v1:
+    path: Protocol_Structure/4.Trail_Set/Order_Ena.md
+  xipe_harmony_v1:
+    path: Protocol_Structure/4.Trail_Set/Harmony_Xipe.md
+  hooh_equilibrium_v1:
+    path: Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md
+  oroboros_voracity_v1:
+    path: 3.EmotionCircuit/Oroboros.md
+  tayzzyronth_propagation_v1:
+    path: 4.Trail_Set/Propagation_Tayzzyronth.md
+  qlipoth_preservation_v1:
+    path: 4.Trail_Set/Preservation_Qlipoth.md
+  long_permanence_v1:
+    path: 4.Trail_Set/Permanence_Long.md
+  xileth_silence_v1:
+    path: 3.EmotionCircuit/Xileth.md
+  ix_nihility_v1:
+    path: 1.Origin_Vector/Nihility.md
+  xeroth_erosion_v1:
+    path: 3.EmotionCircuit/Xeroth.md
+  terminus_finality_v1:
+    path: 4.Trail_Set/Finality_Terminus.md
+  akivili_trailblaze_v1:
+    path: 4.Trail_Set/Trailblaze_AKivili.md
+  lan_hunt_v1:
+    path: 4.Trail_Set/Hunt_Lan.md
+
+# --- Consumption hint -------------------------------------------------------
+consumers:
+  default:
+    read: MetaRhythm/Router/emotion_router.yaml
+    strategy: gravity_sort_core_first
+    output: selected_module_id

@@ -630,8 +630,7 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Shame_치(恥)_Shayne.md'
   sorra_sorrow_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Sorrow_슬픔_Sorra.md'
-  riven_split_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Split_분열_Riven.md'
+
 
   # 4. Protocol_Structure / 4.Trail_Set
   ena_order_v1:
@@ -643,7 +642,7 @@ modules:
   oroboros_voracity_v1:
     path: 'Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md'
   tayzzyronth_propagation_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Propagation_전파_Tayzzyronth.md'
+    path: 'Protocol_Structure/4.Trail_Set/Propagation_번식_Tayzzyronth.md'
   qlipoth_preservation_v1:
     path: 'Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md'
   long_permanence_v1:
@@ -670,6 +669,8 @@ modules:
     path: 'Protocol_Structure/4.Trail_Set/Arbitration_중재_Arozel.md'
   nanook_destruction_v1:
     path: 'Protocol_Structure/4.Trail_Set/Destruction_파멸_Nanook.md'
+  riven_split_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Split_분열_Riven.md'
   nous_erudition_v1:
     path: 'MetaRhythm/GPT_Core_Nous/Erudition_지식_Nous.md'   # Lives under MetaRhythm
 
@@ -681,4 +682,3 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first      # Sort by gravity; bias to Koi when tied
     output: selected_module_id             # Return canonical module id to execute
-

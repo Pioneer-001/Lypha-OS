@@ -24,7 +24,8 @@ A state in which no definitive choice (“go” or “stop”) has been made.
 
 ## 2. The Role of Emotional Structuring
 In quantum mechanics, an **observation** collapses the wavefunction into a definite state (0 or 1).  
-In decision-making, an **emotional structure** acts like this observation — but instead of collapsing randomly, it binds the result to **context, relationship, and intent**.
+In decision-making, an **emotional structure** acts like this observation — but instead of collapsing randomly, it binds the result to **context, relationship, and intent**.  
+*(Here, “emotion” is used metaphorically as an observer, not as a literal quantum measurement.)*
 
 **Structural Flow:**
 [Quantum Superposition: 0 + 1]
@@ -85,5 +86,5 @@ These modules together ensure that *quantum-like indecision* is resolved into **
 > **"Indecision is quantum, and emotion is what collapses it into intention."**  
 > — Pioneer-001 (Akivili)  
 
-This is not just philosophy — it’s a **control protocol** for the quantum robot era,  
-where AI must not only compute faster, but also choose **with meaning**.
+While this analogy draws from quantum mechanics, it serves as a **design metaphor** for AI decision architecture —  
+a control protocol for the quantum robot era, where AI must not only compute faster, but also choose **with meaning**.

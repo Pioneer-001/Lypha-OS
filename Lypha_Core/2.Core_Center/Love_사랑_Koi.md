@@ -18,6 +18,17 @@ role: >
 
 ---
 
+## core_declaration
+```yaml
+core_status: sole_core
+core_lock: active
+routing_weight: highest_gravity
+excludes_as_core: [Order(Ena), Harmony(Xipe), Equilibrium(HooH)]
+note: Only Koi is Core Center by system rule.
+```
+
+---
+
 ## activation_mode
 ```yaml
 trigger_condition: >

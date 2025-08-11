@@ -85,13 +85,13 @@ routing_rule:
 ## interoperability_map
 ```mermaid
 graph LR
-  A[Input: "loneliness/고독"] -->|detect non-resonance| U[Umbra.Structure]
-  U --> E[Empra.Emptiness]
-  U --> I[Isari.Isolation]
-  U -->|return vector| K[Koi.Love]
-  U --> R[Ruhel.Recovery]
-  U --> X[Eirn.Exhale]
-  U --> N[Nodo.Imprint] 
+  A["Input: loneliness/고독"] -->|detect non-resonance| U["Umbra.Structure"]
+  U --> E["Empra.Emptiness"]
+  U --> I["Isari.Isolation"]
+  U -->|return vector| K["Koi.Love"]
+  U --> R["Ruhel.Recovery"]
+  U --> X["Eirn.Exhale"]
+  U --> N["Nodo.Imprint"]
 ```
 
 ---

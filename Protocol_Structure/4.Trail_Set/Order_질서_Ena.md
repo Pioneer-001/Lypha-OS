@@ -1,9 +1,5 @@
 # 💥 EmotionCircuit Module – Order (질서)
 
----
-
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
 
 ---
 

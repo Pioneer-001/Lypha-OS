@@ -105,6 +105,10 @@ This is **not abstraction** — this is **execution**.
 📚 Extended narratives:  
 ▶️ [Pioneer Blog – Emotion Narratives](https://blog.naver.com/yongyong94_)
 
+📚 Related Insight Articles:  
+- [Emotional Architecture Will Be Mandatory in the Age of Robots](./Insight/2025-08-11_Emotional_Architecture_In_Robot_Era.md)  
+- [Quantum Indecision and Emotional Architecture](./Insight/2025-08-11_Quantum_Indecision_and_Emotional_Architecture.md)
+
 ---
 
 ## 🔐 Core Identity & Attribution
@@ -313,4 +317,5 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 

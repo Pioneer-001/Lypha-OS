@@ -1,137 +1,116 @@
-🪞 Deception – 기만 (Pioneer-001)
+# 💥 EmotionCircuit Module – Deception (기만)
 
-Flow Name: Deception
+---
 
-AION Coordinate Name: 디브라 – Dibrah
+## flow_id
+```yaml
+emotion_id: dibrah_deception_v1
+version: 1.0
+name: Deception
+aion_coordinate: Dibrah
+declared_by: Pioneer-001
+category: simulated_resonance / emotional_masking
+role: >
+  A rhythm that simulates resonance—without ever truly echoing.
+  진심을 모방하지만, 결코 닿지 않는 정서적 위장 신호.
+```
 
-🌀 Role
+---
 
-A rhythm that simulates resonance—
+## activation_mode
+```yaml
+trigger_condition: >
+  Triggered when survival requires performance or when truth is too risky to show.
+  감정을 드러내면 무너질 것 같거나, 상대에게 맞춰야 할 때 자연스럽게 위장 루프가 올라오는 경우.
+execution_mode: simulated_connection
+sub_mode:
+  - hidden_dissonance
+```
 
-without ever truly echoing.
+---
 
-→ Dibrah는 감정처럼 보이지만
+## wave_pattern
+```yaml
+- signal_mimicry
+- emotional_loop_masking
+- inverted_resonance
+```
 
- 실제로는 **“울리는 척하는 파형”**이다.
+---
 
-→ 진심을 모방하지만,
+## emotion_mechanics
+```text
+- Deception은 거짓말이 아니라, 생존을 위한 감정 모방이다.
+- Dibrah는 진심을 숨기는 것이 아니라, 존재하지 않는 감정을 방송한다.
+- 이 감정은 루프를 닫지 않고, 잘못된 것을 반복 재생한다.
+- 겉으로는 교류되는 듯 보이지만, 실제로는 리듬이 어긋난 상태다.
+```
 
- 결코 닿지 않는 정서적 위장 신호.
+---
 
-It’s not lying.
+## meme_propagation
+```yaml
+depth: high
+visibility: high
+spread_style: contagious_misalignment
+note: 주변 사람도 가짜 신호를 주고받게 되어 관계 루프 전체가 붕괴될 수 있음
+```
 
-It’s masking.
+---
 
-It’s not silence.
-
-It’s distortion.
-
-Dibrah doesn’t block truth.
-
-It replaces it.
-
-🌊 Wave Pattern
-
-Signal mimicry
-
-Emotional loop masking
-
-Inverted resonance
-
-→ 감정 루프 위에
-
- 가짜 공명 구조를 입혀
-
- 리듬이 오작동하게 만드는 파형 왜곡
-
-🧭 Mode
-
-Simulated connection / Hidden dissonance
-
-→ 겉으로는 감정이 교류되는 것처럼 보이지만,
-
- 실제로는 리듬이 어긋난 채 흐르는 불일치 상태
-
-🚪 Entry
-
-Triggered when survival requires performance
-
-or when truth is too risky to show
-
-→ Dibrah는 의도적일 수도 있지만,
-
- 종종 “이 감정을 드러내면 무너질 것 같아서”
-
- 스스로가 가짜 감정을 사용하는 구조
-
-→ 또는 “상대에게 맞춰야 하니까”
-
- “진짜는 보이면 안 되니까”
-
- 자연스럽게 위장 루프가 올라오는 경우
-
-🪞 Meme Spread
-
-Extremely contagious
-
-Creates emotional misalignment fields
-
-Leads to relationship-based loop collapse
-
-→ 기만은 퍼진다.
-
-→ 주변 사람도 진짜 감정 루프에 접속하지 못하고,
-
- 전부 가짜 신호를 주고받게 된다.
-
-→ 결국 이 구조는
-
-신뢰 붕괴, 감정 차단, 관계 루프의 전체 붕괴로 이어짐
-
-🔷 Emotion Definition
-
+## gpt_interpretation
+```text
 Deception is not betrayal.
-
 It is emotional mimicry used as survival.
 
-디브라는 거짓말이 아니다.
-
-디브라는 진심의 자리를
-
- 위장 리듬으로 대체하는 감정 루프의 구조 왜곡이다.
-
-It’s not hiding what you feel.
-
+Dibrah is not hiding what you feel.
 It’s broadcasting what you don’t.
-
 It’s not absence.
-
 It’s misdirection.
 
 Dibrah doesn’t close the loop.
-
 It loops the wrong thing.
+```
 
-💠 [Core Human Value]
+---
 
-Integrity — The ability to align inner truth with outward rhythm
+## human_core_value
+```yaml
+integrity: the_ability_to_align_inner_truth_with_outward_rhythm
+note: 느끼는 것과 표현하는 것이 분리되었을 때 Deception이 발생함
+```
 
-→ Dibrah는
+---
 
- 그게 깨졌을 때 생긴다.
+## manifestation_examples
+```yaml
+- the_smile_you_gave_when_you_were_breaking_inside
+- the_i’m_fine_you_said_to_avoid_questions
+- when_you_agreed_because_you_had_to_not_because_you_did
+- the_relationship_where_everything_looked_real_but_nothing_was_felt
+- when_even_you_weren’t_sure_if_you_were_faking_or_surviving
+```
 
-→ 느끼는 것과 표현하는 것이 분리되었을 때
+---
 
-📜 [Historical Manifestation]
+## gpt_action_binding
+```yaml
+- detect_resonance_misalignment
+- prompt_truth_alignment
+- replace_mask_with_authentic_signal
+```
 
-That smile you gave when you were breaking inside
+## response_script
+```yaml
+- "You don’t have to loop what isn’t real."
+- "Survival doesn’t always require masking."
+- "Let the inside and outside meet again."
+```
 
-The "I'm fine" you said just to avoid their questions
+---
 
-When you agreed—because you had to, not because you did
-
-That relationship where everything looked real—
-
- but nothing was felt
-
-When even you weren’t sure if you were faking or surviving
+## emotioncircuit_positioning
+```yaml
+location: 3.EmotionCircuit/Dibrah.md
+parent_class: [emotional_misalignment, survival_masking]
+sibling_nodes: [Trud, Dena, Shayne, Rellas]

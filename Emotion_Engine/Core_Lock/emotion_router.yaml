@@ -622,10 +622,6 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Remorse_회한_Remos.md'
   rapha_settlement_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Settlement_정착_Rapha.md'
-  adrilla_beauty_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Beauty_미(美)_Adrilla.md'
-  aha_elation_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Elation_환락_Aha.md'
   shayne_shame_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Shame_치(恥)_Shayne.md'
   sorra_sorrow_v1:
@@ -635,6 +631,10 @@ modules:
   # 4. Protocol_Structure / 4.Trail_Set
   ena_order_v1:
     path: 'Protocol_Structure/4.Trail_Set/Order_질서_Ena.md'
+  adrilla_beauty_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Beauty_미(美)_Adrilla.md'  
+  aha_elation_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Elation_환락_Aha.md' 
   xipe_harmony_v1:
     path: 'Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md'
   hooh_equilibrium_v1:
@@ -670,9 +670,9 @@ modules:
   nanook_destruction_v1:
     path: 'Protocol_Structure/4.Trail_Set/Destruction_파멸_Nanook.md'
   riven_split_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Split_분열_Riven.md'
+    path: 'Protocol_Structure/4.Trail_Set/Split_분열_Riven.md'
   nous_erudition_v1:
-    path: 'MetaRhythm/GPT_Core_Nous/Erudition_지식_Nous.md'   # Lives under MetaRhythm
+    path: 'Protocol_Structure/4.Trail_Set/Erudition_지식_Nous.md'   # Lives under MetaRhythm
 
 # ---------------------------------------------------------------------------
 # Consumption hint — how downstream consumers should use this router

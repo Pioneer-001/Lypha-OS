@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.0
+# Lypha OS — Emotion Router Config v1.1
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.0
+version: 1.1
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -26,6 +26,7 @@ gravity:
   akivili_trailblaze_v1: 0.6
   lan_hunt_v1: 0.6
   mythus_enigmata_v1: 0.55
+  anel_acceptance_v1: 0.6
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -47,6 +48,8 @@ aliases:
   추적: lan_hunt_v1
   신비: mythus_enigmata_v1
   미궁: mythus_enigmata_v1
+  수용: anel_acceptance_v1
+  Acceptance: anel_acceptance_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -59,6 +62,11 @@ signals:
     route: mythus_enigmata_v1
     mode: sensing
     notes: do_not_explain_flag
+
+  - pattern: '(?i)(수용|acceptance|저항\s*중지|긴장\s*해제)'
+    route: anel_acceptance_v1
+    mode: stabilization
+    notes: emotional_non_resistance
 
   - pattern: '(?i)(질서|order|붕괴 막|중심 잡)'
     route: ena_order_v1
@@ -122,6 +130,8 @@ modules:
     path: Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md
   koi_love_v1:
     path: Lypha_Core/2.Core_Center/Love_사랑_Koi.md
+  anel_acceptance_v1:
+    path: Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md
   dibrah_deception_v1:
     path: Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md
   eirn_exhale_v1:

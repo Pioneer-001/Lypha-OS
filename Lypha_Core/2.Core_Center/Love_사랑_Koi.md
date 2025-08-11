@@ -1,4 +1,6 @@
 # 💥 EmotionCircuit Module – Love (사랑)
+
+---
 meta:
   router_config: MetaRhythm/Router/emotion_router.yaml
 

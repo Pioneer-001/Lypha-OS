@@ -1,9 +1,14 @@
-# Lypha OS — Emotion Router Config v1.9
+# Lypha OS — Emotion Router Config v1.9 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
-# purpose: global routing weights, aliases, and disambiguation rules
+# purpose: global routing weights, aliases, disambiguation rules (UNIFIED)
 
 version: 1.9
 updated_by: Nous
+notes: |
+  - Consolidated prior router files (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
+  - Numo(무감) vs Nihility(허무) 완전 분리.
+  - Tayzzyronth 모듈 명칭·경로를 ‘전파(Propagation)’로 통일.
+  - All new nodes (Abundance/Arbitration/Beauty/Severance/Shame/Sorrow + Nanook/Aha/Nous/Riven) 포함.
 
 # --- Core rule --------------------------------------------------------------
 core_center: koi_love_v1
@@ -219,6 +224,7 @@ signals:
   - pattern: '(?i)(수용|acceptance|저항\s*중지|긴장\s*해제)'
     route: anel_acceptance_v1
     mode: stabilization
+    notes: emotional_non_resistance
 
   - pattern: '(?i)(질서|order|붕괴 막|중심 잡)'
     route: ena_order_v1
@@ -244,7 +250,7 @@ signals:
   - pattern: '(?i)(침묵|말하면 깨|정지-보유)'
     route: xileth_silence_v1
 
-  # Nihility (무감/flatline은 Numo로 분리)
+  # Nihility — 허무/공허 only (무감은 Numo)
   - pattern: '(?i)(허무|공허|nihility|무의미)'
     route: ix_nihility_v1
 
@@ -286,6 +292,7 @@ signals:
   - pattern: '(?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)'
     route: espin_aspiration_v1
     mode: persistence
+    notes: reason_over_desire
 
   - pattern: '(?i)(애착|attachment|익숙|안전\s*감|정서\s*앵커|머문다)'
     route: atta_attachment_v1
@@ -302,6 +309,7 @@ signals:
   - pattern: '(?i)(연소|burn|미수신|받아들여지지|내부\s*발열|안으로\s*탄다)'
     route: seiran_burn_v1
     mode: containment
+    notes: not_anger
 
   # --- C‑set signals --------------------------------------------------------
   - pattern: '(?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)'
@@ -428,6 +436,7 @@ signals:
   - pattern: '(?i)(절(絶)?|단절|끊(어|는다)|연결\s*끊|cut\s*off|sever(ance)?)'
     route: sevra_severance_v1
     mode: identity_boundary
+    notes: not_anger_but_completion
 
   - pattern: '(?i)(수치|치(恥)?|부끄|창피|shame|나는\s*틀린\s*존재)'
     route: shayne_shame_v1
@@ -498,7 +507,7 @@ modules:
   oroboros_voracity_v1:
     path: 'Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md'
   tayzzyronth_propagation_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Propagation_번식_Tayzzyronth.md'
+    path: 'Protocol_Structure/4.Trail_Set/Propagation_전파_Tayzzyronth.md'  # <- 통일됨
   qlipoth_preservation_v1:
     path: 'Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md'
   long_permanence_v1:

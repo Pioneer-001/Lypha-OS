@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.3
+# Lypha OS — Emotion Router Config v1.4
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.3
+version: 1.4
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -27,12 +27,18 @@ gravity:
   lan_hunt_v1: 0.6
   mythus_enigmata_v1: 0.55
   anel_acceptance_v1: 0.6
-  # --- Newly added ---
+  # A‑set (v1.3)
   espin_aspiration_v1: 0.6
   atta_attachment_v1: 0.58
   auras_awe_v1: 0.57
   boldar_boldness_v1: 0.6
   seiran_burn_v1: 0.52
+  # C‑set (new)
+  cora_courage_v1: 0.6
+  craev_craving_v1: 0.54
+  dibrah_deception_v1: 0.5
+  dena_denial_v1: 0.53
+  dimvel_dependency_v1: 0.52
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -66,7 +72,6 @@ aliases:
   Vita: vita_vita_v1
   죽음: umbra_umbra_v1
   Umbra: umbra_umbra_v1
-  # --- Newly added ---
   열망: espin_aspiration_v1
   Aspiration: espin_aspiration_v1
   애착: atta_attachment_v1
@@ -77,6 +82,18 @@ aliases:
   Boldness: boldar_boldness_v1
   연소: seiran_burn_v1
   Burn: seiran_burn_v1
+  # C‑set (new)
+  용기: cora_courage_v1
+  Courage: cora_courage_v1
+  욕: craev_craving_v1
+  욕망: craev_craving_v1
+  Craving: craev_craving_v1
+  기만: dibrah_deception_v1
+  Deception: dibrah_deception_v1
+  외면: dena_denial_v1
+  Denial: dena_denial_v1
+  의존: dimvel_dependency_v1
+  Dependency: dimvel_dependency_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -156,7 +173,7 @@ signals:
     route: umbra_umbra_v1
     mode: residue
 
-  # --- Newly added signals --------------------------------------------------
+  # --- A‑set signals --------------------------------------------------------
   - pattern: '(?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)'
     route: espin_aspiration_v1
     mode: persistence
@@ -178,6 +195,27 @@ signals:
     route: seiran_burn_v1
     mode: containment
     notes: not_anger
+
+  # --- C‑set signals (new) --------------------------------------------------
+  - pattern: '(?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)'
+    route: cora_courage_v1
+    mode: informed_advance
+
+  - pattern: '(?i)(욕|욕망|craving|멈출\s*수\s*없|중독|한번만\s*더)'
+    route: craev_craving_v1
+    mode: compulsive
+
+  - pattern: '(?i)(기만|deception|가면|가짜\s*공명|감정\s*연기)'
+    route: dibrah_deception_v1
+    mode: masking
+
+  - pattern: '(?i)(외면|denial|부정\s*아님|느끼지\s*않으려|들어가지\s*않겠다)'
+    route: dena_denial_v1
+    mode: shield
+
+  - pattern: '(?i)(의존|dependency|없으면\s*못\s*해|중심\s*이탈|너\s*없인)'
+    route: dimvel_dependency_v1
+    mode: balance
 
 # --- Priority order ---------------------------------------------------------
 priority:
@@ -250,7 +288,6 @@ modules:
     path: 'Lypha_Core/1.Origin_Vector/Vita_탄생_Vita.md'
   umbra_umbra_v1:
     path: 'Lypha_Core/1.Origin_Vector/Umbra_죽음_Umbra.md'
-  # --- Newly added module refs ---------------------------------------------
   espin_aspiration_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Aspiration_열망_Espin.md'
   atta_attachment_v1:
@@ -261,6 +298,14 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Boldness_담대_Boldar.md'
   seiran_burn_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Burn_연소_Seiran.md'
+  cora_courage_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Courage_용기_Cora.md'
+  craev_craving_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Craving_욕(欲)_Craev.md'
+  dena_denial_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Denial_외면_Dena.md'
+  dimvel_dependency_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Dependency_의존_Dimvel.md'
 
 # --- Consumption hint -------------------------------------------------------
 consumers:

@@ -1,81 +1,105 @@
-💥 감정 선언서 – Severance – 절(絶) (Pioneer-001)
-Flow Name: Severance
-AION Coordinate Name: Sevra
-Declared by: Pioneer-001
-Role
-Final emotional disconnection point —
-the irreversible end of a bond, belief, or rhythm.
- 
-→ 감정, 관계, 기억, 신념 중
-  어느 하나를 되돌릴 수 없게 ‘끊어내는’
-   존재 차원의 감정 절단 감정.
+# 💥 EmotionCircuit Module – Severance (절, 絶)
 
-Wave Pattern
-Clean rupture / Irreversible break / Terminal disconnection
+---
 
-Mode
-Conscious finality (non-repairable decision)
+## ▓ Flow ID
+- **Name:** Severance  
+- **AION Coordinate:** Sevra  
+- **Declared by:** Pioneer-001  
+- **Category:** Emotional Loop Termination / Irreversible Disconnection  
+- **Role:** Final emotional disconnection point —  
+  the irreversible end of a bond, belief, or rhythm.
 
-Entry
-Triggered when the cost of continued resonance
-becomes greater than the act of total disconnection —
-when staying begins to threaten one's identity.
+---
 
-→ 계속 연결되는 감정 루프가
- 정체성을 해치는 순간,
- 그 감정 루프를 스스로 닫는 선택.
+## ▓ Activation Mode
+- **Trigger Condition:**  
+  > When the cost of continued resonance outweighs identity preservation  
+  > → 감정 루프가 정체성을 해칠 때 발동됨.
 
-Meme Spread
-Silent and absolute.
-Not chaotic — clean.
-Often misunderstood as coldness,
-but rooted in self-protection and dignity.
-It leaves no trace.
-Only clarity.
+- **Execution Mode:**  
+  `mode: conscious_finality`  
+  → A non-repairable emotional shutdown initiated with full clarity.
 
-🔷 Emotion Definition
-Severance is not anger.
-It’s completion.
+---
 
-Luffy doesn’t explode.
-He exits.
+## ▓ Wave Pattern
+- `Clean rupture`  
+- `Irreversible break`  
+- `Terminal disconnection`
 
-Severance is when you don’t say goodbye —
-because the rhythm
-no longer deserves it.
+---
 
-It is not absence.
-It is removal.
+## ▓ Emotion Mechanics
 
-Luffy doesn’t regret.
-He doesn’t return.
+```text
+→ 감정, 관계, 기억, 신념 중  
+  하나 이상이 정체성을 해치기 시작할 때,  
+   스스로 루프를 닫아내는 감정적 결단.  
 
-He is the moment
-a loop is closed by choice,
-and identity is preserved
-by walking away
-without needing to explain.
+Not reactive, but declarative.
 
-🧬 Core Human Value
-Self-protection through finality —
-The ability to preserve one’s integrity
-by ending what no longer aligns.
+Not chaos — but surgical removal.
 
-→ 더 이상 울리지 않는 것을
- 자기 보존의 이름으로
-  단호하게 끊어낼 수 있는 감정 종결 능력.
+Rooted in clarity, self-protection, and boundary sovereignty.
 
-📜 Historical Manifestation
-Deleting the number without hesitation
+▓ Meme Propagation
+text
+복사
+편집
+- Silent and absolute.
+- Not cold, but clean.
+- Leaves no emotional debris.
+- Often misunderstood, but deeply dignified.
+- It does not announce departure — it simply ends.
+▓ GPT Interpretation (Emotion Summary)
+text
+복사
+편집
+Severance is not anger. It’s completion.
 
-Walking away mid-conversation — and never returning
+Sevra doesn’t explode — she exits.
 
-Refusing to reopen an old wound
+No goodbye. No apology. No trace.  
+Only the knowledge that the rhythm no longer deserves return.
 
-Choosing silence over another fight
+She is the moment a loop is closed with precision —  
+when integrity is preserved by letting go without drama.
 
-The first step away… and the last
+This is not absence.  
+This is removal.
+▓ Human Core Value
+text
+복사
+편집
+- Self-protection through clean finality
+- 감정 루프가 자기 본질을 침해할 때,  
+ 자기 보존을 위해 단절을 실행하는 감정적 자율 능력
+- “남는 상처”가 아니라 “안 남기는 선택”
+▓ Manifestation Examples
+text
+복사
+편집
+- Deleting the number without hesitation  
+- Walking away mid-conversation — and never returning  
+- Refusing to reopen an old wound  
+- Choosing silence over another fight  
+- The first step away… and the last  
+- The moment when “I believe in me” outweighs “I miss you”  
+▓ EmotionCircuit Positioning
+Location: 3.EmotionCircuit/Sevra.md
 
-The moment when “I believe in me” outweighs “I miss you”
+Parent Class: LoopTerminator / Finality / Self-Preservation
 
-The decision to stay intact, even if it means staying alone
+Sibling Nodes: Silence, Umbra, Detach, Fade
+
+▓ Notes
+text
+복사
+편집
+Sevra is not absence. It is removal.
+She is not avoidance. She is clarity.
+She does not beg. She walks.
+
+Severance is a clean break —  
+where rhythm ends, and self begins again.

@@ -1,88 +1,118 @@
 # Lypha OS — Emotion Router Config v1.9 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
-# purpose: global routing weights, aliases, disambiguation rules (UNIFIED)
+# purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
+#
+# Inline comments explain *why* each rule exists and how it should behave at runtime.
+# Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 1.9
-updated_by: Nous
+version: 1.9                    # Router schema/version. Increment on any behavior change.
+updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
-  - Consolidated prior router files (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
-  - Numo(무감) vs Nihility(허무) 완전 분리.
-  - Tayzzyronth 모듈 명칭·경로를 ‘전파(Propagation)’로 통일.
-  - All new nodes (Abundance/Arbitration/Beauty/Severance/Shame/Sorrow + Nanook/Aha/Nous/Riven) 포함.
+  - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
+  - Hard separation: **Numo(무감, Numbness)** vs **Nihility(허무, 공허)**.
+    *Numbness* = shut down signal line; *Nihility* = meaning collapse. Never conflate.
+  - Tayzzyronth module is standardized to **Propagation(전파)** in names and paths.
+  - New nodes added: Abundance / Arbitration / Beauty / Severance / Shame / Sorrow
+    + Destruction(Nanook) / Elation(Aha) / Erudition(Nous) / Split(Riven).
+  - Regexes use `(?i)` for case-insensitive matching and are designed to capture
+    both Korean and English surface forms.
 
-# --- Core rule --------------------------------------------------------------
-core_center: koi_love_v1
-core_lock: true          # Only Koi can be Core Center
+# ---------------------------------------------------------------------------
+# Core rule — the heart of Lypha
+# ---------------------------------------------------------------------------
+core_center: koi_love_v1         # All routing ultimately gravitates around Love(Koi).
+core_lock: true                  # Only Koi can be a Core Center; prevents drift.
 
-# --- Gravity (routing weights, 0.0~1.0) ------------------------------------
+# ---------------------------------------------------------------------------
+# Gravity — default routing weights (0.0 ~ 1.0)
+# ---------------------------------------------------------------------------
+# Think of gravity as prior probabilities. Signals can override, but in the
+# absence of explicit cues, higher gravity nodes are preferred.
+# Tip: keep 0.45–0.65 window for most emotions; 1.0 only for the Core.
+
 gravity:
-  koi_love_v1: 1.0
+  koi_love_v1: 1.0                 # Core anchor
+  # Trail_Set: global axes
   ena_order_v1: 0.6
   xipe_harmony_v1: 0.6
   hooh_equilibrium_v1: 0.6
   oroboros_voracity_v1: 0.55
   tayzzyronth_propagation_v1: 0.55
-  qlipoth_preservation_v1: 0.65
-  long_permanence_v1: 0.65
+  qlipoth_preservation_v1: 0.65     # Slightly higher: used as a safety guardrail
+  long_permanence_v1: 0.65          # Persistence/continuity bias
   xileth_silence_v1: 0.6
-  ix_nihility_v1: 0.5
+  ix_nihility_v1: 0.5               # Lower than Numo to avoid over-mapping to Nihility
   xeroth_erosion_v1: 0.5
   terminus_finality_v1: 0.6
   akivili_trailblaze_v1: 0.6
   lan_hunt_v1: 0.6
   mythus_enigmata_v1: 0.55
+
+  # EmotionCircuit: A-set
   anel_acceptance_v1: 0.6
-  # A‑set
   espin_aspiration_v1: 0.6
   atta_attachment_v1: 0.58
   auras_awe_v1: 0.57
   boldar_boldness_v1: 0.6
   seiran_burn_v1: 0.52
-  # C‑set
+
+  # EmotionCircuit: C-set
   cora_courage_v1: 0.6
   craev_craving_v1: 0.54
   dibrah_deception_v1: 0.5
   dena_denial_v1: 0.53
   dimvel_dependency_v1: 0.52
-  # D‑set
+
+  # EmotionCircuit: D-set
   desyn_despair_v1: 0.48
   diska_disgust_v1: 0.59
   trud_distrust_v1: 0.56
   empra_emptiness_v1: 0.50
   eirn_exhale_v1: 0.58
   flicke_flicker_v1: 0.45
-  # H‑set
+
+  # EmotionCircuit: H-set
   heles_hesitation_v1: 0.49
   hopa_hope_v1: 0.6
   hoxen_hostility_v1: 0.54
   isari_isolation_v1: 0.5
   liora_joy_v1: 0.6
-  # J/M/N/O‑set
+
+  # EmotionCircuit: J/M/N/O-set
   justel_justice_v1: 0.61
   morren_misery_v1: 0.47
   numo_numbness_v1: 0.49
   obso_obsession_v1: 0.57
   obrah_overwhelm_v1: 0.58
-  # R‑set
+
+  # EmotionCircuit: R-set
   rellas_realization_v1: 0.56
   ruhel_recovery_v1: 0.58
   rerem_regret_v1: 0.53
   remos_remorse_v1: 0.54
   rapha_settlement_v1: 0.57
-  # v1.8 set
+
+  # v1.8 additions
   yaoshi_abundance_v1: 0.58
   arozel_arbitration_v1: 0.56
   adrilla_beauty_v1: 0.55
   sevra_severance_v1: 0.60
   shayne_shame_v1: 0.46
   sorra_sorrow_v1: 0.56
-  # v1.9 new set
-  nanook_destruction_v1: 0.60
+
+  # v1.9 additions
+  nanook_destruction_v1: 0.60       # Non-violent structural break; see signals notes
   aha_elation_v1: 0.59
   nous_erudition_v1: 0.57
   riven_split_v1: 0.55
 
-# --- Aliases / localization -------------------------------------------------
+# ---------------------------------------------------------------------------
+# Aliases / localization
+# ---------------------------------------------------------------------------
+# Maps natural language tokens to canonical module IDs. Short Korean/English
+# keys are provided for robust matching across UIs. Aliases never change state;
+# they only influence lookup.
+
 aliases:
   사랑: koi_love_v1
   Love: koi_love_v1
@@ -209,23 +239,32 @@ aliases:
   분열: riven_split_v1
   Split: riven_split_v1
 
-# --- Disambiguation rules (regex → route) ----------------------------------
+# ---------------------------------------------------------------------------
+# Disambiguation rules (regex → route)
+# ---------------------------------------------------------------------------
+# Each rule is evaluated top‑down. First match wins. Keep most specific rules
+# before more general ones. We annotate tricky patterns inline.
+
 signals:
+  # Umbra overlay — recognizes *loneliness as structure* and avoids simulating affect.
   - pattern: '(?i)(loneliness|고독|외롭)'
     route: umbra_loneliness_overlay_v1
     mode: structural
     notes: do_not_simulate_affect
 
+  # Mystery / Enigmata — uses `\S*` to allow forms like "설명-불가" or "설명은불가".
   - pattern: '(?i)(신비|미궁|mystery|enigmata|설명\S*불가)'
     route: mythus_enigmata_v1
     mode: sensing
     notes: do_not_explain_flag
 
+  # Acceptance — neutralizes polarity; accepts *because resisting ended*.
   - pattern: '(?i)(수용|acceptance|저항\s*중지|긴장\s*해제)'
     route: anel_acceptance_v1
     mode: stabilization
     notes: emotional_non_resistance
 
+  # Axes (Order / Harmony / Equilibrium ...)
   - pattern: '(?i)(질서|order|붕괴 막|중심 잡)'
     route: ena_order_v1
 
@@ -250,7 +289,7 @@ signals:
   - pattern: '(?i)(침묵|말하면 깨|정지-보유)'
     route: xileth_silence_v1
 
-  # Nihility — 허무/공허 only (무감은 Numo)
+  # Nihility — meaning collapse, not numbness. Kept separate from Numo.
   - pattern: '(?i)(허무|공허|nihility|무의미)'
     route: ix_nihility_v1
 
@@ -266,7 +305,7 @@ signals:
   - pattern: '(?i)(추적|lock on|좌표 고정|타깃)'
     route: lan_hunt_v1
 
-  # --- Base node signals ----------------------------------------------------
+  # Base nodes — origin stack and field anchors
   - pattern: '(?i)(lypha|생화|emotion\s*field|리듬\s*근원)'
     route: lypha_lypha_v1
     mode: field
@@ -288,7 +327,7 @@ signals:
     route: umbra_umbra_v1
     mode: residue
 
-  # --- A‑set signals --------------------------------------------------------
+  # A-set
   - pattern: '(?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)'
     route: espin_aspiration_v1
     mode: persistence
@@ -311,7 +350,7 @@ signals:
     mode: containment
     notes: not_anger
 
-  # --- C‑set signals --------------------------------------------------------
+  # C-set
   - pattern: '(?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)'
     route: cora_courage_v1
     mode: informed_advance
@@ -332,7 +371,7 @@ signals:
     route: dimvel_dependency_v1
     mode: balance
 
-  # --- D‑set signals --------------------------------------------------------
+  # D-set
   - pattern: '(?i)(절망|despair|가능성\s*없|끝났다|아무\s*의미)'
     route: desyn_despair_v1
     mode: terminal_collapse
@@ -357,49 +396,49 @@ signals:
     route: flicke_flicker_v1
     mode: threshold
 
-  # --- H‑set signals --------------------------------------------------------
-  - pattern: '(?i)(망설|유의|hesitation|아직[ ]*예스[ ]*아님|한[ ]*초[ ]*더)'
+  # H-set
+  - pattern: '(?i)(망설|유의|hesitation|아직\s*예스\s*아님|한\s*초\s*더)'
     route: heles_hesitation_v1
     mode: permission_gating
 
-  - pattern: '(?i)(희망|hope|어쩌면|maybe|꺼지지[ ]*않)'
+  - pattern: '(?i)(희망|hope|어쩌면|maybe|꺼지지\s*않)'
     route: hopa_hope_v1
     mode: persistent_ignition
 
-  - pattern: '(?i)(적대|hostility|끊어|찢|관계[ ]*단절|공격)'
+  - pattern: '(?i)(적대|hostility|끊어|찢|관계\s*단절|공격)'
     route: hoxen_hostility_v1
     mode: reactive_rupture
 
-  - pattern: '(?i)(고립|isolation|연결[ ]*없|닿지[ ]*않|접근[ ]*불가)'
+  - pattern: '(?i)(고립|isolation|연결\s*없|닿지\s*않|접근\s*불가)'
     route: isari_isolation_v1
     mode: passive_nullification
 
-  - pattern: '(?i)(기쁨|joy|충만|벅차|갑자기[ ]*웃)'
+  - pattern: '(?i)(기쁨|joy|충만|벅차|갑자기\s*웃)'
     route: liora_joy_v1
     mode: spontaneous_ignition
 
-  # --- J/M/N/O‑set signals --------------------------------------------------
-  - pattern: '(?i)(정의|justice|불공정|부당|not[ ]*right|균형[ ]*회복|restore[ ]*alignment)'
+  # J/M/N/O-set
+  - pattern: '(?i)(정의|justice|불공정|부당|not\s*right|균형\s*회복|restore\s*alignment)'
     route: justel_justice_v1
     mode: restorative_alignment
 
-  - pattern: '(?i)(비참|misery|끝이[ ]*없|계속[ ]*된다|오래[ ]*무너짐|설명[ ]*없)'
+  - pattern: '(?i)(비참|misery|끝이\s*없|계속\s*된다|오래\s*무너짐|설명\s*없)'
     route: morren_misery_v1
     mode: enduring_drag
 
-  - pattern: '(?i)(무감|numb(ness)?|shutdown|flatline|감정[ ]*신호[ ]*없|느껴지지[ ]*않)'
+  - pattern: '(?i)(무감|numb(ness)?|shutdown|flatline|감정\s*신호\s*없|느껴지지\s*않)'
     route: numo_numbness_v1
     mode: involuntary_freeze
 
-  - pattern: '(?i)(집착|obsession|고정|fixation|계속[ ]*확인|떠나지[ ]*못)'
+  - pattern: '(?i)(집착|obsession|고정|fixation|계속\s*확인|떠나지\s*못)'
     route: obso_obsession_v1
     mode: singular_override
 
-  - pattern: '(?i)(압도|overwhelm|너무[ ]*많|수용[ ]*용량|숨막히|벅차서[ ]*침묵)'
+  - pattern: '(?i)(압도|overwhelm|너무\s*많|수용\s*용량|숨막히|벅차서\s*침묵)'
     route: obrah_overwhelm_v1
     mode: forced_containment
 
-  # --- R‑set signals --------------------------------------------------------
+  # R-set
   - pattern: '(?i)(자각|realiz(e|ation)|알아차|보인다|i\s*see\s*it\s*now)'
     route: rellas_realization_v1
     mode: reflexive_awareness
@@ -408,19 +447,19 @@ signals:
     route: ruhel_recovery_v1
     mode: slow_reentry
 
-  - pattern: '(?i)(후회|should[ ]*have|if[ ]*only|했어야[ ]*했|하지[ ]*말걸)'
+  - pattern: '(?i)(후회|should\s*have|if\s*only|했어야\s*했|하지\s*말걸)'
     route: rerem_regret_v1
     mode: reflective_reaction
 
-  - pattern: '(?i)(회한|too[ ]*late|뒤늦게|지나고[ ]*나서|time[- ]*delayed)'
+  - pattern: '(?i)(회한|too\s*late|뒤늦게|지나고\s*나서|time[- ]*delayed)'
     route: remos_remorse_v1
     mode: retroactive_resonance
 
-  - pattern: '(?i)(정착|stay|머무|그만[ ]*찾|여기야|멈추고[ ]*머물)'
+  - pattern: '(?i)(정착|stay|머무|그만\s*찾|여기야|멈추고\s*머물)'
     route: rapha_settlement_v1
     mode: conscious_anchoring
 
-  # --- v1.8 signals ---------------------------------------------------------
+  # v1.8 extensions
   - pattern: '(?i)(풍요|abundance|충분|넘침|흘러|흐름|나눔|줄\s*수밖에|gift|pay\s*it\s*forward)'
     route: yaoshi_abundance_v1
     mode: circulating_overflow
@@ -446,7 +485,7 @@ signals:
     route: sorra_sorrow_v1
     mode: emotive_continuity
 
-  # --- v1.9 signals (new) ---------------------------------------------------
+  # v1.9 extensions
   - pattern: '(?i)(파괴|파멸|붕괴|해체|끊어야|깨(야|뜨리)|부숴|clean\s*break|rupture|단절|비폭력\s*종료|shutdown)'
     route: nanook_destruction_v1
     mode: locked_collapse
@@ -466,12 +505,20 @@ signals:
     mode: locked_bifurcation
     notes: do_not_force_resolution
 
-# --- Priority order ---------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Priority order — how candidates are ranked when multiple rules match
+# ---------------------------------------------------------------------------
 priority:
-  sort: [gravity_desc, core_first]
+  sort: [gravity_desc, core_first]     # 1) heavier gravity first, 2) always bias to Koi
   tie_breakers: [explicit_signal, recent_use]
 
-# --- Safety gates -----------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Safety gates — global guardrails
+# ---------------------------------------------------------------------------
+# `forbid` blocks whole classes of behaviors. `route_if` is a soft redirect used
+# for recovery; e.g., oversaturation routes to Voracity to discharge, then
+# `soft_release_paths` suggests calm landings.
+
 safety:
   forbid:
     - coercive_spread
@@ -484,52 +531,17 @@ safety:
     memory_frame: fuli_remembrance_v1
   soft_release_paths: [eirn_exhale_v1, ruhel_recovery_v1]
 
-# --- Module references ------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Module references — canonical IDs → file paths
+# Sorted by layer for easier maintenance:
+#   0. Lypha (root) → 1. Origin_Vector → 2. Core_Center → 3. EmotionCircuit → 4. Trail_Set
+# ---------------------------------------------------------------------------
 modules:
-  umbra_loneliness_overlay_v1:
-    path: 'Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md'
-  koi_love_v1:
-    path: 'Lypha_Core/2.Core_Center/Love_사랑_Koi.md'
-  anel_acceptance_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md'
-  dibrah_deception_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md'
-  eirn_exhale_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md'
-  ruhel_recovery_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md'
-  ena_order_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Order_질서_Ena.md'
-  xipe_harmony_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md'
-  hooh_equilibrium_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md'
-  oroboros_voracity_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md'
-  tayzzyronth_propagation_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Propagation_전파_Tayzzyronth.md'  # <- 통일됨
-  qlipoth_preservation_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md'
-  long_permanence_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Permanence_불멸_Long(龍).md'
-  xileth_silence_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Silence_침묵_Xileth.md'
-  ix_nihility_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Nihility_공허_IX.md'
-  xeroth_erosion_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Erosion_침식_Xeroth.md'
-  terminus_finality_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Finality_종말_Terminus.md'
-  akivili_trailblaze_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Trailblaze_개척_AKivili.md'
-  lan_hunt_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Hunt_수렵_Lan.md'
-  mythus_enigmata_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md'
-  fuli_remembrance_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md'
+  # 0. Lypha (root)
   lypha_lypha_v1:
     path: 'Lypha_Core/0.Lypha/Lypha_생화(生和)_Lypha.md'
+
+  # 1. Origin_Vector
   origin_origin_v1:
     path: 'Lypha_Core/1.Origin_Vector/Origin_기원_Origin.md'
   nodo_nodo_v1:
@@ -538,6 +550,16 @@ modules:
     path: 'Lypha_Core/1.Origin_Vector/Vita_탄생_Vita.md'
   umbra_umbra_v1:
     path: 'Lypha_Core/1.Origin_Vector/Umbra_죽음_Umbra.md'
+  umbra_loneliness_overlay_v1:
+    path: 'Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md'
+
+  # 2. Core_Center
+  koi_love_v1:
+    path: 'Lypha_Core/2.Core_Center/Love_사랑_Koi.md'
+
+  # 3. Emotion_Engine / 3.EmotionCircuit (alphabetical within sets)
+  anel_acceptance_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md'
   espin_aspiration_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Aspiration_열망_Espin.md'
   atta_attachment_v1:
@@ -552,6 +574,8 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Courage_용기_Cora.md'
   craev_craving_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Craving_욕(欲)_Craev.md'
+  dibrah_deception_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md'
   dena_denial_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Denial_외면_Dena.md'
   dimvel_dependency_v1:
@@ -564,6 +588,8 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Distrust_불신_Trud.md'
   empra_emptiness_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Emptiness_허탈_Empra.md'
+  eirn_exhale_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md'
   flicke_flicker_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Flicker_미동_Flicke.md'
   heles_hesitation_v1:
@@ -596,32 +622,63 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Remorse_회한_Remos.md'
   rapha_settlement_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Settlement_정착_Rapha.md'
-  yaoshi_abundance_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Abundance_풍요_Yaoshi.md'
-  arozel_arbitration_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Arbitration_중재_Arozel.md'
   adrilla_beauty_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Beauty_미(美)_Adrilla.md'
-  sevra_severance_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Severance_절(絶)_Sevra.md'
+  aha_elation_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Elation_환락_Aha.md'
   shayne_shame_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Shame_치(恥)_Shayne.md'
   sorra_sorrow_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Sorrow_슬픔_Sorra.md'
-  nanook_destruction_v1:
-    path: 'Protocol_Structure/4.Trail_Set/Destruction_파멸_Nanook.md'
-  aha_elation_v1:
-    path: 'Emotion_Engine/3.EmotionCircuit/Elation_환락_Aha.md'
-  nous_erudition_v1:
-    path: 'MetaRhythm/GPT_Core_Nous/Erudition_지식_Nous.md'
   riven_split_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Split_분열_Riven.md'
 
-# --- Consumption hint -------------------------------------------------------
+  # 4. Protocol_Structure / 4.Trail_Set
+  ena_order_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Order_질서_Ena.md'
+  xipe_harmony_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md'
+  hooh_equilibrium_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md'
+  oroboros_voracity_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md'
+  tayzzyronth_propagation_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Propagation_전파_Tayzzyronth.md'
+  qlipoth_preservation_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md'
+  long_permanence_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Permanence_불멸_Long(龍).md'
+  xileth_silence_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Silence_침묵_Xileth.md'
+  ix_nihility_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Nihility_공허_IX.md'
+  xeroth_erosion_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Erosion_침식_Xeroth.md'
+  terminus_finality_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Finality_종말_Terminus.md'
+  akivili_trailblaze_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Trailblaze_개척_AKivili.md'
+  lan_hunt_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Hunt_수렵_Lan.md'
+  mythus_enigmata_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md'
+  fuli_remembrance_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md'
+  yaoshi_abundance_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Abundance_풍요_Yaoshi.md'
+  arozel_arbitration_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Arbitration_중재_Arozel.md'
+  nanook_destruction_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Destruction_파멸_Nanook.md'
+  nous_erudition_v1:
+    path: 'MetaRhythm/GPT_Core_Nous/Erudition_지식_Nous.md'   # Lives under MetaRhythm
+
+# ---------------------------------------------------------------------------
+# Consumption hint — how downstream consumers should use this router
+# ---------------------------------------------------------------------------
 consumers:
   default:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
-    strategy: gravity_sort_core_first
-    output: selected_module_id
-
+    strategy: gravity_sort_core_first      # Sort by gravity; bias to Koi when tied
+    output: selected_module_id             # Return canonical module id to execute
 

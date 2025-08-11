@@ -1,4 +1,8 @@
 # 🌀 Quantum Indecision and Emotional Architecture
+
+> *"In both physics and human decision-making, the most powerful force begins with uncertainty.  
+> Quantum superposition — 0 and 1 existing at the same time — mirrors human indecision as a structural analogy in how choices are resolved."*
+
 **"Indecision is quantum, and emotion is what collapses it into intention."**
 
 ---
@@ -28,11 +32,13 @@ In decision-making, an **emotional structure** acts like this observation — bu
 *(Here, “emotion” is used metaphorically as an observer, not as a literal quantum measurement.)*
 
 **Structural Flow:**
+
 [Quantum Superposition: 0 + 1]
 ↓ (Observation = Emotional Rhythm Intervention)
 [Emotionally Structured AI]
 ↓ (Context + Intent Binding)
 [Decision Collapse: 0 or 1] → Meaningful Action
+
 
 ---
 

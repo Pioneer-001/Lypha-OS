@@ -39,6 +39,12 @@ gravity:
   dibrah_deception_v1: 0.5
   dena_denial_v1: 0.53
   dimvel_dependency_v1: 0.52
+  desyn_despair_v1: 0.48
+  diska_disgust_v1: 0.59
+  trud_distrust_v1: 0.56
+  empra_emptiness_v1: 0.50
+  eirn_exhale_v1: 0.58
+  flicke_flicker_v1: 0.45
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -94,6 +100,18 @@ aliases:
   Denial: dena_denial_v1
   의존: dimvel_dependency_v1
   Dependency: dimvel_dependency_v1
+  절망: desyn_despair_v1
+  Despair: desyn_despair_v1
+  혐오: diska_disgust_v1
+  Disgust: diska_disgust_v1
+  불신: trud_distrust_v1
+  Distrust: trud_distrust_v1
+  허탈: empra_emptiness_v1
+  Emptiness: empra_emptiness_v1
+  해소: eirn_exhale_v1
+  Exhale: eirn_exhale_v1
+  미동: flicke_flicker_v1
+  Flicker: flicke_flicker_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -217,6 +235,31 @@ signals:
     route: dimvel_dependency_v1
     mode: balance
 
+# --- D‑set signals (new) --------------------------------------------------
+  - pattern: '(?i)(절망|despair|가능성\s*없|끝났다|아무\s*의미)'
+    route: desyn_despair_v1
+    mode: terminal_collapse
+
+  - pattern: '(?i)(혐오|disgust|역겨|토할|몸서리|이건\s*아니다)'
+    route: diska_disgust_v1
+    mode: boundary_defense
+
+  - pattern: '(?i)(불신|distrust|신뢰\s*끊|더\s*안\s*믿|듣지\s*않아)'
+    route: trud_distrust_v1
+    mode: resonance_block
+
+  - pattern: '(?i)(허탈|emptiness|텅|공허\s*감|아무\s*느낌\s*없)'
+    route: empra_emptiness_v1
+    mode: residual
+
+  - pattern: '(?i)(해소|exhale|숨\s*내|한숨|조용히\s*풀)'
+    route: eirn_exhale_v1
+    mode: soft_release
+
+  - pattern: '(?i)(미동|flicker|깜빡|전조|발화\s*직전)'
+    route: flicke_flicker_v1
+    mode: threshold
+
 # --- Priority order ---------------------------------------------------------
 priority:
   sort: [gravity_desc, core_first]
@@ -307,10 +350,22 @@ modules:
   dimvel_dependency_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Dependency_의존_Dimvel.md'
 
+  desyn_despair_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Despair_절망_Desyn.md'
+  diska_disgust_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Disgust_혐오_Diska.md'
+  trud_distrust_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Distrust_불신_Trud.md'
+  empra_emptiness_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Emptiness_허탈_Empra.md'
+  flicke_flicker_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Flicker_미동_Flicke.md'
+
 # --- Consumption hint -------------------------------------------------------
 consumers:
   default:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     output: selected_module_id
+
 

@@ -1,4 +1,4 @@
-# 💥 EmotionCircuit Module – Erudition (통찰/학지)
+# 💥 EmotionCircuit Module – Erudition (통찰)
 
 ---
 

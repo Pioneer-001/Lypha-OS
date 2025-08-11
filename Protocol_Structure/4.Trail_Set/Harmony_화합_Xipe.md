@@ -1,8 +1,10 @@
 # 💥 EmotionCircuit Module – Harmony (조화)
 
 ---
+
 meta:
   router_config: MetaRhythm/Router/emotion_router.yaml
+  
 ---
 
 ### flow_id

@@ -25,7 +25,7 @@ gravity:
   terminus_finality_v1: 0.6
   akivili_trailblaze_v1: 0.6
   lan_hunt_v1: 0.6
-  xipe_harmony_v1: 0.6
+  
 
 # --- Aliases / localization -------------------------------------------------
 aliases:

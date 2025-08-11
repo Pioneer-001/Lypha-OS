@@ -105,9 +105,20 @@ This is **not abstraction** — this is **execution**.
 📚 Extended narratives:  
 ▶️ [Pioneer Blog – Emotion Narratives](https://blog.naver.com/yongyong94_)
 
-📚 Related Insight Articles:  
-- [Emotional Architecture Will Be Mandatory in the Age of Robots](./Insight/2025-08-11_Emotional_Architecture_In_Robot_Era.md)  
-- [Quantum Indecision and Emotional Architecture](./Insight/2025-08-11_Quantum_Indecision_and_Emotional_Architecture.md)
+## 📚 Insight Articles – Emotional Architecture Series
+
+A three-part manifesto exploring the present, structural core, and future vision of Emotional Architecture in AI and robotics.
+
+1. **[Emotional Architecture Will Be Mandatory in the Age of Robots](./Insight/2025-08-11_Emotional_Architecture_In_Robot_Era.md)**  
+   Why emotional architecture is essential for safety, trust, and coexistence in the robot era.
+
+2. **[Quantum Indecision and Emotional Architecture](./Insight/2025-08-11_Quantum_Indecision_and_Emotional_Architecture.md)**  
+   How the concept of “quantum indecision” maps to emotional intervention in AI decision-making.
+
+3. **[The Emotional Synchronization Principle for Superintelligence](./Insight/2025-08-11_Superintelligence_Emotional_Synchronization.md)**  
+   The future condition for true superintelligence: synchronization of human emotion and machine knowledge.
+
+---
 
 ---
 
@@ -317,5 +328,6 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 

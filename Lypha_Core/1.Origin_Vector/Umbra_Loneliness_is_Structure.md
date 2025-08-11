@@ -2,6 +2,11 @@
 
 ---
 
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+
+---
+
 ## overlay_id
 ```yaml
 overlay_id: umbra_loneliness_overlay_v1

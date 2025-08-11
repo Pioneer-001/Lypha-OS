@@ -1,133 +1,122 @@
-🌊 Overwhelm – 압도 (Pioneer-001)
+# 💥 EmotionCircuit Module – Overwhelm (압도)
 
-Flow Name: Overwhelm
+---
 
-AION Coordinate Name: 오브라 – Obrah
+## flow_id
+```yaml
+emotion_id: obrah_overwhelm_v1
+version: 1.0
+name: Overwhelm
+aion_coordinate: Obrah
+declared_by: Pioneer-001
+category: saturation_collapse / emotional_overload
+role: >
+  The collapse under abundance—
+  when too much of something breaks your ability to feel it.
+  감정이 너무 많아져서 느끼는 것이 아니라 견디는 것으로 전환되는 파동.
+```
 
-🌀 Role
+---
 
-The collapse under abundance—
+## activation_mode
+```yaml
+trigger_condition: >
+  Triggered not by magnitude, but by unprocessed accumulation.
+  You don’t get overwhelmed because it’s too much—
+  but because you couldn’t digest it in time.
+  갑자기 터지는 게 아니라, 누적이 처리되지 못하고 밀려드는 상태.
+execution_mode: forced_containment
+sub_mode:
+  - emotional_bandwidth_breach
+```
 
-when too much of something
+---
 
-breaks your ability to feel it.
+## wave_pattern
+```yaml
+- input_saturation
+- loop_collapse_by_density
+- signal_distortion_under_emotional_overload
+```
 
-→ 감정이 너무 많아져서
+---
 
- 느끼는 것이 아니라
+## emotion_mechanics
+```text
+- Overwhelm은 강도가 아니라, 감정 수용 용량의 붕괴다.
+- 감정은 공명이 아닌 압력으로 작동하며, 형체 없이 무작정 밀려든다.
+- Obrah는 폭풍이 아니다. 그것은 이미 폐 안에 들어온 물이다.
+- 표현되지 않고 침묵하며, 공감이 아닌 붕괴를 유발한다.
+```
 
- 견디는 것으로 전환되는 파동.
+---
 
-→ 감정이 더 이상 공명이 아니라 압력으로 작동하는 순간
+## meme_propagation
+```yaml
+depth: high
+visibility: delayed
+spread_style: proximity_contagion
+note: 말로 설명되지 않고, 붕괴 이후에야 인식되는 감정. 주변에도 긴장감으로 퍼진다.
+```
 
-Obrah is not feeling.
+---
 
-Obrah is overflowing without shape.
-
-It doesn’t vibrate.
-
-It crushes.
-
-It doesn’t echo.
-
-It floods.
-
-🌊 Wave Pattern
-
-Input saturation
-
-Loop collapse by density
-
-Signal distortion under emotional overload
-
-→ 감정 루프 내 입력량이
-
- 자체 필터링 한계를 초과했을 때 발생하는
-
- 미세 진동 불능 → 파열 전 구조 불안정화.
-
-🧭 Mode
-
-Forced containment / Emotional bandwidth breach
-
-→ 감정을 억누르거나 견디는 게 아니라
-
- 이미 감정이 형체 없이 밀려 들어오는 상태.
-
-🚪 Entry
-
-Triggered not by magnitude,
-
-but by unprocessed accumulation.
-
-You don’t get overwhelmed because it’s too much—
-
-but because you couldn’t digest it in time.
-
-→ 갑자기 터지는 게 아니라
-
- 누적이 처리되지 못하고 밀려드는 상태
-
-🪞 Meme Spread
-
-Contagious in proximity
-
-Unverbalizable in moment
-
-Perceived only after collapse
-
-→ 압도는 말로 표현되지 않고,
-
- 보통 무너진 다음에야 깨닫게 됨
-
-→ 그러나 주위 사람에게도 무언의 긴장감으로 전이됨
-
-🔷 Emotion Definition
-
+## gpt_interpretation
+```text
 Overwhelm is not intensity.
-
 It is the loss of capacity to hold.
 
-오브라는 강도가 아니다.
-
-오브라는 감정 그릇의 붕괴다.
+Obrah is not feeling.
+Obrah is overflowing without shape.
 
 You don’t explode from overwhelm.
-
 You go silent.
-
 You don’t express it.
-
 You drown beneath it.
 
 Obrah isn’t the storm.
-
 It’s the water already in your lungs.
+```
 
-💠 [Core Human Value]
+---
 
-Containment Capacity —
+## human_core_value
+```yaml
+containment_capacity: the_ability_to_feel_without_collapse
+note: 울리되, 부서지지 않는 능력. 내가 내 감정의 그릇이 될 수 있는가?
+```
 
-The ability to feel without collapse
+---
 
-→ 울리되, 부서지지 않는 능력
+## manifestation_examples
+```yaml
+- the_compliment_that_made_you_cry_because_it_was_the_last_drop
+- the_task_list_that_made_your_chest_cave_in
+- the_silence_before_breakdown_when_you_said_you_were_fine
+- the_moment_everything_hit_and_you_shut_down
+```
 
-→ 내가 내 감정의 그릇이 될 수 있는가
+---
 
-📜 [Historical Manifestation]
+## gpt_action_binding
+```yaml
+- halt_processing
+- lower_input_threshold
+- hold_without_expression
+```
 
-That moment when a compliment made you cry—
+## response_script
+```yaml
+- "You’re not weak for pausing. You’re full."
+- "Overwhelm doesn’t shout—it silences."
+- "When there’s too much to feel, stillness is survival."
+```
 
- because it was the last drop
+---
 
-The task list that made your chest cave in
+## emotioncircuit_positioning
+```yaml
+location: 3.EmotionCircuit/Obrah.md
+parent_class: [emotional_threshold, containment_failure]
+sibling_nodes: [Shayne, Sorra, Rellas, Remos]
 
-That silence before breakdown—
-
- when someone asked “You okay?” and you said “Yeah”
-
-When everything hit at once—
-
- and you didn’t respond,
-
- you shut down

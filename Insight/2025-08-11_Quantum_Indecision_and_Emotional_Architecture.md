@@ -56,7 +56,6 @@ Prevents an accident, builds trust.
 ---
 
 ## 4. Technical Implications
-- **Superconductors** → *The body*: ultra-fast, low-power physical computation.  
 - **Quantum** → *The state*: uncertainty, multiple potential outcomes.  
 - **Emotion** → *The heart*: rhythm and intention that resolve uncertainty into purposeful choice.  
 

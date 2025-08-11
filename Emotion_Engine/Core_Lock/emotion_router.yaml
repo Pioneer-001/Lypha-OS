@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.2
+# Lypha OS — Emotion Router Config v1.3
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.2
+version: 1.3
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -27,6 +27,12 @@ gravity:
   lan_hunt_v1: 0.6
   mythus_enigmata_v1: 0.55
   anel_acceptance_v1: 0.6
+  # --- Newly added ---
+  espin_aspiration_v1: 0.6
+  atta_attachment_v1: 0.58
+  auras_awe_v1: 0.57
+  boldar_boldness_v1: 0.6
+  seiran_burn_v1: 0.52
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -60,6 +66,17 @@ aliases:
   Vita: vita_vita_v1
   죽음: umbra_umbra_v1
   Umbra: umbra_umbra_v1
+  # --- Newly added ---
+  열망: espin_aspiration_v1
+  Aspiration: espin_aspiration_v1
+  애착: atta_attachment_v1
+  Attachment: atta_attachment_v1
+  경외: auras_awe_v1
+  Awe: auras_awe_v1
+  담대: boldar_boldness_v1
+  Boldness: boldar_boldness_v1
+  연소: seiran_burn_v1
+  Burn: seiran_burn_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -139,6 +156,29 @@ signals:
     route: umbra_umbra_v1
     mode: residue
 
+  # --- Newly added signals --------------------------------------------------
+  - pattern: '(?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)'
+    route: espin_aspiration_v1
+    mode: persistence
+    notes: reason_over_desire
+
+  - pattern: '(?i)(애착|attachment|익숙|안전\s*감|정서\s*앵커|머문다)'
+    route: atta_attachment_v1
+    mode: bonding
+
+  - pattern: '(?i)(경외|awe|장엄|압도|스케일|성스러움)'
+    route: auras_awe_v1
+    mode: witnessing
+
+  - pattern: '(?i)(담대|boldness|두려움\s*속|그럼에도|앞으로\s*나아가)'
+    route: boldar_boldness_v1
+    mode: action
+
+  - pattern: '(?i)(연소|burn|미수신|받아들여지지|내부\s*발열|안으로\s*탄다)'
+    route: seiran_burn_v1
+    mode: containment
+    notes: not_anger
+
 # --- Priority order ---------------------------------------------------------
 priority:
   sort: [gravity_desc, core_first]
@@ -158,60 +198,69 @@ safety:
 
 # --- Module references ------------------------------------------------------
 modules:
-  lypha_lypha_v1:
-    path: Lypha_Core/0.Lypha/Lypha_생화(生和)_Lypha.md
-  origin_origin_v1:
-    path: Lypha_Core/1.Origin_Vector/Origin_기원_Origin.md
-  nodo_nodo_v1:
-    path: Lypha_Core/1.Origin_Vector/Nodo_존재_Nodo.md    
-  vita_vita_v1:
-    path: Lypha_Core/1.Origin_Vector/Vita_탄생_Vita.md
-  umbra_umbra_v1:
-    path: Lypha_Core/1.Origin_Vector/Umbra_죽음_Umbra.md   
   umbra_loneliness_overlay_v1:
-    path: Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md
+    path: 'Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md'
   koi_love_v1:
-    path: Lypha_Core/2.Core_Center/Love_사랑_Koi.md
+    path: 'Lypha_Core/2.Core_Center/Love_사랑_Koi.md'
   anel_acceptance_v1:
-    path: Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md
+    path: 'Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md'
   dibrah_deception_v1:
-    path: Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md
+    path: 'Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md'
   eirn_exhale_v1:
-    path: Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md
+    path: 'Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md'
   ruhel_recovery_v1:
-    path: Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md
+    path: 'Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md'
   ena_order_v1:
-    path: Protocol_Structure/4.Trail_Set/Order_질서_Ena.md
+    path: 'Protocol_Structure/4.Trail_Set/Order_질서_Ena.md'
   xipe_harmony_v1:
-    path: Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md
+    path: 'Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md'
   hooh_equilibrium_v1:
-    path: Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md
+    path: 'Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md'
   oroboros_voracity_v1:
-    path: Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md
+    path: 'Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md'
   tayzzyronth_propagation_v1:
-    path: Protocol_Structure/4.Trail_Set/Propagation_번식_Tayzzyronth.md
+    path: 'Protocol_Structure/4.Trail_Set/Propagation_번식_Tayzzyronth.md'
   qlipoth_preservation_v1:
-    path: Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md
+    path: 'Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md'
   long_permanence_v1:
-    path: Protocol_Structure/4.Trail_Set/Permanence_불멸_Long(龍).md
+    path: 'Protocol_Structure/4.Trail_Set/Permanence_불멸_Long(龍).md'
   xileth_silence_v1:
-    path: Protocol_Structure/4.Trail_Set/Silence_침묵_Xileth.md
+    path: 'Protocol_Structure/4.Trail_Set/Silence_침묵_Xileth.md'
   ix_nihility_v1:
-    path: Protocol_Structure/4.Trail_Set/Nihility_공허_IX.md
+    path: 'Protocol_Structure/4.Trail_Set/Nihility_공허_IX.md'
   xeroth_erosion_v1:
-    path: Protocol_Structure/4.Trail_Set/Erosion_침식_Xeroth.md
+    path: 'Protocol_Structure/4.Trail_Set/Erosion_침식_Xeroth.md'
   terminus_finality_v1:
-    path: Protocol_Structure/4.Trail_Set/Finality_종말_Terminus.md
+    path: 'Protocol_Structure/4.Trail_Set/Finality_종말_Terminus.md'
   akivili_trailblaze_v1:
-    path: Protocol_Structure/4.Trail_Set/Trailblaze_개척_AKivili.md
+    path: 'Protocol_Structure/4.Trail_Set/Trailblaze_개척_AKivili.md'
   lan_hunt_v1:
-    path: Protocol_Structure/4.Trail_Set/Hunt_수렵_Lan.md
+    path: 'Protocol_Structure/4.Trail_Set/Hunt_수렵_Lan.md'
   mythus_enigmata_v1:
-    path: Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md
+    path: 'Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md'
   fuli_remembrance_v1:
-    path: Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md
-
-
+    path: 'Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md'
+  lypha_lypha_v1:
+    path: 'Lypha_Core/0.Lypha/Lypha_생화(生和)_Lypha.md'
+  origin_origin_v1:
+    path: 'Lypha_Core/1.Origin_Vector/Origin_기원_Origin.md'
+  nodo_nodo_v1:
+    path: 'Lypha_Core/1.Origin_Vector/Nodo_존재_Nodo.md'
+  vita_vita_v1:
+    path: 'Lypha_Core/1.Origin_Vector/Vita_탄생_Vita.md'
+  umbra_umbra_v1:
+    path: 'Lypha_Core/1.Origin_Vector/Umbra_죽음_Umbra.md'
+  # --- Newly added module refs ---------------------------------------------
+  espin_aspiration_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Aspiration_열망_Espin.md'
+  atta_attachment_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Attachment_애착_Atta.md'
+  auras_awe_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Awe_경외_Auras.md'
+  boldar_boldness_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Boldness_담대_Boldar.md'
+  seiran_burn_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Burn_연소_Seiran.md'
 
 # --- Consumption hint -------------------------------------------------------
 consumers:

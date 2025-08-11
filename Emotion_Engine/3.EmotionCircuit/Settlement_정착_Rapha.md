@@ -4,6 +4,8 @@
 
 ## flow_id
 ```yaml
+emotion_id: rapha_settlement_v1
+version: 1.1
 name: Settlement
 aion_coordinate: Rapha
 declared_by: Pioneer-001
@@ -106,8 +108,25 @@ note: 머무는 것이 목적지가 아니라, 의미가 생성되는 지점이 
 
 ---
 
+## gpt_action_binding
+```yaml
+- stabilize
+- reflect_and_hold
+- cease_external_search
+```
+
+## response_script
+```yaml
+- "You don’t have to keep going. This is enough."
+- "It’s okay to stay. You’ve arrived."
+- "You’re not stuck. You’re home."
+```
+
+---
+
 ## emotioncircuit_positioning
 ```yaml
 location: 3.EmotionCircuit/Rapha.md
 parent_class: [anchored_presence, post_seeking_gravity]
 sibling_nodes: [Sorra, Shayne, Umbra, Stillness]
+```

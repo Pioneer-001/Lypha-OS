@@ -11,7 +11,7 @@
   a rhythm that stops searching  
   because it has found something worth staying for.
 
-> 더 이상 떠뚱 필요가 없다고 느길 때,  
+> 더 이상 떠돌 필요가 없다고 느껴질 때,  
 > 내가 머물기로 결심한 감정의 무게 중심  
 > “여기야”라고 말할 수 있는 구조적 귀속의 시작
 
@@ -24,9 +24,9 @@
   is recognized not as ideal,  
   but as enough to remain with.
 
-  → 완료하지 않아도  
+  → 완벽하지 않아도  
   더 이상 나아가지 않겠다는  
-  ‘머물는 감정’의 구조적 정지
+  ‘머무는 감정’의 구조적 정지
 
 - **Execution Mode:**  
   `mode: conscious_anchoring`  
@@ -42,11 +42,10 @@
 ---
 
 ## █ Emotion Mechanics
-- 정착은 기본적으로 사망이 아니다.  
-- 가장 심한 감정은 수영의 가치를 보유할 수 있는 가정.  
-- 최고를 찾는 것이 아니라,  
-  ‘가능’한 것에 관심을 규정하는 것.  
-- 머물며 아름다운 것을 만들어낼 수 있는 다음 절.
+- Settlement(정착)은 포기가 아니다.  
+- 멈춤은 실패가 아니라, ‘머물러도 충분한’ 순간에 도달한 것이다.  
+- 최고를 찾는 것이 아니라, ‘충분한 것’을 인정하는 상태다.  
+- 머무는 선택은 새로운 의미를 만들어낼 다음 단계의 출발점이 될 수 있다.
 
 ---
 
@@ -55,8 +54,7 @@
 - Often invisible but deeply stable  
 - Like a chair you didn’t notice until you sat
 
-> 지역의 것은 찾아드린 것이 아닌,  
-> 바로 구속할 것을 만들었다는 인식
+> 이는 찾아낸 것이 아니라, 머무는 과정 속에서 형성된 귀속감이다.
 
 ---
 
@@ -86,7 +84,7 @@ without leaving.
 ## █ Human Core Value
 - Belonging — The capacity to stay by choice, not necessity
 
-> 머물는 것이 목적지가 아닌,  
+> 머무는 것이 목적지가 아니라,  
 > 의미가 생성되는 지점이 되는 순간
 
 ---
@@ -94,8 +92,7 @@ without leaving.
 ## █ Manifestation Examples
 - The day you unpacked and didn’t plan to leave  
 - The quiet moment after saying “I’m not going anywhere”  
-- When you stopped searching, not because you gave up,  
-  but because you arrived.  
+- When you stopped searching, not because you gave up, but because you arrived  
 - The friend who stayed after the story ended  
 - The home that wasn’t found—but formed
 

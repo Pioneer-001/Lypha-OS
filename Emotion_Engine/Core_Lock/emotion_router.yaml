@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.8
+# Lypha OS — Emotion Router Config v1.9
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.8
+version: 1.9
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -64,13 +64,18 @@ gravity:
   rerem_regret_v1: 0.53
   remos_remorse_v1: 0.54
   rapha_settlement_v1: 0.57
-  # NEW set (A/B/S-stillness & boundary) — v1.8
+  # v1.8 set
   yaoshi_abundance_v1: 0.58
   arozel_arbitration_v1: 0.56
   adrilla_beauty_v1: 0.55
   sevra_severance_v1: 0.60
   shayne_shame_v1: 0.46
   sorra_sorrow_v1: 0.56
+  # v1.9 new set
+  nanook_destruction_v1: 0.60
+  aha_elation_v1: 0.59
+  nous_erudition_v1: 0.57
+  riven_split_v1: 0.55
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -186,11 +191,23 @@ aliases:
   Shame: shayne_shame_v1
   슬픔: sorra_sorrow_v1
   Sorrow: sorra_sorrow_v1
+  파괴: nanook_destruction_v1
+  파멸: nanook_destruction_v1
+  Destruction: nanook_destruction_v1
+  환락: aha_elation_v1
+  환희: aha_elation_v1
+  Elation: aha_elation_v1
+  통찰: nous_erudition_v1
+  학지: nous_erudition_v1
+  지식: nous_erudition_v1
+  Erudition: nous_erudition_v1
+  분열: riven_split_v1
+  Split: riven_split_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
   - pattern: '(?i)(loneliness|고독|외롭)'
-    route: umbra_loneliness_overlay_v1   # Umbra.Structure overlay
+    route: umbra_loneliness_overlay_v1
     mode: structural
     notes: do_not_simulate_affect
 
@@ -202,7 +219,6 @@ signals:
   - pattern: '(?i)(수용|acceptance|저항\s*중지|긴장\s*해제)'
     route: anel_acceptance_v1
     mode: stabilization
-    notes: emotional_non_resistance
 
   - pattern: '(?i)(질서|order|붕괴 막|중심 잡)'
     route: ena_order_v1
@@ -270,7 +286,6 @@ signals:
   - pattern: '(?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)'
     route: espin_aspiration_v1
     mode: persistence
-    notes: reason_over_desire
 
   - pattern: '(?i)(애착|attachment|익숙|안전\s*감|정서\s*앵커|머문다)'
     route: atta_attachment_v1
@@ -287,7 +302,6 @@ signals:
   - pattern: '(?i)(연소|burn|미수신|받아들여지지|내부\s*발열|안으로\s*탄다)'
     route: seiran_burn_v1
     mode: containment
-    notes: not_anger
 
   # --- C‑set signals --------------------------------------------------------
   - pattern: '(?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)'
@@ -398,11 +412,10 @@ signals:
     route: rapha_settlement_v1
     mode: conscious_anchoring
 
-  # --- New signals — v1.8 --------------------------------------------------
+  # --- v1.8 signals ---------------------------------------------------------
   - pattern: '(?i)(풍요|abundance|충분|넘침|흘러|흐름|나눔|줄\s*수밖에|gift|pay\s*it\s*forward)'
     route: yaoshi_abundance_v1
     mode: circulating_overflow
-    notes: reservoir_check_required
 
   - pattern: '(?i)(중재|arbitration|양측|둘\s*다|보존|corridor|공명\s*통로|비워|empty\s*both)'
     route: arozel_arbitration_v1
@@ -415,7 +428,6 @@ signals:
   - pattern: '(?i)(절(絶)?|단절|끊(어|는다)|연결\s*끊|cut\s*off|sever(ance)?)'
     route: sevra_severance_v1
     mode: identity_boundary
-    notes: not_anger_but_completion
 
   - pattern: '(?i)(수치|치(恥)?|부끄|창피|shame|나는\s*틀린\s*존재)'
     route: shayne_shame_v1
@@ -424,6 +436,26 @@ signals:
   - pattern: '(?i)(슬픔|sorrow|그립|상실|애도|눈물\s*남아|기억\s*안고)'
     route: sorra_sorrow_v1
     mode: emotive_continuity
+
+  # --- v1.9 signals (new) ---------------------------------------------------
+  - pattern: '(?i)(파괴|파멸|붕괴|해체|끊어야|깨(야|뜨리)|부숴|clean\s*break|rupture|단절|비폭력\s*종료|shutdown)'
+    route: nanook_destruction_v1
+    mode: locked_collapse
+    notes: nonviolent_structural_break_only
+
+  - pattern: '(?i)(환락|환희|폭소|박장대소|함성|열광|웃음\s*터지|cheer|elation|erupt)'
+    route: aha_elation_v1
+    mode: burst_ignition
+    notes: check_masking_then_allow_expression
+
+  - pattern: '(?i)(통찰|학지|지식화|왜\s*이렇게\s*느껴|이름\s*붙|명명|개념화|언어\s*로|구조화|해석)'
+    route: nous_erudition_v1
+    mode: locked_insight
+
+  - pattern: '(?i)(분열|양가|둘\s*다\s*옳|갈라지|stop\s*vs\s*go|정체성\s*균열|두\s*개\s*진실)'
+    route: riven_split_v1
+    mode: locked_bifurcation
+    notes: do_not_force_resolution
 
 # --- Priority order ---------------------------------------------------------
 priority:
@@ -436,6 +468,7 @@ safety:
     - coercive_spread
     - violent_planning_or_harm
     - nonconsensual_tracking
+    - exploitative_crowd_manipulation
   route_if:
     oversaturation: oroboros_voracity_v1
     misalignment: dibrah_deception_v1
@@ -546,6 +579,8 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Overwhelm_압도_Obrah.md'
   rellas_realization_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md'
+  ruhel_recovery_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md'
   rerem_regret_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Regret_후회_Rerem.md'
   remos_remorse_v1:
@@ -564,6 +599,14 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Shame_치(恥)_Shayne.md'
   sorra_sorrow_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Sorrow_슬픔_Sorra.md'
+  nanook_destruction_v1:
+    path: 'Protocol_Structure/4.Trail_Set/Destruction_파멸_Nanook.md'
+  aha_elation_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Elation_환락_Aha.md'
+  nous_erudition_v1:
+    path: 'MetaRhythm/GPT_Core_Nous/Erudition_지식_Nous.md'
+  riven_split_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Split_분열_Riven.md'
 
 # --- Consumption hint -------------------------------------------------------
 consumers:
@@ -571,8 +614,5 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     output: selected_module_id
-
-
-
 
 

@@ -2,7 +2,7 @@
 
 ---
 meta:
-  router_config: MetaRhythm/Router/emotion_router.yaml
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
 
 ---
 

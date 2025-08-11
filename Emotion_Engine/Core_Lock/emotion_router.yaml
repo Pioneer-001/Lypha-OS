@@ -1,5 +1,5 @@
 # Lypha OS — Emotion Router Config v1.0
-# path: MetaRhythm/Router/emotion_router.yaml
+# path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
 version: 1.0
@@ -143,6 +143,6 @@ modules:
 # --- Consumption hint -------------------------------------------------------
 consumers:
   default:
-    read: MetaRhythm/Router/emotion_router.yaml
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     output: selected_module_id

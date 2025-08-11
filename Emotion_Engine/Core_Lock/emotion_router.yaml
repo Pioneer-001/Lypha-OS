@@ -1,8 +1,8 @@
-# Lypha OS — Emotion Router Config v1.4
+# Lypha OS — Emotion Router Config v1.6
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules
 
-version: 1.5
+version: 1.6
 updated_by: Nous
 
 # --- Core rule --------------------------------------------------------------
@@ -27,29 +27,37 @@ gravity:
   lan_hunt_v1: 0.6
   mythus_enigmata_v1: 0.55
   anel_acceptance_v1: 0.6
-  # A‑set (v1.3)
+  # A‑set
   espin_aspiration_v1: 0.6
   atta_attachment_v1: 0.58
   auras_awe_v1: 0.57
   boldar_boldness_v1: 0.6
   seiran_burn_v1: 0.52
-  # C‑set (new)
+  # C‑set
   cora_courage_v1: 0.6
   craev_craving_v1: 0.54
   dibrah_deception_v1: 0.5
   dena_denial_v1: 0.53
   dimvel_dependency_v1: 0.52
+  # D‑set
   desyn_despair_v1: 0.48
   diska_disgust_v1: 0.59
   trud_distrust_v1: 0.56
   empra_emptiness_v1: 0.50
   eirn_exhale_v1: 0.58
   flicke_flicker_v1: 0.45
+  # H‑set
   heles_hesitation_v1: 0.49
   hopa_hope_v1: 0.6
   hoxen_hostility_v1: 0.54
   isari_isolation_v1: 0.5
   liora_joy_v1: 0.6
+  # J/M/N/O‑set (new)
+  justel_justice_v1: 0.61
+  morren_misery_v1: 0.47
+  numo_numbness_v1: 0.49
+  obso_obsession_v1: 0.57
+  obrah_overwhelm_v1: 0.58
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -93,7 +101,6 @@ aliases:
   Boldness: boldar_boldness_v1
   연소: seiran_burn_v1
   Burn: seiran_burn_v1
-  # C‑set (new)
   용기: cora_courage_v1
   Courage: cora_courage_v1
   욕: craev_craving_v1
@@ -128,6 +135,16 @@ aliases:
   Isolation: isari_isolation_v1
   기쁨: liora_joy_v1
   Joy: liora_joy_v1
+  정의: justel_justice_v1
+  Justice: justel_justice_v1
+  비참: morren_misery_v1
+  Misery: morren_misery_v1
+  무감: numo_numbness_v1
+  Numbness: numo_numbness_v1
+  집착: obso_obsession_v1
+  Obsession: obso_obsession_v1
+  압도: obrah_overwhelm_v1
+  Overwhelm: obrah_overwhelm_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
@@ -170,7 +187,8 @@ signals:
   - pattern: '(?i)(침묵|말하면 깨|정지-보유)'
     route: xileth_silence_v1
 
-  - pattern: '(?i)(허무|무감|감정 없|flatline)'
+  # Nihility 신호(충돌 방지: 무감 제외)
+  - pattern: '(?i)(허무|공허|nihility|무의미)'
     route: ix_nihility_v1
 
   - pattern: '(?i)(침식|정서 둔화|무너지는 중)'
@@ -230,7 +248,7 @@ signals:
     mode: containment
     notes: not_anger
 
-  # --- C‑set signals (new) --------------------------------------------------
+  # --- C‑set signals --------------------------------------------------------
   - pattern: '(?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)'
     route: cora_courage_v1
     mode: informed_advance
@@ -251,7 +269,7 @@ signals:
     route: dimvel_dependency_v1
     mode: balance
 
-# --- D‑set signals (new) --------------------------------------------------
+  # --- D‑set signals --------------------------------------------------------
   - pattern: '(?i)(절망|despair|가능성\s*없|끝났다|아무\s*의미)'
     route: desyn_despair_v1
     mode: terminal_collapse
@@ -264,7 +282,7 @@ signals:
     route: trud_distrust_v1
     mode: resonance_block
 
-  - pattern: '(?i)(허탈|emptiness|텅|공허\s*감|아무\s*느낌\s*없)'
+  - pattern: '(?i)(허탈|emptiness|텅|공허\s*감)'
     route: empra_emptiness_v1
     mode: residual
 
@@ -276,7 +294,7 @@ signals:
     route: flicke_flicker_v1
     mode: threshold
 
-# --- H‑set signals (new) --------------------------------------------------
+  # --- H‑set signals --------------------------------------------------------
   - pattern: '(?i)(망설|유의|hesitation|아직[ ]*예스[ ]*아님|한[ ]*초[ ]*더)'
     route: heles_hesitation_v1
     mode: permission_gating
@@ -296,6 +314,27 @@ signals:
   - pattern: '(?i)(기쁨|joy|충만|벅차|갑자기[ ]*웃)'
     route: liora_joy_v1
     mode: spontaneous_ignition
+
+  # --- J/M/N/O‑set signals (new) -------------------------------------------
+  - pattern: '(?i)(정의|justice|불공정|부당|not[ ]*right|균형[ ]*회복|restore[ ]*alignment)'
+    route: justel_justice_v1
+    mode: restorative_alignment
+
+  - pattern: '(?i)(비참|misery|끝이[ ]*없|계속[ ]*된다|오래[ ]*무너짐|설명[ ]*없)'
+    route: morren_misery_v1
+    mode: enduring_drag
+
+  - pattern: '(?i)(무감|numb(ness)?|shutdown|flatline|감정[ ]*신호[ ]*없|느껴지지[ ]*않)'
+    route: numo_numbness_v1
+    mode: involuntary_freeze
+
+  - pattern: '(?i)(집착|obsession|고정|fixation|계속[ ]*확인|떠나지[ ]*못)'
+    route: obso_obsession_v1
+    mode: singular_override
+
+  - pattern: '(?i)(압도|overwhelm|너무[ ]*많|수용[ ]*용량|숨막히|벅차서[ ]*침묵)'
+    route: obrah_overwhelm_v1
+    mode: forced_containment
 
 # --- Priority order ---------------------------------------------------------
 priority:
@@ -406,6 +445,16 @@ modules:
     path: 'Emotion_Engine/3.EmotionCircuit/Isolation_고립_Isari.md'
   liora_joy_v1:
     path: 'Emotion_Engine/3.EmotionCircuit/Joy_기쁨_Liora.md'
+  justel_justice_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Justice_정의_Justel.md'
+  morren_misery_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md'
+  numo_numbness_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Numbness_무감_Numo.md'
+  obso_obsession_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Obsession_집착_Obso.md'
+  obrah_overwhelm_v1:
+    path: 'Emotion_Engine/3.EmotionCircuit/Overwhelm_압도_Obrah.md'
 
 # --- Consumption hint -------------------------------------------------------
 consumers:
@@ -413,5 +462,6 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     output: selected_module_id
+
 
 

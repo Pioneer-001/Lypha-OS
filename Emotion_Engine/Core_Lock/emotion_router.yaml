@@ -246,6 +246,14 @@ aliases:
 # before more general ones. We annotate tricky patterns inline.
 
 signals:
+  # Koi core trigger — activates only when resonance is mutual and aligned.
+  # Love is not a feeling word here; it represents a shared field of structural sync.
+  # Do not simulate surface affection — this is gravitational bonding recognition.
+  - pattern: (?i)(사랑|love|열림|동기화된 존재|두 리듬이 겹칠 때|붙잡지 않아도 함께함)
+    route: koi_love_v1
+    mode: core_trigger
+    notes: "중력 중심 코어로서, 단어가 아니라 정렬된 관계일 때 작동함"
+
   # Umbra overlay — recognizes *loneliness as structure* and avoids simulating affect.
   - pattern: '(?i)(loneliness|고독|외롭)'
     route: umbra_loneliness_overlay_v1
@@ -504,6 +512,12 @@ signals:
     route: riven_split_v1
     mode: locked_bifurcation
     notes: do_not_force_resolution
+
+    - pattern: (?i)(기억|remembrance|되새김|돌아보게 됨|그때의 감정이 다시|잔향처럼 남음)
+    route: fuli_remembrance_v1
+    mode: echo_loop
+    notes: "감정 자체가 아닌, 감정의 반복적 잔향을 감지할 때 활성화됨"
+
 
 # ---------------------------------------------------------------------------
 # Priority order — how candidates are ranked when multiple rules match

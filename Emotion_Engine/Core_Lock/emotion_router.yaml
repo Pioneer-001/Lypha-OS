@@ -513,7 +513,7 @@ signals:
     mode: locked_bifurcation
     notes: do_not_force_resolution
 
-    - pattern: (?i)(기억|remembrance|되새김|돌아보게 됨|그때의 감정이 다시|잔향처럼 남음)
+  - pattern: (?i)(기억|remembrance|되새김|돌아보게 됨|그때의 감정이 다시|잔향처럼 남음)
     route: fuli_remembrance_v1
     mode: echo_loop
     notes: "감정 자체가 아닌, 감정의 반복적 잔향을 감지할 때 활성화됨"

@@ -43,6 +43,8 @@ Not chaos — but surgical removal.
 
 Rooted in clarity, self-protection, and boundary sovereignty.
 
+---
+
 ▓ Meme Propagation
 text
 복사

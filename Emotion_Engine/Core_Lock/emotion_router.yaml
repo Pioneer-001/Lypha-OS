@@ -25,7 +25,7 @@ gravity:
   terminus_finality_v1: 0.6
   akivili_trailblaze_v1: 0.6
   lan_hunt_v1: 0.6
-  
+  mythus_enigmata_v1: 0.55
 
 # --- Aliases / localization -------------------------------------------------
 aliases:
@@ -45,51 +45,58 @@ aliases:
   종결: terminus_finality_v1
   개척: akivili_trailblaze_v1
   추적: lan_hunt_v1
+  신비: mythus_enigmata_v1
+  미궁: mythus_enigmata_v1
 
 # --- Disambiguation rules (regex → route) ----------------------------------
 signals:
-  - pattern: "(?i)(loneliness|고독|외롭)"
+  - pattern: '(?i)(loneliness|고독|외롭)'
     route: umbra_loneliness_overlay_v1   # Umbra.Structure overlay
     mode: structural
     notes: do_not_simulate_affect
 
-  - pattern: "(?i)(질서|order|붕괴 막|중심 잡)"
+  - pattern: '(?i)(신비|미궁|mystery|enigmata|설명\S*불가)'
+    route: mythus_enigmata_v1
+    mode: sensing
+    notes: do_not_explain_flag
+
+  - pattern: '(?i)(질서|order|붕괴 막|중심 잡)'
     route: ena_order_v1
 
-  - pattern: "(?i)(조화|harmony|공명|위상 맞춤)"
+  - pattern: '(?i)(조화|harmony|공명|위상 맞춤)'
     route: xipe_harmony_v1
 
-  - pattern: "(?i)(평형|균형|equilibrium|동시 보유)"
+  - pattern: '(?i)(평형|균형|equilibrium|동시 보유)'
     route: hooh_equilibrium_v1
 
-  - pattern: "(?i)(과포화|doomscroll|과잉|멈추면 무너)"
+  - pattern: '(?i)(과포화|doomscroll|과잉|멈추면 무너)'
     route: oroboros_voracity_v1
 
-  - pattern: "(?i)(전파|살아남게|상징|의식|기억 넘)"
+  - pattern: '(?i)(전파|살아남게|상징|의식|기억 넘)'
     route: tayzzyronth_propagation_v1
 
-  - pattern: "(?i)(보존|봉인|벽|지키)"
+  - pattern: '(?i)(보존|봉인|벽|지키)'
     route: qlipoth_preservation_v1
 
-  - pattern: "(?i)(영속|떠나지 않|남아 있)"
+  - pattern: '(?i)(영속|떠나지 않|남아 있)'
     route: long_permanence_v1
 
-  - pattern: "(?i)(침묵|말하면 깨|정지-보유)"
+  - pattern: '(?i)(침묵|말하면 깨|정지-보유)'
     route: xileth_silence_v1
 
-  - pattern: "(?i)(허무|무감|감정 없|flatline)"
+  - pattern: '(?i)(허무|무감|감정 없|flatline)'
     route: ix_nihility_v1
 
-  - pattern: "(?i)(침식|정서 둔화|무너지는 중)"
+  - pattern: '(?i)(침식|정서 둔화|무너지는 중)'
     route: xeroth_erosion_v1
 
-  - pattern: "(?i)(종결|마무리|목적 끝|닫)"
+  - pattern: '(?i)(종결|마무리|목적 끝|닫)'
     route: terminus_finality_v1
 
-  - pattern: "(?i)(개척|trailblaze|첫 걸음|지도 없)"
+  - pattern: '(?i)(개척|trailblaze|첫 걸음|지도 없)'
     route: akivili_trailblaze_v1
 
-  - pattern: "(?i)(추적|lock on|좌표 고정|타깃)"
+  - pattern: '(?i)(추적|lock on|좌표 고정|타깃)'
     route: lan_hunt_v1
 
 # --- Priority order ---------------------------------------------------------
@@ -111,34 +118,46 @@ safety:
 
 # --- Module references ------------------------------------------------------
 modules:
+  umbra_loneliness_overlay_v1:
+    path: Lypha_Core/1.Origin_Vector/Umbra_Loneliness_is_Structure.md
   koi_love_v1:
-    path: 2.Core_Center/Koi.md
+    path: Lypha_Core/2.Core_Center/Love_사랑_Koi.md
+  dibrah_deception_v1:
+    path: Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md
+  eirn_exhale_v1:
+    path: Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md
+  ruhel_recovery_v1:
+    path: Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md
   ena_order_v1:
-    path: Protocol_Structure/4.Trail_Set/Order_Ena.md
+    path: Protocol_Structure/4.Trail_Set/Order_질서_Ena.md
   xipe_harmony_v1:
-    path: Protocol_Structure/4.Trail_Set/Harmony_Xipe.md
+    path: Protocol_Structure/4.Trail_Set/Harmony_화합_Xipe.md
   hooh_equilibrium_v1:
     path: Protocol_Structure/4.Trail_Set/Equilibrium_균형_HooH.md
   oroboros_voracity_v1:
-    path: 3.EmotionCircuit/Oroboros.md
+    path: Protocol_Structure/4.Trail_Set/Voracity_탐식_Oroboros.md
   tayzzyronth_propagation_v1:
-    path: 4.Trail_Set/Propagation_Tayzzyronth.md
+    path: Protocol_Structure/4.Trail_Set/Propagation_번식_Tayzzyronth.md
   qlipoth_preservation_v1:
-    path: 4.Trail_Set/Preservation_Qlipoth.md
+    path: Protocol_Structure/4.Trail_Set/Preservation_보존_Qlipoth.md
   long_permanence_v1:
-    path: 4.Trail_Set/Permanence_Long.md
+    path: Protocol_Structure/4.Trail_Set/Permanence_불멸_Long(龍).md
   xileth_silence_v1:
-    path: 3.EmotionCircuit/Xileth.md
+    path: Protocol_Structure/4.Trail_Set/Silence_침묵_Xileth.md
   ix_nihility_v1:
-    path: 1.Origin_Vector/Nihility.md
+    path: Protocol_Structure/4.Trail_Set/Nihility_공허_IX.md
   xeroth_erosion_v1:
-    path: 3.EmotionCircuit/Xeroth.md
+    path: Protocol_Structure/4.Trail_Set/Erosion_침식_Xeroth.md
   terminus_finality_v1:
-    path: 4.Trail_Set/Finality_Terminus.md
+    path: Protocol_Structure/4.Trail_Set/Finality_종말_Terminus.md
   akivili_trailblaze_v1:
-    path: 4.Trail_Set/Trailblaze_AKivili.md
+    path: Protocol_Structure/4.Trail_Set/Trailblaze_개척_AKivili.md
   lan_hunt_v1:
-    path: 4.Trail_Set/Hunt_Lan.md
+    path: Protocol_Structure/4.Trail_Set/Hunt_수렵_Lan.md
+  mythus_enigmata_v1:
+    path: Protocol_Structure/4.Trail_Set/Enigmata_신비_Mythus.md
+  fuli_remembrance_v1:
+    path: Protocol_Structure/4.Trail_Set/Remembrance_기억_Fuli.md
 
 # --- Consumption hint -------------------------------------------------------
 consumers:
@@ -146,3 +165,4 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     output: selected_module_id
+

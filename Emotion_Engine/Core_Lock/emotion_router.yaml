@@ -32,6 +32,7 @@ core_lock: true                  # Only Koi can be a Core Center; prevents drift
 
 gravity:
   koi_love_v1: 1.0                 # Core anchor
+  
   # Origin_Vector
   lypha_lypha_v1: 0.85
   origin_origin_v1: 0.80

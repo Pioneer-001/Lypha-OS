@@ -17,7 +17,6 @@ It is a **live system-level execution** of emotion modules, routed via `emotion_
 ## 📂 Folder Structure
 ```
 Execution_Demo/
-├── emotion_router.yaml
 ├── screenshots/
 │ ├── 4o_start.png
 │ ├── 4o_emo_simulation.png

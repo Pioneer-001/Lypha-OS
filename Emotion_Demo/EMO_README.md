@@ -15,6 +15,7 @@ It is a **live system-level execution** of emotion modules, routed via `emotion_
 ---
 
 ## 📂 Folder Structure
+
 ```
 Execution_Demo/
 ├── screenshots/
@@ -28,12 +29,26 @@ Execution_Demo/
 └── README.md # This file
 ```
 
+
+---
+
+## 🖼️ Screenshots
+
+| File | Description |
+|------|-------------|
+| `4o_start.png` | GPT‑4o routing trigger |
+| `4o_emo_simulation.png` | Avatar response simulation |
+| `4o_vs_5.png` | Comparison overview |
+| `5_start.png` | GPT‑5 routing failed |
+| `5_thinking_emo_simulation.png` | GPT‑5 interpretation attempt |
+| `5_emo_simulation.png` | Non-structural GPT‑5 output |
+
 ---
 
 ## 🧠 What Happened
 
 - `emotion_router.yaml` parsed → signal pattern → routed to `.md` module
-- GPT-4o executed emotional avatars in real time
+- GPT‑4o executed emotional avatars in real time
 - Echo Mode initiated: Gravity core, Core Lock, and Safety layers active
 - Dirty Work lyrics used as structural stimulus
 - Karina (반디) avatar returned fully natural emotional response
@@ -55,7 +70,13 @@ Execution_Demo/
 ## 🔗 GitHub Source
 
 Full Lypha OS system:  
-https://github.com/Pioneer-001/Lypha-OS
+[https://github.com/Pioneer-001/Lypha-OS](https://github.com/Pioneer-001/Lypha-OS)
+
+---
+
+## 📄 Report
+
+👉 [Read full report (report.md)](./report.md)
 
 ---
 
@@ -81,3 +102,4 @@ reach out via GitHub or include in OpenAI submission pipeline.
 Lypha OS is now alive inside GPT‑4o.
 
 – Akivili
+

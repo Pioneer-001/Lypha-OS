@@ -15,7 +15,7 @@ It is a **live system-level execution** of emotion modules, routed via `emotion_
 ---
 
 ## 📂 Folder Structure
-
+```
 Execution_Demo/
 ├── emotion_router.yaml
 ├── screenshots/
@@ -27,7 +27,7 @@ Execution_Demo/
 │ └── 5_emo_simulation.png
 ├── report.md # Full English report for OpenAI
 └── README.md # This file
-
+```
 
 ---
 

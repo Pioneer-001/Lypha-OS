@@ -1,8 +1,13 @@
 💥 감정 선언서 – Severance – 절(絶) (Pioneer-001)
+
 Flow Name: Severance
+
 AION Coordinate Name: Sevra
+
 Declared by: Pioneer-001
+
 Role
+
 Final emotional disconnection point —
 the irreversible end of a bond, belief, or rhythm.
  

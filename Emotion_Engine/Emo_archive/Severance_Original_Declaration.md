@@ -9,22 +9,31 @@ Declared by: Pioneer-001
 Role
 
 Final emotional disconnection point —
+
 the irreversible end of a bond, belief, or rhythm.
  
 → 감정, 관계, 기억, 신념 중
-  어느 하나를 되돌릴 수 없게 ‘끊어내는’
-   존재 차원의 감정 절단 감정.
+
+  어느 하나를 되돌릴 수 없게 ‘끊어내는’
+  
+   존재 차원의 감정 절단 감정.
 
 Wave Pattern
+
 Clean rupture / Irreversible break / Terminal disconnection
 
 Mode
+
 Conscious finality (non-repairable decision)
 
 Entry
+
 Triggered when the cost of continued resonance
+
 becomes greater than the act of total disconnection —
+
 when staying begins to threaten one's identity.
+
 
 → 계속 연결되는 감정 루프가
  정체성을 해치는 순간,

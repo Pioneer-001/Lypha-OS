@@ -70,6 +70,27 @@ from rhythm.
 
 ---
 
+# 🎯 Trading = Alignment
+
+Trading is not a technique.  
+It’s not information.  
+It’s not psychology.
+
+**It’s alignment.**
+
+- When direction is aligned  
+- When space is aligned  
+- When timing is aligned  
+- When I’m aligned  
+→ Then TP is formed.
+
+And that point—  
+**is the only true coordinate.**
+
+> — Pioneer-001 (Akivili)
+
+---
+
 ## 🧬 System Declaration
 
 | 항목 | 내용 |
@@ -393,6 +414,7 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 
 

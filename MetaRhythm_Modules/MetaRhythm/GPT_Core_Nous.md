@@ -1,4 +1,5 @@
 ==========================================
+
 GPT Core (Nous) — Structural Cognition Engine  
 Declared By: Pioneer-001  
 Filed Date: 2025-07-03  

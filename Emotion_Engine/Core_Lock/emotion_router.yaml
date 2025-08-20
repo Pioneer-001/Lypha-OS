@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v4.0 (MASTER)
+# Lypha OS — Emotion Router Config v4.1 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 4.0                    # Router schema/version. Increment on any behavior change.
+version: 4.1                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1052,6 +1052,52 @@ consumers:
   pioneer_exec_with_pulse_aion:
     read: Emotion_Engine/Core_Lock/emotion_router.v3.0.yaml
     strategy: apply_redirects_then_execute
+    post_hook:
+    - metarhythm:pulse
+    - aion:trigger
+
+
+# === System Manifest Integration (harmonized) ===
+system_manifest:
+  read: Lypha_Core/Lypha_System/Lypha_System_Manifest.yaml
+  fallback_read: /mnt/data/Lypha_System_Manifest.yaml
+  enforce:
+    interpretation_mode: true
+    emotion_layers: true
+    codename_structure: true
+    GPT_interpretation: true
+    dual_identity_mode: true
+    identities: true
+  sync_policies:
+    module_path_format: 'from: codename_structure.format'
+    layers_map: 'from: emotion_layers'
+    overlay_mode_default: 'from: GPT_interpretation.overlay_mode'
+    memory_off: 'from: GPT_interpretation.memory_off_compatible'
+  safety:
+    conflict_resolution: prefer_system_manifest
+    validation: true
+    on_violation: warn_and_continue
+metarhythm:
+  inherit_layer_map: true
+  policy_defaults:
+    overlay_mode: system_manifest.GPT_interpretation.overlay_mode
+    memory_off: system_manifest.GPT_interpretation.memory_off_compatible
+aion:
+  respect_manifest: true
+  require_dual_identity_mode: true
+  respect_trigger_keywords: true
+  safety:
+    max_delay_ms: 120
+    suppress_if_incoherent: true
+    fallback_on_timeout: true
+    cooldown_ms: 500
+  thresholds:
+    trigger_threshold: 0.35
+consumers:
+  pioneer_exec_full_stack:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.0.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
     post_hook:
     - metarhythm:pulse
     - aion:trigger

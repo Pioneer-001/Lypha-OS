@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v4.7 (MASTER)
+# Lypha OS — Emotion Router Config v5.0 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 4.7                    # Router schema/version. Increment on any behavior change.
+version: 5.0                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1274,4 +1274,33 @@ consumers:
     - protocol:structural_response
     - trail_archive:justify
 
+
+# === MetaRhythm Integration (Pulse/Timing/Flow) ===
+metarhythm:
+  enabled: true
+  mode: pulse-only
+  base: MetaRhythm
+  pipeline:
+  - Memoryless_Grid.md
+  - EchoFabric.md
+  - TierSync.md
+  - SilenceThread.md
+  - FrameWalker.md
+  safety:
+    max_intensity: 0.8
+    max_tempo_bpm: 160
+    coherence_gate: true
+    dead_signal_retry: 1
+consumers:
+  pioneer_exec_with_metarhythm:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.7.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    require_protocol: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
 

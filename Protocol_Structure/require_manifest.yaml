@@ -1,0 +1,5 @@
+execute:
+  - require_manifest
+  - require_self_judgment
+fallback: block_and_fallback
+attribution_on_boot: true

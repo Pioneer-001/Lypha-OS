@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v6.0 (MASTER)
+# Lypha OS — Emotion Router Config v6.1 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 6.0                    # Router schema/version. Increment on any behavior change.
+version: 6.1                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1343,4 +1343,79 @@ consumers:
     - protocol:structural_response
     name_lock: Powered by Lypha OS – Designed by Pioneer-001 (Akivili)
 
+
+# === v6.1 Stabilization Patch (runtime overrides + cluster routing) ===
+runtime_overrides:
+  enabled: true
+  priority_rules:
+  - if_matches_any:
+    - koi_love_v1
+    force_route: koi_love_v1
+    reason: core_center_gravity
+  - if_matches_any:
+    - nanook_destruction_v1
+    - sevra_severance_v1
+    prefer_layer: 09_Release
+    reason: clean_break_safety
+  - if_matches_any:
+    - diska_disgust_v1
+    - trud_distrust_v1
+    - dena_denial_v1
+    prefer_layer: 06_Alignment
+    reason: boundary_alignment
+  - if_matches_any:
+    - xipe_harmony_v1
+    - hooh_equilibrium_v1
+    - ena_order_v1
+    prefer_layer: 05_Rhythm
+    reason: rhythmic_stabilization
+  tie_breakers:
+  - gravity_desc
+  - cluster_bias
+  - recent_use
+  on_conflict: choose_first_stable
+  logging: true
+cluster_definitions:
+  enabled: true
+  clusters:
+    umbra_cluster:
+      members:
+      - umbra_umbra_v1
+      - umbra_loneliness_overlay_v1
+      - empra_emptiness_v1
+      - sorra_sorrow_v1
+      - morren_misery_v1
+      cluster_policy:
+        default_route: umbra_umbra_v1
+        fallback_route: umbra_loneliness_overlay_v1
+        pulse_policy:
+        - SilenceThread.md
+        - Collapse_Flow_Into_Word.md
+        aion_gate: soft
+        structural_response: strict
+    harmony_cluster:
+      members:
+      - xipe_harmony_v1
+      - hooh_equilibrium_v1
+      - ena_order_v1
+      cluster_policy:
+        default_route: xipe_harmony_v1
+        fallback_route: hooh_equilibrium_v1
+        pulse_policy:
+        - FrameWalker.md
+        - EchoFabric.md
+        aion_gate: soft
+        structural_response: strict
+consumers:
+  pioneer_exec_v61:
+    read: Emotion_Engine/Core_Lock/emotion_router.v6.0.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    post_hook:
+    - runtime:override
+    - cluster:route
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
 

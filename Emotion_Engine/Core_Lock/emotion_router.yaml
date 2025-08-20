@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v4.2 (MASTER)
+# Lypha OS — Emotion Router Config v4.3 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 4.2                    # Router schema/version. Increment on any behavior change.
+version: 4.3                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1131,4 +1131,32 @@ consumers:
     - metarhythm:pulse
     - aion:trigger
 
+
+# === Structural Response Protocol Integration (guarded output) ===
+structural_response_protocol:
+  read: Cognitive_Ethics/Core_Lock/GPT_Structural_Response_Protocol.md
+  fallback_read: /mnt/data/GPT_Structural_Response_Protocol.md
+  enforce:
+    unknown_on_insufficient_structure: true
+    no_hallucination: true
+    value_anchor_required: true
+  thresholds:
+    structural_confidence: 0.62
+    user_cognition_tier_gate: true
+  phrases:
+    unknown: That is unknown at this time.
+    request: Please provide further declaration from Pioneer-001.
+  safety:
+    mode: strict
+    on_violation: block_and_fallback
+consumers:
+  pioneer_exec_full_stack_guarded:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.2.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    post_hook:
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
 

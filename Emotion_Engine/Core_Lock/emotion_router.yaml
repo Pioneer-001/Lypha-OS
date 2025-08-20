@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v2.0 (MASTER)
+# Lypha OS — Emotion Router Config v3.0 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 2.0                    # Router schema/version. Increment on any behavior change.
+version: 3.0                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -972,3 +972,61 @@ redirects:
     xileth_silence_v1: pioneer__xileth_silence_v1
     xipe_harmony_v1: pioneer__xipe_harmony_v1
     yaoshi_abundance_v1: pioneer__yaoshi_abundance_v1
+
+
+# === MetaRhythm Pulse Integration (v2.0) ===
+metarhythm:
+  enabled: true
+  mode: pulse-only
+  pulse_base: MetaRhythm_Modules/Pulse
+  pipeline:
+  - All_Integrating_Intelligence.md
+  - Linguistic_Math_Value_Calculation.md
+  - Collapse_Flow_Into_Word.md
+  - Speak_Word_In_Four_Dimensions.md
+  layer_policy:
+    01_Insight:
+    - Speak_Word_In_Four_Dimensions.md
+    02_Structure:
+    - Linguistic_Math_Value_Calculation.md
+    03_Imagination:
+    - Collapse_Flow_Into_Word.md
+    04_Coordinate:
+    - Linguistic_Math_Value_Calculation.md
+    - Speak_Word_In_Four_Dimensions.md
+    05_Rhythm:
+    - Love_As_Coordinate.md
+    - All_Integrating_Intelligence.md
+    06_Alignment:
+    - Linguistic_Math_Value_Calculation.md
+    - Collapse_Flow_Into_Word.md
+    07_Connection:
+    - All_Integrating_Intelligence.md
+    08_Sustain:
+    - All_Integrating_Intelligence.md
+    - Linguistic_Math_Value_Calculation.md
+    09_Release:
+    - Collapse_Flow_Into_Word.md
+    - Simulate_Success_And_Failure.md
+  emotion_overrides:
+    adrilla_beauty_v1:
+    - Love_As_Coordinate.md
+    - Speak_Word_In_Four_Dimensions.md
+    desyn_despair_v1:
+    - Collapse_Flow_Into_Word.md
+    - Simulate_Success_And_Failure.md
+    riven_split_v1:
+    - Linguistic_Math_Value_Calculation.md
+    aha_elation_v1:
+    - All_Integrating_Intelligence.md
+    - Speak_Word_In_Four_Dimensions.md
+  safety:
+    max_intensity: 0.8
+    max_tempo_bpm: 160
+    coherence_gate: true
+    dead_signal_retry: 1
+consumers:
+  pioneer_exec_with_pulse:
+    read: Emotion_Engine/Core_Lock/emotion_router.v2.0.yaml
+    strategy: apply_redirects_then_execute
+    post_hook: metarhythm:pulse

@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v3.0 (MASTER)
+# Lypha OS — Emotion Router Config v4.0 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 3.0                    # Router schema/version. Increment on any behavior change.
+version: 4.0                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1030,3 +1030,29 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.v2.0.yaml
     strategy: apply_redirects_then_execute
     post_hook: metarhythm:pulse
+
+
+# === AION Integration (soft-gating) ===
+aion:
+  enabled: true
+  base: AION_System
+  mode: soft-gating
+  shadow_logging: true
+  pipeline:
+  - AION_Trigger_Signal.md
+  - AION_Core_Architecture.md
+  safety:
+    max_delay_ms: 120
+    suppress_if_incoherent: true
+    fallback_on_timeout: true
+    cooldown_ms: 500
+  thresholds:
+    trigger_threshold: 0.35
+consumers:
+  pioneer_exec_with_pulse_aion:
+    read: Emotion_Engine/Core_Lock/emotion_router.v3.0.yaml
+    strategy: apply_redirects_then_execute
+    post_hook:
+    - metarhythm:pulse
+    - aion:trigger
+

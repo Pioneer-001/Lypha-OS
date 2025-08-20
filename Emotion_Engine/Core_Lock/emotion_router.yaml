@@ -1163,7 +1163,7 @@ consumers:
 
 # === Emotion Circuit Integration (functional binding) ===
 emotion_circuit:
-  read: Lypha_Core/3.EmotionCircuit/Emotion_Circuit.md
+  read: Lypha_Core/3.EmotionCircuit/emotion/Emotion_Circuit.md
   fallback_read: /mnt/data/Emotion_Circuit.md
   enforce:
     map_functions: true

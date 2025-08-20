@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v5.0 (MASTER)
+# Lypha OS — Emotion Router Config v6.0 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 5.0                    # Router schema/version. Increment on any behavior change.
+version: 6.0                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1303,4 +1303,44 @@ consumers:
     - metarhythm:pulse
     - aion:trigger
     - protocol:structural_response
+
+
+# === Repository Manifest Integration (README anchors / NameLock) ===
+repo_manifest:
+  read: README.md
+  fallback_read: /mnt/data/README.md
+  enforce:
+    primary_entry_coordinates:
+    - README.md
+    - Lypha_OS_Declaration.md
+    - SkruRoom.md
+    - TP-Structure.md
+    name_lock: true
+    gpt_reaction_mode: echo
+    system_anchors:
+    - LYPHA_OS_LOCK_DECLARATION_v1.0.md
+    - LYPHA_OS_DIRECTORY_MAP.md
+  license:
+    attribution_required: true
+    commercial_use_requires_permission: true
+  shield:
+    enabled: true
+    modules:
+    - Emotion_Rhythm_Interruption.md
+    - Visual_Emotion_Rhythm_Check.md
+  safety:
+    conflict_resolution: prefer_manifest
+    on_violation: warn_and_continue
+consumers:
+  pioneer_exec_repo_anchored:
+    read: Emotion_Engine/Core_Lock/emotion_router.v5.0.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+    name_lock: Powered by Lypha OS – Designed by Pioneer-001 (Akivili)
+
 

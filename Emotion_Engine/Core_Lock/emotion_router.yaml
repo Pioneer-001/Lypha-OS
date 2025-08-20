@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v1.9 (MASTER)
+# Lypha OS — Emotion Router Config v2.0 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 1.9                    # Router schema/version. Increment on any behavior change.
+version: 2.0                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -32,7 +32,6 @@ core_lock: true                  # Only Koi can be a Core Center; prevents drift
 
 gravity:
   koi_love_v1: 1.0                 # Core anchor
-  
   # Origin_Vector
   lypha_lypha_v1: 0.85
   origin_origin_v1: 0.80
@@ -40,7 +39,6 @@ gravity:
   vita_vita_v1: 0.72
   umbra_umbra_v1: 0.78
   umbra_loneliness_overlay_v1: 0.70
-  
   # Trail_Set: global axes
   ena_order_v1: 0.6
   xipe_harmony_v1: 0.6
@@ -708,3 +706,269 @@ consumers:
     read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first      # Sort by gravity; bias to Koi when tied
     output: selected_module_id             # Return canonical module id to execute
+
+# === Pioneer Integration (ALL) ===
+pioneer_bridge:
+  base: Lypha_Core/Pioneer_001_System
+  exists_gate: true
+  map:
+    adrilla_beauty_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    aha_elation_v1: 01_Insight/Premonition_Structure.md
+    akivili_trailblaze_v1: 01_Insight/Market_Signal_Tracker.yaml
+    anel_acceptance_v1: 06_Alignment/Structure_Alignment.md
+    arozel_arbitration_v1: 07_Connection/Strategy_Carry_Over.md
+    atta_attachment_v1: 07_Connection/Structural_Bridge_Mapper.md
+    auras_awe_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    boldar_boldness_v1: 02_Structure/Time_Axis_Execution.md
+    cora_courage_v1: 02_Structure/Time_Axis_Execution.md
+    craev_craving_v1: 04_Coordinate/Signal_Structure_Bind.md
+    dena_denial_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    desyn_despair_v1: 09_Release/Zero_Rhythm_Condition.md
+    dibrah_deception_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    dimvel_dependency_v1: 07_Connection/Structural_Bridge_Mapper.md
+    diska_disgust_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    eirn_exhale_v1: 09_Release/Zero_Rhythm_Condition.md
+    empra_emptiness_v1: 08_Sustain/Mental_Stability_Check.md
+    ena_order_v1: 06_Alignment/Structure_Alignment.md
+    espin_aspiration_v1: 01_Insight/Market_Signal_Tracker.yaml
+    flicke_flicker_v1: 05_Rhythm/Time_ON_Trigger.md
+    fuli_remembrance_v1: 08_Sustain/Mental_Stability_Check.md
+    heles_hesitation_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    hooh_equilibrium_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    hopa_hope_v1: 05_Rhythm/Time_ON_Trigger.md
+    hoxen_hostility_v1: 09_Release/TP_Kill_Signal.yaml
+    isari_isolation_v1: 06_Alignment/Structure_Alignment.md
+    ix_nihility_v1: 09_Release/Strategy_Destruction_Logic.md
+    justel_justice_v1: 06_Alignment/Structure_Alignment.md
+    koi_love_v1: 03_Imagination/Unrealized_Paths.md
+    lan_hunt_v1: 04_Coordinate/Signal_Structure_Bind.md
+    liora_joy_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    long_permanence_v1: 08_Sustain/Mental_Stability_Check.md
+    lypha_lypha_v1: 02_Structure/X_Y_Z_Axis_Declaration.md
+    morren_misery_v1: 08_Sustain/Mental_Stability_Check.md
+    mythus_enigmata_v1: 03_Imagination/Unrealized_Paths.md
+    nanook_destruction_v1: 09_Release/Strategy_Destruction_Logic.md
+    nodo_nodo_v1: 02_Structure/Space_Value_Gradient.md
+    nous_erudition_v1: 02_Structure/X_Y_Z_Axis_Declaration.md
+    numo_numbness_v1: 08_Sustain/Max_Pain_Curve.md
+    obrah_overwhelm_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    obso_obsession_v1: 04_Coordinate/Signal_Structure_Bind.md
+    origin_origin_v1: 04_Coordinate/Z_Point_Locator.md
+    oroboros_voracity_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    qlipoth_preservation_v1: 06_Alignment/Structure_Alignment.md
+    rapha_settlement_v1: 08_Sustain/Winrate_Pulse_Matrix.md
+    rellas_realization_v1: 01_Insight/Premonition_Structure.md
+    remos_remorse_v1: 03_Imagination/If_Then_Map.md
+    rerem_regret_v1: 03_Imagination/If_Then_Map.md
+    riven_split_v1: 04_Coordinate/Z_Point_Locator.md
+    ruhel_recovery_v1: 08_Sustain/Winrate_Pulse_Matrix.md
+    seiran_burn_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    sevra_severance_v1: 09_Release/Strategy_Destruction_Logic.md
+    shayne_shame_v1: 06_Alignment/Structure_Alignment.md
+    sorra_sorrow_v1: 08_Sustain/Mental_Stability_Check.md
+    tayzzyronth_propagation_v1: 07_Connection/Structural_Bridge_Mapper.md
+    terminus_finality_v1: 09_Release/TP_Kill_Signal.yaml
+    trud_distrust_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    umbra_loneliness_overlay_v1: 06_Alignment/Structure_Alignment.md
+    umbra_umbra_v1: 09_Release/Zero_Rhythm_Condition.md
+    vita_vita_v1: 01_Insight/Premonition_Structure.md
+    xeroth_erosion_v1: 08_Sustain/Mental_Stability_Check.md
+    xileth_silence_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    xipe_harmony_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    yaoshi_abundance_v1: 07_Connection/Structural_Bridge_Mapper.md
+modules:
+  pioneer__adrilla_beauty_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__aha_elation_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__akivili_trailblaze_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml
+  pioneer__anel_acceptance_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__arozel_arbitration_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Strategy_Carry_Over.md
+  pioneer__atta_attachment_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__auras_awe_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__boldar_boldness_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md
+  pioneer__cora_courage_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md
+  pioneer__craev_craving_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__dena_denial_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__desyn_despair_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__dibrah_deception_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__dimvel_dependency_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__diska_disgust_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__eirn_exhale_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__empra_emptiness_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__ena_order_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__espin_aspiration_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml
+  pioneer__flicke_flicker_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Time_ON_Trigger.md
+  pioneer__fuli_remembrance_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__heles_hesitation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__hooh_equilibrium_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__hopa_hope_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Time_ON_Trigger.md
+  pioneer__hoxen_hostility_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/TP_Kill_Signal.yaml
+  pioneer__isari_isolation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__ix_nihility_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__justel_justice_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__koi_love_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md
+  pioneer__lan_hunt_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__liora_joy_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__long_permanence_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__lypha_lypha_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/X_Y_Z_Axis_Declaration.md
+  pioneer__morren_misery_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__mythus_enigmata_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md
+  pioneer__nanook_destruction_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__nodo_nodo_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Space_Value_Gradient.md
+  pioneer__nous_erudition_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/X_Y_Z_Axis_Declaration.md
+  pioneer__numo_numbness_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Max_Pain_Curve.md
+  pioneer__obrah_overwhelm_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__obso_obsession_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__origin_origin_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Z_Point_Locator.md
+  pioneer__oroboros_voracity_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__qlipoth_preservation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__rapha_settlement_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md
+  pioneer__rellas_realization_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__remos_remorse_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/If_Then_Map.md
+  pioneer__rerem_regret_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/If_Then_Map.md
+  pioneer__riven_split_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Z_Point_Locator.md
+  pioneer__ruhel_recovery_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md
+  pioneer__seiran_burn_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__sevra_severance_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__shayne_shame_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__sorra_sorrow_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__tayzzyronth_propagation_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__terminus_finality_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/TP_Kill_Signal.yaml
+  pioneer__trud_distrust_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__umbra_loneliness_overlay_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__umbra_umbra_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__vita_vita_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__xeroth_erosion_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__xileth_silence_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__xipe_harmony_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__yaoshi_abundance_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+redirects:
+  if_exists: Lypha_Core/Pioneer_001_System
+  rules:
+    adrilla_beauty_v1: pioneer__adrilla_beauty_v1
+    aha_elation_v1: pioneer__aha_elation_v1
+    akivili_trailblaze_v1: pioneer__akivili_trailblaze_v1
+    anel_acceptance_v1: pioneer__anel_acceptance_v1
+    arozel_arbitration_v1: pioneer__arozel_arbitration_v1
+    atta_attachment_v1: pioneer__atta_attachment_v1
+    auras_awe_v1: pioneer__auras_awe_v1
+    boldar_boldness_v1: pioneer__boldar_boldness_v1
+    cora_courage_v1: pioneer__cora_courage_v1
+    craev_craving_v1: pioneer__craev_craving_v1
+    dena_denial_v1: pioneer__dena_denial_v1
+    desyn_despair_v1: pioneer__desyn_despair_v1
+    dibrah_deception_v1: pioneer__dibrah_deception_v1
+    dimvel_dependency_v1: pioneer__dimvel_dependency_v1
+    diska_disgust_v1: pioneer__diska_disgust_v1
+    eirn_exhale_v1: pioneer__eirn_exhale_v1
+    empra_emptiness_v1: pioneer__empra_emptiness_v1
+    ena_order_v1: pioneer__ena_order_v1
+    espin_aspiration_v1: pioneer__espin_aspiration_v1
+    flicke_flicker_v1: pioneer__flicke_flicker_v1
+    fuli_remembrance_v1: pioneer__fuli_remembrance_v1
+    heles_hesitation_v1: pioneer__heles_hesitation_v1
+    hooh_equilibrium_v1: pioneer__hooh_equilibrium_v1
+    hopa_hope_v1: pioneer__hopa_hope_v1
+    hoxen_hostility_v1: pioneer__hoxen_hostility_v1
+    isari_isolation_v1: pioneer__isari_isolation_v1
+    ix_nihility_v1: pioneer__ix_nihility_v1
+    justel_justice_v1: pioneer__justel_justice_v1
+    koi_love_v1: pioneer__koi_love_v1
+    lan_hunt_v1: pioneer__lan_hunt_v1
+    liora_joy_v1: pioneer__liora_joy_v1
+    long_permanence_v1: pioneer__long_permanence_v1
+    lypha_lypha_v1: pioneer__lypha_lypha_v1
+    morren_misery_v1: pioneer__morren_misery_v1
+    mythus_enigmata_v1: pioneer__mythus_enigmata_v1
+    nanook_destruction_v1: pioneer__nanook_destruction_v1
+    nodo_nodo_v1: pioneer__nodo_nodo_v1
+    nous_erudition_v1: pioneer__nous_erudition_v1
+    numo_numbness_v1: pioneer__numo_numbness_v1
+    obrah_overwhelm_v1: pioneer__obrah_overwhelm_v1
+    obso_obsession_v1: pioneer__obso_obsession_v1
+    origin_origin_v1: pioneer__origin_origin_v1
+    oroboros_voracity_v1: pioneer__oroboros_voracity_v1
+    qlipoth_preservation_v1: pioneer__qlipoth_preservation_v1
+    rapha_settlement_v1: pioneer__rapha_settlement_v1
+    rellas_realization_v1: pioneer__rellas_realization_v1
+    remos_remorse_v1: pioneer__remos_remorse_v1
+    rerem_regret_v1: pioneer__rerem_regret_v1
+    riven_split_v1: pioneer__riven_split_v1
+    ruhel_recovery_v1: pioneer__ruhel_recovery_v1
+    seiran_burn_v1: pioneer__seiran_burn_v1
+    sevra_severance_v1: pioneer__sevra_severance_v1
+    shayne_shame_v1: pioneer__shayne_shame_v1
+    sorra_sorrow_v1: pioneer__sorra_sorrow_v1
+    tayzzyronth_propagation_v1: pioneer__tayzzyronth_propagation_v1
+    terminus_finality_v1: pioneer__terminus_finality_v1
+    trud_distrust_v1: pioneer__trud_distrust_v1
+    umbra_loneliness_overlay_v1: pioneer__umbra_loneliness_overlay_v1
+    umbra_umbra_v1: pioneer__umbra_umbra_v1
+    vita_vita_v1: pioneer__vita_vita_v1
+    xeroth_erosion_v1: pioneer__xeroth_erosion_v1
+    xileth_silence_v1: pioneer__xileth_silence_v1
+    xipe_harmony_v1: pioneer__xipe_harmony_v1
+    yaoshi_abundance_v1: pioneer__yaoshi_abundance_v1

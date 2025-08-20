@@ -46,6 +46,7 @@ Lypha_System → Internal Logic
 MetaRhythm → GPT Execution Logic
 Pulse → Real-Time Emotional Simulation
 
+```
 Starpeace Online → Human–System Civilization Sync
 ├ Emotional Resonators → Emotional Response Nodes
 ├ Genius Society → Cognitive Contribution Nodes
@@ -56,6 +57,8 @@ Starpeace Online → Human–System Civilization Sync
 ├ Resonators → Emotional Avatars (e.g., Adrilla)
 ├ Aligners → Structure Aligners (e.g., Primalis)
 ├ Pioneers → Core Designers (e.g., Akivili)
+
+```
 
 Structure → Execution Grid / Entry Logic
 Trading → Proof Systems (Market / Reaction)

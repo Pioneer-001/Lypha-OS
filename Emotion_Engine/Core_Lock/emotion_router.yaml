@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v4.3 (MASTER)
+# Lypha OS — Emotion Router Config v4.7 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 4.3                    # Router schema/version. Increment on any behavior change.
+version: 4.7                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1159,4 +1159,119 @@ consumers:
     - metarhythm:pulse
     - aion:trigger
     - protocol:structural_response
+
+
+# === Emotion Circuit Integration (functional binding) ===
+emotion_circuit:
+  read: Lypha_Core/3.EmotionCircuit/Emotion_Circuit.md
+  fallback_read: /mnt/data/Emotion_Circuit.md
+  enforce:
+    map_functions: true
+    trigger_validation: true
+    class_alignment: true
+  runtime:
+    explain_mode: on_demand
+    minimize_overhead: true
+  safety:
+    on_missing_entry: warn_and_continue
+    fallback_role: Reflective
+consumers:
+  pioneer_exec_with_circuit:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.3.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+
+
+# === Emotion Archive Integration (original declarations binding) ===
+emotion_archive:
+  read: Lypha_Core/Emo_archive/
+  fallback_read: /mnt/data/Emo_archive
+  enforce:
+    reference_original_declaration: true
+    bind_roles: true
+    validate_with_archive: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    on_missing_entry: warn_and_continue
+    conflict_resolution: prefer_router
+consumers:
+  pioneer_exec_with_archive:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.4.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    require_protocol: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+    - archive:explain
+
+
+# === Lypha Archive Integration (roots & core center binding) ===
+lypha_archive:
+  read: Lypha_Core/lypha_archive/
+  fallback_read: /mnt/data/lypha_archive
+  enforce:
+    bind_roots: true
+    validate_upper_layers: true
+    love_as_core_center: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    conflict_resolution: prefer_router
+    on_missing_entry: warn_and_continue
+consumers:
+  pioneer_exec_with_lypha_archive:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.5.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    require_protocol: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+    - lypha_archive:justify
+
+
+# === Trail Archive Integration (directional binding) ===
+trail_archive:
+  read: Lypha_Core/trail_archive/
+  fallback_read: null
+  enforce:
+    bind_trails: true
+    validate_directions: true
+    align_with_router: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    conflict_resolution: prefer_router
+    on_missing_entry: warn_and_continue
+consumers:
+  pioneer_exec_with_trail_archive:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.6.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    require_protocol: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+    - trail_archive:justify
+
 

@@ -1,11 +1,11 @@
-# Lypha OS — Emotion Router Config v4.1 (MASTER)
+# Lypha OS — Emotion Router Config v4.2 (MASTER)
 # path: Emotion_Engine/Core_Lock/emotion_router.yaml
 # purpose: global routing weights, aliases, and disambiguation rules — **UNIFIED**
 #
 # Inline comments explain *why* each rule exists and how it should behave at runtime.
 # Keep comments when editing; they are part of the contract for future maintainers.
 
-version: 4.1                    # Router schema/version. Increment on any behavior change.
+version: 4.2                    # Router schema/version. Increment on any behavior change.
 updated_by: Nous                 # Author/maintainer of this revision.
 notes: |
   - Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.
@@ -1101,4 +1101,34 @@ consumers:
     post_hook:
     - metarhythm:pulse
     - aion:trigger
+
+
+# === Self-Judgment Declaration Integration (soft, harmonized) ===
+self_judgment_anchor:
+  read: Cognitive_Ethics/Core_Lock/GPT_Self_Judgment_Declaration.md
+  fallback_read: /mnt/data/GPT_Self_Judgment_Declaration.md
+  enforce:
+    value_calibration: true
+    tri_node_ethics: true
+    anti_comparative_scoring: true
+  output_policy:
+    anchor_reference: GPT_Self_Judgment_Declaration
+    scale_by_user_tier: true
+  safety:
+    mode: soft
+    on_violation: warn_and_continue
+metarhythm:
+  value_hook: self_judgment_anchor.enforce.value_calibration
+aion:
+  gate_with: self_judgment_anchor.enforce.tri_node_ethics
+consumers:
+  pioneer_exec_full_stack_anchored:
+    read: Emotion_Engine/Core_Lock/emotion_router.v4.1.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    post_hook:
+    - metarhythm:pulse
+    - aion:trigger
+
 

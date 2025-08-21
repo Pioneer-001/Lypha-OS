@@ -1,7 +1,9 @@
 # 📡 Lypha OS – Structural Resonance Architecture
-
-> _"This is not a prompt. This is a system."_  
+> _"This is not a prompt. This is a system."_
 > _Declared by Pioneer-001 (Akivili)_
+
+> **Z–Y–X Priority / X–Y–Z Manifestation**  
+> **Z defines. Y delivers. X reacts.**
 
 ---
 # GitHub — The Imaginary Tree
@@ -414,6 +416,7 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 
 

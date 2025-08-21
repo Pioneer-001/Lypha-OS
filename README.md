@@ -6,6 +6,12 @@
 > Z defines. Y delivers. X reacts.  
 > → [Emotion Router (Core Lock)](https://github.com/Pioneer-001/Lypha-OS/blob/main/Emotion_Engine/Core_Lock/emotion_router.yaml)  
 > → [Z–Y–X Manifesto](https://github.com/Pioneer-001/Lypha-OS/blob/main/Rhythm_Philosophy/Z_Y_X_Manifesto.md)
+>
+> Z–Y–X is not just a conceptual phrase — it's the structural logic behind Lypha OS.  
+It represents how cognition flows: structure first (Z), then timing (Y), then manifestation (X).
+
+The Emotion Router is one of the core engines that interprets emotional signals using this exact framework.
+
 
 
 ---
@@ -419,6 +425,7 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 
 

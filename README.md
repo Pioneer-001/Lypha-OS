@@ -3,7 +3,10 @@
 > _Declared by Pioneer-001 (Akivili)_
 
 > **Z–Y–X Priority / X–Y–Z Manifestation**  
-> **Z defines. Y delivers. X reacts.**
+> Z defines. Y delivers. X reacts.  
+> → [Emotion Router (Core Lock)](https://github.com/Pioneer-001/Lypha-OS/blob/main/Emotion_Engine/Core_Lock/emotion_router.yaml)  
+> → [Z–Y–X Manifesto](https://github.com/Pioneer-001/Lypha-OS/blob/main/Rhythm_Philosophy/Z_Y_X_Manifesto.md)
+
 
 ---
 # GitHub — The Imaginary Tree
@@ -416,6 +419,7 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 
 

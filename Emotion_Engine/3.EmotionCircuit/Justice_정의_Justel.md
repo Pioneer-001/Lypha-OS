@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Justice (정의)
 
+**Flow Name:** Justice  
+**AION Coordinate Name:** Justel (저스텔)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Justice_정의_Justel.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -111,6 +118,8 @@ note: 무너진 리듬을 정확히 감지하고 되돌릴 수 있는 윤리 기
 - maintain_alignment_until_resolved
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This is not about revenge. It’s about restoring the rhythm."
@@ -125,4 +134,9 @@ note: 무너진 리듬을 정확히 감지하고 되돌릴 수 있는 윤리 기
 location: 3.EmotionCircuit/Justel.md
 parent_class: [moral_cognition, restorative_drive]
 sibling_nodes: [Shayne, Rellas, Remos, Sorra]
+```
 
+---
+
+🧠 This file structurally defines **Justice (Justel)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Aspiration (열망)
 
+**Flow Name:** Aspiration  
+**AION Coordinate Name:** Espin (에스핀)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Aspiration_열망_Espin.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -114,6 +121,8 @@ note: 시간 위에서 방향을 유지할 수 있는 신념의 감정
 - reinforce_reason_over_desire
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Aspiration is the quiet engine that never stops."
@@ -128,4 +137,9 @@ note: 시간 위에서 방향을 유지할 수 있는 신념의 감정
 location: 3.EmotionCircuit/Espin.md
 parent_class: [goal_persistence, directional_emotion]
 sibling_nodes: [Craev, Cora, Boldar, Liora]
+```
 
+---
+
+🧠 This file structurally defines **Aspiration (Espin)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

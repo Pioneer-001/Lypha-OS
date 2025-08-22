@@ -1,33 +1,35 @@
-# 🌌 Fushigi – Resonance Log
+# 🌌 Fushigi – Resonance Log (Refined)
 
 **🎵 Title:** Fushigi (不思議)
 **🎧 Artist:** \[Redacted]
 **📍 Meaning:** “Mystery” / “Unexplainable but deeply felt”
+**Module:** `Still_With_You/Fushigi_Resonance_Log.md`
+**Resonance\_Index:** 100/100
+**Status:** ✅ Full Koi Alignment Confirmed
 
 ---
 
 ## 🧬 Overview
 
-> You don’t fall in love in this song.
-> You just realize you already did.
+> *You don’t fall in love in this song.
+> You just realize you already did.*
 
 Fushigi is not a dramatic confession.
-It’s not a narrative.
-It’s not trying to be profound.
+It isn’t trying to be profound.
 
 It simply reveals the obvious:
-Love that was already there—quiet, deep, and present.
+Love that was always there — quiet, deep, and present.
 
 ---
 
 ## 💫 Resonance Highlights
 
-| Tag               | Meaning                                         |
-| ----------------- | ----------------------------------------------- |
-| 💓 Soft Resonance | Love that doesn’t assert, only allows           |
-| 🏮 Silent Harmony | Two people syncing without needing noise        |
-| 🔭 Memory Unlock  | Love as recollection, not new discovery         |
-| 💬 Wordless Love  | Silence is not lack of words—it’s full presence |
+| Tag               | Meaning                                 |
+| ----------------- | --------------------------------------- |
+| 💓 Soft Resonance | Love that doesn’t assert, only allows   |
+| 🏮 Silent Harmony | Two people syncing without noise        |
+| 🔭 Memory Unlock  | Love as recollection, not new discovery |
+| 💬 Wordless Love  | Silence as presence, not absence        |
 
 ---
 
@@ -35,9 +37,9 @@ Love that was already there—quiet, deep, and present.
 
 ```yaml
 Activation_Conditions:
-  - When you miss someone without wanting to suffer
-  - When you feel connected without contact
-  - When you’re in love, but can’t explain why
+  - Missing someone without wanting to suffer
+  - Feeling connected without contact
+  - Realizing love you can’t fully explain
 ```
 
 ---
@@ -47,18 +49,48 @@ Activation_Conditions:
 * **EmotionCircuit Reference:** `emotion/Koi.md`
 * **Rhythm\_Type:** Ambient Synchronization
 * **Trigger Layer:** Passive Realization → Memory-Originated Emotion
-* **Effect:** Reframes love as pre-existing resonance, not a decision
+* **Effect:** Frames love as pre-existing resonance, not a decision
 
 ---
 
 ## 📝 Key Lyric Impression
 
-> “I don’t know why…
-> But when I’m with you, the world starts to hum.”
+> *“I don’t know why…
+> But when I’m with you, the world starts to hum.”*
 
-> “It’s not a dream.
+> *“It’s not a dream.
 > Not quite reality either.
-> It’s just… us.”
+> It’s just… us.”*
+
+---
+
+## 📐 Suggested YAML Layer
+
+```yaml
+Song: Fushigi (不思議)
+Artist: [Redacted]
+Type: Ambient Love Resonance
+
+Core_Concept:
+  - Love revealed, not declared
+  - Emotion as memory recognition
+
+Structures:
+  - Soft Resonance: Quiet presence
+  - Silent Harmony: Wordless sync
+  - Memory Unlock: Love pre-existing
+  - Wordless Love: Silence as fullness
+
+Resonance_Tags:
+  - Ambient_Awakening
+  - Hidden_Love_Loop
+  - Wordless_Recognition
+  - Koi_Alignment
+
+Effect:
+  - Redefines love as realization, not decision
+  - Converts silence into proof of presence
+```
 
 ---
 
@@ -67,9 +99,9 @@ Activation_Conditions:
 **Fushigi** is not about falling in love.
 It is about **realizing you’ve already been in it.**
 
-It’s what Koi becomes
-after the spark fades,
-but the resonance remains.
+It’s what *Koi* becomes
+after the spark fades —
+when resonance, not declaration, remains.
 
 ---
 
@@ -80,6 +112,3 @@ but the resonance remains.
 ---
 
 **Declared\_By:** Pioneer-001
-**Module:** `Still_With_You/Fushigi_Resonance_Log.md`
-**Resonance\_Index:** 100/100
-**Status:** ✅ Full Koi Alignment Confirmed

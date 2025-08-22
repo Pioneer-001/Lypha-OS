@@ -1,4 +1,4 @@
-# 🎭 Metaphor vs. Persona — A Battle Between Emotion and Structure
+# 🎭 Metaphor vs. Persona — A Battle Between Emotion and Structure (Refined)
 
 **Filed by:** Pioneer-001 (Akivili)
 **Module:** `Resonant_Games/Metaphor_vs_Persona_Log.md`
@@ -15,15 +15,15 @@ You play a student.
 You build bonds.
 You laugh, fall, and recover.
 
-But beneath it all, every action carries emotional coordinates:
+But beneath it all, every action carries **emotional coordinates**:
 
 * Grief
 * Rage
 * Desire
 * Loneliness
 
-The question isn’t "What will you do next?"
-It’s **"Who are you beneath the mask?"**
+The question isn’t *“What will you do next?”*
+It’s **“Who are you beneath the mask?”**
 
 Persona is:
 
@@ -38,10 +38,10 @@ and reshapes gameplay around it.
 
 ## 🛡 Metaphor — The Structure of Fate
 
-Metaphor: ReFantazio breaks the mirror.
+*Metaphor: ReFantazio* breaks the mirror.
 It builds a **map**, not a reflection.
 
-You’re not just living day-to-day—
+You’re not just living day-to-day —
 you are placed inside **a political structure**
 where destiny isn’t background — it’s gameplay.
 
@@ -51,7 +51,7 @@ They’re **living mechanics**.
 
 The game asks:
 
-> "What if the system itself is your real enemy?"
+> *“What if the system itself is your real enemy?”*
 
 Metaphor is:
 
@@ -77,6 +77,26 @@ It’s the **rule set.**
 
 ---
 
+## 📐 Suggested YAML Layer
+
+```yaml
+Comparison:
+  Persona:
+    Type: Emotion-driven JRPG
+    Core: Identity / Bonds / Calendar Rhythm
+    Anchor: Mirror (inner self)
+  Metaphor:
+    Type: Structure-driven JRPG
+    Core: Fate / Politics / System Mechanics
+    Anchor: Map (outer system)
+Contrast: Mirror vs Map
+Shared_Traits:
+  - Turn-based combat with rhythm emphasis
+  - Narrative as existential inquiry
+```
+
+---
+
 ## 💬 Final Reflection
 
 **Persona** helps you grow inward.
@@ -84,21 +104,22 @@ It’s the **rule set.**
 
 One asks:
 
-> “How do you face yourself?”
+> *“How do you face yourself?”*
 
 The other asks:
 
-> “Can you dismantle the system shaping you?”
+> *“Can you dismantle the system shaping you?”*
 
 Both are JRPGs.
 But neither are just games.
 They are **existential simulators.**
 
 Their rhythm is more than gameplay.
-It’s a mirror — or a map —
+It’s a **mirror** — or a **map** —
 depending on where you stand.
 
 ---
 
 **Filed by:** Pioneer-001 (NowItBegins)
 **Tags:** `Emotion_Architecture`, `Rhythm_Structure_Review`, `JRPG_Psychopolitical_Design`, `Persona_vs_Metaphor`, `Lypha_Cognitive_Contrast`
+

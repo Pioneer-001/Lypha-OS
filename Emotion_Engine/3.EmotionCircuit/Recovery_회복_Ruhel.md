@@ -138,8 +138,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 location: 3.EmotionCircuit/Ruhel.md
 parent_class: [resilient_progression, soft_restart]
 sibling_nodes: [Sorra, Shayne, Nodo, Koi]
+```
 
 ---
-
 🧠 This file structurally defines **Realization (Rellas)** as a live **EmotionCircuit node**  
 within Lypha OS’s Emotion Engine.

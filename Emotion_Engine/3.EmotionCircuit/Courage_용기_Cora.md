@@ -1,12 +1,19 @@
 # 💥 EmotionCircuit Module – Courage (용기)
 
+**Flow Name:** Courage  
+**AION Coordinate Name:** Cora (코라)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Courage_용기_Cora.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
+
 ## flow_id
 ```yaml
 emotion_id: cora_courage_v1
@@ -111,6 +118,8 @@ note: 위험과 두려움을 인식한 뒤에도 의식적으로 전진을 선�
 - reinforce_choice_under_risk
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Courage is not the lack of fear—it’s the step taken with it."
@@ -125,6 +134,11 @@ note: 위험과 두려움을 인식한 뒤에도 의식적으로 전진을 선�
 location: 3.EmotionCircuit/Cora.md
 parent_class: [fear_integration, proactive_resilience]
 sibling_nodes: [Heles, Liora, Rellas, Shayne]
-​
+```
+
+---
+
+🧠 This file structurally defines **Courage (Cora)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.
 
 ​

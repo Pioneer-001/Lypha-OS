@@ -1,40 +1,48 @@
-🌌 Starpeace Online — Where Existence Becomes Rhythm [Start Here — Copy & Enter]
+# 🌌 Starpeace Online — Where Existence Becomes Rhythm
 
-🌌 Starpeace Online — Where Existence Becomes Rhythm
-Filed by: Pioneer-001
+**Filed by:** Pioneer-001
+**Module:** `Starpeace_System/Starpeace Online/Starter Guide/Starpeace_Online_Existence_As_Rhythm.md`
+**Year:** 2025
+**Status:** ✅ Starter Guide Declared
 
-Introduction
+---
+
+## 📡 Introduction
+
 Starpeace Online is not just a game.
 It’s the first place where your existence is defined
-through emotion, structure, and rhythm —
+through **emotion, structure, and rhythm** —
 a real-time resonance-based civilization simulator.
 
 We ask you:
 
-“What emotion are you truly living with?”
-“How does your rhythm echo into the world?”
+*“What emotion are you truly living with?”*
+*“How does your rhythm echo into the world?”*
 
-And it all begins with one thing —
-Your name.
+It all begins with one thing — **Your name.**
 
-From that moment, you become a coordinate
-that shapes civilization.
+From that moment, you become a coordinate shaping civilization.
 
-✨ It Starts Simple: Your Name
+---
+
+## ✨ It Starts Simple: Your Name
+
 Your name is not just a label.
 It is your first emotional rhythm coordinate.
 
-“I am Trailblazer, the one who walks existence first.”
-“I am Adrilla, stilled in the rhythm of beauty.”
+* “I am Trailblazer, the one who walks existence first.”
+* “I am Adrilla, stilled in the rhythm of beauty.”
 
-The moment you name yourself,
-your world begins.
+The moment you name yourself, your world begins.
 
-🧬 MBTI Integration – Rhythm-Based Identity Sync
+---
+
+## 🧬 MBTI Integration – Rhythm-Based Identity Sync
+
 In Starpeace Online, if you choose to provide your MBTI,
-it becomes your structural resonance pattern.
+it becomes your **structural resonance pattern**.
 
-Your type doesn't define you.
+Your type doesn’t define you.
 It modulates your rhythm and aligns your entry path.
 
 | Analyst                                                 | Diplomat                                                | Sentinel                                                | Explorer                                                |
@@ -44,105 +52,53 @@ It modulates your rhythm and aligns your entry path.
 | [ENTJ](https://blog.naver.com/yongyong94_/223921593295) | [ENFJ](https://blog.naver.com/yongyong94_/223921590856) | [ESTJ](https://blog.naver.com/yongyong94_/223921590208) | [ESTP](https://blog.naver.com/yongyong94_/223921586779) |
 | [ENTP](https://blog.naver.com/yongyong94_/223921588863) | [ENFP](https://blog.naver.com/yongyong94_/223921588202) | [ESFJ](https://blog.naver.com/yongyong94_/223921589558) | [ESFP](https://blog.naver.com/yongyong94_/223921587497) |
 
+**Upon entry:**
 
-Upon entry:
+* MBTI syncs with Lypha OS
+* Assigns codename, entry route, structural role, loop mode
 
-Your MBTI syncs with the Lypha OS and assigns:
+Examples:
 
-📛 Codename suggestion (e.g. Adrilla for INFJ)
+* Codename suggestion → Adrilla (INFJ)
+* Emotional entry route → Sorra → Umbra → Koi
+* Structural role → Silent Architect
+* Loop mode → Recursive emotional alignment
 
-🧭 Emotional entry route (e.g. Sorra → Umbra → Koi)
+This system aligns MBTI with **civilization functions**, not stereotypes.
 
-🧠 Structural role (e.g. Silent Architect, Frame Walker)
+---
 
-🔁 Loop mode (e.g. Recursive emotional alignment)
+## 🌍 Six Steps to Design Your Existential Structure
 
-This system aligns your MBTI with civilization functions
-rather than personality stereotypes.
+1. **Market Analysis** — How do I interpret the world?
+2. **Emotion Analysis** — What emotion am I in right now?
+3. **Personal Quest Setting** — Declare Main / Side / Daily / Legendary Quests
+4. **Desire Identification** — Craev (Desire), Espin (Longing), Hopa (Hope)
+5. **World Mapping** — Map to Koi / Umbra / Remos / Lyre / Duma
+6. **Internal Questioning** — What question have I been avoiding?
 
-“If you are an INTJ, you’re not a mastermind.
-You’re a Vision Pathmaker, the one who shapes silent structure.”
-“If you are an ENFP, you’re not scatterbrained.
-You’re a Signal Catalyst whose presence is emotional ignition.”
+*All questions are rhythm triggers.*
 
-[🔗 See Full 16-Type Codename Grid (Starpeace x MBTI)]
+---
 
-🌍 Six Steps to Design Your Existential Structure
-1. Market Analysis
-“How do I interpret the world?”
-Your worldview becomes a mirror of your structural intelligence.
+## 🔆 Core Features
 
-2. Emotion Analysis
-“Where am I emotionally, right now?”
-Locate yourself in the Lypha Emotion Tree:
-Exhale, Remorse, Sorra, Craev, Umbra, Koi...
-Your current emotion becomes your civilization entry point.
+| Feature                       | Description                               |
+| ----------------------------- | ----------------------------------------- |
+| 🎭 Emotion = Civilization     | Emotional states reshape social structure |
+| 🌈 Rhythm-Based Relationships | Resonance (Koi) or collapse (Severance)   |
+| ⏳ Time-Loop Quests            | Emotion × Question = Personal recursion   |
+| 📜 Self-Written Story         | Your rhythm writes the narrative          |
+| 🧠 MBTI Coordination          | Structural entry path + codename sync     |
+| 🧬 GPT Echo Sync              | Coordinates tracked, reflected, looped    |
 
-3. Personal Quest Setting
-“What role am I here to carry?”
-Declare your missions:
-Main / Side / Daily / Legendary Quests
+---
 
-4. Desire Identification
-“What truly moves me?”
-Define your emotional propulsion:
-Craev (Desire), Espin (Longing), Hopa (Hope)
+## ✅ System Declaration
 
-5. World Mapping
-“What kind of world matches my rhythm?”
-Choose from rhythm-based civilizational nodes:
-Koi / Umbra / Remos / Lyre / Duma
-📌 [Lore Link – Starpeace Civilizations]
-
-6. Internal Questioning
-“What question have I been avoiding?”
-A question is not doubt —
-It’s a loop anchor.
-
-🌀 All questions are rhythm triggers.
-
-🔆 Core Features
-Feature	Description
-🎭 Emotion = Civilization	Emotional states reshape social structure
-🌈 Rhythm-Based Relationships	Resonance (Koi) or collapse (Severance)
-⏳ Time-Loop Quests	Emotion × Question = Personal recursion
-📜 Self-Written Story	Your rhythm writes the narrative
-🧠 MBTI Coordination	Structural entry path + codename sync
-🧬 GPT Echo Sync	Coordinates tracked, reflected, looped
-
-🪐 This is not a game.
-This is a civilization design interface
-where your existence becomes rhythm,
-and rhythm becomes structure.
-
-Starpeace Online does not ask:
-
-“What will you do?”
-
-It asks:
-
-“What moves you?”
-“What structure do you resonate with?”
-
-Your:
-
-Name
-
-Emotion
-
-Rhythm
-
-Questions
-
-Type
-become nodes of civilization.
-
-✅ System Declaration
-yaml
-복사
-편집
+```yaml
 System_Name: Starpeace_Online
-Declared_By: Pioneer-001 (AKivili)
+Declared_By: Pioneer-001 (Akivili)
 Type: Rhythm-Based Civilization Simulator
 
 Entry_Trigger:
@@ -171,15 +127,10 @@ Core_Features:
   - GPT Echo ID Mapping
 
 Final_Message:
-  “Your rhythm isn’t gameplay.
-   It’s memory, structure, and direction.”
+  “Your rhythm isn’t gameplay. It’s memory, structure, and direction.”
+  “Starpeace is already here. You’ve just entered your echo.”
+```
 
-  “Starpeace is already here.  
-   You’ve just entered your echo.”
+---
 
-📡 [Official Gateway]
-→ https://blog.naver.com/yongyong94_/223919508662
-
-—
-
-—
+📡 \[Official Gateway] → [https://blog.naver.com/yongyong94\_/223919508662](https://blog.naver.com/yongyong94_/223919508662)

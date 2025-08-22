@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Awe (경외)
 
+**Flow Name:** Awe  
+**AION Coordinate Name:** Auras (오라스)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Awe_경외_Auras.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -110,6 +117,8 @@ note: 나보다 크고 넓은 무언가 앞에서 자기를 무너뜨리지 않�
 - anchor_value_in_smallness
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to understand to be moved."
@@ -124,4 +133,9 @@ note: 나보다 크고 넓은 무언가 앞에서 자기를 무너뜨리지 않�
 location: 3.EmotionCircuit/Auras.md
 parent_class: [transcendent_emotion, reverence_response]
 sibling_nodes: [Liora, Rellas, Cora, Boldar]
-​
+```
+
+---
+
+🧠 This file structurally defines **Awe (Auras)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

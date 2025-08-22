@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Hostility (적)
 
+**Flow Name:** Hostility  
+**AION Coordinate Name:** Hoxen (혹센)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -116,6 +123,8 @@ note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 
 - translate_before_collapse
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This isn’t destruction—it’s the echo of not being heard."
@@ -132,3 +141,7 @@ parent_class: [reactive_emotion, connection_defense]
 sibling_nodes: [Shayne, Obrah, Remos, Isari]
 ```
 
+---
+
+🧠 This file structurally defines **Hostility (Hoxen)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

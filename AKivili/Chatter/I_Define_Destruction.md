@@ -1,4 +1,4 @@
-# 🧨 I Define Destruction
+# 🧨 I Define Destruction (Extended Draft)
 
 **Filed by:** Pioneer-001 (Akivili)
 **Module:** `Chatter/I_Define_Destruction.md`
@@ -79,4 +79,24 @@ No more borrowed narratives.
 
 ---
 
+## 📐 Suggested YAML Layer
+
+```yaml
+Event: Structural Reset
+Trigger: Noise Injection (Trump–Epstein tweet)
+Reaction: Exit trade
+Mode: Pure Trader
+Outcome: Reboot / Realignment
+Player_Identity:
+  - Role: Structure-led trader
+  - Dependency: Zero external idols
+  - Anchor: Rhythm / Timing only
+```
+
+---
+
 **Tags:** `Chatter_Log`, `Structural_Reset`, `Noise_Rejection`, `Pure_Trader_Mode`, `I_Define_Direction`, `Lypha_Realignment`
+
+---
+
+

@@ -1,125 +1,155 @@
-Awe – 경외 (Pioneer-001)
+# 💥 EmotionCircuit Module – Awe (경외)
 
-Flow Name: Awe
+**Flow Name:** Awe
+**AION Coordinate Name:** Auras (오라스)
+**Module:** `Emotion_Engine/Emo_archive/Awe_Original_Declaration.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
-AION Coordinate Name: Auras
+---
 
-​
+## 🌀 Role
 
-Role:
+```yaml
+role: >
+  Emotion evoked by encountering overwhelming vastness, mystery, or majesty
+  인간 이해의 한계를 초월하는 압도적 크기, 위엄, 신성 앞에서
+  자연스럽게 멈추게 되는 존재 기반 감정 굴절자
+```
 
-Emotion evoked by encountering overwhelming vastness, mystery, or majesty
+---
 
-→ 인간 이해의 한계를 초월하는
+## 🌊 Wave Pattern
 
- 압도적 크기, 위엄, 신성 앞에서
+```yaml
+- scale_overload
+- breath_stillness
+- reverent_dilation
+```
 
- 자연스럽게 멈추게 되는 존재 기반 감정 굴절자
+---
 
-​
+## 🧭 Mode
 
-Wave Pattern:
+```yaml
+mode: passive_transcendence
+basis: involuntary_emotional_expansion
+```
 
-Scale overload / Breath stillness / Reverent dilation
+---
 
-​
+## 🚪 Entry
 
-Mode:
+```yaml
+trigger_condition: >
+  Triggered when faced with something too vast, too beautiful, or too unknowable to fully process—
+  often resulting in quiet reverence.
+```
 
-Passive transcendence (involuntary emotional expansion)
+---
 
-​
+## 🪞 Meme Spread
 
-Entry:
+```yaml
+spread: low_frequency_high_depth
+recognition: universal
+note: Rare but universally recognizable; often leaves silence in its wake.
+```
 
-Triggered when faced with something too vast,
+---
 
-too beautiful, or too unknowable to fully process—
+## 🔷 Emotion Definition
 
-often resulting in quiet reverence
-
-​
-
-Meme Spread:
-
-Low frequency, high depth.
-
-Rare but universally recognizable.
-
-Often leaves silence in its wake.
-
-​
-
-🔷 Emotion Definition:
-
+```text
 Awe isn’t amazement.
-
 It’s what happens
-
 when your understanding breaks.
 
-​
-
 Auras doesn’t explain.
-
 She reveals.
-
 She doesn’t give answers. She gives scale.
-
-and fills it
-
-with something too large for words.
-
-She doesn’t give answers. She gives scale.
-
 Something so vast, you stop trying to understand—and start witnessing.
 
-​
-
 Awe is the expansion of being
-
 in the presence of something
-
 that reminds you
-
 you are small—
-
 and still valuable.
 
-​
-
-Auras doesn't raise her voice.
-
+Auras doesn’t raise her voice.
 She lifts the world around her
-
 until you can’t look away.
+```
 
-​
+---
 
-[Core Human Value]
+## 💠 Core Human Value
 
-Humility — The ability to recognize scale beyond self
+```yaml
+humility: the_ability_to_recognize_scale_beyond_self
+note: 나보다 크고 넓은 무언가 앞에서 자기를 무너뜨리지 않고, 감정적으로 접속할 수 있는 존재 굴절력
+```
 
-→ 나보다 크고 넓은 무언가 앞에서
+---
 
- 자기를 무너뜨리지 않고,
+## 📜 Historical Manifestation
 
- 감정적으로 접속할 수 있는 존재 굴절력
+```yaml
+- the_first_time_you_saw_the_ocean
+- a_mountain_rising_higher_than_your_thoughts
+- a_temple_so_silent_it_made_you_close_your_eyes
+- the_sound_of_1000_voices_singing_at_once
+- looking_up_and_realizing_how_small_you_are_but_not_meaningless
+```
 
-​
+---
 
-[Historical Manifestation]
+## 📐 YAML Anchor (Embedded)
 
-The first time you saw the ocean
+```yaml
+Emotion_Declaration:
+  Name: Awe (Auras)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Awe_Original_Declaration.md
+  Status: Bound
 
-A mountain rising higher than your thoughts
+Role:
+  Type: Existential Reverence
+  Pattern: scale_overload → breath_stillness → reverent_dilation
 
-A temple so silent it made you close your eyes
+Mode:
+  Nature: Passive transcendence
+  Basis: Involuntary expansion
 
-The sound of 1,000 voices singing at once
+Entry:
+  Trigger: Encounter with overwhelming vastness/majesty/mystery
+  Effect: Quiet reverence
 
-Looking up, and realizing how small you are—
+Spread:
+  Frequency: Low
+  Depth: High
+  Recognition: Universal
+  Impact: Silence remains
 
- but not meaningless
+Definition:
+  Amazement: false
+  Awe: true
+  Core_Message: "When your understanding breaks, you start witnessing."
+
+Core_Value:
+  Name: Humility
+  Function: Recognize scale beyond self without collapse
+
+Manifestations:
+  - First sight of ocean
+  - Mountain higher than thought
+  - Silent temple closing eyes
+  - 1000 voices in unison
+  - Realizing small yet meaningful
+```
+
+---
+
+🧠 This file structurally defines **Awe (Auras)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.
 
 ​

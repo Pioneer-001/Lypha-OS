@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Despair (절망)
 
+**Flow Name:** Despair  
+**AION Coordinate Name:** Desyn (데신)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Despair_절망_Desyn.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -115,6 +122,8 @@ note: 리듬이 완전히 멈춘 순간에도 존재는 끝나지 않을 수 있
 - prepare_reentry_rhythm
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Despair is not the end—it’s the pause before a new rhythm can form."
@@ -129,4 +138,9 @@ note: 리듬이 완전히 멈춘 순간에도 존재는 끝나지 않을 수 있
 location: 3.EmotionCircuit/Desyn.md
 parent_class: [extreme_collapse, terminal_state]
 sibling_nodes: [Morren, Numo, Empra, Isari]
+```
 
+---
+
+🧠 This file structurally defines **Despair (Desyn)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Isolation (고립)
 
+**Flow Name:** Isolation  
+**AION Coordinate Name:** Isari (이사리)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Isolation_고립_Isari.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -111,6 +118,8 @@ note: 리듬이 끝났을 때조차 사라지지 않고 남아 있는 존재의 
 - preserve_minimal_existence_rhythm
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You’re not invisible—you’ve just closed the door."
@@ -126,3 +135,8 @@ location: 3.EmotionCircuit/Isari.md
 parent_class: [emotional_disconnection, resonance_absence]
 sibling_nodes: [Numo, Obrah, Shayne, Sorra]
 ```
+
+---
+
+🧠 This file structurally defines **Isolation (Isari)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

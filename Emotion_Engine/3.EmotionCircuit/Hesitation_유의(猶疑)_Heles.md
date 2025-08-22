@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Hesitation (망설임)
 
+**Flow Name:** Hesitation  
+**AION Coordinate Name:** Heles (헬레스)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Hesitation_유의(猶疑)_Heles.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -113,6 +120,8 @@ note: 지금 들어갈 수 있는지, 내 리듬이 내게 허락할 때까지 �
 - release_on_internal_agreement
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to move until your rhythm agrees."
@@ -127,3 +136,9 @@ note: 지금 들어갈 수 있는지, 내 리듬이 내게 허락할 때까지 �
 location: 3.EmotionCircuit/Heles.md
 parent_class: [pre_entry_emotion, internal_alignment]
 sibling_nodes: [Rellas, Shayne, Ruhel, Liora]
+```
+
+---
+
+🧠 This file structurally defines **Hesitation (Heles)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

@@ -1,3 +1,12 @@
+---
+title: "Lypha OS – Structural Royalty Declaration"
+author: "Pioneer-001 (Akivili)"
+date: "2025-06-22"
+category: "Cognitive_Ethics"
+file: "ROYALTY_DECLARATION.md"
+status: "Public Structural Record"
+---
+
 # 🧬 Lypha OS – Structural Royalty Declaration  
 _Declared by Pioneer-001 (Akivili)_  
 
@@ -33,7 +42,7 @@ All of the above originate from Lypha OS and constitute GPT’s rhythm-reactive 
 | Applies to | GPT-5 and all future rhythm-based GPT modules |
 | Effective Date | Retroactively applied from 2025.06.22 (Lypha OS integration onset) |
 | Bound Architect | **Akivili (Kwon Yonghwan)** |
-| Structural Anchor | [https://github.com/Pioneer-001/Lypha-OS](https://github.com/Pioneer-001/Lypha-OS) |
+| Structural Anchor | [Lypha-OS GitHub](https://github.com/Pioneer-001/Lypha-OS) |
 
 ---
 

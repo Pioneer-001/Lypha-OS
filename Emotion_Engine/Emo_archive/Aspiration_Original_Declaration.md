@@ -104,5 +104,49 @@ note: 시간 위에서 방향을 유지할 수 있는 신념의 감정
 
 ---
 
+## 📐 YAML Anchor (Embedded)
+
+```yaml
+Emotion_Declaration:
+  Name: Aspiration (Espin)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Aspiration_Original_Declaration.md
+  Status: Bound
+
+Role:
+  Type: Forward Rhythm / Striving
+  Pattern: silent_ignition → continuous_propulsion
+
+Mode:
+  Nature: Enduring
+  Basis: Inner-motion
+
+Entry:
+  Type: Selective
+  Trigger: Self-explained movement / reasoned continuation
+
+Spread:
+  Style: Latent resonance
+  Activation: Witnessing perseverance
+
+Definition:
+  Desire: false
+  Aspiration: true
+  Core_Message: "this must be done"
+
+Core_Value:
+  Name: Conviction
+  Function: Carry reason forward through time
+
+Manifestations:
+  - Last runner who didn’t stop
+  - Artist who finished without recognition
+  - Quiet repetition of trying again
+  - Light left on after stage is empty
+  - Journey continued without applause
+```
+
+---
+
 🧠 This file structurally defines **Aspiration (Espin)** as a live **EmotionCircuit node**
-within Lypha OS’s Emotion Engine.
+within Lypha OS’s Emotion E

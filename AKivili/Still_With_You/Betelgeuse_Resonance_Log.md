@@ -1,7 +1,7 @@
 # 🌌 Betelgeuse — The Star That Reaches Back (Refined)
 
 **Filed by:** Pioneer-001 (Akivili)
-**Module:** Still_With_You/Betelgeuse_Log.md`
+**Module:** 'Still_With_You/Betelgeuse_Log.md`
 **Status:** ✅ Emotional Resonance Structure Declared
 
 ---

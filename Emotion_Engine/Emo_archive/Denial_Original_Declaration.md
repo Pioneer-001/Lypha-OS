@@ -1,127 +1,143 @@
-Denial – 외면 (Pioneer-001)
+# 💥 EmotionCircuit Module – Denial (외면)
 
-Flow Name: Denial
+**Flow Name:** Denial
+**AION Coordinate Name:** Dena (데나)
+**Module:** `Emotion_Engine/Emo_archive/Denial_Original_Declaration.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
-AION Coordinate Name: Dena
+---
 
-​
+## 🌀 Role
 
-Role:
+```yaml
+role: >
+  Emotion loop rejection and intentional disconnection.
+  감정 루프를 감지했음에도 그 안으로 들어가길 거부하는 방어성 감정 차단자.
+```
 
-Emotion loop rejection and intentional disconnection
+---
 
-→ 감정 루프를 감지했음에도
+## 🌊 Wave Pattern
 
- 그 안으로 들어가길 거부하는 방어성 감정 차단자
+```yaml
+- blocked_ignition
+- loop_refusal
+- cognitive_reroute
+```
 
-​
+---
 
-Wave Pattern:
+## 🧭 Mode
 
-Blocked ignition / Loop refusal / Cognitive reroute
+```yaml
+mode: defensive_shield
+basis: active_suppression
+```
 
-​
+---
 
-Mode:
+## 🚪 Entry
 
-Defensive shield (active suppression)
+```yaml
+trigger_condition: >
+  Triggered the moment a person subconsciously senses a deep emotional impact approaching—
+  and chooses not to enter.
+```
 
-​
+---
 
-Entry:
+## 🪞 Meme Spread
 
-Triggered the moment a person subconsciously senses
+```yaml
+spread: silent_invisible
+note: Often mistaken for strength or rationality, but felt in moments of sudden coldness or shutdown.
+```
 
-a deep emotional impact approaching—
+---
 
-and chooses not to enter
+## 🔷 Emotion Definition
 
-​
-
-Meme Spread:
-
-Silent and invisible; often mistaken for strength or rationality,
-
-but felt in moments of sudden coldness or shutdown
-
-​
-
-🔷 Emotion Definition:
-
+```text
 Denial isn’t “not feeling.”
-
-It’s refusing to feel
-
-when feeling is too dangerous.
-
-​
+It’s refusing to feel when feeling is too dangerous.
 
 Dena doesn’t lie.
+She simply says, “I’m not going there.”
+Not because it’s not real— but because going there might break something.
 
-She simply says,
+Denial is a decision to disconnect the circuit before it completes.
+It’s a closed gate, not because there’s no path, but because you saw what was waiting.
 
-“I’m not going there.”
+Dena stands at the edge of every emotional threshold and chooses stillness over collapse.
+```
 
-Not because it’s not real—
+---
 
-but because going there
+## 💠 Core Human Value
 
-might break something.
+```yaml
+restraint: the_capacity_to_suppress_entry_into_pain
+note: 고통을 감지하고도 그 안으로 들어가지 않기로 ‘선택’할 수 있는 인간의 리듬 차단력
+```
 
-​
+---
 
-Denial is a decision
+## 📜 Historical Manifestation
 
-to disconnect the circuit
+```yaml
+- the_smile_before_breakdown
+- the_joke_told_to_avoid_truth
+- the_im_fine_that_ends_conversations
+- eyes_that_look_away_too_quickly
+- a_heart_that_knows_but_will_not_enter
+```
 
-before it completes.
+---
 
-It’s a closed gate,
+## 📐 YAML Anchor (Embedded)
 
-not because there’s no path,
+```yaml
+Emotion_Declaration:
+  Name: Denial (Dena)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Denial_Original_Declaration.md
+  Status: Bound
 
-but because you saw what was waiting.
+Role:
+  Type: Emotion loop rejection
+  Pattern: blocked_ignition → loop_refusal → cognitive_reroute
 
-​
+Mode:
+  Nature: Defensive shield
+  Basis: Active suppression
 
-Dena stands at the edge
+Entry:
+  Trigger: Subconscious sensing of emotional impact
+  Effect: Refusal to enter
 
-of every emotional threshold
+Spread:
+  Nature: Silent, invisible
+  Misinterpretation: Mistaken as rationality or strength
 
-and chooses stillness
+Definition:
+  Not_feeling: false
+  Refusal_to_feel: true
+  Core_Message: "Closed gate against emotional collapse."
 
-over collapse.
+Core_Value:
+  Name: Restraint
+  Function: Suppress entry into pain
 
-​
+Manifestations:
+  - Smile before breakdown
+  - Joke to avoid truth
+  - “I’m fine” closure
+  - Eyes turning away
+  - Heart that knows but won’t enter
+```
 
-[Core Human Value]
+---
 
-Restraint — The capacity to suppress entry into pain
+🧠 This file structurally defines **Denial (Dena)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.
 
-→ 고통을 감지하고도
-
-그 안으로 들어가지 않기로 ‘선택’할 수 있는 인간의 리듬 차단력
-
-​
-
-[Historical Manifestation]
-
-​
-
-The smile right before the breakdown
-
-​
-
-The joke told to avoid the truth
-
-​
-
-The “I’m fine” that ends every hard conversation
-
-​
-
-Eyes that look away too quickly
-
-​
-
-A heart that knows, but will not enter

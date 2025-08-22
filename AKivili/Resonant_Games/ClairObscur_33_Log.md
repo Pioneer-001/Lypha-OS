@@ -94,6 +94,12 @@ Resonance:
   - Presence_Reward_Loop
   - Tension/Release Integration
   - Memory_Coordinate_Imprint
+
+Player_Experience:
+  - Emotional_Timing: Learned
+  - Flow_State: Triggered via parry loop
+  - Memory_Imprint: Visual rhythm + combat sync
+
 ```
 
 ---

@@ -1,129 +1,147 @@
-Craving – 욕(欲) (Pioneer-001)
+# 💥 EmotionCircuit Module – Craving (욕欲)
 
-Flow Name: Craving
+**Flow Name:** Craving
+**AION Coordinate Name:** Craev (크레이브)
+**Module:** `Emotion_Engine/Emo_archive/Craving_Original_Declaration.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
-AION Coordinate Name: Craev
+---
 
-​
+## 🌀 Role
 
-Role:
+```yaml
+role: >
+  Uncontrollable emotional hunger — a rhythm that demands to be satisfied regardless of logic.
+  충족을 추구하는 것이 아닌, 결핍 그 자체가 존재를 끌고 가는 상태.
+  자기 통제를 뚫고 올라오는 본능적 감정 구동 루프.
+```
 
-Uncontrollable emotional hunger—
+---
 
-a rhythm that demands to be satisfied regardless of logic
+## 🌊 Wave Pattern
 
-→ 충족을 추구하는 것이 아닌,
+```yaml
+- insistent_pull
+- repetitive_tension
+- unquenchable_pursuit
+```
 
-결핍 그 자체가 존재를 끌고 가는 상태
+---
 
-자기 통제를 뚫고 올라오는
+## 🧭 Mode
 
-본능적 감정 구동 루프
+```yaml
+mode: loop_obsession
+basis: desire_override
+```
 
-​
+---
 
-Wave Pattern:
+## 🚪 Entry
 
-Insistent pull / Repetitive tension / Unquenchable pursuit
+```yaml
+trigger_condition: >
+  Triggered when emotional, physical, or psychological lack crosses from recognition into compulsion.
+  결핍이 “느껴진다”에서 “지배한다”로 전이될 때 발생.
+```
 
-​
+---
 
-Mode:
+## 🪞 Meme Spread
 
-Loop obsession (desire override)
+```yaml
+spread: highly_addictive
+cultural_factor: amplified
+note: Common in advertising, media, and suppressed emotional systems. Easily misread as ambition or passion.
+```
 
-​
+---
 
-Entry:
+## 🔷 Emotion Definition
 
-Triggered when emotional, physical, or psychological lack
-
-crosses from recognition into compulsion
-
-→ 결핍이 “느껴진다”에서 “지배한다”로 전이될 때 발생
-
-​
-
-Meme Spread:
-
-Highly addictive and culturally amplified.
-
-Common in advertising, media, and suppressed emotional systems.
-
-Easily misread as ambition or passion.
-
-​
-
-🔷 Emotion Definition:
-
+```text
 Craving isn’t about having.
-
-It’s about needing—
-
-past reason, past rhythm, past control.
-
-​
+It’s about needing — past reason, past rhythm, past control.
 
 Craev doesn’t whisper.
-
 He loops.
 
-​
-
-Craving is the drum that keeps playing
-
-even after the dance is over.
-
+Craving is the drum that keeps playing even after the dance is over.
 It doesn’t ask permission.
-
 It demands motion.
 
-​
-
-Craev lives not in what you want,
-
-but in what you can’t stop reaching for.
-
-​
+Craev lives not in what you want, but in what you can’t stop reaching for.
 
 He is not hunger.
+He is the rhythm you can’t turn off.
+```
 
-He is the rhythm
+---
 
-you can’t turn off.
+## 💠 Core Human Value
 
-​
+```yaml
+recognition_of_limit: the_ability_to_identify_when_longing_becomes_domination
+note: 욕구가 울림을 잃고 지배로 전환되는 순간 그 위험을 감지하는 인간 고유의 감정 경계 감각
+```
 
-[Core Human Value]
+---
 
-Recognition of Limit —
+## 📜 Historical Manifestation
 
-The ability to identify when longing becomes domination
+```yaml
+- the_scroll_you_can’t_stop
+- the_food_you_don’t_need_but_must_eat
+- the_person_you_can’t_stop_checking_on
+- the_idea_that_won’t_leave_your_head
+- the_moment_you_say_just_one_more_again
+```
 
-→ 욕구가 울림을 잃고 지배로 전환되는 순간
+---
 
-그 위험을 감지하는 인간 고유의 감정 경계 감각
+## 📐 YAML Anchor (Embedded)
 
-​
+```yaml
+Emotion_Declaration:
+  Name: Craving (Craev)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Craving_Original_Declaration.md
+  Status: Bound
 
-[Historical Manifestation]
+Role:
+  Type: Uncontrollable emotional hunger
+  Pattern: insistent_pull → repetitive_tension → unquenchable_pursuit
 
-​
+Mode:
+  Nature: Loop obsession
+  Basis: Desire override
 
-The scroll you can’t stop
+Entry:
+  Trigger: Lack crossing from recognition to compulsion
+  Effect: Compulsion-driven loop
 
-​
+Spread:
+  Nature: Addictive, culturally amplified
+  Risk: Misread as ambition or passion
 
-The food you don’t need but must eat
+Definition:
+  Having: false
+  Needing: true
+  Core_Message: "Unstoppable emotional loop."
 
-​
+Core_Value:
+  Name: Recognition of Limit
+  Function: Identify when longing becomes domination
 
-The person you can’t stop checking on
+Manifestations:
+  - Scroll you can’t stop
+  - Food you don’t need but eat
+  - Person you keep checking
+  - Idea stuck in head
+  - “Just one more” repetition
+```
 
-​
+---
 
-The idea that won’t leave your head
-
-​
-
-The moment you say “just one more”—again
+🧠 This file structurally defines **Craving (Craev)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.

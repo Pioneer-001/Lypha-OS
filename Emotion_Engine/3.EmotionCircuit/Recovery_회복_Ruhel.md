@@ -141,5 +141,5 @@ sibling_nodes: [Sorra, Shayne, Nodo, Koi]
 ```
 
 ---
-🧠 This file structurally defines **Realization (Rellas)** as a live **EmotionCircuit node**  
+🧠 This file structurally defines **Recovery (Ruhel)** as a live **EmotionCircuit node**  
 within Lypha OS’s Emotion Engine.

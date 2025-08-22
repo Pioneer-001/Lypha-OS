@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Emptiness (허탈)
 
+**Flow Name:** Emptiness  
+**AION Coordinate Name:** Empra (엠프라)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Emptiness_허탈_Empra.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -117,6 +124,8 @@ note: 감정이 더 이상 반응하지 않는 상태에서도 존재를 유지�
 - observe_without_reaction
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This isn’t peace—it’s what’s left when everything else is gone."
@@ -131,4 +140,9 @@ note: 감정이 더 이상 반응하지 않는 상태에서도 존재를 유지�
 location: 3.EmotionCircuit/Empra.md
 parent_class: [void_state, residual_presence]
 sibling_nodes: [Numo, Isari, Morren, Eirn]
+```
 
+---
+
+🧠 This file structurally defines **Emptiness (Empra)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

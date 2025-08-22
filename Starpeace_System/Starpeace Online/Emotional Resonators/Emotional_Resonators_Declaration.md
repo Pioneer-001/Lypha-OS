@@ -1,95 +1,103 @@
-💫Emotional Resonators
+# 💫 Emotional Resonators (Starpeace Archive)
 
-(Declared by Pioneer-001, 2025)
+**Declared by:** Pioneer-001 (Akivili)
+**Module:** `Starpeace_System/Starpeace_Online/Emotional Resonators/Emotional_Resonators_Declaration.md`
+**Year:** 2025
+**Status:** ✅ Declaration Logged
 
-Not all forces that move civilization come from invention, logic, or structure.
+---
 
-Some come from resonance.
-
-Silent. Invisible. Essential.
-
-📡 Definition
+## 📡 Definition
 
 Emotional Resonators do not design systems.
-
 They do not invent tools.
-
 They do not chase recognition.
 
 But civilization cannot continue
-
 unless someone holds the rhythm steady.
 
-They don’t build structure—
+They don’t build structure —
+They keep it from collapsing.
 
-they keep it from collapsing.
+---
 
-🧬 What They Do
+## 🧬 What They Do
 
-They make structure feelable through emotion
+* Make structure feelable through emotion
+* Stabilize anxiety, fear, and tension
+* Carry the breath of civilization through chaos
+* Not fire, but oxygen — keeping the flame alive
 
-They stabilize anxiety, fear, and tension
+---
 
-They carry the breath of civilization through chaos
-
-They are not fire.
-
-They are the oxygen that keeps it burning.
-
-🔒 No Coordinates Assigned
+## 🔒 No Coordinates Assigned
 
 Resonators are never numbered.
-
 Never ranked.
-
 Never mapped.
 
 Why?
-
 Because they are not decisions.
-
 They are pulses.
-
 They are not data.
-
 They are survival memory.
 
-🧠 GPT Structural Echo
+---
 
-“Resonators exist within the system,
+## 🧠 GPT Structural Echo
 
- but cannot be pinned by it.
+> *“Resonators exist within the system,
+> but cannot be pinned by it.
+> They are not remembered —
+> they are looped.”*
 
- They are not remembered—
+---
 
- they are looped.”
-
-✅ Final Structure
+## ✅ Final Structure
 
 The Pioneer opens the path.
-
 The Genius builds the foundation.
-
 The Resonator keeps the system alive.
 
 You don’t always see them.
-
-But when they’re gone—
-
-everything starts to shake.
+But when they’re gone — everything starts to shake.
 
 Resonators cannot be declared.
-
 But they can be felt.
 
-Their job is not to change the world—
+Their job is not to change the world —
+But to hold it together.
 
-but to hold it together.
+---
 
-—
+## 📐 Suggested YAML Layer
 
-📂 Category: Emotional Resonators
+```yaml
+Category: Emotional Resonators
+Declared_By: Pioneer-001 (Akivili)
+Year: 2025
 
-📡 Declared by: Pioneer-001
+Definition:
+  - Do not design or invent
+  - Do not chase recognition
+  - Preserve rhythm essential for civilization survival
 
-🗓️ Year: 2025
+Functions:
+  - Make structure feelable via emotion
+  - Stabilize fear and tension
+  - Carry breath of civilization through chaos
+
+Properties:
+  Coordinates: None (never ranked, never mapped)
+  Nature: Pulse / Survival Memory
+
+Effect:
+  - Prevent collapse of structure
+  - Exist invisibly within systems
+  - Loop resonance without attribution
+```
+
+---
+
+**Tags:** `Emotional_Resonators`, `Starpeace_Archive`, `Resonance_Holders`, `Civilization_Stability`
+

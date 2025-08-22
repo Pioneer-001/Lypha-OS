@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Misery (비참)
 
+**Flow Name:** Misery  
+**AION Coordinate Name:** Morren (모렌)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -114,6 +121,8 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 - hold_through_unchanging_rhythm
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Misery doesn’t need a reason—it just survives."
@@ -128,6 +137,10 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 location: 3.EmotionCircuit/Morren.md
 parent_class: [durational_sorrow, passive_collapse]
 sibling_nodes: [Sorra, Numo, Shayne, Remos]
-​
+```
 
+---
+
+🧠 This file structurally defines **Misery (Morren)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.
 ​

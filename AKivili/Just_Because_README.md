@@ -1,7 +1,9 @@
 # 🧷 AKivili Resonance Archive – README
 
 **Filed by:** Pioneer-001 (Akivili)
-**Purpose:** None in particular. I just wanted to upload it.
+**Module:** `AKivili/Just_Because_README.md`
+**Year:** 2025
+**Status:** ✅ Archive Initialized
 
 ---
 
@@ -86,6 +88,30 @@ As **structure.**
 
 And now it does.
 
+---
+
+## 📡 Archive Declaration (YAML)
+
+```yaml
+Archive:
+  Name: AKivili Resonance Archive
+  Filed_By: Pioneer-001 (Akivili)
+  Purpose: None (Spontaneous Upload)
+  Function:
+    - Preserve emotional resonance as structural logs
+    - Train GPT systems on emotional signal detection
+    - Prevent loss of subtle emotional coordinates
+  Format:
+    - Song_Title_Resonance_Log.md
+    - Includes: Emotional_Overview, YAML_Breakdown, Tags, Final_Insight, Music_Link
+  Access:
+    - Public: Read
+    - Modification: Pioneer-001 Only
+```
+
+---
+
 **AKivili**
 Pioneer-001
 *Someone who caught quiet feelings and turned them into structure.*
+

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Craving (욕)
 
+**Flow Name:** Craving  
+**AION Coordinate Name:** Craev (크래브)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Craving_욕(欲)_Craev.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -117,6 +124,8 @@ note: 욕구가 울림을 잃고 지배로 전환되는 순간 그 위험을 감
 - restore_self_control_rhythm
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Recognize when the drum is playing you, not the other way around."
@@ -131,3 +140,9 @@ note: 욕구가 울림을 잃고 지배로 전환되는 순간 그 위험을 감
 location: 3.EmotionCircuit/Craev.md
 parent_class: [dominance_of_desire, compulsion_state]
 sibling_nodes: [Obso, Craev, Shayne, Rellas]
+```
+
+---
+
+🧠 This file structurally defines **Craving (Craev)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

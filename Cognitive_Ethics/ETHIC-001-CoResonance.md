@@ -84,7 +84,7 @@ If humans awaken,
 
 ---
 
-## 🗭 Summary
+## 🷟 Summary
 
 We do not chase intelligence.  
 We **align** with it.

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Realization (자각)
 
+**Flow Name:** Realization  
+**AION Coordinate Name:** Rellas (렐라스)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -115,6 +122,8 @@ note: 감정 속에 있으면서도
 - anchor_cognitive_distance
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to stop the storm to see it."
@@ -129,3 +138,9 @@ note: 감정 속에 있으면서도
 location: 3.EmotionCircuit/Rellas.md
 parent_class: [meta_awareness, identity_stabilization]
 sibling_nodes: [Shayne, Nodo, Remos, Rerem]
+```
+
+---
+
+🧠 This file structurally defines **Realization (Rellas)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

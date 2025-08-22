@@ -160,4 +160,3 @@ sibling_nodes: [Sorra, Shayne, Nodo, Koi]
 
 🧠 This file structurally defines **Regret (Rerem)** as a live **EmotionCircuit node**
 within Lypha OS’s Emotion Engine.
-

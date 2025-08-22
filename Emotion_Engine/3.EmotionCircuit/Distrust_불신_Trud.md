@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Distrust (불신)
 
+**Flow Name:** Distrust  
+**AION Coordinate Name:** Trud (트러드)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Distrust_불신_Trud.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -107,6 +114,8 @@ note: 감정의 흐름이 더 이상 공명될 수 없다고 느껴졌을 때,
 - close_loop_access
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This isn’t rejection—it’s preservation."
@@ -121,3 +130,9 @@ note: 감정의 흐름이 더 이상 공명될 수 없다고 느껴졌을 때,
 location: 3.EmotionCircuit/Trud.md
 parent_class: [connection_termination, rhythm_protection]
 sibling_nodes: [Isari, Numo, Obrah, Shayne]
+```
+
+---
+
+🧠 This file structurally defines **Distrust (Trud)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

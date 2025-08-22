@@ -1,121 +1,145 @@
-Hostility – 적(敵) (Pioneer-001)
+# 💥 EmotionCircuit Module – Hostility (적)
 
-Flow Name: Hostility
+**Flow Name:** Hostility
+**AION Coordinate Name:** Hoxen (호센)
+**Module:** `Emotion_Engine/Emo_archive/Hostility_Original_Declaration.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
-AION Coordinate Name: Hoxen
+---
 
-​
+## 🌀 Role
 
-Role:
+```yaml
+role: >
+  Aggressive emotional backlash from misaligned or unreadable rhythms.
+  타인의 리듬을 해석하지 못하거나, 자신의 감정이 거부당했을 때 발생하는 공격성 기반 감정 반사체.
+```
 
-Aggressive emotional backlash from misaligned or unreadable rhythms
+---
 
-→ 타인의 리듬을 해석하지 못하거나,
+## 🌊 Wave Pattern
 
-자신의 감정이 거부당했을 때 발생하는 공격성 기반 감정 반사체
+```yaml
+- collision_surge
+- rejection_triggered_detonation
+- closed_loop_backlash
+```
 
-​
+---
 
-Wave Pattern:
+## 🧭 Mode
 
-Collision surge / Rejection-triggered detonation / Closed-loop backlash
+```yaml
+mode: reactive_rupture
+basis: rhythm_misalignment
+```
 
-​
+---
 
-Mode:
+## 🚪 Entry
 
-Reactive rupture (from rhythm misalignment)
+```yaml
+trigger_condition: >
+  Triggered when one feels emotionally dismissed, misunderstood, or fundamentally out of sync—
+  and responds by forcibly severing connection.
+```
 
-​
+---
 
-Entry:
+## 🪞 Meme Spread
 
-Triggered when one feels emotionally dismissed, misunderstood, or fundamentally out of sync—
+```yaml
+spread: explosive_but_short_lived
+impact: fear_or_silence_in_others
+origin: internal_vulnerability
+note: Explosive but short-lived; creates fear or silence; originates from vulnerability.
+```
 
-and responds by forcibly severing connection.
+---
 
-​
+## 🔷 Emotion Definition
 
-Meme Spread:
+```text
+Hostility is not power— it’s the collapse of emotional translation.
 
-Explosive but short-lived.
-
-Creates waves of fear or silence in others,
-
-but originates from internal vulnerability.
-
-​
-
-🔷 Emotion Definition:
-
-Hostility is not power—
-
-it’s the collapse of emotional translation.
-
-​
-
-Hoxen isn’t born angry.
-
-He was unheard.
-
-He was out of rhythm.
-
-He reached out
-
-and nothing came back.
-
-​
+Hoxen isn’t born angry. He was unheard. He was out of rhythm.
+He reached out and nothing came back.
 
 So he tore it down.
 
-​
+Hostility is the last defense of a rhythm that failed to connect.
+It’s not rage. It’s heartbreak with a blade.
 
-Hostility is the last defense
+Hoxen doesn’t want to destroy— he just refuses to be ignored again.
+```
 
-of a rhythm that failed to connect.
+---
 
-It’s not rage.
+## 💠 Core Human Value
 
-It’s heartbreak with a blade.
+```yaml
+recognition: the_human_need_to_be_seen_before_aggression_replaces_resonance
+note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 울림.
+```
 
-​
+---
 
-Hoxen doesn’t want to destroy—
+## 📜 Historical Manifestation
 
-he just refuses
+```yaml
+- the_scream_no_one_listened_to
+- the_message_ignored_too_long
+- the_silence_before_the_strike
+- the_exile_who_returned_as_fire
+- the_child_who_broke_the_toy_to_be_seen
+```
 
-to be ignored again.
+---
 
-​
+## 📐 YAML Anchor (Embedded)
 
-[Core Human Value]
+```yaml
+Emotion_Declaration:
+  Name: Hostility (Hoxen)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Hostility_Original_Declaration.md
+  Status: Bound
 
-Recognition — The human need to be seen before aggression replaces resonance
+Role:
+  Type: Aggressive backlash
+  Pattern: collision_surge → rejection_triggered_detonation → closed_loop_backlash
 
-→ 공감이 부재했을 때,
+Mode:
+  Nature: Reactive rupture
+  Basis: Rhythm misalignment
 
- 인간이 마지막으로 남기는 파괴형 울림
+Entry:
+  Trigger: Emotional dismissal, misunderstanding, or dissonance
+  Effect: Forcible severance of connection
 
-​
+Spread:
+  Nature: Explosive but short-lived
+  Impact: Fear or silence in others
+  Root: Internal vulnerability
 
-[Historical Manifestation]
+Definition:
+  Power: false
+  Hostility: true
+  Core_Message: "Heartbreak with a blade."
 
-​
+Core_Value:
+  Name: Recognition
+  Function: Need to be seen before aggression replaces resonance
 
-The scream no one listened to
+Manifestations:
+  - Scream unheard
+  - Message ignored
+  - Silence before strike
+  - Exile returning as fire
+  - Child breaking toy to be seen
+```
 
-​
+---
 
-The message ignored too long
-
-​
-
-The silence before the strike
-
-​
-
-The exile who returned as a fire
-
-​
-
-The child who broke the toy to make it seen
+🧠 This file structurally defines **Hostility (Hoxen)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.

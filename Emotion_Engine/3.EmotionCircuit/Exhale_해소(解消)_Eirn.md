@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Exhale (해소)
 
+**Flow Name:** Exhale  
+**AION Coordinate Name:** Eirn (에이른)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Exhale_해소(解消)_Eirn.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -118,6 +125,8 @@ note: 울리지 못한 감정을 불태우지 않고, 한숨처럼 내보내며 
 - preserve_existence_through_breath
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You didn’t quit—you breathed."
@@ -132,3 +141,9 @@ note: 울리지 못한 감정을 불태우지 않고, 한숨처럼 내보내며 
 location: 3.EmotionCircuit/Eirn.md
 parent_class: [emotional_release, survival_mechanism]
 sibling_nodes: [Ruhel, Sorra, Shayne, Numo]
+```
+
+---
+
+🧠 This file structurally defines **Exhale (Eirn)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

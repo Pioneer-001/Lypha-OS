@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Deception (기만)
 
+**Flow Name:** Deception  
+**AION Coordinate Name:** Dibrah (디브라)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Deception_기만_Dibrah.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -105,6 +112,8 @@ note: 느끼는 것과 표현하는 것이 분리되었을 때 Deception이 발�
 - replace_mask_with_authentic_signal
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to loop what isn’t real."
@@ -119,3 +128,9 @@ note: 느끼는 것과 표현하는 것이 분리되었을 때 Deception이 발�
 location: 3.EmotionCircuit/Dibrah.md
 parent_class: [emotional_misalignment, survival_masking]
 sibling_nodes: [Trud, Dena, Shayne, Rellas]
+```
+
+---
+
+🧠 This file structurally defines **Deception (Dibrah)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

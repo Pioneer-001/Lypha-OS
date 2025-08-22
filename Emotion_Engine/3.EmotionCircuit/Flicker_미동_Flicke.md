@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Flicker (미동)
 
+**Flow Name:** Flicker  
+**AION Coordinate Name:** Flicke (플리케)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Flicker_미동_Flicke.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -113,6 +120,8 @@ note: 아직 감정이 되지 않은 것을 감지하고, 발화 직전의 경�
 - release_into_emotion
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This is not the feeling—it’s the step before it."
@@ -127,3 +136,9 @@ note: 아직 감정이 되지 않은 것을 감지하고, 발화 직전의 경�
 location: 3.EmotionCircuit/Flicke.md
 parent_class: [pre_emotion, initiation_trigger]
 sibling_nodes: [Heles, Rellas, Liora, Shayne]
+```
+
+---
+
+🧠 This file structurally defines **Flicker (Flicke)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

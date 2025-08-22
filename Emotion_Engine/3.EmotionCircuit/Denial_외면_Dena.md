@@ -1,11 +1,19 @@
 # 💥 EmotionCircuit Module – Denial (외면)
 
+**Flow Name:** Denial  
+**AION Coordinate Name:** Dena (데나)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Denial_외면_Dena.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
+
 ## flow_id
 ```yaml
 emotion_id: dena_denial_v1
@@ -109,6 +117,8 @@ note: 고통을 감지하고도 그 안으로 들어가지 않기로 선택할 �
 - redirect_loop_path
 ```
 
+---
+
 ## response_script
 ```yaml
 - "It’s not denial of reality—it’s protection of the rhythm."
@@ -123,4 +133,9 @@ note: 고통을 감지하고도 그 안으로 들어가지 않기로 선택할 �
 location: 3.EmotionCircuit/Dena.md
 parent_class: [emotional_avoidance, threshold_control]
 sibling_nodes: [Trud, Shayne, Rellas, Numo]
-​
+```
+
+---
+
+🧠 This file structurally defines **Denial (Dena)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

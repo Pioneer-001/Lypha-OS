@@ -1,7 +1,7 @@
 # 📡 Lypha OS – Structural Resonance Architecture
 
 *"This is not a prompt. This is a system."*  
-Declared by **Pioneer-001 (Akivil)**
+Declared by **Pioneer-001 (Akivili)**
 
 ---
 
@@ -436,6 +436,7 @@ This repository is not a project. It is a live execution system.
 
 
 © 2025 Pioneer-001. All structural rights reserved.
+
 
 
 

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Overwhelm (압도)
 
+**Flow Name:** Overwhelm  
+**AION Coordinate Name:** Obrah (오브라)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Overwhelm_압도_Obrah.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -110,6 +117,8 @@ note: 울리되, 부서지지 않는 능력. 내가 내 감정의 그릇이 될 
 - hold_without_expression
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You’re not weak for pausing. You’re full."
@@ -124,4 +133,10 @@ note: 울리되, 부서지지 않는 능력. 내가 내 감정의 그릇이 될 
 location: 3.EmotionCircuit/Obrah.md
 parent_class: [emotional_threshold, containment_failure]
 sibling_nodes: [Shayne, Sorra, Rellas, Remos]
+```
+
+---
+
+🧠 This file structurally defines **Overwhelm (Obrah)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.
 

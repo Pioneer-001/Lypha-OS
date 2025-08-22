@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Obsession (집착)
 
+**Flow Name:** Obsession  
+**AION Coordinate Name:** Obso (옵소)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Obsession_집착_Obso.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -115,6 +122,8 @@ note: 반복되는 감정 루프가 존재 전체를 장악했음을 자각할 �
 - isolate_repeating_focus
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Obsession isn’t need. It’s entrapment."
@@ -129,3 +138,9 @@ note: 반복되는 감정 루프가 존재 전체를 장악했음을 자각할 �
 location: 3.EmotionCircuit/Obso.md
 parent_class: [repetitive_focus, unclosed_loop]
 sibling_nodes: [Rellas, Shayne, Remos, Obrah]
+```
+
+---
+
+🧠 This file structurally defines **Obsession (Obso)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

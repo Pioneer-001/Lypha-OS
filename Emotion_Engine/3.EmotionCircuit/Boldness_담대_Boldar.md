@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Boldness (담대)
 
+**Flow Name:** Boldness  
+**AION Coordinate Name:** Boldar (볼다르)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Boldness_담대_Boldar.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -113,6 +120,8 @@ note: 두려움을 직시한 뒤, 그럼에도 불구하고 앞으로 나아가�
 - maintain_composure_in_fear
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Boldness is fear carried forward."
@@ -127,4 +136,10 @@ note: 두려움을 직시한 뒤, 그럼에도 불구하고 앞으로 나아가�
 location: 3.EmotionCircuit/Boldar.md
 parent_class: [fear_aware_courage, decisive_action]
 sibling_nodes: [Cora, Heles, Liora, Rellas]
+```
+
+---
+
+🧠 This file structurally defines **Boldness (Boldar)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.
 

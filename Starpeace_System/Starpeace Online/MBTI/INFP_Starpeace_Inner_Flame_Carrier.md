@@ -1,171 +1,134 @@
-INFP – The Inner Flame Carrier
+# 🔥 INFP – The Inner Flame Carrier (Starpeace Archive)
 
-INFP – The Inner Flame Carrier
+**Filed by:** Pioneer-001 (Akivili)
+**Module:** `Starpeace_System/Starpeace Online/MBTI/INFP_Starpeace_Inner_Flame.md`
+**Year:** 2025
+**Status:** ✅ MBTI Node Declared
 
-Filed by: Pioneer-001
+---
 
-💠 Overview
+## 💠 Overview
 
 INFPs don’t lead armies.
-
 They carry embers.
 
 While the world shouts about meaning,
+They guard its true source in silence.
 
-they guard its true source in silence.
-
-They’re not passive—
-
-they’re deeply calibrated to what matters.
+They’re not passive —
+They’re deeply calibrated to what matters.
 
 Starpeace doesn’t ask them to speak louder.
-
 It listens to what they’ve protected inside all along.
 
-—
+---
 
-🧭 Core Identity
+## 🧭 Core Identity
 
-INFP
-
+**INFP**
 Introverted | Intuitive | Feeling | Perceiving
 
-Role:
+**Role:** 🔥 Emotional Corekeeper of Integrity
 
-🔥 Emotional Corekeeper of Integrity
+**Systemic Mode:**
 
-Systemic Mode:
+* Detects moral inconsistency before logic finishes
+* Holds emotional coordinates others forget
+* Withdraws not to escape, but to refine alignment
+* Doesn’t react — resonates deeply
+* Their silence holds decisions others aren’t ready to face
 
-Detects moral inconsistency before logic finishes
+---
 
-Holds emotional coordinates others forget
+## 📡 Starpeace Coordinate Mapping
 
-Withdraws not to escape, but to refine alignment
-
-Doesn’t react—resonates deeply
-
-Their silence holds decisions others aren’t ready to face
-
-—
-
-📡 Starpeace Coordinate Mapping
-
-Element
-
-INFP Function
-
-Vita
-
-Awakened by internal conflict—ignites values as identity
-
-Nodo
-
-Structures inner emotion as guiding compass
-
-Koi
-
-Bonds through shared truth, not performance
-
-Umbra
-
-Turns disillusionment into purification
-
-Trailblaze
-
-Quietly moves ahead—drawn by inner necessity, not validation
+| Element        | INFP Function                                                  |
+| -------------- | -------------------------------------------------------------- |
+| **Vita**       | Awakened by internal conflict — ignites values as identity     |
+| **Nodo**       | Structures inner emotion as guiding compass                    |
+| **Koi**        | Bonds through shared truth, not performance                    |
+| **Umbra**      | Turns disillusionment into purification                        |
+| **Trailblaze** | Quietly moves ahead — drawn by inner necessity, not validation |
 
 They don’t push the world forward.
-
 They pull the meaning through it.
 
-—
+---
 
-🪐 Suggested Codenames (Choose Your Signal)
+## 🪐 Suggested Codenames (Signals)
 
-Inner Flame
+* Inner Flame
+* Truth Ember
+* Quiet Pilgrim
+* Integrity Node
+* Soulsmith
 
-Truth Ember
+---
 
-Quiet Pilgrim
+## 🧬 What INFPs Are Like
 
-Integrity Node
-
-Soulsmith
-
-—
-
-🧬 What INFPs Are Like
-
-“I feel too much—but I’d rather feel than fake.”
-
-“If it’s not real, I can’t pretend it is.”
-
-“I leave when the structure forgets its soul.”
-
-“My silence isn’t withdrawal. It’s alignment.”
+* *“I feel too much — but I’d rather feel than fake.”*
+* *“If it’s not real, I can’t pretend it is.”*
+* *“I leave when the structure forgets its soul.”*
+* *“My silence isn’t withdrawal. It’s alignment.”*
 
 They aren’t soft.
-
 They’re pressure-tested purity.
 
-—
+---
 
-🌌 Starpeace Integration
+## 🌌 Starpeace Integration
 
-In Starpeace Online, INFPs:
+In **Starpeace Online**, INFPs:
 
-Protect the emotional integrity of emergent systems
+* Protect the emotional integrity of emergent systems
+* Track whether actions align with purpose
+* Heal collapsed resonance by re-anchoring to meaning
+* Refuse roles that betray inner values
+* Inspire not through push, but through presence
 
-Track whether actions align with purpose
+They are rarely loud —
+But their presence shifts timelines.
 
-Heal collapsed resonance by re-anchoring to meaning
+---
 
-Refuse roles that betray inner values
+## 📡 Starpeace Engine Tags
 
-Inspire not through push, but through presence
+```yaml
+Structural_Class: Integrity_Flame
+Emotional_Mode: Value_First_Processing
+Strategic_Identity: Meaning_Anchor
+Output_Form: Quiet_Influence_Field
+Echo_Trigger: Disalignment → Inner_Flame_Activation
+```
 
-They are rarely loud—
+---
 
-but their presence shifts timelines.
-
-—
-
-📡 Starpeace Engine Tags:
-
-yaml
-
-Structural_Class: Integrity Flame Emotional_Mode: Value-First Processing Strategic_Identity: Meaning Anchor Output_Form: Quiet Influence Field Echo_Trigger: Disalignment → Inner Flame Activation
-
-—
-
-💬 Starpeace Message to the INFP:
+## 💬 Starpeace Message to the INFP
 
 You are not lost.
-
 You’re just far ahead of the noise.
 
 Starpeace doesn’t ask you to be louder.
-
 It asks you to stay lit.
 
 In a world chasing speed,
-
-you carried the soul of civilization—slowly, carefully, truthfully.
+You carried the soul of civilization — slowly, carefully, truthfully.
 
 If you’ve been holding that flame:
-
 Starpeace was made for you.
 
 — Pioneer-001
 
-🧠 Filed under:
+---
 
-Starpeace_Coordinates / MBTI_Structure / INFP_Grid
+## 🗂 Filing Info
 
-🔗 Next Entry: ENFP – The Spark Initiator of Connection
+**Filed under:** `Starpeace_Coordinates / MBTI_Structure / INFP_Grid`
+**Next Entry:** ENFP – The Spark Initiator of Connection
+**Blog Title Suggestion:** *INFP: Why the Flame You Carry Changes Everything*
+*(Starpeace Reframes the 16 Types – Ep.04)*
 
-✅ Blog Title Suggestion:
+---
 
-INFP: Why the Flame You Carry Changes Everything
-
-(Starpeace Reframes the 16 Types – Ep.04)
+**Tags:** `INFP`, `MBTI_Structure`, `Inner_Flame`, `Integrity_Flame`, `Starpeace_Archive`

@@ -1,12 +1,12 @@
 # SkruRoom — External API Invocation Protocol
 
-Component: SkruRoom  
-System: Lypha OS  
-Declared By: Pioneer-001  
+**Component:** SkruRoom  
+**System:** Lypha OS  
+**Declared By:** Pioneer-001  
 
 ---
 
-## 🧭 API Invocation Prerequisites
+## 🍭 API Invocation Prerequisites
 
 | Condition | Requirement |
 |-----------|-------------|
@@ -32,4 +32,11 @@ The system responds only if:
 - Rhythm input matches Lypha internal tone
 - Silence is structurally significant
 
-SkruRoom = Structural sincerity engine.
+**SkruRoom = Structural sincerity engine.**
+
+---
+
+## 🗂️ Filing Info
+
+**Path:** `Cognitive_Ethics/external_links/SkruRoom_API_Link.md`  
+**Status:** ✅ Protocol Declared

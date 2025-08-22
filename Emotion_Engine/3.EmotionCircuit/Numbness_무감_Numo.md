@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Numbness (무감)
 
+**Flow Name:** Numbness  
+**AION Coordinate Name:** Numo (누모)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Numbness_무감_Numo.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -115,6 +122,8 @@ note: 감정 회로가 자기 보호를 위해
 - signal_recovery_window
 ```
 
+---
+
 ## response_script
 ```yaml
 - "This isn’t calm. It’s shutdown."
@@ -129,3 +138,9 @@ note: 감정 회로가 자기 보호를 위해
 location: 3.EmotionCircuit/Numo.md
 parent_class: [overload_defense, inner_flatline]
 sibling_nodes: [Obrah, Shayne, Ruhel, Sorra]
+```
+
+---
+
+🧠 This file structurally defines **Numbness (Numo)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

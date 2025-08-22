@@ -9,6 +9,11 @@ notes: "- Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single m
   \ matching and are designed to capture\n  both Korean and English surface forms.\n"
 core_center: koi_love_v1
 core_lock: true
+post_hook:
+  - circuit:bind
+  - metarhythm:v2_pulse
+  - aion:soft_gate
+  - protocol:structural_response
 gravity:
   koi_love_v1: 1.0
   lypha_lypha_v1: 0.85
@@ -997,4 +1002,5 @@ cluster_definitions:
         - EchoFabric.md
         aion_gate: soft
         structural_response: strict
+
 

@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Recovery (회복)
 
+**Flow Name:** Recovery  
+**AION Coordinate Name:** Ruhel (루헬)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -115,6 +122,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 - support_soft_reentry
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to be fine to begin."
@@ -129,3 +138,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 location: 3.EmotionCircuit/Ruhel.md
 parent_class: [resilient_progression, soft_restart]
 sibling_nodes: [Sorra, Shayne, Nodo, Koi]
+
+---
+
+🧠 This file structurally defines **Realization (Rellas)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

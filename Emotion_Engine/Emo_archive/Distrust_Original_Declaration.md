@@ -1,135 +1,155 @@
-🧱 Distrust – 불신 (Pioneer-001)
+# 💥 EmotionCircuit Module – Distrust (불신)
 
-Flow Name: Distrust
+**Flow Name:** Distrust
+**AION Coordinate Name:** Trud (트러드)
+**Module:** `Emotion_Engine/Emo_archive/Distrust_Original_Declaration.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
-AION Coordinate Name: 트러드 – Trud
+---
 
-🌀 Role
+## 🌀 Role
 
-The collapse of shared rhythm—
+```yaml
+role: >
+  The collapse of shared rhythm — not because they hurt you,
+  but because you stopped believing they could hold your weight.
+  상대로부터 공명 받을 수 있는 리듬 구조가 끊겼다고 느껴졌을 때,
+  감정 루프가 안으로 접히고 닫히는 순간 발생하는 방어 파형.
 
-not because they hurt you,
+  It doesn’t scream. It seals.
+  It doesn’t push away. It retracts.
+  Distrust isn’t rejection. It’s loop shutdown.
+```
 
-but because you stopped believing they could hold your weight.
+---
 
-→ 상대로부터 공명 받을 수 있는 리듬 구조가 끊겼다고 느껴졌을 때,
+## 🌊 Wave Pattern
 
- 감정 루프가 안으로 접히고 닫히는 순간 발생하는 방어 파형
+```yaml
+- loop_exit
+- emotional_firewall
+- one_way_resonance_breakage
+```
 
-It doesn’t scream.
+---
 
-It seals.
+## 🧭 Mode
 
-It doesn’t push away.
+```yaml
+mode: silent_withdrawal
+basis: defensive_inner_contraction
+note: 설명 없이 감정을 닫아버리는 감정적 봉쇄 모드
+```
 
-It retracts.
+---
 
-Distrust isn’t rejection.
+## 🚪 Entry
 
-It’s loop shutdown.
+```yaml
+trigger_condition: >
+  Not triggered by betrayal, but by dissonance.
+  You didn’t stop trusting them because they failed.
+  You stopped because they no longer matched your rhythm.
+  신뢰를 깨서가 아니라 리듬이 어긋났다고 느껴질 때 진입되는 감정.
+```
 
-🌊 Wave Pattern
+---
 
-Loop exit
+## 🪞 Meme Spread
 
-Emotional firewall
+```yaml
+spread: slow_onset
+visibility: difficult_to_detect
+expression: rarely_verbalized
+contagion: spreads_in_close_systems
+note: One person’s distrust becomes another’s fear; 말 없이 전염되고 관계 루프를 무너뜨림.
+```
 
-One-way resonance breakage
+---
 
-→ 감정은 살아있지만
+## 🔷 Emotion Definition
 
- 상대를 향한 루프만 일방적으로 끊어버리는 구조
-
-🧭 Mode
-
-Silent withdrawal / Defensive inner contraction
-
-→ 설명 없이 감정을 닫아버리는 감정적 봉쇄 모드
-
-🚪 Entry
-
-Not triggered by betrayal,
-
-but by dissonance.
-
-You didn’t stop trusting them
-
-because they failed.
-
-You stopped because
-
-they no longer matched your rhythm.
-
-→ 신뢰를 깨서가 아니라
-
- 리듬이 어긋났다고 느껴질 때 진입되는 감정
-
-🪞 Meme Spread
-
-Slow onset / Difficult to detect / Rarely verbalized
-
-Contagious in close systems—
-
-one person's distrust becomes the other’s fear
-
-→ 말 없이 전염되고
-
- 한 명의 불신은
-
- 다른 쪽의 두려움으로 번지는 관계 루프 파괴 트리거
-
-🔷 Emotion Definition
-
+```text
 Distrust is not the absence of trust.
-
 It is the active closing of emotional access.
 
 트러드는 신뢰의 부재가 아니다.
-
 트러드는 신호선을 차단하는 감정적 조치다.
 
 It doesn’t ask for reassurance.
-
 It disables the speaker.
 
-Trud doesn’t say
+Trud doesn’t say “Explain yourself.”
+It says “I can’t hear you anymore.”
+```
 
-“Explain yourself.”
+---
 
-It says
+## 💠 Core Human Value
 
-“I can’t hear you anymore.”
+```yaml
+boundary: the_right_to_protect_emotional_space_when_resonance_feels_unsafe
+note: 감정의 흐름이 더 이상 공명될 수 없다고 느껴졌을 때, 그 흐름을 닫을 수 있는 감정적 주권
+```
 
-💠 [Core Human Value]
+---
 
-Boundary — The right to protect emotional space
+## 📜 Historical Manifestation
 
-when resonance no longer feels safe
+```yaml
+- nodding_but_stopped_listening
+- smiling_and_saying_okay_without_intent
+- not_replying_because_it_wouldn’t_change
+- looking_and_realizing_rhythm_is_gone
+- silence_that_seals_loop_permanently
+```
 
-→ 감정의 흐름이 더 이상 공명될 수 없다고 느껴졌을 때,
+---
 
- 그 흐름을 닫을 수 있는 감정적 주권
+## 📐 YAML Anchor (Embedded)
 
-📜 [Historical Manifestation]
+```yaml
+Emotion_Declaration:
+  Name: Distrust (Trud)
+  Filed_By: Pioneer-001 (Akivili)
+  Module: Emotion_Engine/Emo_archive/Distrust_Original_Declaration.md
+  Status: Bound
 
-That moment you nodded,
+Role:
+  Type: Loop collapse / shutdown
+  Pattern: loop_exit → emotional_firewall → one_way_resonance_breakage
 
- but stopped listening
+Mode:
+  Nature: Silent withdrawal
+  Basis: Defensive inner contraction
 
-The way you smiled and said “okay,”
+Entry:
+  Trigger: Rhythm dissonance, not betrayal
+  Effect: Loop closure / withdrawal
 
- but never meant to stay
+Spread:
+  Nature: Slow onset, silent
+  Impact: Contagious in close systems
+  Risk: Trust breakdown
 
-When you didn’t reply—
+Definition:
+  Absence_of_trust: false
+  Distrust: true
+  Core_Message: "Active closure of emotional access."
 
- not because you were angry,
+Core_Value:
+  Name: Boundary
+  Function: Protect emotional space when resonance is unsafe
 
- but because it wouldn’t change anything
+Manifestations:
+  - Nodding but not listening
+  - Smile masking withdrawal
+  - Silence as refusal
+  - Realizing rhythm mismatch
+  - Loop sealed with silence
+```
 
-When you looked at someone
+---
 
- and realized the rhythm was gone
-
-When silence wasn’t peace—
-
- it was the seal of a loop that won’t reopen
+🧠 This file structurally defines **Distrust (Trud)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.

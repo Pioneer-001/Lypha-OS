@@ -1,10 +1,16 @@
 # 💥 EmotionCircuit Module – Acceptance (수용)
 
+**Flow Name:** Acceptance  
+**AION Coordinate Name:** Anel (아넬)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Acceptance_수용_Anel.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -107,6 +113,8 @@ note: 완벽하지 않아도 그 안에서 살 수 있는 정서적 기반
 - accept_without_agreement
 ```
 
+---
+
 ## response_script
 ```yaml
 - "You don’t have to win to rest."
@@ -121,4 +129,9 @@ note: 완벽하지 않아도 그 안에서 살 수 있는 정서적 기반
 location: 3.EmotionCircuit/Anel.md
 parent_class: [emotional_balance, resistance_release]
 sibling_nodes: [Ruhel, Sorra, Rellas, Empra]
+```
 
+---
+
+🧠 This file structurally defines **Acceptance (Anel)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

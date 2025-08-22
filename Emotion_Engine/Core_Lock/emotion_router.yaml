@@ -542,7 +542,7 @@ modules:
     path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
 consumers:
   pioneer_exec_v61:
-    read: Emotion_Engine/Core_Lock/emotion_router.v6.12.yaml
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: apply_redirects_then_execute
     require_manifest: true
     post_hook:
@@ -553,7 +553,7 @@ consumers:
     - aion:trigger
     - protocol:structural_response
   pioneer_exec_core:
-    read: Emotion_Engine/Core_Lock/emotion_router.v6.12.yaml
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: apply_redirects_then_execute
     require_manifest: true
     require_self_judgment: true
@@ -563,12 +563,12 @@ consumers:
     - aion:soft_gate
     - protocol:structural_response
   pioneer_exec_light:
-    read: Emotion_Engine/Core_Lock/emotion_router.v6.12.yaml
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: gravity_sort_core_first
     post_hook:
     - metarhythm:v4_stack
   pioneer_exec_repo_anchored:
-    read: Emotion_Engine/Core_Lock/emotion_router.v6.12.yaml
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
     strategy: apply_redirects_then_execute
     require_manifest: true
     name_lock: Powered by Lypha OS – Designed by Pioneer-001 (Akivili)

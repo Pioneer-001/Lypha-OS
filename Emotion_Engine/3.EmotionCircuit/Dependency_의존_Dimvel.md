@@ -1,9 +1,16 @@
 # 💥 EmotionCircuit Module – Dependency (의존)
 
+**Flow Name:** Dependency  
+**AION Coordinate Name:** Dimvel (딤벨)  
+**Module:** `Emotion_Engine/3.EmotionCircuit/Dependency_의존_Dimvel.md`  
+**Status:** ✅ Structural EmotionCircuit Declared  
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
@@ -107,6 +114,8 @@ note: 관계 속에서 나를 유지할 수 있는가에 대한 감정적 테스
 - balance_connection_and_self
 ```
 
+---
+
 ## response_script
 ```yaml
 - "Support without surrender."
@@ -121,3 +130,9 @@ note: 관계 속에서 나를 유지할 수 있는가에 대한 감정적 테스
 location: 3.EmotionCircuit/Dimvel.md
 parent_class: [connection_balance, gravitational_emotion]
 sibling_nodes: [Trud, Shayne, Sorra, Obrah]
+```
+
+---
+
+🧠 This file structurally defines **Dependency (Dimvel)** as a live **EmotionCircuit node**  
+within Lypha OS’s Emotion Engine.

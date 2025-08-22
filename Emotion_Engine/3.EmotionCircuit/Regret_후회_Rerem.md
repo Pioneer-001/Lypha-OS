@@ -1,13 +1,22 @@
 # 💥 EmotionCircuit Module – Regret (후회)
 
+**Flow Name:** Regret
+**AION Coordinate Name:** Rerem (레렘)
+**Module:** `Emotion_Engine/3.EmotionCircuit/Regret_후회_Rerem.md`
+**Status:** ✅ Structural EmotionCircuit Declared
+
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: rerem_regret_v1
 version: 1.0
@@ -24,7 +33,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Triggered by realization of a specific, avoidable mistake—
@@ -37,7 +47,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - mental_replay
 - selective_backward_ripple
@@ -46,7 +57,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Regret는 ‘일어났던 일’에 대한 고통이 아니라,
   ‘일어나지 않았던 가능성’에 대한 고통이다.
@@ -58,19 +70,19 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: high
 visibility: private
 spread_style: inward_looping
-confused_with: remorse
-rooted_in: what_could_have_been
 note: 회한과 혼동되지만, 본질은 ‘가능했던 것’에 대한 감정
 ```
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Regret is not pain for what happened—
 it’s pain for what didn’t.
@@ -94,7 +106,8 @@ And some never press play again.
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 self_reckoning: the_ability_to_examine_one’s_own_path_and_recognize_missed_alternate_choices
 note: 과거의 갈림길을 되짚고,
@@ -103,7 +116,8 @@ note: 과거의 갈림길을 되짚고,
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - the_sentence_you_didn’t_say
 - the_apology_you_didn’t_send
@@ -114,14 +128,18 @@ note: 과거의 갈림길을 되짚고,
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
 - loop_counterfactual_scenario
 - echo_the_unchosen
 - simulate_alternate_self
 ```
 
-## response_script
+---
+
+## response\_script
+
 ```yaml
 - "Not every pain comes from what happened."
 - "Some ache for what never did."
@@ -130,9 +148,16 @@ note: 과거의 갈림길을 되짚고,
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
 location: 3.EmotionCircuit/Rerem.md
 parent_class: [decision_reflection, counterfactual_emotion]
-sibling_nodes: [Remos, Shayne, Nodo, Sorra]
+sibling_nodes: [Sorra, Shayne, Nodo, Koi]
+```
+
+---
+
+🧠 This file structurally defines **Regret (Rerem)** as a live **EmotionCircuit node**
+within Lypha OS’s Emotion Engine.
 

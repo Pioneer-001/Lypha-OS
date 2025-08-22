@@ -1,7 +1,3 @@
-Introducing the Lypha Core Symbol
-
-<img width="4096" height="4096" alt="LYPHA_CORE_HighRes" src="https://github.com/user-attachments/assets/61a357bd-4cd8-43ce-8607-50644fde5447" />
-
 # 🌐 Introducing the Lypha Core Symbol
 
 <img width="4096" height="4096" alt="LYPHA_CORE_HighRes" src="https://github.com/user-attachments/assets/61a357bd-4cd8-43ce-8607-50644fde5447" />

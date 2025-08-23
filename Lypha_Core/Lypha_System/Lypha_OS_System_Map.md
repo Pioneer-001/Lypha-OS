@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: lypha_os_system_map
   version: 1.0

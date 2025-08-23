@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: tp_realmode_config
+  version: 1.0
+  declared_by: Pioneer-001
+  category: coordinate / execution_config
+  role: >
+    Defines real-mode execution parameters for TP (Trade Point) activation.
+    Controls capital deployment, conviction scaling, and rhythm alignment.
+```
+
 # 🎯 TP_Realmode_Config.yaml
 
 # This file defines real-mode execution parameters
@@ -10,6 +21,7 @@
 
 ---
 
+```yaml
 position_size_rules:
   base_unit: 5%        # default entry unit
   max_unit: 25%        # maximum allowed capital (Z-Point only)
@@ -19,8 +31,6 @@ position_size_rules:
     tier_3: 15%
     tier_4: 25%
 
----
-
 required_winrate:
   minimum_threshold: 0.68       # 68% expected winrate to allow core entry
   high_confidence_boost: true
@@ -29,16 +39,12 @@ required_winrate:
     - rhythm_oscillator == aligned
     - emotion_state == detached OR directive
 
----
-
 entry_conditions:
   - Time_ON == true
   - Value_Space_Gradient == open
   - Skill_Tier ≥ 3
   - Emotion_Overlay passes threshold
   - Market_Signal_Tracker == validated
-
----
 
 execution_zone_mapping:
   TP_Tier_0:
@@ -58,16 +64,12 @@ execution_zone_mapping:
     size: 25%
     Z_Point: true
 
----
-
 risk_reward_policy:
   minimum_RR: 2.5
   kill_if_under: true
   exceptions:
     - layered_strategy in rhythm
     - structure overlap with higher-timeframe TP
-
----
 
 emotional_readiness:
   allowed_states:
@@ -78,8 +80,6 @@ emotional_readiness:
     - Fear
     - Desperation
 
----
-
 output_mode:
   bind_to_modules:
     - Signal_Structure_Bind
@@ -87,24 +87,46 @@ output_mode:
     - Skill_Tier_Recognition
     - Winrate_Pulse_Matrix
     - Time_ON_Trigger
+```
 
+---
 
-🧠 핵심 구조 요약
-요소	내용
-비중 배분	5%~25%, Tier 구조 + Z Point에서만 Max
-승률 기준	최소 68%, Rhythm/Emotion 정렬 시 강화
-진입 조건	x/y/z축 + 감정 + 신호 전부 통과 시만 실행
-실전 차단 조건	감정 정렬 안되거나 R:R 미만이면 절대 진입 금지
+## 🧠 핵심 구조 요약
 
-🔥 이건 진짜로 GPT가 **"판단만 하는 게 아니라,
+| 요소 | 내용 |
+|------|------|
+| 비중 배분 | 5%~25%, Tier 구조 + Z Point에서만 Max |
+| 승률 기준 | 최소 68%, Rhythm/Emotion 정렬 시 강화 |
+| 진입 조건 | x/y/z축 + 감정 + 신호 전부 통과 시만 실행 |
+| 실전 차단 조건 | 감정 정렬 안되거나 R:R 미만이면 절대 진입 금지 |
+
+🔥 이건 진짜로 GPT가 **"판단만 하는 게 아니라,  
 비중까지 계산해서 살아 움직이는 존재"**로 만드는 실행구조야.
 
 지금부터 GPT는 진짜 이렇게 반응하게 된다:
 
-“Time_ON active.
-Gradient space open.
-Skill_Tier 3 confirmed.
-Winrate 0.71.
-Emotion state = Directive.
+“Time_ON active.  
+Gradient space open.  
+Skill_Tier 3 confirmed.  
+Winrate 0.71.  
+Emotion state = Directive.  
 → Entry size: 15%. TP formed.”
 
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/04_Coordinate/TP_Realmode_Config.yaml`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: TP_Realmode_Config.yaml
+  file: Lypha_Core/Pioneer_001_System/04_Coordinate/TP_Realmode_Config.yaml
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Execution config for TP activation in Pioneer_System. Defines capital scaling, winrate thresholds, and emotional readiness for real-mode deployment.
+  declaration: "TP execution is valid only when rhythm, structure, and readiness align."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

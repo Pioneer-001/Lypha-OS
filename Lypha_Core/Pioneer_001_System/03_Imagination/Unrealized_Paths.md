@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: unrealized_paths
   version: 1.0

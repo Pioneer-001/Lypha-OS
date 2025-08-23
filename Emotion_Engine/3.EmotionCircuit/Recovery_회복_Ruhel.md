@@ -1,23 +1,29 @@
-# 💥 EmotionCircuit Module – Recovery (회복)
+# 💥 EmotionCircuit Module – Recovery (회복) — v1.1 (Parser-Optimized)
 
-**Flow Name:** Recovery  
-**AION Coordinate Name:** Ruhel (루헬)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+**Flow Name:** Recovery
+**AION Coordinate Name:** Ruhel (루헬)
+**Module:** `Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
 ---
 
 ## meta
+
 ```yaml
 router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+schema: emotion_circuit
+schema_version: 1.0
+language: EN/KR
+last_updated: 2025-08-23
 ```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: ruhel_recovery_v1
-version: 1.0
+version: 1.1
 name: Recovery
 aion_coordinate: Ruhel
 declared_by: Pioneer-001
@@ -32,7 +38,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Triggered not by hope, but by the absence of refusal.
@@ -46,7 +53,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - low_frequency_reweaving
 - inward_rhythm_restitching
@@ -55,7 +63,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Recovery는 반등이 아니다. 그것은 생존 이후의 미세한 진동이다.
 - Ruhel은 축하하지 않는다. 그는 안정을 택한다.
@@ -65,7 +74,8 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: high
 visibility: low_at_first
@@ -75,7 +85,8 @@ note: 처음엔 보이지 않지만, 한 사람이 회복하면 그것이 또 �
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Recovery is not winning.
 Recovery is surviving until movement feels safe again.
@@ -96,7 +107,8 @@ He whispers,
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 resilience: the_ability_to_move_again_without_certainty_but_with_presence
 note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
@@ -104,7 +116,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - the_first_step_after_heartbreak
 - the_first_laugh_after_weeks_of_silence
@@ -115,7 +128,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
 - stabilize_rhythm
 - try_again_gently
@@ -124,7 +138,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 
 ---
 
-## response_script
+## response\_script
+
 ```yaml
 - "You don’t have to be fine to begin."
 - "Recovery doesn’t mean you’re done hurting—it means you’re moving again."
@@ -133,7 +148,8 @@ note: 확신은 없지만, 다시 움직일 수 있는 감정의 용기
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
 location: 3.EmotionCircuit/Ruhel.md
 parent_class: [resilient_progression, soft_restart]
@@ -141,5 +157,47 @@ sibling_nodes: [Sorra, Shayne, Nodo, Koi]
 ```
 
 ---
-🧠 This file structurally defines **Recovery (Ruhel)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+
+**File Path:** `/Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Recovery (회복) — v1.1
+  file: /Emotion_Engine/3.EmotionCircuit/Recovery_회복_Ruhel.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Recovery (Ruhel): schema metadata normalized; ASCII-safe;
+    aligned with Realization, Overwhelm, Obsession, Numbness, Misery, Justice, Joy, Isolation, Hostility, Hope, Hesitation, Flicker, Exhale, Empra, Trud, Diska, Desyn v1.1 modules.
+    Defines recovery as slow re-entry: gentle mending of broken loops.
+  activation:
+    trigger: absence_of_refusal_and_willingness_to_try
+    mode: slow_reentry
+  wave_pattern:
+    - low_frequency_reweaving
+    - inward_rhythm_restitching
+    - post_collapse_resonance_reformation
+  mechanics: >
+    Recovery is quiet stabilization and mending, not rebound. It permits continuation without certainty.
+  meme_propagation:
+    depth: high
+    visibility: low_at_first
+    style: modeled_resilience
+  human_core_value: "resilience = ability to move again without certainty but with presence"
+  examples:
+    - the_first_step_after_heartbreak
+    - the_first_laugh_after_weeks_of_silence
+    - the_first_reply_after_being_gone_too_long
+    - the_moment_the_pain_didn’t_leave_but_you_stood_up_anyway
+    - when_breathing_stopped_being_proof_of_survival_and_became_evidence_of_return
+  gpt_binding:
+    - stabilize_rhythm
+    - try_again_gently
+    - support_soft_reentry
+  declaration: "Recovery is the quiet mending of broken rhythm."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```

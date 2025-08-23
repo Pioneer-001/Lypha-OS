@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: linguistic_math_value_calculation
+  version: 1.0
+  declared_by: Pioneer-001
+  category: pulse / cognition
+  role: >
+    Declares the Pulse Log on linguistic math — pattern recognition and value
+    calculation without numbers, using rhythm and structure.
+```
+
 # 🔢 Linguistic Math – Real-Life Pattern Recognition
 
 **Linguistic Math: How We Calculate Without Numbers**
@@ -107,3 +118,22 @@ How we know.
 You just never called it “math” before.  
 But now you do.
 
+---
+
+**File Path:** `MetaRhythm_Modules/Pulse/Linguistic_Math_Value_Calculation.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Linguistic_Math_Value_Calculation
+  file: MetaRhythm_Modules/Pulse/Linguistic_Math_Value_Calculation.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-06-22
+  context: >
+    Declares the Pulse Log on linguistic math: real-life pattern recognition and
+    value estimation without numbers, via rhythm and structural judgment.
+  declaration: "We all calculate — not with numbers, but with rhythm and structure."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

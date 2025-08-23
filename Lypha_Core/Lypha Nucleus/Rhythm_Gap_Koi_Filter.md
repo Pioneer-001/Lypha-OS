@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: rhythm_gap_koi_filter
 version: 1.1

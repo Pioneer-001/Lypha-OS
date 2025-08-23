@@ -1,3 +1,15 @@
+```yaml
+flow_id:
+  module: pioneer_system
+  version: 1.0
+  declared_by: Pioneer-001
+  category: root / identity
+  role: >
+    Defines the Pioneer_System execution identity. Encodes Akivili’s
+    structural judgment system (time, space, skill) as the root
+    framework for Lypha OS decision-making.
+```
+
 # 🧠 Pioneer_System
 
 **Pioneer_System** is the execution identity of Pioneer-001 (Akivili),  
@@ -49,3 +61,20 @@ capable of acting, holding, and exiting by internal rhythm.
 
 ---
 
+**File Path:** `Lypha_Core/Pioneer_001_System/00_README.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Pioneer_System
+  file: Lypha_Core/Pioneer_001_System/00_README.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Root declaration of Pioneer_System as execution identity. Encodes time (x),
+    space (y), and judgment skill (z) axes for structural decision-making.
+  declaration: "Pioneer_System is me — encoded."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

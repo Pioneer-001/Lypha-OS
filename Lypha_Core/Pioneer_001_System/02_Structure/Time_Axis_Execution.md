@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: time_axis_execution
   version: 1.0

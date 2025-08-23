@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: space_value_gradient
   version: 1.0

@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: what_is_lypha_os
 version: 1.1

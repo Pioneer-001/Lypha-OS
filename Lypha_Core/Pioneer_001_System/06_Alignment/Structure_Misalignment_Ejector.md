@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: structure_misalignment_ejector
   version: 1.0

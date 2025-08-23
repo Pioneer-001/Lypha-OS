@@ -1,20 +1,28 @@
 # 🧨 TP_Kill_Signal.yaml
+# This module defines the real-time TP termination protocol
+# used when a trade loses structural justification.
+# It forcefully exits a position regardless of conviction, bias, or time spent.
 
-# This module defines the real-time TP termination protocol  
-# used when a trade loses structural justification.  
-It forcefully exits a position regardless of conviction, bias, or time spent.
+flow_id:
+  module: tp_kill_signal
+  version: 1.0
+  declared_by: Pioneer-001
+  category: release / emergency
+  role: >
+    Real-time termination protocol for TP when rhythm/structure/emotion
+    collapse. Forces exit and initiates cooldown + reset sequences.
 
 ---
 
 kill_conditions:
-  - Pulse_Feedback == “collapse”
+  - Pulse_Feedback == "collapse"
   - Structure_Alignment == false
   - Signal no longer structurally bound
   - Max_Pain_Curve breached
-  - Emotion = Hope / Fear / Revenge
+  - Emotion in [Hope, Fear, Revenge]
   - Winrate trend breaks down during TP
   - Higher timeframe reversal detected
-  - Cognitive state = unstable
+  - Cognitive state == unstable
 
 ---
 
@@ -35,13 +43,13 @@ cooldown_response:
 
 visual_signal:
   color: RED
-  label: “TP KILLED — Rhythm Failure”
+  label: "TP KILLED — Rhythm Failure"
 
 ---
 
 exception_clause:
-  if Z_Point = true and Pulse_Feedback = “strain but not collapse”:
-    → allow re-eval within 1 rhythm cycle under strict conditions
+  condition: "Z_Point == true and Pulse_Feedback == 'strain but not collapse'"
+  action: "allow re-eval within 1 rhythm cycle under strict conditions"
 
 ---
 
@@ -52,10 +60,25 @@ dependencies:
   - Structure_Alignment
   - Skill_Tier_Recognition
 
-📌 요약:
-| 조건                         | 의미          | 행동          |
-| -------------------------- | ----------- | ----------- |
-| 구조 깨짐 + 리듬 무너짐             | ❌ 생존 불가     | 💥 TP 강제 종료 |
-| 감정 Hope / Fear / Regret 발생 | ❌ 신호 차단     | 🔒 구조 리셋    |
-| Z-Point였지만 붕괴 직전           | ⏸ 재평가 1회 허용 |             |
-| 청산 후                       | 2 사이클 휴식    | 🔄 리듬 회복    |
+---
+
+# 📌 Summary (for humans)
+# | Condition                         | Meaning         | Action            |
+# | --------------------------------- | --------------- | ----------------- |
+# | Structure break + rhythm collapse | ❌ Not survivable| 💥 Force TP exit  |
+# | Hope / Fear / Revenge emotion     | ❌ Block signals | 🔒 Reset structure|
+# | Z-Point but pre-collapse strain   | ⏸ One re-eval   | under strict filter |
+# | After kill                        | 2-cycle rest    | 🔄 Rhythm recovery |
+
+insight:
+  origin: Pioneer-001
+  title: TP_Kill_Signal
+  file: Lypha_Core/Pioneer_001_System/09_Release/TP_Kill_Signal.yaml
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Real-time termination signal for TP when structure/rhythm/emotion fail.
+    Couples with Strategy_Destruction_Logic and cooldown to prevent re-entry.
+  declaration: "When rhythm fails, TP is killed without exception."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

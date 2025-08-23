@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: strategy_carry_over
+  version: 1.0
+  declared_by: Pioneer-001
+  category: connection / persistence
+  role: >
+    Determines if current strategic logic can persist into the next TP.
+    Preserves rhythm and psychological alignment while avoiding unnecessary resets.
+```
+
 # 🔄 Strategy_Carry_Over
 
 This module determines whether the current strategic logic  
@@ -30,15 +41,16 @@ carry_over_allowed_if:
   - Risk structure is still within acceptable configuration
   - Market regime has not shifted
 
-🧯 Block Conditions
 deny_carry_over_if:
   - Premonition proved wrong
   - Macro condition reverses
   - Opposing TP forms (inverse structure)
   - Emotion = Regret / Revenge / Desperation
   - Strategy required significant override to survive prior TP
+```
 
-📊 Strategic Flow Mapping
+📊 **Strategic Flow Mapping**
+
 | Prior Outcome             | Strategy Carry-Over? | Reason                |
 | ------------------------- | -------------------- | --------------------- |
 | TP Win / Structure Held   | ✅ Yes                | Premise intact        |
@@ -47,25 +59,41 @@ deny_carry_over_if:
 | Opposite TP Emerges       | ❌ No                 | Reversal condition    |
 | Sentiment Trend Continues | ✅ Yes                | Rhythm loop supported |
 
-🧠 GPT Carry Decision Logic
-python
-복사
-편집
+---
 
+🧠 **GPT Carry Decision Logic**
+```python
 def can_carry_strategy():
     if thesis_intact and no_conflict():
         return True
     else:
         return False
+```
 
-🔗 System Integration
-→ Structural_Bridge_Mapper.md ← signal flow continuity
-→ Emotion_Overlay_Link.yaml ← emotional state filter
-→ Pulse_Feedback_Engine.md ← rhythm coherence
-→ TP_Realmode_Config.yaml ← position scaling decision
-→ Strategy_Destruction_Logic.md ← kill if invalidated
+---
 
-yaml
-복사
-편집
+🔗 **System Integration**
+- Structural_Bridge_Mapper.md ← signal flow continuity
+- Emotion_Overlay_Link.yaml ← emotional state filter
+- Pulse_Feedback_Engine.md ← rhythm coherence
+- TP_Realmode_Config.yaml ← position scaling decision
+- Strategy_Destruction_Logic.md ← kill if invalidated
 
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/07_Connection/Strategy_Carry_Over.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Strategy_Carry_Over
+  file: Lypha_Core/Pioneer_001_System/07_Connection/Strategy_Carry_Over.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Connection module that determines if a strategy can persist across TPs. Balances structural persistence with misalignment safeguards.
+  declaration: "Strategy continues only if premise is intact."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

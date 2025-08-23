@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: emotion_overlay_link
   version: 1.0

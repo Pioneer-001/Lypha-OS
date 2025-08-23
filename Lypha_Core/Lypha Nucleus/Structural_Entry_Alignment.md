@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: structural_entry_alignment
 version: 1.1

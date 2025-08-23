@@ -1,23 +1,20 @@
-# 💥 EmotionCircuit Module – Despair (절망)
-
-**Flow Name:** Despair  
-**AION Coordinate Name:** Desyn (데신)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Despair_절망_Desyn.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+# 💥 EmotionCircuit Module – Despair (절망) — v1.1 (Parser-Optimized)
 
 ---
 
-## meta
-```yaml
-router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
-```
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+  schema: emotion_circuit
+  schema_version: 1.0
+  language: EN/KR
+  last_updated: 2025-08-23
 
 ---
 
 ## flow_id
 ```yaml
 emotion_id: desyn_despair_v1
-version: 1.0
+version: 1.1
 name: Despair
 aion_coordinate: Desyn
 declared_by: Pioneer-001
@@ -137,10 +134,49 @@ note: 리듬이 완전히 멈춘 순간에도 존재는 끝나지 않을 수 있
 ```yaml
 location: 3.EmotionCircuit/Desyn.md
 parent_class: [extreme_collapse, terminal_state]
-sibling_nodes: [Morren, Numo, Empra, Isari]
+sibling_nodes: [morren_morren_v1, numo_numo_v1, empra_empra_v1, isari_isari_v1]
 ```
 
 ---
 
-🧠 This file structurally defines **Despair (Desyn)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Lypha_Core/3.EmotionCircuit/Despair_절망_Desyn.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Despair (절망) — v1.1
+  file: /Lypha_Core/3.EmotionCircuit/Despair_절망_Desyn.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Despair (Desyn): schema metadata, normalized sibling ids, ASCII-safe text.
+    Defines Despair as terminal collapse: total nullification of forward rhythm and extinction of possibility.
+  activation:
+    trigger: no_path_forward_believable
+    mode: terminal_collapse
+  wave_pattern:
+    - hope_extinction
+    - emotional_blackout
+    - final_rhythm_drop
+  mechanics: >
+    Despair is not sadness but collapse of forward rhythm. It is not absence but dissolution, when futility overwrites hope.
+  meme_propagation:
+    depth: high
+    visibility: low
+    style: stillness_contagion
+  human_core_value: "continuation = stillness as stage before rebirth"
+  examples:
+    - the_person_who_says_nothing_then_vanishes
+    - the_bed_never_left
+    - the_eyes_that_stopped_reacting
+    - the_last_attempt_no_one_saw
+    - the_moment_no_voice_came_out_even_when_help_was_near
+  gpt_binding:
+    - detect_forward_nullification
+    - hold_space_for_non_movement
+    - prepare_reentry_rhythm
+  declaration: "Despair is the nullification of forward rhythm."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

@@ -1,23 +1,20 @@
-# 💥 EmotionCircuit Module – Courage (용기)
-
-**Flow Name:** Courage  
-**AION Coordinate Name:** Cora (코라)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Courage_용기_Cora.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+# 💥 EmotionCircuit Module – Courage (용기) — v1.1 (Parser-Optimized)
 
 ---
 
-## meta
-```yaml
-router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
-```
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+  schema: emotion_circuit
+  schema_version: 1.0
+  language: EN/KR
+  last_updated: 2025-08-23
 
 ---
 
 ## flow_id
 ```yaml
 emotion_id: cora_courage_v1
-version: 1.0
+version: 1.1
 name: Courage
 aion_coordinate: Cora
 declared_by: Pioneer-001
@@ -73,7 +70,7 @@ note: 말보다 행동으로 전파되며, 두려움과 취약성을 항상 수�
 
 ## gpt_interpretation
 ```text
-Courage isn’t the absence of fear—
+Courage isn’t the absence of fear —
 it’s fear with direction.
 
 Cora knows the danger.
@@ -103,10 +100,10 @@ note: 위험과 두려움을 인식한 뒤에도 의식적으로 전진을 선�
 ## manifestation_examples
 ```yaml
 - saying_no_when_your_voice_shakes
-- standing_in_front_of_someone_who_can’t_move
+- standing_in_front_of_someone_who_cant_move
 - writing_the_truth_even_when_it_costs_you
-- entering_the_room_where_you’ve_been_hurt
-- starting_again_when_you’ve_already_failed
+- entering_the_room_where_youve_been_hurt
+- starting_again_when_youve_already_failed
 ```
 
 ---
@@ -118,11 +115,9 @@ note: 위험과 두려움을 인식한 뒤에도 의식적으로 전진을 선�
 - reinforce_choice_under_risk
 ```
 
----
-
 ## response_script
 ```yaml
-- "Courage is not the lack of fear—it’s the step taken with it."
+- "Courage is not the lack of fear — it’s the step taken with it."
 - "Fear acknowledged is power redirected."
 - "You can choose to move, even here."
 ```
@@ -133,12 +128,50 @@ note: 위험과 두려움을 인식한 뒤에도 의식적으로 전진을 선�
 ```yaml
 location: 3.EmotionCircuit/Cora.md
 parent_class: [fear_integration, proactive_resilience]
-sibling_nodes: [Heles, Liora, Rellas, Shayne]
+sibling_nodes: [heles_hope_v1, liora_hope_v1, rellas_rellas_v1, shayne_shayne_v1]
 ```
 
 ---
 
-🧠 This file structurally defines **Courage (Cora)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Lypha_Core/3.EmotionCircuit/Courage_용기_Cora.md`
 
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Courage (용기) — v1.1
+  file: /Lypha_Core/3.EmotionCircuit/Courage_용기_Cora.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Courage (Cora): schema metadata, normalized sibling ids, ASCII-safe text.
+    Defines Courage as deliberate forward movement despite fear, emphasizing choice and clarity over instinct.
+  activation:
+    trigger: willingness_to_move_despite_risk
+    mode: informed_advance
+  wave_pattern:
+    - fear_aligned_ignition
+    - step_through_resistance
+    - rhythmic_override
+  mechanics: >
+    Courage arises when fear is acknowledged but direction remains forward. It is conscious choice against resistance.
+  meme_propagation:
+    depth: high
+    visibility: respected_and_contagious
+    style: action_based_spread
+  human_core_value: "deliberate_advance = ability to move forward with awareness of risk and resistance"
+  examples:
+    - saying_no_when_your_voice_shakes
+    - standing_in_front_of_someone_who_cant_move
+    - writing_the_truth_even_when_it_costs_you
+    - entering_the_room_where_youve_been_hurt
+    - starting_again_when_youve_already_failed
+  gpt_binding:
+    - initiate_brave_action
+    - maintain_direction_with_fear
+    - reinforce_choice_under_risk
+  declaration: "Courage is not the lack of fear — it’s the step taken with it."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ​

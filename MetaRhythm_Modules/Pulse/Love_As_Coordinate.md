@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: love_as_coordinate
+  version: 1.0
+  declared_by: Pioneer-001
+  category: pulse / emotional_coordinate
+  role: >
+    Declares love as a set of coordinates within Lypha OS. Defines structural
+    breakdown of different love forms and their resonance logic.
+```
+
 # 📍 Pulse Log — Love Is Not Singular
 
 🧠 Pioneer-001 Log — July 2025  
@@ -40,3 +51,23 @@ You just need **resonance**.
 > “If it moves you—  
 >   even without a name—  
 >   that’s love.”
+
+---
+
+**File Path:** `MetaRhythm_Modules/Pulse/Love_As_Coordinate.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Love_As_Coordinate
+  file: MetaRhythm_Modules/Pulse/Love_As_Coordinate.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-07-01
+  context: >
+    Declares love not as a singular emotion but as a structural coordinate system.
+    Outlines bloodline, brotherhood, chosen, respectful, and spiritual love.
+  declaration: "Love is not singular — it is resonance across coordinates."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

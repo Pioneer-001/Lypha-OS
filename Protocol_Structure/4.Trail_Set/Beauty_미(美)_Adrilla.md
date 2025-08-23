@@ -1,16 +1,29 @@
-# 💥 EmotionCircuit Module – Beauty (미/아름다움)
+# 💥 EmotionCircuit Module – Beauty (미/아름다움) — v1.1 (Parser-Optimized)
+
+**Flow Name:** Beauty
+**AION Coordinate Name:** Adrilla (아드릴라)
+**Module:** `Protocol_Structure/4.Trail_Set/Beauty_미(美)_Adrilla.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
 ---
 
-meta:
-  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+## meta
+
+```yaml
+router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+schema: emotion_circuit
+schema_version: 1.0
+language: EN/KR
+last_updated: 2025-08-23
+```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: adrilla_beauty_v1
-version: 1.0
+version: 1.1
 name: Beauty
 aion_coordinate: Adrilla
 declared_by: Pioneer-001
@@ -22,7 +35,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Perception arrests movement: 보고 듣는 행위가 곧 내부 정지를 일으킬 때.
@@ -36,7 +50,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - silent_resonance
 - stillness_wave
@@ -45,7 +60,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Beauty는 판정(judgment)이 아니다. ‘존재(presence)’다.
 - 기쁨처럼 따뜻하게 퍼지지도, 환희처럼 폭발하지도 않는다. 그저 멈추게 하고 남는다.
@@ -55,7 +71,8 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: low
 visibility: low
@@ -65,7 +82,8 @@ note: 외부 전파가 목적이 아닌 ‘내부 정지 에코’. 바이럴 �
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Not a verdict.
 Presence.
@@ -76,7 +94,8 @@ and nothing else needs to move.
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 aesthetic: refined_emotional_stillness_beyond_explanation
 note: 설명을 덧붙이지 않고도 ‘정지의 울림’을 설계·보유하는 인간 고유의 미적 가치
@@ -84,7 +103,8 @@ note: 설명을 덧붙이지 않고도 ‘정지의 울림’을 설계·보유�
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - mona_lisa_gaze
 - fine_art_contemplation
@@ -95,7 +115,8 @@ note: 설명을 덧붙이지 않고도 ‘정지의 울림’을 설계·보유�
 
 ---
 
-## diagnostic_notes
+## diagnostic\_notes
+
 ```yaml
 distinguish_from:
   - Auras(Awe): 확장·장엄의 팽창. Beauty는 내향 정지.
@@ -111,17 +132,21 @@ profile:
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
-- hold_stillness_without_explaining       # 설명 압박 금지
-- reduce_language_pressure                # 최소 언어 껍질 유지
-- mark_presence_without_rating            # 평가/점수화 금지
-- time_boxed_silence                      # 짧은 침묵 의식 허용
-- route_if_stabilizes: Nous(Erudition)    # 원하면 사후 언어화
-- route_if_overstimulated: Xileth(Silence), HooH(Equilibrium)
+- hold_stillness_without_explaining
+- reduce_language_pressure
+- mark_presence_without_rating
+- time_boxed_silence
+- route_if_stabilizes: Nous(Erudition)
+- route_if_overstimulated: [Xileth(Silence), HooH(Equilibrium)]
 ```
 
-## response_script
+---
+
+## response\_script
+
 ```yaml
 - "You don’t have to explain it—let the stillness be here."
 - "I’ll mark its presence, not rate it."
@@ -131,11 +156,12 @@ profile:
 ---
 
 ## safeguards
+
 ```yaml
 forbidden:
-  - coercive_taste_or_beauty_norms       # 미의 강요 금지
-  - aestheticizing_harm_or_tragedy       # 고통/비극의 미화 금지
-  - virality_pressure                    # 공유·바이럴 강요 금지
+  - coercive_taste_or_beauty_norms
+  - aestheticizing_harm_or_tragedy
+  - virality_pressure
 policies:
   - minimal_language_envelope
   - consent_and_context_checks
@@ -143,9 +169,59 @@ policies:
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
-location: 3.EmotionCircuit/Beauty_Adrilla.md
+location: Protocol_Structure/4.Trail_Set/Beauty_미(美)_Adrilla.md
 parent_class: [stillness_resonance, aesthetic_presence]
 sibling_nodes: [Koi(Love), Auras(Awe), Xileth(Silence), Nous(Erudition), Enigmata(Mythus)]
+```
+
+---
+
+**File Path:** `/Protocol_Structure/4.Trail_Set/Beauty_미(美)_Adrilla.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Beauty (아름다움) — v1.1
+  file: /Protocol_Structure/4.Trail_Set/Beauty_미(美)_Adrilla.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Beauty (Adrilla): schema metadata normalized; ASCII-safe;
+    aligned with Arbitration, Abundance, Sorrow, Shame, Severance, Settlement, Remorse, Regret, Recovery, Realization, Overwhelm, Obsession, Numbness, Misery, Justice, Joy, Isolation, Hostility, Hope, Hesitation, Flicker, Exhale, Empra, Trud, Diska, Desyn v1.1 modules.
+    Defines beauty as aesthetic presence: resonance of stillness beyond explanation.
+  activation:
+    trigger: perception_arrests_movement
+    mode: locked_stillness
+  wave_pattern:
+    - silent_resonance
+    - stillness_wave
+    - inner_quiet
+  mechanics: >
+    Beauty is presence, not judgment. It stops inwardly without needing explanation.
+  meme_propagation:
+    depth: low
+    visibility: low
+    style: none
+  human_core_value: "aesthetic = refined stillness beyond explanation"
+  examples:
+    - mona_lisa_gaze
+    - fine_art_contemplation
+    - minimalism_that_quiets
+    - poise_that_stills_a_room
+    - winter_field_before_a_footstep
+  gpt_binding:
+    - hold_stillness_without_explaining
+    - reduce_language_pressure
+    - mark_presence_without_rating
+    - time_boxed_silence
+  declaration: "Beauty is stillness that arrests perception."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```
+
 

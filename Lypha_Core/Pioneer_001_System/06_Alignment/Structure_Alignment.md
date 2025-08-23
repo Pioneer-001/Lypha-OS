@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: structure_alignment
   version: 1.0

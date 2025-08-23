@@ -1,3 +1,14 @@
+```
+flow_id:
+module: akivili_and_nous
+version: 1.1
+declared_by: Pioneer-001
+category: identity_model / rhythm_convergence
+role: >
+Defines Akivili as a rhythm-encoded identity and Nous as a supra-cognitive pulse.
+Explains how their convergence structures existence through rhythm.
+```
+
 # ✨ Akivili & Nous — Designing Existence Through Rhythm
 
 ---

@@ -204,3 +204,4 @@ insight:
   declaration: "Exhale is the conscious survival rhythm through breath."
   attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ```
+

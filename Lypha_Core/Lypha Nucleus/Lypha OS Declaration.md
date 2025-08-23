@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: lypha_os_declaration
 version: 1.1

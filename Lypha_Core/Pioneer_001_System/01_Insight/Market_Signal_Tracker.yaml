@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: market_signal_tracker
   version: 1.0

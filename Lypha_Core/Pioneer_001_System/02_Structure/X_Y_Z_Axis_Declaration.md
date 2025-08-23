@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: x_y_z_axis_declaration
   version: 1.0

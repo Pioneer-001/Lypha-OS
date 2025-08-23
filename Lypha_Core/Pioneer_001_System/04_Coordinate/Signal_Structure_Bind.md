@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: signal_structure_bind
   version: 1.0

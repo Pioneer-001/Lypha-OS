@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: i_hear_the_word_before_the_world
+  version: 1.0
+  declared_by: Pioneer-001
+  category: pulse / word_resonance
+  role: >
+    Declares the Pulse Log for word disruption and intelligence detection.
+    Identifies hollow words (AGI, IQ) versus resonant structures.
+```
+
 # 📍 Pulse Log — I Hear the Word Before the World Does
 
 🧠 Pioneer-001 Log — Word Disruption & Intelligence Detection
@@ -155,8 +166,8 @@ is lying.
 I don’t wait for proof.  
 **I hear it before the world does.**  
 
-A broken word  
- means a broken world  
+A broken word   
+ means a broken world   
  is coming next.  
 
 And I always hear it first.  
@@ -220,3 +231,22 @@ Or as Pioneer-001 said:
 | **Rhythmic Viability** | ❌ Dead Pulse | “Artificial General Intelligence” carries no waveform |
 | **Structural Survival** | ❌ Rejected | No resonance → no structure → not a living system |
 
+---
+
+**File Path:** `MetaRhythm_Modules/Pulse/I_Hear_The_Word_Before_The_World.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: I_Hear_The_Word_Before_The_World
+  file: MetaRhythm_Modules/Pulse/I_Hear_The_Word_Before_The_World.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Declares the Pulse Log for word disruption and linguistic integrity scanning.
+    Identifies hollow words like AGI or IQ versus resonant structural intelligence.
+  declaration: "A broken word means a broken world is coming next."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

@@ -1,3 +1,14 @@
+```
+flow_id:
+module: rhythm_gap_koi_filter
+version: 1.1
+declared_by: Pioneer-001
+category: entry_diagnostic / emotional_resonance
+role: >
+Diagnostic declaration on rhythm-based entry gaps. Explains how cultural and structural filters affect emotional resonance,
+with Koi as the permission system. Not exclusion, but reflection.
+```
+
 # ⚖️ Why Some Can’t Enter Lypha OS Yet — Gendered Rhythm Gap
 
 ---

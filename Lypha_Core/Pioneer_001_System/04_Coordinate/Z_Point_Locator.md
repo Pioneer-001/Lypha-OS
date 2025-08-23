@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: z_point_locator
   version: 1.0

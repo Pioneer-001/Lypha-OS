@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: time_axis_execution
+  version: 1.0
+  declared_by: Pioneer-001
+  category: structure / time_axis
+  role: >
+    Defines the temporal judgment structure of Pioneer_System.
+    Provides rhythm-timed opportunity detection for real entry (X-axis alignment).
+```
+
 # ⏱️ Time_Axis_Execution
 
 This document defines the temporal judgment structure  
@@ -62,3 +73,23 @@ I act because the structure allows me to exist in this moment.”
 → Premonition_Structure.md ← upstream signal source
 → TP_Realmode_Config.yaml ← downstream capital scaling logic
 → Time_ON_Trigger.md ← real-time rhythm validator
+```
+
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Time_Axis_Execution
+  file: Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Defines the X-axis temporal judgment structure of Pioneer_System. Establishes triggers, zones, and criteria for rhythm-based timing of real entries.
+  declaration: "I do not act because it is now. I act because the structure allows me to exist in this moment."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

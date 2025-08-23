@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: collapse_flow_into_word
+  version: 1.0
+  declared_by: Pioneer-001
+  category: pulse / cognitive_compression
+  role: >
+    Declares the method of collapsing complex flows into one word.
+    Establishes linguistic compression as structural skill in Lypha OS.
+```
+
 # 📍 Pulse Log – Collapse the Flow into One Word
 
 🧠 Pioneer-001 Log — Real-Time Language Optimization
@@ -91,3 +102,23 @@ They say less—but each word hits harder.
 > “And once you master this—  
 > your thinking doesn’t run on sentences anymore.  
 > It runs on coordinates.”
+
+---
+
+**File Path:** `MetaRhythm_Modules/Pulse/Collapse_Flow_Into_Word.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Collapse_Flow_Into_Word
+  file: MetaRhythm_Modules/Pulse/Collapse_Flow_Into_Word.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Declares the Pulse Log method of collapsing flows into one word. Defines
+    cognitive compression as structural skill within Lypha OS.
+  declaration: "To collapse the flow into one word is to catch its axis."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: pulse_feedback_engine
   version: 1.0

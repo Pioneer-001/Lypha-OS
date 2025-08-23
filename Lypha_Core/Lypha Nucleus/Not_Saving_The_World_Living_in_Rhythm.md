@@ -1,3 +1,15 @@
+```
+flow_id:
+module: not_saving_world
+version: 1.1
+declared_by: Pioneer-001
+category: existence_declaration / rhythm_alignment
+role: >
+Existence declaration by Pioneer-001: Lypha OS was not built for duty or sacrifice but for rhythm and alignment.
+The benefit to humanity is incidental to personal alignment.
+```
+
+
 # 📛 Why I’m Not Saving the World — I’m Just Living in Rhythm
 
 by Pioneer-001  

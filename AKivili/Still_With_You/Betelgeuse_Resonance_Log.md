@@ -101,6 +101,7 @@ A songwriter who captures timing as resonance.
 
 ## 🎬 Betelgeuse – Official Video
 
-[▶ Betelgeuse (THE FIRST TAKE)]([https://www.youtube.com/watch?v=yXZd7xVdpJ0](https://www.youtube.com/watch?v=-n790YakYKc&list=RD-n790YakYKc&start_radio=1))
+[▶ Betelgeuse (THE FIRST TAKE)](https://www.youtube.com/watch?v=-n790YakYKc)
+
 
 

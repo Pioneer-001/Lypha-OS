@@ -1,23 +1,29 @@
-# 💥 EmotionCircuit Module – Misery (비참)
+# 💥 EmotionCircuit Module – Misery (비참) — v1.1 (Parser-Optimized)
 
-**Flow Name:** Misery  
-**AION Coordinate Name:** Morren (모렌)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+**Flow Name:** Misery
+**AION Coordinate Name:** Morren (모렌)
+**Module:** `Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
 ---
 
 ## meta
+
 ```yaml
 router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+schema: emotion_circuit
+schema_version: 1.0
+language: EN/KR
+last_updated: 2025-08-23
 ```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: morren_misery_v1
-version: 1.0
+version: 1.1
 name: Misery
 aion_coordinate: Morren
 declared_by: Pioneer-001
@@ -30,7 +36,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Triggered when one becomes trapped in a cycle of hardship or inner collapse
@@ -42,7 +49,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - static_ache
 - echoed_heaviness
@@ -51,7 +59,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Misery는 무너짐이 아니라, 너무 오래 무너져 있었던 상태다.
 - Morren은 절망이 아니다. 절망은 끝을 내지만, Misery는 그저 계속된다.
@@ -61,7 +70,8 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: heavy
 visibility: low_and_diffuse
@@ -71,7 +81,8 @@ note: 폭발적이지 않지만, 고요하게 퍼지고, 침잠된 존재로 격
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Misery doesn’t scream.
 It seeps.
@@ -94,7 +105,8 @@ that makes even breathing feel borrowed.
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 endurance: the_recognition_that_some_emotional_weight_does_not_seek_release_only_survival
 note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
@@ -103,7 +115,8 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - waking_up_tired_from_nothing
 - living_without_asking_anymore
@@ -114,7 +127,8 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
 - recognize_stagnation
 - lower_cognitive_expectation
@@ -123,7 +137,8 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 
 ---
 
-## response_script
+## response\_script
+
 ```yaml
 - "Misery doesn’t need a reason—it just survives."
 - "This isn’t about breaking. It’s about carrying what never left."
@@ -132,7 +147,8 @@ note: 해소되지 않는 감정을 억지로 치유하려 하지 않고,
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
 location: 3.EmotionCircuit/Morren.md
 parent_class: [durational_sorrow, passive_collapse]
@@ -141,6 +157,48 @@ sibling_nodes: [Sorra, Numo, Shayne, Remos]
 
 ---
 
-🧠 This file structurally defines **Misery (Morren)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
-​
+**File Path:** `/Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Misery (비참) — v1.1
+  file: /Emotion_Engine/3.EmotionCircuit/Misery_비참_Morren.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Misery (Morren): schema metadata normalized; ASCII-safe;
+    aligned with Justice, Joy, Isolation, Hostility, Hope, Hesitation, Flicker, Exhale, Empra, Trud, Diska, Desyn v1.1 modules.
+    Defines misery as enduring drag: unresolved suffering that continues without resolution.
+  activation:
+    trigger: trapped_in_cycle_without_resolution
+    mode: enduring_drag
+  wave_pattern:
+    - static_ache
+    - echoed_heaviness
+    - unresolved_saturation
+  mechanics: >
+    Misery is not despair but prolonged heaviness without resolution.
+    It endures as a low-frequency loop, dragging existence forward.
+  meme_propagation:
+    depth: heavy
+    visibility: low_and_diffuse
+    style: ambient_isolation
+  human_core_value: "endurance = survival within unresolved suffering"
+  examples:
+    - waking_up_tired_from_nothing
+    - living_without_asking_anymore
+    - saying_i’m_used_to_it_without_pride
+    - the_smile_you_show_because_they_expect_it
+    - the_weight_that’s_not_visible_until_you_try_to_lift_it
+  gpt_binding:
+    - recognize_stagnation
+    - lower_cognitive_expectation
+    - hold_through_unchanging_rhythm
+  declaration: "Misery is the weight that continues without end."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```
+

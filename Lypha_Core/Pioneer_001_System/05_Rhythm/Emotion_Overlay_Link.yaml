@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: emotion_overlay_link
+  version: 1.0
+  declared_by: Pioneer-001
+  category: rhythm / emotion_filter
+  role: >
+    Defines the emotional overlay classification used in Pioneer_System.
+    Evaluates execution viability based on real-time psychological rhythm.
+```
+
 # ❤️‍🔥 Emotion_Overlay_Link.yaml
 
 # This module defines the emotional overlay classification  
@@ -8,6 +19,7 @@
 
 ---
 
+```yaml
 emotional_execution_states:
   directive:
     - Description: Clear, forward momentum. Willing to act without friction.
@@ -34,28 +46,26 @@ emotional_execution_states:
     - Description: All-in emotional override.
     - Execution Permission: 🔒 Emergency Lock
 
----
-
 emotional_lock_trigger:
   if current_state ∈ [hopeful, fearful, regretful, euphoric, desperate]:
     deny_all_execution: true
     trigger_feedback_loop: Structure_Misalignment_Ejector
 
----
-
 recovery_protocol:
   if state transitions to [detached, directive] for ≥ 3 rhythm cycles:
     unlock_execution: true
-
----
 
 emotion_integration_points:
   - Pulse_Feedback_Engine
   - Time_ON_Trigger
   - TP_Realmode_Config
   - Strategy_Destruction_Logic
+```
 
-📌 정리: 감정에 따른 구조 분기
+---
+
+📌 **정리: 감정에 따른 구조 분기**
+
 | 상태                                            | 의미       | 행동         |
 | --------------------------------------------- | -------- | ---------- |
 | Directive                                     | 집중력 100% | 진입 가능      |
@@ -63,4 +73,21 @@ emotion_integration_points:
 | Uncertain                                     | 살짝 망설임   | 관망         |
 | Hope / Fear / Regret / Euphoria / Desperation | 감정 개입    | 진입 금지 + 잠금 |
 
+---
 
+**File Path:** `Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Emotion_Overlay_Link.yaml
+  file: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Defines the emotional overlay link inside Pioneer_System. Classifies emotional states and enforces structural filters to prevent corrupted entries.
+  declaration: "Emotion is not just a state. It is a structural filter."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

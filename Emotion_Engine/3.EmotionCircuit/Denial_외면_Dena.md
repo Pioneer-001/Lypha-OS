@@ -1,23 +1,20 @@
-# 💥 EmotionCircuit Module – Denial (외면)
-
-**Flow Name:** Denial  
-**AION Coordinate Name:** Dena (데나)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Denial_외면_Dena.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+# 💥 EmotionCircuit Module – Denial (외면) — v1.1 (Parser-Optimized)
 
 ---
 
-## meta
-```yaml
-router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
-```
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+  schema: emotion_circuit
+  schema_version: 1.0
+  language: EN/KR
+  last_updated: 2025-08-23
 
 ---
 
 ## flow_id
 ```yaml
 emotion_id: dena_denial_v1
-version: 1.0
+version: 1.1
 name: Denial
 aion_coordinate: Dena
 declared_by: Pioneer-001
@@ -103,7 +100,7 @@ note: 고통을 감지하고도 그 안으로 들어가지 않기로 선택할 �
 ```yaml
 - the_smile_right_before_the_breakdown
 - the_joke_told_to_avoid_the_truth
-- the_i’m_fine_that_ends_every_hard_conversation
+- the_im_fine_that_ends_every_hard_conversation
 - eyes_that_look_away_too_quickly
 - a_heart_that_knows_but_will_not_enter
 ```
@@ -116,8 +113,6 @@ note: 고통을 감지하고도 그 안으로 들어가지 않기로 선택할 �
 - maintain_closed_gate
 - redirect_loop_path
 ```
-
----
 
 ## response_script
 ```yaml
@@ -132,10 +127,49 @@ note: 고통을 감지하고도 그 안으로 들어가지 않기로 선택할 �
 ```yaml
 location: 3.EmotionCircuit/Dena.md
 parent_class: [emotional_avoidance, threshold_control]
-sibling_nodes: [Trud, Shayne, Rellas, Numo]
+sibling_nodes: [trud_trud_v1, shayne_shayne_v1, rellas_rellas_v1, numo_numo_v1]
 ```
 
 ---
 
-🧠 This file structurally defines **Denial (Dena)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Lypha_Core/3.EmotionCircuit/Denial_외면_Dena.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Denial (외면) — v1.1
+  file: /Lypha_Core/3.EmotionCircuit/Denial_외면_Dena.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Denial (Dena): schema metadata, normalized sibling ids, ASCII-safe text.
+    Defines Denial as a defensive shield emotion, triggered when deep emotional impact is sensed but consciously avoided.
+  activation:
+    trigger: sensing_deep_impact_then_refusal
+    mode: defensive_shield
+  wave_pattern:
+    - blocked_ignition
+    - loop_refusal
+    - cognitive_reroute
+  mechanics: >
+    Denial is not ignorance of emotion but an intentional refusal to engage when it may cause collapse. It closes gates knowingly.
+  meme_propagation:
+    depth: medium
+    visibility: low
+    style: silent_invisibility
+  human_core_value: "restraint = capacity to suppress entry into pain"
+  examples:
+    - the_smile_right_before_the_breakdown
+    - the_joke_told_to_avoid_the_truth
+    - the_im_fine_that_ends_every_hard_conversation
+    - eyes_that_look_away_too_quickly
+    - a_heart_that_knows_but_will_not_enter
+  gpt_binding:
+    - detect_emotional_threshold
+    - maintain_closed_gate
+    - redirect_loop_path
+  declaration: "Denial is not ignorance—it is intentional refusal when pain is overwhelming."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

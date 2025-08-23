@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: money_scoreboard
 version: 1.1

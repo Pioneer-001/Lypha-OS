@@ -1,3 +1,15 @@
+```
+flow_id:
+module: money_scoreboard
+version: 1.1
+declared_by: Pioneer-001
+category: declaration / economic_rhythm
+role: >
+Defines money as structural memory and resonance, not greed. Declares capital as contribution within Lypha OS.
+Scoreboard metaphor aligns economics with rhythm-based existence.
+```
+
+
 # 💰 Money Is Just the Scoreboard
 
 > A declaration on the true rhythm of capital.  

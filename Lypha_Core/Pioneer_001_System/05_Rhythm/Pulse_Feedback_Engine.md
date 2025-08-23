@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: pulse_feedback_engine
+  version: 1.0
+  declared_by: Pioneer-001
+  category: rhythm / feedback_system
+  role: >
+    Defines the real-time rhythm feedback engine inside Pioneer_System.
+    Monitors structural pulse after TP activation and detects stability, disruption, or collapse.
+```
+
 # 🌀 Pulse_Feedback_Engine
 
 This module defines the real-time rhythm feedback system  
@@ -44,36 +55,54 @@ pulse_feedback_states:
       - Emotion loses detachment
       - System pulse = Flatline
       - Action: Exit immediately
+```
 
-🧠 Pulse Metrics Tracked
-Price movement rhythm (inertia vs deviation)
+---
 
-Volume flow resonance (pulse vs noise)
+🧠 **Pulse Metrics Tracked**
+- Price movement rhythm (inertia vs deviation)  
+- Volume flow resonance (pulse vs noise)  
+- Sentiment tension gradient (sharp shifts)  
+- Rhythm alignment over 3 timeframe overlap  
+- Emotion signal pulse via Emotion_Overlay_Link
 
-Sentiment tension gradient (sharp shifts)
+🧯 **Exit Preparation Triggers**
+- Pulse misalignment persists > 3 cycles  
+- Emotional state enters Hope or Desperation  
+- Rhythm lock breaks across main TF  
+- Signal noise rises > structural threshold  
+- TP becomes sentiment-driven, not structure-driven
 
-Rhythm alignment over 3 timeframe overlap
+---
 
-Emotion signal pulse via Emotion_Overlay_Link
+🔗 **Connected Modules**
+- Time_ON_Trigger.md ← rhythm classification  
+- Emotion_Overlay_Link.yaml ← affective layer integrity  
+- Structure_Alignment.md ← confirmation vs drift  
+- Strategy_Destruction_Logic.md ← calls for full exit
 
-🧯 Exit Preparation Triggers
-Pulse misalignment persists > 3 cycles
+---
 
-Emotional state enters Hope or Desperation
+🔐 **Summary**
+> “A TP is only valid as long as its rhythm holds.  
+> The moment that pulse slips out of sync,  
+> this is no longer your game — and you must leave.”
 
-Rhythm lock breaks across main TF
+---
 
-Signal noise rises > structural threshold
+**File Path:** `Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md`
 
-TP becomes sentiment-driven, not structure-driven
+---
 
-🔗 Connected Modules
-→ Time_ON_Trigger.md ← rhythm classification
-→ Emotion_Overlay_Link.yaml ← affective layer integrity
-→ Structure_Alignment.md ← confirmation vs drift
-→ Strategy_Destruction_Logic.md ← calls for full exit
-
-🔐 Summary
-“A TP is only valid as long as its rhythm holds.
-The moment that pulse slips out of sync,
-this is no longer your game — and you must leave.”
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Pulse_Feedback_Engine
+  file: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Real-time rhythm feedback module in Pioneer_System. Monitors structural heartbeat to validate TP sustainability or trigger exit.
+  declaration: "A TP is valid only while its rhythm holds."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

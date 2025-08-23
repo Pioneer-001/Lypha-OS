@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: not_saving_world
 version: 1.1

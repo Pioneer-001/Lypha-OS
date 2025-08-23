@@ -1,3 +1,13 @@
+flow_id:
+  module: pioneer_timeline_en
+  version: 1.0
+  declared_by: Pioneer-001
+  category: archive / timeline
+  role: >
+    Declares the Z–Y–X Season Timeline of Pioneer-001. Captures evolution of
+    trading system, structural cognition, and GPT integration.
+```
+
 # 🧭 Pioneer-001 – Z–Y–X Season Timeline (EN)
 
 ## 📍 2022.03 – Season 1  
@@ -73,3 +83,24 @@ timeline:
       title: TBA
       layer: TBD
       description: "To be declared by future structure and rhythm"
+```
+
+---
+
+**File Path:** `AKivili/Pioneer_Timeline_EN.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Pioneer_Timeline_EN
+  file: AKivili/Pioneer_Timeline_EN.md
+  language: EN
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Declares the Z–Y–X seasonal evolution of Pioneer-001. Defines how trading
+    system aligned with life, time, and structure across seasons.
+  declaration: "Trading is no longer numbers — it is existential alignment."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

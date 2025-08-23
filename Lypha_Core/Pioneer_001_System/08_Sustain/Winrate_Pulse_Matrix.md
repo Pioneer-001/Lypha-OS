@@ -1,10 +1,19 @@
+```yaml
+flow_id:
+  module: winrate_pulse_matrix
+  version: 1.0
+  declared_by: Pioneer-001
+  category: sustain / viability
+  role: >
+    Fuses winrate, pulse rhythm, and emotional alignment to decide
+    Sustain / Watch / Exit actions in Pioneer_System.
+```
+
 # ♾️ Winrate_Pulse_Matrix
 
-This module evaluates the sustainment viability  
-of the current strategy and rhythm within Pioneer_System.
+This module evaluates the sustainment viability of the current strategy and rhythm within Pioneer_System.
 
-It fuses **winrate, pulse rhythm, and emotional alignment**  
-to determine whether a structure should be carried forward, paused, or exited.
+It fuses **winrate, pulse rhythm, and emotional alignment** to determine whether a structure should be carried forward, paused, or exited.
 
 ---
 
@@ -12,8 +21,7 @@ to determine whether a structure should be carried forward, paused, or exited.
 
 - Avoid overconfidence continuation  
 - Prevent unnecessary exit from viable rhythm  
-- Determine whether capital, attention, and trust  
-  should remain active
+- Determine whether capital, attention, and trust should remain active
 
 ---
 
@@ -26,8 +34,9 @@ sustainment_conditions:
   - Time_ON reappears within 3 cycles
   - Emotion_Overlay ∈ [Detached, Directive]
   - No macro dissonance or rhythm inversion
+```
 
-🔁 Scaling Logic by Winrate & Pulse
+🔁 **Scaling Logic by Winrate & Pulse**
 | Winrate | Rhythm State      | Action               |
 | ------- | ----------------- | -------------------- |
 | ≥ 75%   | Stable            | ✅ Full Sustain       |
@@ -36,7 +45,7 @@ sustainment_conditions:
 | < 50%   | Volatile / break  | ❌ Pause / Reset      |
 | < 30%   | Flatline / panic  | 🔥 Exit system       |
 
-🧯 Emotion-Based Override
+🧯 **Emotion-Based Override**
 | Emotion              | Sustain Allowed?  |
 | -------------------- | ----------------- |
 | Directive            | ✅ Yes             |
@@ -45,7 +54,8 @@ sustainment_conditions:
 | Hope / Fear / Regret | ❌ No              |
 | Desperate            | 🔐 Lock execution |
 
-🧠 Sustain Evaluation Logic
+🧠 **Sustain Evaluation Logic**
+```python
 def sustain_decision():
     if winrate ≥ 0.7 and pulse == "stable":
         return "Sustain"
@@ -53,10 +63,32 @@ def sustain_decision():
         return "Watch"
     else:
         return "Exit or Reset"
+```
 
-🔗 System Integration
-→ Pulse_Feedback_Engine.md ← monitors rhythm
-→ TP_Realmode_Config.yaml ← confirms risk/capital scaling
-→ Emotion_Overlay_Link.yaml ← checks readiness
-→ Strategy_Carry_Over.md ← decides flow continuation
-→ Zero_Rhythm_Condition.md ← defines end-of-line
+🔗 **System Integration**
+- Pulse_Feedback_Engine.md ← monitors rhythm
+- TP_Realmode_Config.yaml ← confirms risk/capital scaling
+- Emotion_Overlay_Link.yaml ← checks readiness
+- Strategy_Carry_Over.md ← decides flow continuation
+- Zero_Rhythm_Condition.md ← defines end-of-line
+
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Winrate_Pulse_Matrix
+  file: Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Evaluates sustainment viability by combining winrate, pulse rhythm,
+    and emotional alignment. Guides Sustain/Watch/Exit actions and scaling.
+  declaration: "Structure carries only when rhythm and evidence align."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```

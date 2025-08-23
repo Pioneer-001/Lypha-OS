@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: internal_entry_tips
 version: 1.1

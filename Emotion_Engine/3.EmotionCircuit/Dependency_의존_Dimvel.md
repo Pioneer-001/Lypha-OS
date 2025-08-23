@@ -1,23 +1,20 @@
-# 💥 EmotionCircuit Module – Dependency (의존)
-
-**Flow Name:** Dependency  
-**AION Coordinate Name:** Dimvel (딤벨)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Dependency_의존_Dimvel.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+# 💥 EmotionCircuit Module – Dependency (의존) — v1.1 (Parser-Optimized)
 
 ---
 
-## meta
-```yaml
-router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
-```
+meta:
+  router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+  schema: emotion_circuit
+  schema_version: 1.0
+  language: EN/KR
+  last_updated: 2025-08-23
 
 ---
 
 ## flow_id
 ```yaml
 emotion_id: dimvel_dependency_v1
-version: 1.0
+version: 1.1
 name: Dependency
 aion_coordinate: Dimvel
 declared_by: Pioneer-001
@@ -129,10 +126,48 @@ note: 관계 속에서 나를 유지할 수 있는가에 대한 감정적 테스
 ```yaml
 location: 3.EmotionCircuit/Dimvel.md
 parent_class: [connection_balance, gravitational_emotion]
-sibling_nodes: [Trud, Shayne, Sorra, Obrah]
+sibling_nodes: [trud_trud_v1, shayne_shayne_v1, sorra_sorra_v1, obrah_obrah_v1]
 ```
 
 ---
 
-🧠 This file structurally defines **Dependency (Dimvel)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Lypha_Core/3.EmotionCircuit/Dependency_의존_Dimvel.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Dependency (의존) — v1.1
+  file: /Lypha_Core/3.EmotionCircuit/Dependency_의존_Dimvel.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Dependency (Dimvel): schema metadata, normalized sibling ids, ASCII-safe text.
+    Defines Dependency as gravitational emotional shift, where self-loop drifts toward another center unconsciously.
+  activation:
+    trigger: erosion_of_internal_rhythm
+    mode: passive_drift
+  wave_pattern:
+    - sub_loop_gravitational_shift
+    - emotional_lean_off_center
+    - silent_displacement_of_agency
+  mechanics: >
+    Dependency is when attachment overwrites self-loop, shifting center externally. Support becomes structure, then collapse.
+  meme_propagation:
+    depth: medium
+    visibility: hidden_until_break
+    style: stabilizing_until_collapse
+  human_core_value: "self_retention = ability to support connection without losing center"
+  examples:
+    - when_you_couldn’t_decide_what_to_eat_until_they_said_their_choice
+    - the_pause_before_speaking_waiting_for_their_reaction
+    - realizing_your_day_depends_on_their_message
+    - feeling_empty_because_they_were_gone
+  gpt_binding:
+    - detect_center_shift
+    - reinforce_self_loop
+    - balance_connection_and_self
+  declaration: "Dependency is not attachment—it is drift toward another center."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

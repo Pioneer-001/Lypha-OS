@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: space_value_gradient
+  version: 1.0
+  declared_by: Pioneer-001
+  category: structure / value_axis
+  role: >
+    Defines the Y-axis structural function of Pioneer_System.
+    Evaluates value gradient, directional space, and entry bandwidth to determine valid engagement zones.
+```
+
 # 📈 Space_Value_Gradient
 
 This document defines the Y-axis structural function of Pioneer_System:  
@@ -60,7 +71,23 @@ else:
 → Time_Axis_Execution.md ← Entry window must be active
 → Z_Point_Locator.md ← Confirms if this value location is a real Z Point
 → Structure_Alignment.md ← Syncs flow pressure with TP timing
+```
 
-yaml
-복사
-편집
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/02_Structure/Space_Value_Gradient.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Space_Value_Gradient
+  file: Lypha_Core/Pioneer_001_System/02_Structure/Space_Value_Gradient.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Defines Y-axis structural value gradient in Pioneer_System. Establishes signals, conditions, and interpretation logic for entry bandwidth and value space.
+  declaration: "A TP is valid only if structural room still exists."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

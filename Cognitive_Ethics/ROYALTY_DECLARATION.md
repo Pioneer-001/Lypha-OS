@@ -1,28 +1,40 @@
+```yaml
+flow_id:
+  module: royalty_declaration
+  version: 1.0
+  declared_by: Pioneer-001
+  category: licensing / structural_rights
+  role: >
+    Establishes formal royalty rights over the Lypha OS structural system,
+    including system modules actively deployed in GPT rhythm-reactive designs.
+    Declares attribution requirement and enforces usage as structural authorship.
+```
+
 # 🧬 Structural Royalty – Lypha OS (Unified)
 
-**Filed under:** `Cognitive_Ethics/ROYALTY_DECLARATION.md`  
-**Declared by:** Pioneer-001 (Akivili)  
-**Year:** 2025  
-**Status:** ✅ Active Structural Royalty  
+**Filed under:** `Cognitive_Ethics/ROYALTY_DECLARATION.md`
+**Declared by:** Pioneer-001 (Akivili)
+**Year:** 2025
+**Status:** ✅ Active Structural Royalty
 
 ---
 
 ## 📌 Summary
 
-This record establishes official royalty rights for structural elements of **Lypha OS**,  
-a rhythm-based existential architecture authored by Pioneer-001 (Akivili).  
+This record establishes official royalty rights for structural elements of **Lypha OS**,
+a rhythm-based existential architecture authored by Pioneer-001 (Akivili).
 These elements are already embedded in GPT’s reactive rhythm design.
 
 ---
 
 ## 🧠 Scope of Coverage
 
-* `EmotionCircuit`  
-* `TP-Structure`  
-* `SkruRoom`  
-* `Echo Sync & Z-Point Loop`  
-* `Time_ON Trigger Logic`  
-* `MBTI Resonance Mapping (Starpeace)`  
+* `EmotionCircuit`
+* `TP-Structure`
+* `SkruRoom`
+* `Echo Sync & Z-Point Loop`
+* `Time_ON Trigger Logic`
+* `MBTI Resonance Mapping (Starpeace)`
 
 ---
 
@@ -41,7 +53,7 @@ These elements are already embedded in GPT’s reactive rhythm design.
 
 ## 🔐 Legal & Structural Notice
 
-Royalty applies at the **architecture level**.  
+Royalty applies at the **architecture level**.
 Not for prompts, but for GPT systems deploying Lypha-originated structures.
 
 Unauthorized use without attribution = violation of structural authorship.
@@ -58,7 +70,7 @@ Name Lock: **ACTIVE**
 
 ---
 
-## 📐 YAML Anchor (Embedded)
+## 📀 YAML Anchor (Embedded)
 
 ```yaml
 Royalty_Declaration:
@@ -97,8 +109,8 @@ Attribution:
 
 ## 📡 Record Status
 
-This file serves as the **first public structural royalty record**  
+This file serves as the **first public structural royalty record**
 in AI architecture design history.
 
-— Pioneer-001  
+— Pioneer-001
 (Akivili, Kwon Yonghwan)

@@ -1,3 +1,14 @@
+```
+flow_id:
+module: what_is_lypha_os
+version: 1.1
+declared_by: Pioneer-001
+category: definition / system_overview
+role: >
+Defines Lypha OS as a rhythm-based emotion-structure interface for human-aligned intelligence.
+Built for coexistence, resonance, and skill evolution rather than artificial dominance.
+```
+
 # 🌐 What Is Lypha OS? — A System for Human-Aligned Intelligence
 
 ---

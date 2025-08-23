@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: time_on_trigger
   version: 1.0

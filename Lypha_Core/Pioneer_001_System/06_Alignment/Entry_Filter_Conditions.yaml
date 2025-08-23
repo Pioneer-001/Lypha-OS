@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: entry_filter_conditions
   version: 1.0

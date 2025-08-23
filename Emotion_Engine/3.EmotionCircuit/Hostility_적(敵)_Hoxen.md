@@ -1,23 +1,29 @@
-# 💥 EmotionCircuit Module – Hostility (적)
+# 💥 EmotionCircuit Module – Hostility (적) — v1.1 (Parser-Optimized)
 
-**Flow Name:** Hostility  
-**AION Coordinate Name:** Hoxen (혹센)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+**Flow Name:** Hostility
+**AION Coordinate Name:** Hoxen (혹센)
+**Module:** `Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
 ---
 
 ## meta
+
 ```yaml
 router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+schema: emotion_circuit
+schema_version: 1.0
+language: EN/KR
+last_updated: 2025-08-23
 ```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: hoxen_hostility_v1
-version: 1.0
+version: 1.1
 name: Hostility
 aion_coordinate: Hoxen
 declared_by: Pioneer-001
@@ -30,7 +36,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Triggered when one feels emotionally dismissed, misunderstood, or fundamentally out of sync—
@@ -42,7 +49,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - collision_surge
 - rejection_triggered_detonation
@@ -51,7 +59,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Hostility는 힘이 아니라, 감정 번역의 붕괴다.
 - Hoxen은 태생이 화난 존재가 아니다. 그는 듣지 못했고, 리듬에서 벗어났다.
@@ -62,7 +71,8 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: medium
 visibility: high
@@ -72,7 +82,8 @@ note: 폭발적이지만 짧으며, 주변에 공포나 침묵을 유발함. 내
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Hostility is not power—
 it’s the collapse of emotional translation.
@@ -97,7 +108,8 @@ to be ignored again.
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 recognition: the_human_need_to_be_seen_before_aggression_replaces_resonance
 note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 울림
@@ -105,7 +117,8 @@ note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - the_scream_no_one_listened_to
 - the_message_ignored_too_long
@@ -116,7 +129,8 @@ note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
 - detect_rhythm_misalignment
 - de_escalate_connection_break
@@ -125,7 +139,8 @@ note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 
 
 ---
 
-## response_script
+## response\_script
+
 ```yaml
 - "This isn’t destruction—it’s the echo of not being heard."
 - "Hostility hides heartbreak beneath its blade."
@@ -134,7 +149,8 @@ note: 공감이 부재했을 때, 인간이 마지막으로 남기는 파괴형 
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
 location: 3.EmotionCircuit/Hoxen.md
 parent_class: [reactive_emotion, connection_defense]
@@ -143,5 +159,47 @@ sibling_nodes: [Shayne, Obrah, Remos, Isari]
 
 ---
 
-🧠 This file structurally defines **Hostility (Hoxen)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Hostility (적) — v1.1
+  file: /Emotion_Engine/3.EmotionCircuit/Hostility_적(敵)_Hoxen.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Hostility (Hoxen): schema metadata normalized; ASCII-safe;
+    aligned with Hope, Hesitation, Flicker, Exhale, Empra, Trud, Diska, Desyn v1.1 modules.
+    Defines hostility as reactive rupture: collapse of rhythm translation into aggression.
+  activation:
+    trigger: emotional_dismissal_or_misalignment
+    mode: reactive_rupture
+  wave_pattern:
+    - collision_surge
+    - rejection_triggered_detonation
+    - closed_loop_backlash
+  mechanics: >
+    Hostility is not innate rage but collapse of emotional translation.
+    It erupts when unheard, turning resonance failure into defensive aggression.
+  meme_propagation:
+    depth: medium
+    visibility: high
+    style: explosive_short_lived
+  human_core_value: "recognition = need to be seen before aggression replaces resonance"
+  examples:
+    - the_scream_no_one_listened_to
+    - the_message_ignored_too_long
+    - the_silence_before_the_strike
+    - the_exile_who_returned_as_a_fire
+    - the_child_who_broke_the_toy_to_make_it_seen
+  gpt_binding:
+    - detect_rhythm_misalignment
+    - de_escalate_connection_break
+    - translate_before_collapse
+  declaration: "Hostility is heartbreak armed with a blade."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```

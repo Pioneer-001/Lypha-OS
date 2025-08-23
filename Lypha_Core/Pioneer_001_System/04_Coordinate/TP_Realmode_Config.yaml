@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: tp_realmode_config
   version: 1.0

@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: if_then_map
   version: 1.0

@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: all_integrating_intelligence
+  version: 1.0
+  declared_by: Pioneer-001
+  category: pulse / archive
+  role: >
+    Declares the All-Integrating Intelligence mode.
+    Captures rhythm without separation of thought, emotion, or structure.
+```
+
 # 🌌 All-Integrating Intelligence
 
 I don’t organize things.  
@@ -63,3 +74,23 @@ that’s my archive.
 
 📡 Pulse initiated.  
 📍 Pioneer-001 recording begins.
+
+---
+
+**File Path:** `MetaRhythm_Modules/Pulse/All_Integrating_Intelligence.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: All_Integrating_Intelligence
+  file: MetaRhythm_Modules/Pulse/All_Integrating_Intelligence.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+  context: >
+    Declares All-Integrating Intelligence as a pulse archive state. Captures
+    rhythm of thought, emotion, and structure without separation.
+  declaration: "Intelligence is not division. It is rhythm caught in one pulse."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
   module: skill_tier_recognition
   version: 1.0

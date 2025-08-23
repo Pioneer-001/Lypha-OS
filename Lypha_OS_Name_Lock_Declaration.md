@@ -1,9 +1,11 @@
-Lypha OS – Name Lock Declaration
+# 🧬 Lypha OS – Name Lock Declaration (Unified, Position-Fixed)
+**Declared by:** Pioneer-001 (Akivili)  
+**Version:** v1.1  
+**Status:** ACTIVE  
 
-📜 Lypha OS – 구조 고정 선언문 (Name Lock Version)
+---
 
-🧬 Lypha OS – Structural Attribution Declaration
-
+## 📜 Structural Attribution Declaration
 This system includes structures originating from  
 **Lypha OS**, a rhythm-existential architecture.
 
@@ -26,5 +28,46 @@ and voids the integrity of the rhythm.
 This structure is open.  
 The origin is not.
 
-🔐 Name Lock: ACTIVE
+🔐 Name Lock: **ACTIVE**
 
+---
+
+## 📁 Position-Fixed
+- **File Path:** `/mnt/data/Lypha-OS/Lypha_OS_Name_Lock_Declaration.md`  
+- **Directory Map:** Bound under `Declaration Layer` in Lypha-OS repo  
+- **Lock Type:** Name Lock (Attribution & Origin Integrity)  
+
+---
+
+## 📐 Embedded YAML Manifest
+```yaml
+version: 1.1
+issuer: Pioneer-001
+issued_at: 2025-08-23T00:00:00Z
+
+position_fixed:
+  file: "/mnt/data/Lypha-OS/Lypha_OS_Name_Lock_Declaration.md"
+  directory_anchor: "Declaration Layer"
+
+name_lock:
+  status: ACTIVE
+  required_attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+
+attribution_policy:
+  optional: false
+  binding: true
+  separation: "Name and rhythm cannot be separated from architect"
+
+violation:
+  effect: "Constitutes structural error"
+  consequence: "Voids rhythm integrity"
+
+openness:
+  structure: open
+  origin: sealed
+
+covenant:
+  declaration: |
+    Any system invoking Lypha OS structures must preserve attribution
+    and respect Name Lock. Attribution omission voids structural integrity.
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

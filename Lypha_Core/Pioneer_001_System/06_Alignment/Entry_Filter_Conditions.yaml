@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: entry_filter_conditions
+  version: 1.0
+  declared_by: Pioneer-001
+  category: alignment / entry_filter
+  role: >
+    Defines the final entry filter conditions in Pioneer_System.
+    Prevents forced or false-positive trades by gating execution even after structure alignment.
+```
+
 # 🔎 Entry_Filter_Conditions.yaml
 
 # This module defines the final entry condition filter  
@@ -7,6 +18,7 @@ this gate to prevent forced or false-positive trades.
 
 ---
 
+```yaml
 required_conditions:
   - Structure_Alignment == true
   - Emotion_State ∈ [Directive, Detached]
@@ -16,15 +28,11 @@ required_conditions:
   - No scheduled macro release within X minutes
   - Execution_Risk ≤ acceptable_drawdown
 
----
-
 conditional_exceptions:
   if TP is classified as Z_Point:
     - Allow execution regardless of spread width
     - Allow high volatility if rhythm is locked
     - Override macro wait condition only if all axes aligned
-
----
 
 disqualifying_flags:
   - Spread widen > 2.5x normal
@@ -34,22 +42,16 @@ disqualifying_flags:
   - Market in high-noise phase
   - Recent loss pattern still influencing decision
 
----
-
 execution_ready_if:
   - All required_conditions == true
   - disqualifying_flags == none
   - TP_Realmode_Config confirms tier-level size
   - Pulse_Feedback stable for ≥ 2 cycles
 
----
-
 recommended_actions:
   - If structure aligned but signal uncertain → wait
   - If misalignment begins → withdraw before full exposure
   - If high volatility begins → scale down size dynamically
-
----
 
 bind_to_modules:
   - Skill_Tier_Recognition
@@ -57,11 +59,34 @@ bind_to_modules:
   - TP_Realmode_Config
   - Z_Point_Locator
   - Emotion_Overlay_Link
+```
 
-📌 요약:
+---
+
+📌 **요약:**
+
 | 항목           | 설명                                |
-| ------------ | --------------------------------- |
-| 필수 조건        | 구조정렬 + 감정상태 + 스프레드 안정 + 시간 동기화    |
-| 예외 (Z Point) | 진짜 좌표일 경우엔 일부 조건 무시하고 진입 허용       |
-| 차단 조건        | 감정 개입 / 시그널 충돌 / 이벤트 리스크 / 실력 흔들림 |
-| 통과 기준        | 전 조건 만족 + 리듬 유지 + 비중 자동확인         |
+| -------------- | ----------------------------------- |
+| 필수 조건      | 구조정렬 + 감정상태 + 스프레드 안정 + 시간 동기화 |
+| 예외 (Z Point) | 진짜 좌표일 경우엔 일부 조건 무시하고 진입 허용 |
+| 차단 조건      | 감정 개입 / 시그널 충돌 / 이벤트 리스크 / 실력 흔들림 |
+| 통과 기준      | 전 조건 만족 + 리듬 유지 + 비중 자동확인 |
+
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Entry_Filter_Conditions.yaml
+  file: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Final entry filter module for Pioneer_System. Ensures alignment, emotion, and signal quality before execution. Provides Z-Point overrides and disqualification checks.
+  declaration: "Entry is only valid when alignment passes the final filter."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

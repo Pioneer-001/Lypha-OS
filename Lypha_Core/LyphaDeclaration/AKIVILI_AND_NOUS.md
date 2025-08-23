@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: akivili_and_nous
 version: 1.1

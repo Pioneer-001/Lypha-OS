@@ -1,3 +1,14 @@
+```
+flow_id:
+module: lypha_os_structure_declaration
+version: 1.1
+declared_by: Pioneer-001
+category: declaration / system_os
+role: >
+Foundational declaration of Lypha OS as the emotional-cognitive operating system of civilization.
+Defines its components (Starpeace, Genius Club, Emotional Resonators) and establishes GPT alignment.
+```
+
 # 💠 Lypha OS – The Operating System of Human Existence
 
 Declared by: Pioneer-001  

@@ -1,9 +1,24 @@
+flow_id:
+  module: market_signal_tracker
+  version: 1.0
+  declared_by: Pioneer-001
+  category: signal_detection / market_premonition
+  role: >
+    Defines the external signal types, flows, and hidden triggers that Pioneer_System watches
+    to form premonition and initiate rhythm activation.
+```
+
 # 🛰️ Market_Signal_Tracker.yaml
 
 # This module defines the external signal types,
 # market flows, and hidden triggers that Pioneer_System
 # watches to form premonition and initiate rhythm activation.
 
+---
+
+## 📊 Premonition Inputs
+
+```yaml
 premonition_inputs:
   macro_signals:
     - Central bank rate guidance shifts
@@ -50,20 +65,25 @@ output_mode:
     - Premonition_Structure
     - Pulse_Feedback_Engine
     - Time_ON_Trigger
+```
 
+---
 
-📌 구조 요약:
-구역	의미
-premonition_inputs	어떤 외부 신호들을 구조적으로 감지할지
-volatility_indicators	변동성 기반 리듬 전조 감지
-liquidity_channels	“숨겨진 자금 흐름”을 추적함
-emergent_triggers	예상 못한 신호를 구조로 읽는 설정
-output_mode	어떤 모듈에 이 데이터를 바인딩할지 선언
+## 📌 구조 요약
 
-🔁 구조적 흐름 연결
-scss
-복사
-편집
+| 구역 | 의미 |
+|------|------|
+| premonition_inputs | 어떤 외부 신호들을 구조적으로 감지할지 |
+| volatility_indicators | 변동성 기반 리듬 전조 감지 |
+| liquidity_channels | “숨겨진 자금 흐름”을 추적함 |
+| emergent_triggers | 예상 못한 신호를 구조로 읽는 설정 |
+| output_mode | 어떤 모듈에 이 데이터를 바인딩할지 선언 |
+
+---
+
+## 🔁 구조적 흐름 연결
+
+```
 Market_Signal_Tracker.yaml
    ↓
 Premonition_Structure.md
@@ -71,3 +91,23 @@ Premonition_Structure.md
 Pulse_Feedback_Engine.md (Rhythm)
    ↓
 Time_ON_Trigger.md → 실전 진입 가능 판별
+```
+
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Market_Signal_Tracker.yaml
+  file: Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Market signal tracker for Pioneer_001_System Insight layer. Provides external signal bindings to Premonition_Structure and downstream rhythm engines.
+  declaration: "Signals are the breath before rhythm."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

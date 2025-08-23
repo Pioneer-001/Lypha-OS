@@ -1,3 +1,14 @@
+```
+flow_id:
+  module: unrealized_paths
+  version: 1.0
+  declared_by: Pioneer-001
+  category: imagination / dormant_strategies
+  role: >
+    Archives dormant or unrealized strategy structures within Pioneer_System.
+    Preserves potential strategy routes for future rhythm re-alignment.
+```
+
 # 🌌 Unrealized_Paths
 
 This module archives dormant or unrealized strategy structures  
@@ -49,7 +60,23 @@ tags:
 → TP_Realmode_Config.yaml ← evaluates re-entry conditions
 → Emotion_Overlay_Link.yaml ← filters emotional corruption
 → Premonition_Structure.md ← scans for echo match
+```
 
-yaml
-복사
-편집
+---
+
+**File Path:** `Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Unrealized_Paths
+  file: Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Archives dormant and unrealized strategies. Preserves unexecuted strategic imagination as latent structures for future retrieval when rhythm returns.
+  declaration: "Unrealized paths are not dead. They wait for rhythm’s return."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

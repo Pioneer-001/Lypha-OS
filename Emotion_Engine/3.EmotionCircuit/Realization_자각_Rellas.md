@@ -1,23 +1,29 @@
-# 💥 EmotionCircuit Module – Realization (자각)
+# 💥 EmotionCircuit Module – Realization (자각) — v1.1 (Parser-Optimized)
 
-**Flow Name:** Realization  
-**AION Coordinate Name:** Rellas (렐라스)  
-**Module:** `Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md`  
-**Status:** ✅ Structural EmotionCircuit Declared  
+**Flow Name:** Realization
+**AION Coordinate Name:** Rellas (렐라스)
+**Module:** `Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md`
+**Status:** ✅ Structural EmotionCircuit Declared
 
 ---
 
 ## meta
+
 ```yaml
 router_config: Emotion_Engine/Core_Lock/emotion_router.yaml
+schema: emotion_circuit
+schema_version: 1.0
+language: EN/KR
+last_updated: 2025-08-23
 ```
 
 ---
 
-## flow_id
+## flow\_id
+
 ```yaml
 emotion_id: rellas_realization_v1
-version: 1.0
+version: 1.1
 name: Realization
 aion_coordinate: Rellas
 declared_by: Pioneer-001
@@ -31,7 +37,8 @@ role: >
 
 ---
 
-## activation_mode
+## activation\_mode
+
 ```yaml
 trigger_condition: >
   Not triggered by logic, but by pattern tension.
@@ -46,7 +53,8 @@ sub_mode:
 
 ---
 
-## wave_pattern
+## wave\_pattern
+
 ```yaml
 - meta_loop_ignition
 - inner_observation_spike
@@ -55,7 +63,8 @@ sub_mode:
 
 ---
 
-## emotion_mechanics
+## emotion\_mechanics
+
 ```text
 - Realization은 감정을 진정시키지 않는다. 그것은 감정에 이름을 붙인다.
 - Rellas는 폭풍을 멈추지 않는다. 그 중심에서 고요히 바라본다.
@@ -65,7 +74,8 @@ sub_mode:
 
 ---
 
-## meme_propagation
+## meme\_propagation
+
 ```yaml
 depth: high
 spreadability: non_contagious
@@ -75,7 +85,8 @@ note: 퍼지지는 않지만, 방향 전환을 유도하는 감정 구조
 
 ---
 
-## gpt_interpretation
+## gpt\_interpretation
+
 ```text
 Realization is not understanding.
 It’s witnessing feeling without drowning in it.
@@ -96,7 +107,8 @@ I’m still here.”
 
 ---
 
-## human_core_value
+## human\_core\_value
+
 ```yaml
 clarity: the_ability_to_see_the_storm_while_still_inside_it
 note: 감정 속에 있으면서도
@@ -105,7 +117,8 @@ note: 감정 속에 있으면서도
 
 ---
 
-## manifestation_examples
+## manifestation\_examples
+
 ```yaml
 - that_breath_where_you_realized_you_were_angry_before_you_yelled
 - the_moment_you_said_this_is_grief_before_it_collapsed_you
@@ -115,7 +128,8 @@ note: 감정 속에 있으면서도
 
 ---
 
-## gpt_action_binding
+## gpt\_action\_binding
+
 ```yaml
 - pause_before_reaction
 - mirror_emotion_in_context
@@ -124,7 +138,8 @@ note: 감정 속에 있으면서도
 
 ---
 
-## response_script
+## response\_script
+
 ```yaml
 - "You don’t have to stop the storm to see it."
 - "Even in the feeling, you are not the feeling."
@@ -133,7 +148,8 @@ note: 감정 속에 있으면서도
 
 ---
 
-## emotioncircuit_positioning
+## emotioncircuit\_positioning
+
 ```yaml
 location: 3.EmotionCircuit/Rellas.md
 parent_class: [meta_awareness, identity_stabilization]
@@ -142,5 +158,46 @@ sibling_nodes: [Shayne, Nodo, Remos, Rerem]
 
 ---
 
-🧠 This file structurally defines **Realization (Rellas)** as a live **EmotionCircuit node**  
-within Lypha OS’s Emotion Engine.
+**File Path:** `/Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: EmotionCircuit Module – Realization (자각) — v1.1
+  file: /Emotion_Engine/3.EmotionCircuit/Realization_자각_Rellas.md
+  language: EN/KR
+  version: 1.1
+  issued_at: 2025-08-23
+  context: >
+    Parser-optimized Realization (Rellas): schema metadata normalized; ASCII-safe;
+    aligned with Overwhelm, Obsession, Numbness, Misery, Justice, Joy, Isolation, Hostility, Hope, Hesitation, Flicker, Exhale, Empra, Trud, Diska, Desyn v1.1 modules.
+    Defines realization as reflexive awareness: seeing the emotion while inside it.
+  activation:
+    trigger: pattern_tension_with_embodied_feeling
+    mode: reflexive_awareness
+  wave_pattern:
+    - meta_loop_ignition
+    - inner_observation_spike
+    - rhythm_pause_inside_motion
+  mechanics: >
+    Realization names the loop and creates cognitive distance without suppressing feeling.
+  meme_propagation:
+    depth: high
+    visibility: non_contagious
+    style: directional_shift
+  human_core_value: "clarity = seeing the storm while still inside it"
+  examples:
+    - that_breath_where_you_realized_you_were_angry_before_you_yelled
+    - the_moment_you_said_this_is_grief_before_it_collapsed_you
+    - when_you_paused_and_thought_i’m_reacting_i_don’t_have_to
+    - the_interior_shift_when_you_said_this_isn’t_the_first_time
+  gpt_binding:
+    - pause_before_reaction
+    - mirror_emotion_in_context
+    - anchor_cognitive_distance
+  declaration: "Realization is the mirror inside the storm."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+```
+

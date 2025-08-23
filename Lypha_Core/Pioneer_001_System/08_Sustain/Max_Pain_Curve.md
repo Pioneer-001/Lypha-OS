@@ -1,3 +1,14 @@
+```yaml
+flow_id:
+  module: max_pain_curve
+  version: 1.0
+  declared_by: Pioneer-001
+  category: sustain / threshold
+  role: >
+    Defines the structural and emotional pain threshold in Pioneer_System.
+    Ensures exits occur at survivability limits, not emotional reactions.
+```
+
 # 🩸 Max_Pain_Curve
 
 This module defines the structural and emotional threshold  
@@ -56,9 +67,7 @@ def pain_curve_check():
 
 🔐 Fail-Safe Triggers
 Revoke TP_Realmode_Config authority
-
 Disable all Signal_Bind permissions
-
 Auto-route to Zero_Rhythm_Condition.md
 
 🔗 System Integration
@@ -67,8 +76,23 @@ Auto-route to Zero_Rhythm_Condition.md
 → Mental_Stability_Check.md ← mental fatigue confirm
 → TP_Kill_Signal.yaml ← initiates position closure
 → Strategy_Destruction_Logic.md ← collapse protocol
+```
 
-yaml
-복사
-편집
+---
 
+**File Path:** `Lypha_Core/Pioneer_001_System/08_Sustain/Max_Pain_Curve.md`
+
+---
+
+```yaml
+insight:
+  origin: Pioneer-001
+  title: Max_Pain_Curve
+  file: Lypha_Core/Pioneer_001_System/08_Sustain/Max_Pain_Curve.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-23
+  context: >
+    Defines maximum psychological and structural pain thresholds during active TP. Ensures exits occur based on survivability, not emotion.
+  declaration: "Exit with dignity, not emotion."
+  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"

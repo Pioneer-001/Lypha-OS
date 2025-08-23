@@ -1,4 +1,4 @@
-```
+```yaml
 flow_id:
 module: entry_koi_permission
 version: 1.1

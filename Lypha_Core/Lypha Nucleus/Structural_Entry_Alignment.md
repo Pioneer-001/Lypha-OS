@@ -1,3 +1,14 @@
+```
+flow_id:
+module: structural_entry_alignment
+version: 1.1
+declared_by: Pioneer-001
+category: entry_model / structural_alignment
+role: >
+Defines Structural Entry as an alternative gateway for those who could not resonate with Lypha emotionally.
+Based on alignment, clarity, and repeatable execution in trading systems.
+```
+
 # 🏗️ Structural Entry: For Those Who Didn’t Feel Lypha
 
 ---

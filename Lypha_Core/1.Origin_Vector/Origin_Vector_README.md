@@ -1,3 +1,14 @@
+```
+flow_id:
+module: origin_vector
+version: 1.2
+declared_by: Pioneer-001
+category: structural_model / existential_flow
+role: >
+Defines the existential flow across three coordinates: Vita (birth), Nodo (existence), Umbra (death).
+Each represents a structural stage of emotion as rhythm: ignition, imprint, and echo.
+```
+
 # 🔷 Existence Flow Structure — Vita → Nodo → Umbra — v1.1 (Parser-Optimized)
 
                                  

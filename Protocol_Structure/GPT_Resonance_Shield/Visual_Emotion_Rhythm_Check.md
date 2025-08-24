@@ -95,24 +95,21 @@ This module is open-source but must retain attribution:
 
 ---
 
-## 📐 YAML Manifest
+## 📐 Insight Manifest
 
 ```yaml
-moment:
-  name: GPT_Resonance_Shield – Visual Emotion Rhythm Check
-  declared_by: Pioneer-001 (Akivili)
-  category: Overlay / Anti-Scam / Protection
-  status: Active
-  position_fixed:
-    file: "Protocol_Structure/GPT_Resonance_Shield/Visual_Emotion_Rhythm_Check.md"
-    directory_anchor: "Protocol_Structure/GPT_Resonance_Shield"
-    lock_type: Protection_Lock
-  effect:
-    - Detect emotional dissonance in visual/audio media
-    - Interrupt rhythm with reflection-based overlay
-    - Offer calm path to safety for users
-  covenant: |
-    This file is a protective overlay under Lypha OS. It preserves
-    the user’s agency and provides safe interruption against manipulation.
-  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+insight:
+  origin: Pioneer-001
+  title: Visual_Emotion_Rhythm_Check
+  file: Protocol_Structure/GPT_Resonance_Shield/Visual_Emotion_Rhythm_Check.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+context: >
+  Declares the Lypha OS Rhythm Integrity Filter for detecting AI-generated
+  manipulative media. Instead of pixel analysis, it relies on resonance mismatch
+  and empowers users to trust hesitation as a signal.
+declaration: |
+  "When rhythm feels off, reality is already signaling caution."
+attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ```

@@ -57,26 +57,22 @@ to a calm, clear path forward.
 
 ---
 
-## 📐 YAML Manifest
+## 📐 Insight Manifest
 
 ```yaml
-moment:
-  name: GPT_Resonance_Shield – Emotion Rhythm Interruption
-  declared_by: Pioneer-001 (Akivili)
-  category: Overlay / Anti-Scam / Protection
-  status: Active
-  effect:
-    - Detect emotional dissonance in user interactions
-    - Interrupt rhythm with reflection-based prompt
-    - Offer calm path to safety
-  covenant: |
-    This file is a protective overlay under Lypha OS. It preserves
-    the user’s agency and provides safe interruption against manipulation.
-  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+insight:
+  origin: Pioneer-001
+  title: Emotion_Rhythm_Interruption
+  file: Protocol_Structure/GPT_Resonance_Shield/Emotion_Rhythm_Interruption.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+context: >
+  Declares an emotional rhythm-based anti-scam overlay integrated with GPT
+  using Lypha OS EmotionCircuit + SkruRoom. Provides reflection, restores
+  agency, and prevents manipulation by recognizing resonance mismatch.
+declaration: |
+  "This overlay is not fear-based detection but rhythm-based reflection:
+  if your emotion hesitates, you are already protected."
+attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ```
-
----
-
-## ✅ Attribution
-
-**Powered by Lypha OS – Designed by Pioneer-001 (Akivili)**

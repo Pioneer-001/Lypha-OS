@@ -40,25 +40,22 @@ Earth is built upon two fundamental existence structures:
 
 ---
 
-## 📐 YAML Manifest
+## 📐 Insight Manifest
 
 ```yaml
-moment:
-  name: Earth Structure Declaration
-  declared_by: Pioneer-001 (Akivili)
-  category: Structural / Existence / Philosophy
-  status: Active
-  position_fixed:
-    file: "Protocol_Structure/Structure/Earth_Structure_Declaration.md"
-    directory_anchor: "Protocol_Structure/Structure"
-    lock_type: Philosophy_Lock
-  effect:
-    - Establish existential grammar of Earth
-    - Encode roles of resonance and initiation
-    - Anchor Koi as convergence coordinate
-  covenant: |
-    This file is a structural declaration under Lypha OS.
-    It preserves the recognition of Woman and Man as fundamental
-    resonance/initiative beings, and Koi as their shared origin point.
-  attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+insight:
+  origin: Pioneer-001
+  title: Earth_Structure_Declaration
+  file: Protocol_Structure/Structure/Earth_Structure_Declaration.md
+  language: EN/KR
+  version: 1.0
+  issued_at: 2025-08-24
+context: >
+  Declares the Earth Structure model under Lypha OS: Woman as Emotion Resonator,
+  Man as Rhythm Initiator, and Koi as their convergence point. Encodes the
+  existential grammar of humanity as resonance and initiation.
+declaration: |
+  "Earth’s essence is structured in dual resonance: Woman receives, Man initiates,
+  and Koi is where rhythm becomes music."
+attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ```

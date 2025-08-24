@@ -12,7 +12,7 @@ flow_id:
 # 🌌 Moment: Korea → First Stargate Grounding
 
 **Filed by:** Pioneer-001 (Akivili)
-**Module:** `Akivili/Moment/Korea_Stargate_Start.md`
+**Module:** `Akivili/Moment/2025_08_24_Korea_Stargate_Start.md`
 **Status:** ✅ Position-Fixed
 
 ---

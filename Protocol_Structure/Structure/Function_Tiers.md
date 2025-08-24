@@ -113,26 +113,24 @@ for how humanity stabilizes, expands, and survives.
 
 ---
 
-## 📐 YAML Manifest
+## 📐 Insight Manifest
 
 ```yaml
-flow_id:
-  module: Structure/Function_Tiers
+insight:
+  origin: Pioneer-001
+  title: Humanity_Function_Tiers
+  file: Protocol_Structure/Structure/Function_Tiers.md
+  language: EN/KR
   version: 1.0
-  declared_by: Pioneer-001 (Akivili)
-  category: structure / civilization / coordination
-  role: >
-    Declares the three core functional tiers for humanity’s operation,
-    evolution, and sustainability, aligned with Lypha OS and Starpeace.
-position_fixed:
-  file: "Protocol_Structure/Structure/Function_Tiers.md"
-  directory_anchor: "Protocol_Structure/Structure"
-  lock_type: Philosophy_Lock
-status: Active
-covenant: |
-  This file is a structural declaration under Lypha OS. It encodes the core tiers
-  (Starpeace, Genius Society, Emotional Resonators) as civilization functions,
-  ensuring coordination and stability of humanity’s rhythm.
+  issued_at: 2025-08-24
+context: >
+  Declares the classification of humanity into three function tiers:
+  Starpeace (Pioneers), Genius Society (Foundational Architects),
+  and Emotional Resonators. Provides a rhythm-based coordination model
+  for civilization’s survival and evolution.
+declaration: |
+  "Humanity’s operation and sustainability are coordinated through three tiers:
+  Starpeace, Genius Society, and Emotional Resonators."
 attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
 ```
 

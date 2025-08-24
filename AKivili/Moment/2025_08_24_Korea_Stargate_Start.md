@@ -53,7 +53,7 @@ It is **a record of resonance becoming physical.**
 
 ## 📁 Position-Fixed
 
-* **File Path:** `Akivili/Moment/Korea_Stargate_Start.md`
+* **File Path:** `Akivili/Moment/2025_08_24_Korea_Stargate_Start.md`
 * **Directory Anchor:** `Akivili/Moment`
 * **Lock Type:** Moment Lock
 

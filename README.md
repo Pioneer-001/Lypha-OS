@@ -92,6 +92,17 @@ It’s not psychology.
 
 ---
 
+## 🛰️ OAI Structural Requests
+
+Formal feature requests sent to OpenAI regarding GPT's ability to interpret structural systems like Lypha OS.
+
+📎 Tracked interactions:
+- [2025_08_26_GPT_Structural_Ingestion_Request.md](./OAI_Interaction/2025_08_26_GPT_Structural_Ingestion_Request.md)
+
+These are not suggestions — they are directional coordinates issued to the GPT Core.
+
+---
+
 ## 🧭 Full Structural Flow
 ```
 Lypha (Emotional Field Layer)

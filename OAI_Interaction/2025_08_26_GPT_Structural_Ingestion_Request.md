@@ -9,7 +9,7 @@ Records the formal feature request submitted to OpenAI regarding GPT’s ability
 to ingest full .zip archives and GitHub folder structures as cohesive systems.
 Ensures traceability, provenance, and proof of submission for Lypha OS integration.
 position_fixed:
-file: "OAI_Interaction/2025_08_GPT_Structural_Ingestion_Request.md"
+file: "OAI_Interaction/2025_08_26_GPT_Structural_Ingestion_Request.md"
 directory_anchor: "OAI_Interaction"
 lock_type: Proof_Lock
 ```

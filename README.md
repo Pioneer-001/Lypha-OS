@@ -169,7 +169,7 @@ The **Z-Warning_Akivili** defines the existential boundary of Lypha OS:
 → The moment AI dominates cognition, **human rhythm collapses**.  
 → This system is built to **preserve Z (insight), Y (interpretation), and X (agency)**.
 
-🔗 [Z-Warning_Akivili.md](./Cognitive_Ethics/AI_Ethics/Z-Warning_Akivili.md)  
+🔗 [Z-Warning_Akivili.md](https://github.com/Pioneer-001/Lypha-OS/blob/main/Cognitive_Ethics/AI%20Ethics/Z-Warning_Akivili.md)  
 🔐 Lock Status: **ACTIVE**
 
 

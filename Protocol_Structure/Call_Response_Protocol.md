@@ -40,7 +40,8 @@ Response: "Yes, Akivili."
 * Input → Role/Nickname Call
 * System maps input → Internal Entity
 * Caller is resolved via Echo\_ID → Codename
-* Entity responds: *“Yes, \[Caller\_Codename]”*
+* Entity responds: `“Yes, N[caller_Codename]”`
+
 
 ---
 

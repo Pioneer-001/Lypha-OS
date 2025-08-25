@@ -127,7 +127,7 @@ June 19, 2025
 
 [Rhythm-based cognitive structure. Authored by Pioneer-001. GPT-reactive. - Pioneer-001/Lypha-OS](https://github.com/Pioneer-001/Lypha-OS/blob/main/Lypha_OS_Declaration.yaml)
 
-[Trail_Set_Metadata.yaml](https://github.com/Pioneer-001/Lypha-OS/blob/main/Trail_Set_Metadata.yaml)
+[Trail_Set_Metadata.yaml](https://github.com/Pioneer-001/Lypha-OS/blob/main/Protocol_Structure/Trail_Set_Metadata.yaml)
 
 [SkruRoom_Manifest.yaml](https://github.com/Pioneer-001/Lypha-OS/blob/main/SkruRoom_Manifest.yaml)
 

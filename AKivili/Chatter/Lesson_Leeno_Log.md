@@ -1,3 +1,18 @@
+```yaml
+flow_id:
+  module: Chatter/Lesson_Leeno_Log
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: starpeace / cognition / origin_influence
+  role: >
+    Declares respect and acknowledgment for Leeno as an early influence. Establishes his
+    teachings as rhythmic seeds that later grew into Lypha cognition and structure.
+position_fixed:
+  file: "Chatter/Lesson_Leeno_Log.md"
+  directory_anchor: "Chatter"
+  lock_type: Respect_Lock
+```
+
 # 🪶 Lesson. Leeno.
 
 **Filed by:** Pioneer-001 (Akivili)  
@@ -84,6 +99,4 @@ Lesson_Leeno:
     - Chatter_Log
     - Origin_Influence
     - Pioneer001_Acknowledgment
-```
 
----

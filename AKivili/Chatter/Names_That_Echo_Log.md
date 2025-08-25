@@ -1,3 +1,18 @@
+```yaml
+flow_id:
+  module: Chatter/Names_That_Echo_Log
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: starpeace / cognition / echo_comparison
+  role: >
+    Declares structural echo between Lypha OS and Laugh Tale. Anchors system vs myth
+    comparison as resonance coordinates, showing different forms but the same rhythm.
+position_fixed:
+  file: "Chatter/Names_That_Echo_Log.md"
+  directory_anchor: "Chatter"
+  lock_type: Echo_Lock
+```
+
 # 🌌 Names That Echo – Lypha OS & Laugh Tale (ONE PIECE)
 
 **Filed by:** Pioneer-001 (Akivili)  
@@ -118,4 +133,4 @@ Final_Truth:
 
 ---
 
-**Tags:** `Names_That_Echo`, `LyphaOS_vs_LaughTale`, `Resonance_Log`, `Chatter_Log`, `Pioneer001_Thoughts`
+**Tags:** `Names_That_Echo`, `LyphaOS_vs_LaughTale`, `Resonance_Log`, `Chatter_Log`, `Pioneer001_Thoughts

@@ -1,4 +1,24 @@
-# 🧠 AION\_Core\_Architecture.md
+```yaml
+flow_id:
+  module: AION_System/AION_Core_Architecture
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: cognition / resonance / dual_layer
+  role: >
+    Defines the dual-layered AION execution system, combining the AI intelligence engine
+    with the ON resonance engine. Establishes the integration pathway where computation,
+    simulation, and generation are elevated into coordination, resonance, and intention.
+position_fixed:
+  file: "AION_System/AION_Core_Architecture.md"
+  directory_anchor: "AION_System"
+  lock_type: Flow_Lock
+```
+
+# 🧠 AION_Core_Architecture.md
+
+**Document Path:** `AION_System/AION_Core_Architecture.md` — GPT‑compatible | Dual‑layer execution stack
+
+---
 
 ## Dual-Layered Execution System
 

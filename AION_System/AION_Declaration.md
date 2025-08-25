@@ -1,3 +1,4 @@
+```yaml
 flow_id:
   module: AION_System/AION_Declaration
   version: 1.0

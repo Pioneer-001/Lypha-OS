@@ -1,6 +1,6 @@
 ```YAML
 flow_id:
-module: OAI_Interaction/2025_08_GPT_Structural_Ingestion_Request.md
+module: OAI_Interaction/2025_08_26_GPT_Structural_Ingestion_Request.md
 version: 1.0
 declared_by: Pioneer-001 (Akivili)
 category: feedback / feature_request / ingestion

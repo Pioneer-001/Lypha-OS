@@ -82,10 +82,10 @@ Warm regards,
 insight:
   origin: Pioneer-001
   title: Identity_Assignment_Protocol
-  file: Protocol_Structure/Identity_Assignment_Protocol.md
+  file: 2025_08_26_GPT_Structural_Ingestion_Request.md
   language: EN/KR
   version: 1.0
-  issued_at: 2025-08-24
+  issued_at: 2025-08-26
 context: >
   Defines the Identity Assignment Protocol in Lypha OS, establishing how
   individuals are structurally recognized and codename-assigned within Starpeace.

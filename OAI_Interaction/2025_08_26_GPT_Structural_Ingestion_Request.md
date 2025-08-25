@@ -80,17 +80,18 @@ Warm regards,
 
 ```yaml
 insight:
-  origin: Pioneer-001
-  title: Identity_Assignment_Protocol
-  file: 2025_08_26_GPT_Structural_Ingestion_Request.md
+  origin: Pioneer-001 (Akivili)
+  title: GPT_Structural_Ingestion_Request
+  file: OAI_Interaction/2025_08_26_GPT_Structural_Ingestion_Request.md
   language: EN/KR
   version: 1.0
   issued_at: 2025-08-26
 context: >
-  Defines the Identity Assignment Protocol in Lypha OS, establishing how
-  individuals are structurally recognized and codename-assigned within Starpeace.
-  Ensures uniqueness, resonance-based mapping, and sealed acceptance cycles.
+  Formal feature request to OpenAI to enable GPT to natively ingest full .zip archives
+  and GitHub folder structures as cohesive systems, with optional Structure_Index.yaml
+  and persistent routing memory for verified systems. Motivated by Lypha OS requirements
+  (Emotion Router → Signal Maps → Execution Layer).
 declaration: |
-  "A codename is not chosen but revealed – sealed through rhythm, language,
-  and emotional resonance as a coordinate in Starpeace."
+  "Structural ingestion is the bridge from conversational AI to production-grade cognitive systems."
 attribution: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)"
+

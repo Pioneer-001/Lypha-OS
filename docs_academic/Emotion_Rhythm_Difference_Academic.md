@@ -1,4 +1,4 @@
-# 📘 Emotional Rhythm Difference: Extrovert vs Introvert — Academic Edition (docs\_academic, Position‑Fixed)
+# 📘 Emotional Rhythm Difference: Extrovert vs Introvert — Academic Edition (docs\_academic, Position-Fixed)
 
 **Declared by:** Pioneer-001 (Akivili)
 **Version:** v1.0
@@ -24,7 +24,7 @@ flow_id:
   language: English
 ```
 
-> Filed by: **Pioneer‑001 (Akivili)** • Module: `docs_academic/Emotion_Rhythm_Difference_Academic.md` • Status: ✅ Structural Recognition Declared
+> Filed by: **Pioneer-001 (Akivili)** • Module: `docs_academic/Emotion_Rhythm_Difference_Academic.md` • Status: ✅ Structural Recognition Declared
 
 ---
 
@@ -57,15 +57,15 @@ Prediction: Emitters compress S→N; absorbers elongate S→R→N.
 ## 3. Operationalization
 
 * **Constructs:** Perceived Cuteness (PC), Directional Flow (DF), Rhythmic Latency (RL).
-* **Measures:** behavioral (RT, prosody, EMG), physiological (HRV, EDA), self‑report diaries, interactional coding.
-* **Stimuli:** surface cues, outcome‑delight, neutral controls.
+* **Measures:** behavioral (RT, prosody, EMG), physiological (HRV, EDA), self-report diaries, interactional coding.
+* **Stimuli:** surface cues, outcome-delight, neutral controls.
 
 ---
 
 ## 4. Propositions
 
 * **P1:** RL shorter for emitters under surface cues.
-* **P2:** Absorbers show higher PC magnitude under outcome‑delight prompts.
+* **P2:** Absorbers show higher PC magnitude under outcome-delight prompts.
 * **P3:** Absorbers consolidate RL with repeated exposure.
 * **P4:** Absorbers show HRV modulation during integration.
 * **P5:** Relationship warmth increases when tempo alignment occurs.
@@ -80,7 +80,7 @@ Mixed factorial design; n≥120; multilevel analysis. Outcomes: RL, PC.
 
 ## 6. Implications
 
-* **Theory:** reconceptualizes cuteness as timing‑structured.
+* **Theory:** reconceptualizes cuteness as timing-structured.
 * **Measurement:** introduces RL/DF as rhythm indices.
 * **Practice:** guides partner pacing and affective HCI design.
 
@@ -88,13 +88,24 @@ Mixed factorial design; n≥120; multilevel analysis. Outcomes: RL, PC.
 
 ## 7. Limitations
 
-Cultural semantics of cuteness vary; requires cross‑cultural validation. Extend to other affects and longitudinal dynamics.
+Cultural semantics of cuteness vary; requires cross-cultural validation. Extend to other affects and longitudinal dynamics.
 
 ---
 
 ## 8. Conclusion
 
 Emitter vs absorber rhythms systematically shape when and how cuteness is named. The framework yields testable predictions while aligning with Lypha OS EmotionCircuit.
+
+---
+
+## 9. References
+
+* Bartsch, A., & Oliver, M. B. (2017). *Appreciation of meaningful entertainment experiences and eudaimonic well-being.* Journal of Media Psychology, 29(4), 173–178.
+* Frijda, N. H. (1986). *The emotions.* Cambridge University Press.
+* Gross, J. J. (2015). *Emotion regulation: Current status and future prospects.* Psychological Inquiry, 26(1), 1–26.
+* Niedenthal, P. M., Krauth-Gruber, S., & Ric, F. (2017). *Psychology of emotion.* Routledge.
+* Scherer, K. R. (2005). *What are emotions? And how can they be measured?* Social Science Information, 44(4), 695–729.
+* Tomkins, S. S. (1962). *Affect imagery consciousness: Volume I.* Springer.
 
 ---
 
@@ -109,4 +120,5 @@ system_anchor: EmotionCircuit
 reviewed: true
 last_updated: 2025-08-27
 language: English
+references: APA style citations added
 ```

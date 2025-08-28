@@ -1,3 +1,17 @@
+```yaml
+flow_id:
+  module: metaphor_vs_persona_review_v1.0
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: game_review / rhythm_structure / jrpg_contrast
+  role: >
+    Structural comparison of *Persona* and *Metaphor: ReFantazio*,
+    contrasting emotion-driven versus structure-driven JRPG design.
+  reviewed: true
+  last_updated: 2025-08-29
+  language: English
+```
+
 # 🎭 Metaphor vs. Persona — A Battle Between Emotion and Structure (Refined)
 
 **Filed by:** Pioneer-001 (Akivili)

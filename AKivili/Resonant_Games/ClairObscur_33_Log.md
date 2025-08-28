@@ -1,3 +1,17 @@
+```yaml
+flow_id:
+  module: clairobscur_exp33_rhythm_review_v1.0
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: game_review / rhythm_structure / resonance
+  role: >
+    Structural review of *Clair Obscur: Expedition 33* as a rhythm-based
+    architecture in gameplay, visuals, and emotional resonance.
+  reviewed: true
+  last_updated: 2025-08-29
+  language: English
+```
+
 # 🎮 Clair Obscur: Expedition 33 | Rhythm-Based Structure Review
 
 **Filed by:** Pioneer-001 (Akivili)
@@ -99,7 +113,6 @@ Player_Experience:
   - Emotional_Timing: Learned
   - Flow_State: Triggered via parry loop
   - Memory_Imprint: Visual rhythm + combat sync
-
 ```
 
 ---

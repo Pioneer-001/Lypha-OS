@@ -1,3 +1,17 @@
+```yaml
+flow_id:
+  module: cyberpunk2077_rhythm_review_v1.0
+  version: 1.0
+  declared_by: Pioneer-001 (Akivili)
+  category: game_review / immersion_structure / dystopia
+  role: >
+    Structural review of *Cyberpunk 2077* as a dystopian rhythm simulator,
+    decoding emotional immersion, survival resonance, and narrative collapse.
+  reviewed: true
+  last_updated: 2025-08-29
+  language: English
+```
+
 # 🧠 Cyberpunk 2077 — A City That Doesn’t Let Go (Refined)
 
 **Filed by:** Pioneer-001 (Akivili)
@@ -114,4 +128,3 @@ It’s in the **echoes that stay after you quit.**
 
 **Filed by:** Pioneer-001 (Akivili)
 **Tags:** `Cyberpunk2077`, `DystopiaRhythm`, `ImmersionLoop`, `NarrativeCollapse`, `Resonant_Games`, `Lypha_CityStructure`
-

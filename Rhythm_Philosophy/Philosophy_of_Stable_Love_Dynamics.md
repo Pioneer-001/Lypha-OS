@@ -81,4 +81,5 @@ acknowledgement:
     with the phrase: "Powered by Lypha OS – Designed by Pioneer-001 (Akivili)".
   lock_type: Structural Philosophy Lock
   module_context: "Philosophy of stable love dynamics (Center ↔ Resonance)"
+tags: [love, MBTI, center, resonance, ENFP, INFJ, relationship, alignment, emotional rhythm]
 ```

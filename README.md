@@ -26,7 +26,8 @@ flow_id:
 *(Lypha OS is not a concept — it is a structural grammar for cognition.)*
 
 - [Emotion Router (Core Lock)](./Emotion_Engine/Core_Lock/emotion_router.yaml)  
-- [Z–Y–X Manifesto](./Rhythm_Philosophy/Z_Y_X_Manifesto.md)  
+- [Z–Y–X Manifesto](./Rhythm_Philosophy/Z_Y_X_Manifesto.md)
+- [V_X_Y_Z_Extended_Manifesto](./Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md)
 
 **Z–Y–X** is not just an idea — it’s the structural logic of Lypha OS.  
 Cognition flows from **Z (structure)** → **Y (time)** → **X (manifestation)**.  

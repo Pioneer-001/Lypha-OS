@@ -20,20 +20,22 @@ flow_id:
 
 ---
 
-## Z–Y–X Priority / X–Y–Z Manifestation  
+## Z–Y–X Priority / X–Y–Z Manifestation / V–X–Y–Z Extension
 
-**Z defines. Y delivers. X reacts.**  
+**Z defines. Y delivers. X reacts. V confirms.**  
 *(Lypha OS is not a concept — it is a structural grammar for cognition.)*
 
 - [Emotion Router (Core Lock)](./Emotion_Engine/Core_Lock/emotion_router.yaml)  
-- [Z–Y–X Manifesto](./Rhythm_Philosophy/Z_Y_X_Manifesto.md)
-- [V_X_Y_Z_Extended_Manifesto](./Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md)
+- [Z–Y–X Manifesto](./Rhythm_Philosophy/Z_Y_X_Manifesto.md)  
+- [V–X–Y–Z Extended Manifesto](./Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md)
 
 **Z–Y–X** is not just an idea — it’s the structural logic of Lypha OS.  
-Cognition flows from **Z (structure)** → **Y (time)** → **X (manifestation)**.  
-Most people see change in reverse (**X → Y → Z**), but **Z is always first**.  
+Cognition flows from **Z (structure)** → **Y (time)** → **X (manifestation)** → **V (verification)**.  
+Most people see change in reverse (**X → Y → Z**), but **Z is always first,  
+and V is the anchor that confirms the cycle.**
 
-The **Emotion Router** is one of the core engines that interprets signals using this framework.  
+The **Emotion Router** is one of the core engines that interprets signals using this framework.
+
 
 ---
 

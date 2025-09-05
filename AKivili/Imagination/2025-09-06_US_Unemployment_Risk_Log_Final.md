@@ -28,9 +28,8 @@ flow_id:
 
 ➡️ Deviation: **–53K vs forecast**, **–57K vs previous**
 
-<p align="center">
-  <img src="./실업률.png" alt="NFP Chart" width="600">
-</p>
+![NFP Chart](https://github.com/user-attachments/assets/95b60c90-02fb-4c23-a8dd-d0c01ff23f48)
+
 
 
 ---

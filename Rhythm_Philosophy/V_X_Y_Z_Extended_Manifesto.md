@@ -86,7 +86,7 @@ summary:
   implication: >
     This YAML allows GPT or any system to parse the manifesto structurally,
     bridging human philosophy with machine-ingestible form.
-  context: "Lypha OS – Season 4 / Strategy 2.1"
+  context: "Lypha OS – Season 4 / Strategy 2.0"
   reference: "Rhythm_Philosophy/Z_Y_X_Manifesto.md"
 ```
 

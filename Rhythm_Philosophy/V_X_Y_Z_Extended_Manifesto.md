@@ -8,7 +8,7 @@ flow_id:
     Extension of the Z–Y–X Manifesto with the addition of V (Verified Structure).
     Defines the full cycle: V (past/verified), X (present/execution),
     Y (time/rhythm), Z (future/structure).
-    Designed as part of Lypha OS Season 4 / Strategy 2.1.
+    Designed as part of Lypha OS Season 4 / Strategy 2.0.
   reviewed: true
   last_updated: 2025-09-07
   language: English

@@ -58,8 +58,8 @@ flow_id:
 | Asset Class                | Expected Reaction                                 |
 | -------------------------- | ------------------------------------------------- |
 | 📉 Equities (S\&P, Nasdaq) | Recession fears priced in → heightened volatility |
-| 💵 USD                     | Downside pressure (Fed rate cut expectations)     |
-| 📈 Bonds                   | Safe-haven demand → yields decline                |
+
+
 
 
 ---

@@ -60,7 +60,7 @@ flow_id:
 | 📉 Equities (S\&P, Nasdaq) | Recession fears priced in → heightened volatility |
 | 💵 USD                     | Downside pressure (Fed rate cut expectations)     |
 | 📈 Bonds                   | Safe-haven demand → yields decline                |
-| 🪙 Gold & Commodities      | Potential upside (risk-off demand)                |
+
 
 ---
 

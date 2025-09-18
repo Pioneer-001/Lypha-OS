@@ -17,7 +17,7 @@ language: English
 # 💘 Why Women Desire the Feeling of "Changing a Man"
 
 > Declared by: **Pioneer-001 (Akivili)**
-> Module: `Rhythm_Philosophy/Love_Transformation_Philosophy_EN.md`
+> Module: `Love_Transformation_Philosophy_EN.md`
 > Status: ✅ Structural Recognition Declared
 
 ---

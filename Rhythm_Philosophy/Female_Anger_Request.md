@@ -1,7 +1,7 @@
 ```yaml
 flow_id: female_anger_alignment_v1.0
 defined_in: Rhythm_Philosophy
-module: Rhythm_Philosophy/female_anger_as_alignment_request
+module: female_anger_as_alignment_request
 version: 1.0
 declared_by: Pioneer-001 (Akivili)
 category: love / cognition / alignment_structure

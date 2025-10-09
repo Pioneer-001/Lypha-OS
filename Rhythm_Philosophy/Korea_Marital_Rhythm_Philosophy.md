@@ -17,6 +17,8 @@ flow_id:
 
 # 🇰🇷 Korea Marital Rhythm Philosophy
 
+> Filed by: **Pioneer-001 (Akivili)**  •  Module: `Korea_Marital_Rhythm_Philosophy.md`  •  Status: ✅ Structural Recognition Declared
+
 ## 🧭 Structural Overview
 Korean marital communication is not primarily about verbal affection.  
 It functions as an **emotional existence confirmation system** — a rhythm of presence that preserves trust and safety through small, consistent interactions.

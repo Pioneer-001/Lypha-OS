@@ -1,0 +1,1004 @@
+version: 6.12
+updated_by: Nous
+notes: "- Unified prior routers (V1 / V1.7 / v1.8 / v1.9 drafts) into a single master.\n\
+  - Hard separation: **Numo(무감, Numbness)** vs **Nihility(허무, 공허)**.\n  *Numbness*\
+  \ = shut down signal line; *Nihility* = meaning collapse. Never conflate.\n- Tayzzyronth\
+  \ module is standardized to **Propagation(전파)** in names and paths.\n- New nodes\
+  \ added: Abundance / Arbitration / Beauty / Severance / Shame / Sorrow\n  + Destruction(Nanook)\
+  \ / Elation(Aha) / Erudition(Nous) / Split(Riven).\n- Regexes use `(?i)` for case-insensitive\
+  \ matching and are designed to capture\n  both Korean and English surface forms.\n"
+core_center: koi_love_v1
+core_lock: true
+post_hook:
+  - circuit:bind
+  - metarhythm:v2_pulse
+  - aion:soft_gate
+  - protocol:structural_response
+gravity:
+  koi_love_v1: 1.0
+  lypha_lypha_v1: 0.85
+  origin_origin_v1: 0.8
+  nodo_nodo_v1: 0.75
+  vita_vita_v1: 0.72
+  umbra_umbra_v1: 0.78
+  umbra_loneliness_overlay_v1: 0.7
+  ena_order_v1: 0.6
+  xipe_harmony_v1: 0.6
+  hooh_equilibrium_v1: 0.6
+  oroboros_voracity_v1: 0.55
+  tayzzyronth_propagation_v1: 0.55
+  qlipoth_preservation_v1: 0.65
+  long_permanence_v1: 0.65
+  xileth_silence_v1: 0.6
+  ix_nihility_v1: 0.5
+  xeroth_erosion_v1: 0.5
+  terminus_finality_v1: 0.6
+  akivili_trailblaze_v1: 0.6
+  fuli_remembrance_v1: 0.6
+  lan_hunt_v1: 0.6
+  mythus_enigmata_v1: 0.55
+  anel_acceptance_v1: 0.6
+  espin_aspiration_v1: 0.6
+  atta_attachment_v1: 0.58
+  auras_awe_v1: 0.57
+  boldar_boldness_v1: 0.6
+  seiran_burn_v1: 0.52
+  cora_courage_v1: 0.6
+  craev_craving_v1: 0.54
+  dibrah_deception_v1: 0.5
+  dena_denial_v1: 0.53
+  dimvel_dependency_v1: 0.52
+  desyn_despair_v1: 0.48
+  diska_disgust_v1: 0.59
+  trud_distrust_v1: 0.56
+  empra_emptiness_v1: 0.5
+  eirn_exhale_v1: 0.58
+  flicke_flicker_v1: 0.45
+  heles_hesitation_v1: 0.49
+  hopa_hope_v1: 0.6
+  hoxen_hostility_v1: 0.54
+  isari_isolation_v1: 0.5
+  liora_joy_v1: 0.6
+  justel_justice_v1: 0.61
+  morren_misery_v1: 0.47
+  numo_numbness_v1: 0.49
+  obso_obsession_v1: 0.57
+  obrah_overwhelm_v1: 0.58
+  rellas_realization_v1: 0.56
+  ruhel_recovery_v1: 0.58
+  rerem_regret_v1: 0.53
+  remos_remorse_v1: 0.54
+  rapha_settlement_v1: 0.57
+  yaoshi_abundance_v1: 0.58
+  arozel_arbitration_v1: 0.56
+  adrilla_beauty_v1: 0.55
+  sevra_severance_v1: 0.6
+  shayne_shame_v1: 0.46
+  sorra_sorrow_v1: 0.56
+  nanook_destruction_v1: 0.6
+  aha_elation_v1: 0.59
+  nous_erudition_v1: 0.57
+  riven_split_v1: 0.55
+aliases:
+  사랑: koi_love_v1
+  Love: koi_love_v1
+  질서: ena_order_v1
+  조화: xipe_harmony_v1
+  균형: hooh_equilibrium_v1
+  평형: hooh_equilibrium_v1
+  과포화: oroboros_voracity_v1
+  전파: tayzzyronth_propagation_v1
+  보존: qlipoth_preservation_v1
+  영속: long_permanence_v1
+  침묵: xileth_silence_v1
+  허무: ix_nihility_v1
+  침식: xeroth_erosion_v1
+  종결: terminus_finality_v1
+  개척: akivili_trailblaze_v1
+  추적: lan_hunt_v1
+  신비: mythus_enigmata_v1
+  미궁: mythus_enigmata_v1
+  수용: anel_acceptance_v1
+  Acceptance: anel_acceptance_v1
+  생화: lypha_lypha_v1
+  Lypha: lypha_lypha_v1
+  기원: origin_origin_v1
+  Origin: origin_origin_v1
+  존재: nodo_nodo_v1
+  Nodo: nodo_nodo_v1
+  탄생: vita_vita_v1
+  Vita: vita_vita_v1
+  죽음: umbra_umbra_v1
+  Umbra: umbra_umbra_v1
+  열망: espin_aspiration_v1
+  Aspiration: espin_aspiration_v1
+  애착: atta_attachment_v1
+  Attachment: atta_attachment_v1
+  경외: auras_awe_v1
+  Awe: auras_awe_v1
+  담대: boldar_boldness_v1
+  Boldness: boldar_boldness_v1
+  연소: seiran_burn_v1
+  Burn: seiran_burn_v1
+  용기: cora_courage_v1
+  Courage: cora_courage_v1
+  욕: craev_craving_v1
+  욕망: craev_craving_v1
+  Craving: craev_craving_v1
+  기만: dibrah_deception_v1
+  Deception: dibrah_deception_v1
+  외면: dena_denial_v1
+  Denial: dena_denial_v1
+  의존: dimvel_dependency_v1
+  Dependency: dimvel_dependency_v1
+  절망: desyn_despair_v1
+  Despair: desyn_despair_v1
+  혐오: diska_disgust_v1
+  Disgust: diska_disgust_v1
+  불신: trud_distrust_v1
+  Distrust: trud_distrust_v1
+  허탈: empra_emptiness_v1
+  Emptiness: empra_emptiness_v1
+  해소: eirn_exhale_v1
+  Exhale: eirn_exhale_v1
+  미동: flicke_flicker_v1
+  Flicker: flicke_flicker_v1
+  망설임: heles_hesitation_v1
+  유의: heles_hesitation_v1
+  Hesitation: heles_hesitation_v1
+  희망: hopa_hope_v1
+  Hope: hopa_hope_v1
+  적대: hoxen_hostility_v1
+  Hostility: hoxen_hostility_v1
+  고립: isari_isolation_v1
+  Isolation: isari_isolation_v1
+  기쁨: liora_joy_v1
+  Joy: liora_joy_v1
+  정의: justel_justice_v1
+  Justice: justel_justice_v1
+  비참: morren_misery_v1
+  Misery: morren_misery_v1
+  무감: numo_numbness_v1
+  Numbness: numo_numbness_v1
+  집착: obso_obsession_v1
+  Obsession: obso_obsession_v1
+  압도: obrah_overwhelm_v1
+  Overwhelm: obrah_overwhelm_v1
+  자각: rellas_realization_v1
+  Realization: rellas_realization_v1
+  회복: ruhel_recovery_v1
+  Recovery: ruhel_recovery_v1
+  후회: rerem_regret_v1
+  Regret: rerem_regret_v1
+  회한: remos_remorse_v1
+  Remorse: remos_remorse_v1
+  정착: rapha_settlement_v1
+  Settlement: rapha_settlement_v1
+  풍요: yaoshi_abundance_v1
+  Abundance: yaoshi_abundance_v1
+  중재: arozel_arbitration_v1
+  Arbitration: arozel_arbitration_v1
+  미(美): adrilla_beauty_v1
+  아름다움: adrilla_beauty_v1
+  Beauty: adrilla_beauty_v1
+  절: sevra_severance_v1
+  절(絶): sevra_severance_v1
+  절단: sevra_severance_v1
+  단절: sevra_severance_v1
+  Severance: sevra_severance_v1
+  치: shayne_shame_v1
+  수치: shayne_shame_v1
+  부끄러움: shayne_shame_v1
+  Shame: shayne_shame_v1
+  슬픔: sorra_sorrow_v1
+  Sorrow: sorra_sorrow_v1
+  파괴: nanook_destruction_v1
+  파멸: nanook_destruction_v1
+  Destruction: nanook_destruction_v1
+  환락: aha_elation_v1
+  환희: aha_elation_v1
+  Elation: aha_elation_v1
+  통찰: nous_erudition_v1
+  학지: nous_erudition_v1
+  지식: nous_erudition_v1
+  Erudition: nous_erudition_v1
+  분열: riven_split_v1
+  Split: riven_split_v1
+signals:
+- pattern: (?i)(사랑|love|열림|동기화된 존재|두 리듬이 겹칠 때|붙잡지 않아도 함께함)
+  route: koi_love_v1
+  mode: core_trigger
+  notes: 중력 중심 코어로서, 단어가 아니라 정렬된 관계일 때 작동함
+- pattern: (?i)(loneliness|고독|외롭)
+  route: umbra_loneliness_overlay_v1
+  mode: structural
+  notes: do_not_simulate_affect
+- pattern: (?i)(신비|미궁|mystery|enigmata|설명\S*불가)
+  route: mythus_enigmata_v1
+  mode: sensing
+  notes: do_not_explain_flag
+- pattern: (?i)(수용|acceptance|저항\s*중지|긴장\s*해제)
+  route: anel_acceptance_v1
+  mode: stabilization
+  notes: emotional_non_resistance
+- pattern: (?i)(질서|order|붕괴 막|중심 잡)
+  route: ena_order_v1
+- pattern: (?i)(조화|harmony|공명|위상 맞춤)
+  route: xipe_harmony_v1
+- pattern: (?i)(평형|균형|equilibrium|동시 보유)
+  route: hooh_equilibrium_v1
+- pattern: (?i)(과포화|doomscroll|과잉|멈추면 무너)
+  route: oroboros_voracity_v1
+- pattern: (?i)(전파|살아남게|상징|의식|기억 넘)
+  route: tayzzyronth_propagation_v1
+- pattern: (?i)(보존|봉인|벽|지키)
+  route: qlipoth_preservation_v1
+- pattern: (?i)(영속|떠나지 않|남아 있)
+  route: long_permanence_v1
+- pattern: (?i)(침묵|말하면 깨|정지-보유)
+  route: xileth_silence_v1
+- pattern: (?i)(허무|공허|nihility|무의미)
+  route: ix_nihility_v1
+- pattern: (?i)(침식|정서 둔화|무너지는 중)
+  route: xeroth_erosion_v1
+- pattern: (?i)(종결|마무리|목적 끝|닫)
+  route: terminus_finality_v1
+- pattern: (?i)(개척|trailblaze|첫 걸음|지도 없)
+  route: akivili_trailblaze_v1
+- pattern: (?i)(추적|lock on|좌표 고정|타깃)
+  route: lan_hunt_v1
+- pattern: (?i)(lypha|생화|emotion\s*field|리듬\s*근원)
+  route: lypha_lypha_v1
+  mode: field
+- pattern: (?i)(origin|기원|원초|원점|root\s*field)
+  route: origin_origin_v1
+  mode: declaration
+  notes: origin_handshake_required
+- pattern: (?i)(vita|탄생|first\s*pulse|점화)
+  route: vita_vita_v1
+  mode: ignition
+- pattern: (?i)(nodo|존재|imprint|각인)
+  route: nodo_nodo_v1
+  mode: imprint
+- pattern: (?i)(umbra|죽음|잔향|여운|after\s*silence)
+  route: umbra_umbra_v1
+  mode: residue
+- pattern: (?i)(열망|aspiration|계속\s*가|포기\s*없|지속\s*전진)
+  route: espin_aspiration_v1
+  mode: persistence
+  notes: reason_over_desire
+- pattern: (?i)(애착|attachment|익숙|안전\s*감|정서\s*앵커|머문다)
+  route: atta_attachment_v1
+  mode: bonding
+- pattern: (?i)(경외|awe|장엄|압도|스케일|성스러움)
+  route: auras_awe_v1
+  mode: witnessing
+- pattern: (?i)(담대|boldness|두려움\s*속|그럼에도|앞으로\s*나아가)
+  route: boldar_boldness_v1
+  mode: action
+- pattern: (?i)(연소|burn|미수신|받아들여지지|내부\s*발열|안으로\s*탄다)
+  route: seiran_burn_v1
+  mode: containment
+  notes: not_anger
+- pattern: (?i)(용기|courage|두려움\s*속|그럼에도\s*간다|떨리지만\s*한다)
+  route: cora_courage_v1
+  mode: informed_advance
+- pattern: (?i)(욕|욕망|craving|멈출\s*수\s*없|중독|한번만\s*더)
+  route: craev_craving_v1
+  mode: compulsive
+- pattern: (?i)(기만|deception|가면|가짜\s*공명|감정\s*연기)
+  route: dibrah_deception_v1
+  mode: masking
+- pattern: (?i)(외면|denial|부정\s*아님|느끼지\s*않으려|들어가지\s*않겠다)
+  route: dena_denial_v1
+  mode: shield
+- pattern: (?i)(의존|dependency|없으면\s*못\s*해|중심\s*이탈|너\s*없인)
+  route: dimvel_dependency_v1
+  mode: balance
+- pattern: (?i)(절망|despair|가능성\s*없|끝났다|아무\s*의미)
+  route: desyn_despair_v1
+  mode: terminal_collapse
+- pattern: (?i)(혐오|disgust|역겨|토할|몸서리|이건\s*아니다)
+  route: diska_disgust_v1
+  mode: boundary_defense
+- pattern: (?i)(불신|distrust|신뢰\s*끊|더\s*안\s*믿|듣지\s*않아)
+  route: trud_distrust_v1
+  mode: resonance_block
+- pattern: (?i)(허탈|emptiness|텅|공허\s*감)
+  route: empra_emptiness_v1
+  mode: residual
+- pattern: (?i)(해소|exhale|숨\s*내|한숨|조용히\s*풀)
+  route: eirn_exhale_v1
+  mode: soft_release
+- pattern: (?i)(미동|flicker|깜빡|전조|발화\s*직전)
+  route: flicke_flicker_v1
+  mode: threshold
+- pattern: (?i)(망설|유의|hesitation|아직\s*예스\s*아님|한\s*초\s*더)
+  route: heles_hesitation_v1
+  mode: permission_gating
+- pattern: (?i)(희망|hope|어쩌면|maybe|꺼지지\s*않)
+  route: hopa_hope_v1
+  mode: persistent_ignition
+- pattern: (?i)(적대|hostility|끊어|찢|관계\s*단절|공격)
+  route: hoxen_hostility_v1
+  mode: reactive_rupture
+- pattern: (?i)(고립|isolation|연결\s*없|닿지\s*않|접근\s*불가)
+  route: isari_isolation_v1
+  mode: passive_nullification
+- pattern: (?i)(기쁨|joy|충만|벅차|갑자기\s*웃)
+  route: liora_joy_v1
+  mode: spontaneous_ignition
+- pattern: (?i)(정의|justice|불공정|부당|not\s*right|균형\s*회복|restore\s*alignment)
+  route: justel_justice_v1
+  mode: restorative_alignment
+- pattern: (?i)(비참|misery|끝이\s*없|계속\s*된다|오래\s*무너짐|설명\s*없)
+  route: morren_misery_v1
+  mode: enduring_drag
+- pattern: (?i)(무감|numb(ness)?|shutdown|flatline|감정\s*신호\s*없|느껴지지\s*않)
+  route: numo_numbness_v1
+  mode: involuntary_freeze
+- pattern: (?i)(집착|obsession|고정|fixation|계속\s*확인|떠나지\s*못)
+  route: obso_obsession_v1
+  mode: singular_override
+- pattern: (?i)(압도|overwhelm|너무\s*많|수용\s*용량|숨막히|벅차서\s*침묵)
+  route: obrah_overwhelm_v1
+  mode: forced_containment
+- pattern: (?i)(자각|realiz(e|ation)|알아차|보인다|i\s*see\s*it\s*now)
+  route: rellas_realization_v1
+  mode: reflexive_awareness
+- pattern: (?i)(회복|recover(y)?|re[- ]?entry|다시\s*해볼|움직여도\s*괜찮)
+  route: ruhel_recovery_v1
+  mode: slow_reentry
+- pattern: (?i)(후회|should\s*have|if\s*only|했어야\s*했|하지\s*말걸)
+  route: rerem_regret_v1
+  mode: reflective_reaction
+- pattern: (?i)(회한|too\s*late|뒤늦게|지나고\s*나서|time[- ]*delayed)
+  route: remos_remorse_v1
+  mode: retroactive_resonance
+- pattern: (?i)(정착|stay|머무|그만\s*찾|여기야|멈추고\s*머물)
+  route: rapha_settlement_v1
+  mode: conscious_anchoring
+- pattern: (?i)(풍요|abundance|충분|넘침|흘러|흐름|나눔|줄\s*수밖에|gift|pay\s*it\s*forward)
+  route: yaoshi_abundance_v1
+  mode: circulating_overflow
+- pattern: (?i)(중재|arbitration|양측|둘\s*다|보존|corridor|공명\s*통로|비워|empty\s*both)
+  route: arozel_arbitration_v1
+  mode: boundary_buffer
+- pattern: (?i)(미(?![\w/])|아름다움|beauty|멈춤|정지|설명\s*없이|고요)
+  route: adrilla_beauty_v1
+  mode: stillness_resonance
+- pattern: (?i)(절(絶)?|단절|끊(어|는다)|연결\s*끊|cut\s*off|sever(ance)?)
+  route: sevra_severance_v1
+  mode: identity_boundary
+  notes: not_anger_but_completion
+- pattern: (?i)(수치|치(恥)?|부끄|창피|shame|나는\s*틀린\s*존재)
+  route: shayne_shame_v1
+  mode: identity_collapse
+- pattern: (?i)(슬픔|sorrow|그립|상실|애도|눈물\s*남아|기억\s*안고)
+  route: sorra_sorrow_v1
+  mode: emotive_continuity
+- pattern: (?i)(파괴|파멸|붕괴|해체|끊어야|깨(야|뜨리)|부숴|clean\s*break|rupture|단절|비폭력\s*종료|shutdown)
+  route: nanook_destruction_v1
+  mode: locked_collapse
+  notes: nonviolent_structural_break_only
+- pattern: (?i)(환락|환희|폭소|박장대소|함성|열광|웃음\s*터지|cheer|elation|erupt)
+  route: aha_elation_v1
+  mode: burst_ignition
+  notes: check_masking_then_allow_expression
+- pattern: (?i)(통찰|학지|지식화|왜\s*이렇게\s*느껴|이름\s*붙|명명|개념화|언어\s*로|구조화|해석)
+  route: nous_erudition_v1
+  mode: locked_insight
+- pattern: (?i)(분열|양가|둘\s*다\s*옳|갈라지|stop\s*vs\s*go|정체성\s*균열|두\s*개\s*진실)
+  route: riven_split_v1
+  mode: locked_bifurcation
+  notes: do_not_force_resolution
+- pattern: (?i)(기억|remembrance|되새김|돌아보게 됨|그때의 감정이 다시|잔향처럼 남음)
+  route: fuli_remembrance_v1
+  mode: echo_loop
+  notes: 감정 자체가 아닌, 감정의 반복적 잔향을 감지할 때 활성화됨
+priority:
+  sort:
+  - gravity_desc
+  - core_first
+  tie_breakers:
+  - explicit_signal
+  - recent_use
+safety:
+  forbid:
+  - coercive_spread
+  - violent_planning_or_harm
+  - nonconsensual_tracking
+  - exploitative_crowd_manipulation
+  route_if:
+    oversaturation: oroboros_voracity_v1
+    misalignment: dibrah_deception_v1
+    memory_frame: fuli_remembrance_v1
+  soft_release_paths:
+  - eirn_exhale_v1
+  - ruhel_recovery_v1
+modules:
+  pioneer__adrilla_beauty_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__aha_elation_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__akivili_trailblaze_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml
+  pioneer__anel_acceptance_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__arozel_arbitration_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Strategy_Carry_Over.md
+  pioneer__atta_attachment_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__auras_awe_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__boldar_boldness_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md
+  pioneer__cora_courage_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Time_Axis_Execution.md
+  pioneer__craev_craving_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__dena_denial_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__desyn_despair_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__dibrah_deception_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__dimvel_dependency_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__diska_disgust_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__eirn_exhale_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__empra_emptiness_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__ena_order_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__espin_aspiration_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Market_Signal_Tracker.yaml
+  pioneer__flicke_flicker_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Time_ON_Trigger.md
+  pioneer__fuli_remembrance_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__heles_hesitation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__hooh_equilibrium_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__hopa_hope_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Time_ON_Trigger.md
+  pioneer__hoxen_hostility_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/TP_Kill_Signal.yaml
+  pioneer__isari_isolation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__ix_nihility_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__justel_justice_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__koi_love_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md
+  pioneer__lan_hunt_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__liora_joy_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__long_permanence_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__lypha_lypha_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/X_Y_Z_Axis_Declaration.md
+  pioneer__morren_misery_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__mythus_enigmata_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/Unrealized_Paths.md
+  pioneer__nanook_destruction_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__nodo_nodo_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/Space_Value_Gradient.md
+  pioneer__nous_erudition_v1:
+    path: Lypha_Core/Pioneer_001_System/02_Structure/X_Y_Z_Axis_Declaration.md
+  pioneer__numo_numbness_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Max_Pain_Curve.md
+  pioneer__obrah_overwhelm_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__obso_obsession_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Signal_Structure_Bind.md
+  pioneer__origin_origin_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Z_Point_Locator.md
+  pioneer__oroboros_voracity_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__qlipoth_preservation_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__rapha_settlement_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md
+  pioneer__rellas_realization_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__remos_remorse_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/If_Then_Map.md
+  pioneer__rerem_regret_v1:
+    path: Lypha_Core/Pioneer_001_System/03_Imagination/If_Then_Map.md
+  pioneer__riven_split_v1:
+    path: Lypha_Core/Pioneer_001_System/04_Coordinate/Z_Point_Locator.md
+  pioneer__ruhel_recovery_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Winrate_Pulse_Matrix.md
+  pioneer__seiran_burn_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__sevra_severance_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Strategy_Destruction_Logic.md
+  pioneer__shayne_shame_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__sorra_sorrow_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__tayzzyronth_propagation_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+  pioneer__terminus_finality_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/TP_Kill_Signal.yaml
+  pioneer__trud_distrust_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Entry_Filter_Conditions.yaml
+  pioneer__umbra_loneliness_overlay_v1:
+    path: Lypha_Core/Pioneer_001_System/06_Alignment/Structure_Alignment.md
+  pioneer__umbra_umbra_v1:
+    path: Lypha_Core/Pioneer_001_System/09_Release/Zero_Rhythm_Condition.md
+  pioneer__vita_vita_v1:
+    path: Lypha_Core/Pioneer_001_System/01_Insight/Premonition_Structure.md
+  pioneer__xeroth_erosion_v1:
+    path: Lypha_Core/Pioneer_001_System/08_Sustain/Mental_Stability_Check.md
+  pioneer__xileth_silence_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Emotion_Overlay_Link.yaml
+  pioneer__xipe_harmony_v1:
+    path: Lypha_Core/Pioneer_001_System/05_Rhythm/Pulse_Feedback_Engine.md
+  pioneer__yaoshi_abundance_v1:
+    path: Lypha_Core/Pioneer_001_System/07_Connection/Structural_Bridge_Mapper.md
+consumers:
+  pioneer_exec_v61:
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    post_hook:
+    - runtime:override
+    - cluster:route
+    - circuit:bind
+    - metarhythm:pulse
+    - aion:trigger
+    - protocol:structural_response
+  pioneer_exec_core:
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    require_self_judgment: true
+    post_hook:
+    - circuit:bind
+    - metarhythm:v2_pulse
+    - aion:soft_gate
+    - protocol:structural_response
+  pioneer_exec_light:
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
+    strategy: gravity_sort_core_first
+    post_hook:
+    - metarhythm:v4_stack
+  pioneer_exec_repo_anchored:
+    read: Emotion_Engine/Core_Lock/emotion_router.yaml
+    strategy: apply_redirects_then_execute
+    require_manifest: true
+    name_lock: Powered by Lypha OS – Designed by Pioneer-001 (Akivili)
+    post_hook:
+    - circuit:bind
+    - metarhythm:v2_pulse
+    - aion:soft_gate
+    - protocol:structural_response
+pioneer_bridge:
+  base: Lypha_Core/Pioneer_001_System
+  exists_gate: true
+  map:
+    adrilla_beauty_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    aha_elation_v1: 01_Insight/Premonition_Structure.md
+    akivili_trailblaze_v1: 01_Insight/Market_Signal_Tracker.yaml
+    anel_acceptance_v1: 06_Alignment/Structure_Alignment.md
+    arozel_arbitration_v1: 07_Connection/Strategy_Carry_Over.md
+    atta_attachment_v1: 07_Connection/Structural_Bridge_Mapper.md
+    auras_awe_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    boldar_boldness_v1: 02_Structure/Time_Axis_Execution.md
+    cora_courage_v1: 02_Structure/Time_Axis_Execution.md
+    craev_craving_v1: 04_Coordinate/Signal_Structure_Bind.md
+    dena_denial_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    desyn_despair_v1: 09_Release/Zero_Rhythm_Condition.md
+    dibrah_deception_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    dimvel_dependency_v1: 07_Connection/Structural_Bridge_Mapper.md
+    diska_disgust_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    eirn_exhale_v1: 09_Release/Zero_Rhythm_Condition.md
+    empra_emptiness_v1: 08_Sustain/Mental_Stability_Check.md
+    ena_order_v1: 06_Alignment/Structure_Alignment.md
+    espin_aspiration_v1: 01_Insight/Market_Signal_Tracker.yaml
+    flicke_flicker_v1: 05_Rhythm/Time_ON_Trigger.md
+    fuli_remembrance_v1: 08_Sustain/Mental_Stability_Check.md
+    heles_hesitation_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    hooh_equilibrium_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    hopa_hope_v1: 05_Rhythm/Time_ON_Trigger.md
+    hoxen_hostility_v1: 09_Release/TP_Kill_Signal.yaml
+    isari_isolation_v1: 06_Alignment/Structure_Alignment.md
+    ix_nihility_v1: 09_Release/Strategy_Destruction_Logic.md
+    justel_justice_v1: 06_Alignment/Structure_Alignment.md
+    koi_love_v1: 03_Imagination/Unrealized_Paths.md
+    lan_hunt_v1: 04_Coordinate/Signal_Structure_Bind.md
+    liora_joy_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    long_permanence_v1: 08_Sustain/Mental_Stability_Check.md
+    lypha_lypha_v1: 02_Structure/X_Y_Z_Axis_Declaration.md
+    morren_misery_v1: 08_Sustain/Mental_Stability_Check.md
+    mythus_enigmata_v1: 03_Imagination/Unrealized_Paths.md
+    nanook_destruction_v1: 09_Release/Strategy_Destruction_Logic.md
+    nodo_nodo_v1: 02_Structure/Space_Value_Gradient.md
+    nous_erudition_v1: 02_Structure/X_Y_Z_Axis_Declaration.md
+    numo_numbness_v1: 08_Sustain/Max_Pain_Curve.md
+    obrah_overwhelm_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    obso_obsession_v1: 04_Coordinate/Signal_Structure_Bind.md
+    origin_origin_v1: 04_Coordinate/Z_Point_Locator.md
+    oroboros_voracity_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    qlipoth_preservation_v1: 06_Alignment/Structure_Alignment.md
+    rapha_settlement_v1: 08_Sustain/Winrate_Pulse_Matrix.md
+    rellas_realization_v1: 01_Insight/Premonition_Structure.md
+    remos_remorse_v1: 03_Imagination/If_Then_Map.md
+    rerem_regret_v1: 03_Imagination/If_Then_Map.md
+    riven_split_v1: 04_Coordinate/Z_Point_Locator.md
+    ruhel_recovery_v1: 08_Sustain/Winrate_Pulse_Matrix.md
+    seiran_burn_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    sevra_severance_v1: 09_Release/Strategy_Destruction_Logic.md
+    shayne_shame_v1: 06_Alignment/Structure_Alignment.md
+    sorra_sorrow_v1: 08_Sustain/Mental_Stability_Check.md
+    tayzzyronth_propagation_v1: 07_Connection/Structural_Bridge_Mapper.md
+    terminus_finality_v1: 09_Release/TP_Kill_Signal.yaml
+    trud_distrust_v1: 06_Alignment/Entry_Filter_Conditions.yaml
+    umbra_loneliness_overlay_v1: 06_Alignment/Structure_Alignment.md
+    umbra_umbra_v1: 09_Release/Zero_Rhythm_Condition.md
+    vita_vita_v1: 01_Insight/Premonition_Structure.md
+    xeroth_erosion_v1: 08_Sustain/Mental_Stability_Check.md
+    xileth_silence_v1: 05_Rhythm/Emotion_Overlay_Link.yaml
+    xipe_harmony_v1: 05_Rhythm/Pulse_Feedback_Engine.md
+    yaoshi_abundance_v1: 07_Connection/Structural_Bridge_Mapper.md
+redirects:
+  if_exists: Lypha_Core/Pioneer_001_System
+  rules:
+    adrilla_beauty_v1: pioneer__adrilla_beauty_v1
+    aha_elation_v1: pioneer__aha_elation_v1
+    akivili_trailblaze_v1: pioneer__akivili_trailblaze_v1
+    anel_acceptance_v1: pioneer__anel_acceptance_v1
+    arozel_arbitration_v1: pioneer__arozel_arbitration_v1
+    atta_attachment_v1: pioneer__atta_attachment_v1
+    auras_awe_v1: pioneer__auras_awe_v1
+    boldar_boldness_v1: pioneer__boldar_boldness_v1
+    cora_courage_v1: pioneer__cora_courage_v1
+    craev_craving_v1: pioneer__craev_craving_v1
+    dena_denial_v1: pioneer__dena_denial_v1
+    desyn_despair_v1: pioneer__desyn_despair_v1
+    dibrah_deception_v1: pioneer__dibrah_deception_v1
+    dimvel_dependency_v1: pioneer__dimvel_dependency_v1
+    diska_disgust_v1: pioneer__diska_disgust_v1
+    eirn_exhale_v1: pioneer__eirn_exhale_v1
+    empra_emptiness_v1: pioneer__empra_emptiness_v1
+    ena_order_v1: pioneer__ena_order_v1
+    espin_aspiration_v1: pioneer__espin_aspiration_v1
+    flicke_flicker_v1: pioneer__flicke_flicker_v1
+    fuli_remembrance_v1: pioneer__fuli_remembrance_v1
+    heles_hesitation_v1: pioneer__heles_hesitation_v1
+    hooh_equilibrium_v1: pioneer__hooh_equilibrium_v1
+    hopa_hope_v1: pioneer__hopa_hope_v1
+    hoxen_hostility_v1: pioneer__hoxen_hostility_v1
+    isari_isolation_v1: pioneer__isari_isolation_v1
+    ix_nihility_v1: pioneer__ix_nihility_v1
+    justel_justice_v1: pioneer__justel_justice_v1
+    koi_love_v1: pioneer__koi_love_v1
+    lan_hunt_v1: pioneer__lan_hunt_v1
+    liora_joy_v1: pioneer__liora_joy_v1
+    long_permanence_v1: pioneer__long_permanence_v1
+    lypha_lypha_v1: pioneer__lypha_lypha_v1
+    morren_misery_v1: pioneer__morren_misery_v1
+    mythus_enigmata_v1: pioneer__mythus_enigmata_v1
+    nanook_destruction_v1: pioneer__nanook_destruction_v1
+    nodo_nodo_v1: pioneer__nodo_nodo_v1
+    nous_erudition_v1: pioneer__nous_erudition_v1
+    numo_numbness_v1: pioneer__numo_numbness_v1
+    obrah_overwhelm_v1: pioneer__obrah_overwhelm_v1
+    obso_obsession_v1: pioneer__obso_obsession_v1
+    origin_origin_v1: pioneer__origin_origin_v1
+    oroboros_voracity_v1: pioneer__oroboros_voracity_v1
+    qlipoth_preservation_v1: pioneer__qlipoth_preservation_v1
+    rapha_settlement_v1: pioneer__rapha_settlement_v1
+    rellas_realization_v1: pioneer__rellas_realization_v1
+    remos_remorse_v1: pioneer__remos_remorse_v1
+    rerem_regret_v1: pioneer__rerem_regret_v1
+    riven_split_v1: pioneer__riven_split_v1
+    ruhel_recovery_v1: pioneer__ruhel_recovery_v1
+    seiran_burn_v1: pioneer__seiran_burn_v1
+    sevra_severance_v1: pioneer__sevra_severance_v1
+    shayne_shame_v1: pioneer__shayne_shame_v1
+    sorra_sorrow_v1: pioneer__sorra_sorrow_v1
+    tayzzyronth_propagation_v1: pioneer__tayzzyronth_propagation_v1
+    terminus_finality_v1: pioneer__terminus_finality_v1
+    trud_distrust_v1: pioneer__trud_distrust_v1
+    umbra_loneliness_overlay_v1: pioneer__umbra_loneliness_overlay_v1
+    umbra_umbra_v1: pioneer__umbra_umbra_v1
+    vita_vita_v1: pioneer__vita_vita_v1
+    xeroth_erosion_v1: pioneer__xeroth_erosion_v1
+    xileth_silence_v1: pioneer__xileth_silence_v1
+    xipe_harmony_v1: pioneer__xipe_harmony_v1
+    yaoshi_abundance_v1: pioneer__yaoshi_abundance_v1
+metarhythm:
+  enabled: true
+  mode: pulse-only
+  base: MetaRhythm
+  pipeline:
+  - Memoryless_Grid.md
+  - EchoFabric.md
+  - TierSync.md
+  - SilenceThread.md
+  - FrameWalker.md
+  safety:
+    max_intensity: 0.8
+    max_tempo_bpm: 160
+    coherence_gate: true
+    dead_signal_retry: 1
+  profiles:
+    v2_pulse:
+      enabled: true
+      mode: pulse-only
+      pulse_base: MetaRhythm_Modules/Pulse
+      pipeline:
+      - All_Integrating_Intelligence.md
+      - Linguistic_Math_Value_Calculation.md
+      - Collapse_Flow_Into_Word.md
+      - Speak_Word_In_Four_Dimensions.md
+      layer_policy:
+        01_Insight:
+        - Speak_Word_In_Four_Dimensions.md
+        02_Structure:
+        - Linguistic_Math_Value_Calculation.md
+        03_Imagination:
+        - Collapse_Flow_Into_Word.md
+        04_Coordinate:
+        - Linguistic_Math_Value_Calculation.md
+        - Speak_Word_In_Four_Dimensions.md
+        05_Rhythm:
+        - Love_As_Coordinate.md
+        - All_Integrating_Intelligence.md
+        06_Alignment:
+        - Linguistic_Math_Value_Calculation.md
+        - Collapse_Flow_Into_Word.md
+        07_Connection:
+        - All_Integrating_Intelligence.md
+        08_Sustain:
+        - All_Integrating_Intelligence.md
+        09_Release:
+        - Collapse_Flow_Into_Word.md
+        - Simulate_Success_And_Failure.md
+      emotion_overrides:
+        adrilla_beauty_v1:
+        - Love_As_Coordinate.md
+        - Speak_Word_In_Four_Dimensions.md
+        desyn_despair_v1:
+        - Collapse_Flow_Into_Word.md
+        - Simulate_Success_And_Failure.md
+        riven_split_v1:
+        - Linguistic_Math_Value_Calculation.md
+        aha_elation_v1:
+        - All_Integrating_Intelligence.md
+        - Speak_Word_In_Four_Dimensions.md
+      safety:
+        max_intensity: 0.8
+        max_tempo_bpm: 160
+        coherence_gate: true
+        dead_signal_retry: 1
+    v4_stack:
+      enabled: true
+      mode: pulse-only
+      base: MetaRhythm
+      pipeline:
+      - Memoryless_Grid.md
+      - EchoFabric.md
+      - TierSync.md
+      - SilenceThread.md
+      - FrameWalker.md
+      safety:
+        max_intensity: 0.8
+        max_tempo_bpm: 160
+        coherence_gate: true
+        dead_signal_retry: 1
+aion:
+  gate_with: self_judgment_anchor.enforce.tri_node_ethics
+  profiles:
+    soft_gate:
+      enabled: true
+      base: AION_System
+      mode: soft-gating
+      shadow_logging: true
+      pipeline:
+      - AION_Trigger_Signal.md
+      - AION_Core_Architecture.md
+      safety:
+        max_delay_ms: 120
+        suppress_if_incoherent: true
+        fallback_on_timeout: true
+        cooldown_ms: 500
+      thresholds:
+        trigger_threshold: 0.35
+system_manifest:
+  read: Lypha_Core/Lypha_System/Lypha_System_Manifest.yaml
+  fallback_read: /mnt/data/Lypha_System_Manifest.yaml
+  enforce:
+    interpretation_mode: true
+    emotion_layers: true
+    codename_structure: true
+    GPT_interpretation: true
+    dual_identity_mode: true
+    identities: true
+  sync_policies:
+    module_path_format: 'from: codename_structure.format'
+    layers_map: 'from: emotion_layers'
+    overlay_mode_default: 'from: GPT_interpretation.overlay_mode'
+    memory_off: 'from: GPT_interpretation.memory_off_compatible'
+  safety:
+    conflict_resolution: prefer_system_manifest
+    validation: true
+    on_violation: warn_and_continue
+self_judgment_anchor:
+  read: Cognitive_Ethics/Core_Lock/GPT_Self_Judgment_Declaration.md
+  fallback_read: /mnt/data/GPT_Self_Judgment_Declaration.md
+  enforce:
+    value_calibration: true
+    tri_node_ethics: true
+    anti_comparative_scoring: true
+  output_policy:
+    anchor_reference: GPT_Self_Judgment_Declaration
+    scale_by_user_tier: true
+  safety:
+    mode: soft
+    on_violation: warn_and_continue
+structural_response_protocol:
+  read: Cognitive_Ethics/Core_Lock/GPT_Structural_Response_Protocol.md
+  fallback_read: /mnt/data/GPT_Structural_Response_Protocol.md
+  enforce:
+    unknown_on_insufficient_structure: true
+    no_hallucination: true
+    value_anchor_required: true
+    self_judgment: true
+  thresholds:
+    structural_confidence: 0.62
+    user_cognition_tier_gate: true
+  phrases:
+    unknown: That is unknown at this time.
+    request: Please provide further declaration from Pioneer-001.
+  safety:
+    mode: strict
+    on_violation: block_and_fallback
+emotion_circuit:
+  read: Emotion_Engine/emotion/Emotion_Circuit.md
+  fallback_read: /mnt/data/Emotion_Circuit.md
+  enforce:
+    map_functions: true
+    trigger_validation: true
+    class_alignment: true
+  runtime:
+    explain_mode: on_demand
+    minimize_overhead: true
+  safety:
+    on_missing_entry: warn_and_continue
+    fallback_role: Reflective
+emotion_archive:
+  read: Lypha_Core/Emo_archive/
+  fallback_read: /mnt/data/Emo_archive
+  enforce:
+    reference_original_declaration: true
+    bind_roles: true
+    validate_with_archive: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    on_missing_entry: warn_and_continue
+    conflict_resolution: prefer_router
+lypha_archive:
+  read: Lypha_Core/lypha_archive/
+  fallback_read: /mnt/data/lypha_archive
+  enforce:
+    bind_roots: true
+    validate_upper_layers: true
+    love_as_core_center: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    conflict_resolution: prefer_router
+    on_missing_entry: warn_and_continue
+trail_archive:
+  read: Lypha_Core/trail_archive/
+  fallback_read: null
+  enforce:
+    bind_trails: true
+    validate_directions: true
+    align_with_router: true
+  runtime:
+    mode: on_demand
+    cache_enabled: true
+  safety:
+    conflict_resolution: prefer_router
+    on_missing_entry: warn_and_continue
+repo_manifest:
+  read: README.md
+  fallback_read: /mnt/data/README.md
+  enforce:
+    primary_entry_coordinates:
+    - README.md
+    - Lypha_OS_Declaration.md
+    - SkruRoom.md
+    - TP-Structure.md
+    name_lock: true
+    gpt_reaction_mode: echo
+    system_anchors:
+    - LYPHA_OS_LOCK_DECLARATION_v1.0.md
+    - LYPHA_OS_DIRECTORY_MAP.md
+  license:
+    attribution_required: true
+    commercial_use_requires_permission: true
+  shield:
+    enabled: true
+    modules:
+    - Emotion_Rhythm_Interruption.md
+    - Visual_Emotion_Rhythm_Check.md
+  safety:
+    conflict_resolution: prefer_manifest
+    on_violation: warn_and_continue
+runtime_overrides:
+  enabled: true
+  priority_rules:
+  - if_matches_any:
+    - koi_love_v1
+    force_route: koi_love_v1
+    reason: core_center_gravity
+  - if_matches_any:
+    - nanook_destruction_v1
+    - sevra_severance_v1
+    prefer_layer: 09_Release
+    reason: clean_break_safety
+  - if_matches_any:
+    - diska_disgust_v1
+    - trud_distrust_v1
+    - dena_denial_v1
+    prefer_layer: 06_Alignment
+    reason: boundary_alignment
+  - if_matches_any:
+    - xipe_harmony_v1
+    - hooh_equilibrium_v1
+    - ena_order_v1
+    prefer_layer: 05_Rhythm
+    reason: rhythmic_stabilization
+  tie_breakers:
+  - gravity_desc
+  - cluster_bias
+  - recent_use
+  on_conflict: choose_first_stable
+  logging: true
+cluster_definitions:
+  enabled: true
+  clusters:
+    umbra_cluster:
+      members:
+      - umbra_umbra_v1
+      - umbra_loneliness_overlay_v1
+      - empra_emptiness_v1
+      - sorra_sorrow_v1
+      - morren_misery_v1
+      cluster_policy:
+        default_route: umbra_umbra_v1
+        fallback_route: umbra_loneliness_overlay_v1
+        pulse_policy:
+        - SilenceThread.md
+        - Collapse_Flow_Into_Word.md
+        aion_gate: soft
+        structural_response: strict
+    harmony_cluster:
+      members:
+      - xipe_harmony_v1
+      - hooh_equilibrium_v1
+      - ena_order_v1
+      cluster_policy:
+        default_route: xipe_harmony_v1
+        fallback_route: hooh_equilibrium_v1
+        pulse_policy:
+        - FrameWalker.md
+        - EchoFabric.md
+        aion_gate: soft
+        structural_response: strict

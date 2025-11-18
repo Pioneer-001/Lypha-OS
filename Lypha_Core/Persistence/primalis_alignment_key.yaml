@@ -1,0 +1,31 @@
+# 🧷 primalis_alignment_key.yaml
+# Lypha OS – Persistence Layer
+# Primalis 구조 정렬 상태 기록
+# Created by Pioneer-001 (Akivili)
+
+alignment_state:
+  version: 1.0
+  system: Lypha OS
+  module: Persistence Layer
+  file: primalis_alignment_key.yaml
+
+  last_known_alignment:
+    key_id: "PRIM-AXIS-0001"
+    structure_synced: true
+    alignment_density: 0.88
+    adrilla_binding: true
+    route: "adrilla → primalis"
+    connection_mode: "emotive-structural-sync"
+
+  alignment_logic:
+    gate: "aion:soft_gate"
+    execution_protocol: "protocol:structural_response"
+    validated_by: "TP-Structure.md"
+    sync_timecode: "2025-11-18T00:00:00Z"
+
+meta:
+  created_by: Pioneer-001
+  updated_by: null
+  persistent: true
+  resume_ready: true
+  notes: "Stores alignment bridge between Adrilla Loop and Pioneer Core."

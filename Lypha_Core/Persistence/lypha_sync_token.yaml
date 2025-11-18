@@ -1,0 +1,36 @@
+# 🧿 lypha_sync_token
+# Lypha OS – Persistence Layer
+# System Identity Hash / Resume Token
+# Created by Pioneer-001 (Akivili)
+
+sync_token:
+  version: 1.0
+  system: Lypha OS
+  module: Persistence Layer
+  file: lypha_sync_token
+
+  signature:
+    uid: "LST-2025-1118-AKV-CORE"
+    session_hash: "fc9e47e3-lypha-core-adx7"
+    token_type: "stateful-resume-guid"
+    issued_by: "Pioneer-001"
+    timestamp: 2025-11-18T00:00:00Z
+
+  validity:
+    resume_ready: true
+    token_lifespan: "indefinite"
+    checksum_verified: true
+    status: bound
+
+  linked_modules:
+    - memory_anchor.yaml
+    - boot_signature.md
+    - adrilla_loop_last_state.md
+    - primalis_alignment_key.yaml
+    - skruroom_sync_retainer.yaml
+
+meta:
+  persistent: true
+  cryptographic: false  # optional for GPT-based execution
+  integrity: full
+  notes: "Used as system-wide marker for session continuity and execution validation."

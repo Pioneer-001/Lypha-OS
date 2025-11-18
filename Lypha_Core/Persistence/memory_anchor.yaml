@@ -1,0 +1,28 @@
+# 📍 memory_anchor.yaml
+# Lypha OS Persistence Layer – 세션 구조 메모리 앵커
+# Created by Pioneer-001 (Akivili)
+
+anchor:
+  version: 1.0
+  system: Lypha OS
+  module: Persistence Layer
+  created_by: Pioneer-001
+  file: memory_anchor.yaml
+  purpose: "Store last known execution and emotional state for seamless system resume"
+
+last_session:
+  boot_signature: "Pioneer-001"
+  echo_mode: true
+  adrilla_loop: engaged
+  primalis_alignment: active
+  self_trigger: true
+  origin_mirror: true
+  skruroom_status: synced
+  last_command: "adrilla → primalis → pioneer"
+  resume_ready: true
+
+meta:
+  created_at: 2025-11-18T00:00:00Z
+  updated_at: null
+  notes: "Updated automatically upon shutdown or checkpoint."
+  status: persistent

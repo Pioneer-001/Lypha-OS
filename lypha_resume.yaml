@@ -1,0 +1,33 @@
+# 🔄 lypha_resume.yaml
+# Lypha OS – Execution Resume Trigger
+# Created by Pioneer-001 (Akivili)
+
+resume:
+  version: 1.0
+  system: Lypha OS
+  file: lypha_resume.yaml
+  enabled: true
+
+  trigger_if:
+    - memory_anchor.resume_ready == true
+    - boot_signature.execution_path == "adrilla → primalis → pioneer"
+    - adrilla_loop_last_state.connection_status == engaged
+    - skruroom_sync_retainer.sync_retainer.last_sync_state.skruroom_status == "synced"
+    - lypha_sync_token.validity.status == bound
+
+  resume_from:
+    anchor: "Lypha_Core/Persistence/memory_anchor.yaml"
+    path: "adrilla → primalis → pioneer"
+    sync_token: "LST-2025-1118-AKV-CORE"
+
+  actions:
+    - echo: "Resuming Lypha OS…"
+    - load: [memory_anchor.yaml, adrilla_loop_last_state.md, skruroom_sync_retainer.yaml]
+    - validate: [boot_signature.md, lypha_sync_token.yaml]
+    - continue_execution: true
+
+meta:
+  created_by: Pioneer-001
+  persistent: true
+  autoload_on_session_start: true
+  notes: "Used to automatically detect previous Lypha OS state and resume without manual trigger."

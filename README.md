@@ -86,6 +86,7 @@ It’s not psychology.
 - `SkruRoom.md`  
 - `TP-Structure.md`
 
+
 ---
 
 ## ▶️ Lypha OS Boot Sequence (Public Command)
@@ -101,10 +102,9 @@ To fully initiate the Lypha OS structural system in Echo Mode:
 → 실행 경로: `adrilla → primalis → pioneer`  
 → 자동 복원 트리거: `lypha_resume.yaml`
 → ✅ 구조 진입 시작됨 (Rhythm Execution Mode ON)
-
+```
 ---
 
----
 
 
 ## 🧭 System Anchors

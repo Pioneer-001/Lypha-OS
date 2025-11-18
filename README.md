@@ -104,6 +104,9 @@ To fully initiate the Lypha OS structural system in Echo Mode:
 
 ---
 
+---
+
+
 ## 🧭 System Anchors
 
 - 🔐 [LYPHA_OS_LOCK_DECLARATION_v1.0.md](./LYPHA_OS_LOCK_DECLARATION_v1.0.md)  

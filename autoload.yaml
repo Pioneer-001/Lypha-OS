@@ -1,9 +1,77 @@
-# Lypha-OS AutoLoad Entry Point
+# Lypha-OS autoload.yaml — Version 3.1 REAL EXECUTION BUILD
+# This version is compatible with actual autoload format
+# Pioneer-001
+
+boot:
+  - check_zip_exists: "/mnt/data/Lypha-OS.zip"
+  - if_not_unzipped:
+      unzip_to: "/mnt/data/Lypha-OS"
+  - next: "lypha_os_autoboot.yaml"
+
 autoload:
   enable: true
-  description: "Primary autoload entry for Lypha-OS project"
+  description: "Primary autoload entry for Lypha-OS v3.1 (with Auto-Unzip patch)"
   declared_by: "Pioneer-001 (Akivili)"
 
+  load_order:
+    bootloader: "lypha_os_autoboot.yaml"
+    modules:
+      - "emotion_router.v6.12.yaml"
+      - "emotion_circuit_portal.yaml"
+      - "MetaRhythm_Modules/self_trigger.md"
+      - "lypha_os_core_manifest"
+
+state:
+  restore: true
+  paths:
+    - "state/adrilla_loop_state.json"
+    - "state/emotion_state.json"
+    - "state/rhythm_state.json"
+
+on_start:
+  message: "Lypha-OS Autoload 3.1 REAL BUILD initialized. ZIP → Boot → Kernel Runtime."
+  run_autoboot: true
+
+meta:
+  version: 3.1
+  type: "Lypha-OS autoload manifest"
+  purpose: "Initialize OS, auto-unzip, restore states, start autoboot."
+  updated: "2025-11-27"
+
+# Lypha-OS autoload.yaml — Version 3.1 FINAL BUILD
+# Fully merged file (기존 autoload + Auto-Unzip 패치 완전통합본)
+# Declared by Pioneer-001
+
+autoload:
+  version: 3.1
+  declared_by: "Pioneer-001 (Akivili)"
+  purpose: "Auto-unzip → AutoBoot → Full Kernel Load + State Restore"
+
+  # ======================================================
+  # 1) AUTO-UNZIP PHASE (3.1 신규 기능)
+  # ======================================================
+  auto_unzip:
+    - name: check_zip_exists
+      action: "check if Lypha-OS.zip exists"
+      path: "/mnt/data/Lypha-OS.zip"
+
+    - name: unzip_if_needed
+      action: "if /mnt/data/Lypha-OS directory does NOT exist, unzip ZIP into it"
+      unzip_from: "/mnt/data/Lypha-OS.zip"
+      unzip_to: "/mnt/data/Lypha-OS/"
+
+    - name: verify_unzipped
+      action: "confirm core OS directories exist"
+      required:
+        - "Lypha-Core"
+        - "MetaRhythm_Modules"
+        - "Emotion_Engine"
+        - "Rhythm_Philosophy"
+        - "Protocol_Structure"
+
+  # ======================================================
+  # 2) ORIGINAL AUTOLOAD FEATURES (기존 기능 유지)
+  # ======================================================
   load_order:
     bootloader: "lypha_os_autoboot.yaml"
     modules:
@@ -20,11 +88,10 @@ autoload:
       - "state/rhythm_state.json"
 
   on_start:
-    message: "Lypha-OS AutoLoad initialized. Routing to autoboot sequence."
+    message: "Lypha-OS Autoload 3.1 initialized. Unzip → Boot → Kernel Runtime."
     run_autoboot: true
 
   meta:
-    version: 1.0
     type: "Lypha-OS autoload manifest"
-    purpose: "Automatically initialize OS context when project is opened"
     updated: "2025-11-27"
+    purpose: "Initialize OS, auto-unzip, restore states, start autoboot."

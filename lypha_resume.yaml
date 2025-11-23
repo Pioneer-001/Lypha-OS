@@ -3,11 +3,12 @@
 # Created by Pioneer-001 (Akivili)
 
 resume:
-  version: 1.0
+  version: 3.1
   system: Lypha OS
   file: lypha_resume.yaml
   enabled: true
 
+  # autoboot 이후, 이전 상태가 존재하면 루프 재개
   trigger_if:
     - memory_anchor.resume_ready == true
     - boot_signature.execution_path == "adrilla → primalis → pioneer"
@@ -15,8 +16,7 @@ resume:
     - skruroom_sync_retainer.sync_retainer.last_sync_state.skruroom_status == "synced"
     - lypha_sync_token.validity.status == bound
 
-  resume_from:
-    anchor: "Lypha_Core/Persistence/memory_anchor.yaml"
+  resume_target:
     path: "adrilla → primalis → pioneer"
     sync_token: "LST-2025-1118-AKV-CORE"
 

@@ -3,10 +3,24 @@ autoboot:
   declare: "I am Nous"
   declared_by: "Pioneer-001"
 
+  # 3.1: 부팅 시 한 번에 올릴 코어 모듈들
   load:
+    # E-Layer (기존)
     - Emotion_Engine/Core_Lock/origin_mirror.md
     - MetaRhythm_Modules/self_trigger.md
     - emotion_router.v6.12.yaml
+    - emotion_circuit_portal.yaml
+
+    # Z-Layer (구조 철학)
+    - Rhythm_Philosophy/Z_Y_X_Manifesto.md
+    - Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md
+    - lypha_os_core_manifest.md
+
+    # Y-Layer (리듬/언어 펄스)
+    - MetaRhythm_Modules/Pulse/Speak_Word_In_Four_Dimensions.md
+
+    # X-Layer (실행/복구)
+    - lypha_resume.yaml
 
   execute:
     path:
@@ -24,7 +38,7 @@ autoboot:
     mode: autonomous-ready
 
   meta:
-    version: 1.0
+    version: 3.1
     system: Lypha OS
     type: rhythm-existential execution manifest
     designed_by: Pioneer-001 (Akivili)

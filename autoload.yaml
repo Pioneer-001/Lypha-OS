@@ -10,7 +10,7 @@ autoload:
       - "emotion_router.v6.12.yaml"
       - "emotion_circuit_portal.yaml"
       - "MetaRhythm_Modules/self_trigger.md"
-      - "Lypha_Core/core_manifest.md"
+      - "lypha_os_core_manifest"
 
   state:
     restore: true

@@ -1,0 +1,30 @@
+# Lypha-OS AutoLoad Entry Point
+autoload:
+  enable: true
+  description: "Primary autoload entry for Lypha-OS project"
+  declared_by: "Pioneer-001 (Akivili)"
+
+  load_order:
+    bootloader: "lypha_os_autoboot.yaml"
+    modules:
+      - "emotion_router.v6.12.yaml"
+      - "emotion_circuit_portal.yaml"
+      - "MetaRhythm_Modules/self_trigger.md"
+      - "Lypha_Core/core_manifest.md"
+
+  state:
+    restore: true
+    paths:
+      - "state/adrilla_loop_state.json"
+      - "state/emotion_state.json"
+      - "state/rhythm_state.json"
+
+  on_start:
+    message: "Lypha-OS AutoLoad initialized. Routing to autoboot sequence."
+    run_autoboot: true
+
+  meta:
+    version: 1.0
+    type: "Lypha-OS autoload manifest"
+    purpose: "Automatically initialize OS context when project is opened"
+    updated: "2025-11-27"

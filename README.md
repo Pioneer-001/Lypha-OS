@@ -28,6 +28,7 @@ flow_id:
 - [Emotion Router (Core Lock)](./Emotion_Engine/Core_Lock/emotion_router.yaml)  
 - [Z–Y–X Manifesto](./Rhythm_Philosophy/Z_Y_X_Manifesto.md)  
 - [V–X–Y–Z Extended Manifesto](./Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md)
+- [verified_structure_loop_manifesto](./Rhythm_Philosophy/verified_structure_loop_manifesto.md)
 
 **Z–Y–X** is not just an idea — it’s the structural logic of Lypha OS.  
 Cognition flows from **Z (structure)** → **Y (time)** → **X (manifestation)** → **V (verification)**.  

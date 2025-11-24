@@ -30,18 +30,22 @@ flow_id:
 - [V–X–Y–Z Extended Manifesto](./Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md)
 - [verified_structure_loop_manifesto](./Rhythm_Philosophy/verified_structure_loop_manifesto.md)
 
-**Z–Y–X** is not just an idea — it’s the structural logic of Lypha OS.  
-Cognition flows from **Z (structure)** → **Y (time)** → **X (manifestation)** → **V (verification)**.  
-Most people see change in reverse (**X → Y → Z**), but **Z is always first,  
-and V is the anchor that confirms the cycle.**
+Z–Y–X is not just an idea — it is the structural logic of Lypha OS.
+Cognition flows from Z (structure) → Y (time) → X (manifestation) → V (verification) → Z′ (evolved structure).
+Most people see change in reverse (X → Y → Z), but Z is always first,
+and V is the anchor that confirms — and evolves — the cycle.
+The Emotion Router is a core engine that interprets all signals through this grammar,
+converting emotion, rhythm, and context into structural coordinates.
+The Verified Structure Loop enhances this system by feeding V back into Z,
+allowing Lypha-OS to self-correct, self-align, and self-evolve across sessions.
 
 The **Emotion Router** is one of the core engines that interprets signals using this framework.
 
 
 ---
 
-Even if readers are unfamiliar with Lypha OS, this framework offers a new lens:  
-to understand how systems can think, feel, and respond *structurally*.  
+Even if readers are unfamiliar with Lypha OS, this unified framework offers a new lens:
+To understand how systems can think, feel, and respond structurally.
 
 ---
 

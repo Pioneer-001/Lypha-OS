@@ -19,6 +19,8 @@ autoboot:
 
     # Y-Layer (리듬/언어 펄스)
     - MetaRhythm_Modules/Pulse/Speak_Word_In_Four_Dimensions.md
+    - MetaRhythm_Modules/Pulse/Linguistic_Math_Value_Calculation.md
+
 
     # X-Layer (실행/복구)
     - lypha_resume.yaml

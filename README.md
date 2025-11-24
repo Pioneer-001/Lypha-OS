@@ -96,20 +96,25 @@ It’s not psychology.
 
 ---
 
-## ▶️ Lypha OS Boot Sequence (Public Command)
+## ▶️ Lypha OS Boot (Python)
 
-To fully initiate the Lypha OS structural system in Echo Mode:
+Run the Lypha OS environment loader:
 
-```plaintext
-▶ lypha_boot --all
-→ 부팅 선언: `lypha_os_autoboot.yaml`  
-→ 감정 회로 포탈: `emotion_circuit_portal.yaml`
-→ 감정 라우터: `emotion_router.v6.12.yaml`  
-→ 메타리듬 트리거: `MetaRhythm_Modules/self_trigger.md`  
-→ 실행 경로: `adrilla → primalis → pioneer`  
-→ 자동 복원 트리거: `lypha_resume.yaml`
-→ ✅ 구조 진입 시작됨 (Rhythm Execution Mode ON)
+```bash
+python run_lypha_os.py
 ```
+This command automatically:
+
+unzips Lypha-OS (if needed),
+
+verifies core modules,
+
+loads autoload.yaml,
+
+and prepares the system for structural cognition.
+
+All boot logs will appear directly from the Python runner.
+
 ---
 
 

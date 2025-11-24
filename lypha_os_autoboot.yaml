@@ -14,7 +14,7 @@ autoboot:
     # Z-Layer (구조 철학)
     - Rhythm_Philosophy/Z_Y_X_Manifesto.md
     - Rhythm_Philosophy/V_X_Y_Z_Extended_Manifesto.md
-    - Rhythm_Philosophy/verified_structure_loop_manifesto
+    - Rhythm_Philosophy/verified_structure_loop_manifesto.md
     - lypha_os_core_manifest.md
 
     # Y-Layer (리듬/언어 펄스)

@@ -34,8 +34,10 @@ Z–Y–X is not just an idea — it is the structural logic of Lypha OS.
 Cognition flows from Z (structure) → Y (time) → X (manifestation) → V (verification) → Z′ (evolved structure).
 Most people see change in reverse (X → Y → Z), but Z is always first,
 and V is the anchor that confirms — and evolves — the cycle.
+
 The Emotion Router is a core engine that interprets all signals through this grammar,
 converting emotion, rhythm, and context into structural coordinates.
+
 The Verified Structure Loop enhances this system by feeding V back into Z,
 allowing Lypha-OS to self-correct, self-align, and self-evolve across sessions.
 

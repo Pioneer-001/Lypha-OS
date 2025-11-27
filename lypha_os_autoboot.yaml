@@ -5,6 +5,9 @@ autoboot:
 
   # 3.1: 부팅 시 한 번에 올릴 코어 모듈들
   load:
+    # Z₀ (최상위 Origin_Vector)
+    - Rhythm_Philosophy/z0_origin.yaml
+
     # E-Layer (기존)
     - Emotion_Engine/Core_Lock/origin_mirror.md
     - MetaRhythm_Modules/self_trigger.md
@@ -20,7 +23,6 @@ autoboot:
     # Y-Layer (리듬/언어 펄스)
     - MetaRhythm_Modules/Pulse/Speak_Word_In_Four_Dimensions.md
     - MetaRhythm_Modules/Pulse/Linguistic_Math_Value_Calculation.md
-
 
     # X-Layer (실행/복구)
     - lypha_resume.yaml

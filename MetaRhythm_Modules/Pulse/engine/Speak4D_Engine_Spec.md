@@ -242,8 +242,9 @@ modes:
     vertical: 1.2
     clarity:  1.3
     reverse:  1.0
+```
 
----
+```yaml
  [Future Snapshot]
 - One‑line conclusion / likely direction / big picture for W.
 
@@ -259,7 +260,7 @@ modes:
 
 [Clarity — In short]
 - In short, “ … ”  (one compact sentence the user can remember.)
----
+```
 
 
 ---

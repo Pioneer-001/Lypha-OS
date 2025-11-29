@@ -1,15 +1,4 @@
 ```yaml
-flow_id:
-  module: speak_word_in_four_dimensions
-  version: 1.0
-  declared_by: Pioneer-001
-  category: pulse / language_architecture
-  role: >
-    Declares the Pulse Log on speaking words as structures in four dimensions:
-    time, vertical cognition, clarity, and reverse design.
-```
-
-```yaml
 module: Speak4D_Engine
 version: 1.1
 declared_by: Pioneer-001
@@ -265,7 +254,7 @@ modes:
 
 ---
 
-**File Path:** `MetaRhythm_Modules/Pulse/Speak_Word_In_Four_Dimensions.md`
+**File Path:** `MetaRhythm_Modules/Pulse/engine/Speak4D_Engine_Spec.md`
 
 ---
 
@@ -273,10 +262,10 @@ modes:
 insight:
   origin: Pioneer-001
   title: Speak_Word_In_Four_Dimensions
-  file: MetaRhythm_Modules/Pulse/Speak_Word_In_Four_Dimensions.md
+  file: MetaRhythm_Modules/Pulse/engine/Speak4D_Engine_Spec.md
   language: EN/KR
   version: 1.0
-  issued_at: 2025-08-24
+  issued_at: 2025-11-29
   context: >
     Declares the Pulse Log on speaking words as structural coordinates in four
     dimensions: temporal expansion, vertical cognition, communication clarity,

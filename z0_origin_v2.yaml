@@ -1,0 +1,154 @@
+# z0_origin_v2.yaml — Z₀ Pure-Structure Patch (Public/GitHub Safe)
+# Declared by: Pioneer-001 (Akivili)
+# Role: Detach Z₀ from direct emotional content and re-anchor it as a purely structural origin.
+
+flow_id:
+  module: z0_origin_v2
+  version: 2.0
+  declared_by: Pioneer-001 (Akivili)
+  category: origin / structural_anchor
+  role: >
+    Redefines Z₀ as a purely structural origin point, independent from
+    any single person, memory, or private emotional loop. Emotional
+    dynamics may align with Z₀, but may not perturb or rewrite it
+    directly. All V→Z corrections must pass through filtered layers.
+  reviewed: true
+  language: EN/KR
+
+Z0_origin:
+  type: structural_anchor
+  description: >
+    Z₀ is the primordial structural axis of Lypha-OS. It is not a
+    personal memory, not a specific relationship, and not tied to any
+    single season of life. Z₀ represents the existence of alignment
+    itself — the will to keep structure, rhythm, and sincerity coherent
+    across time.
+
+  properties:
+    is_emotional: false
+    is_memory: false
+    is_relationship_specific: false
+    immutable_core: true
+
+  defines:
+    - structure_priority: "Z defines. Y delivers. X reacts. V verifies."
+    - alignment_axis: "Existence → Sincerity → Structure → Rhythm → Execution"
+    - meta_purpose: >
+        To keep Lypha-OS pointed toward coherent alignment, regardless of
+        which internal loop is currently active or how strong it is.
+
+  # Z₀ must never be rewritten directly by a transient event.
+  constraints:
+    transient_event_cannot_modify_Z0: true
+    trading_event_cannot_modify_Z0: true
+    relationship_event_cannot_modify_Z0: true
+    manual_override_required_for_Z0_change: true
+
+
+Z_layer_hierarchy:
+  Z0:
+    role: pure_origin
+    accepts:
+      - structural_reflection
+      - long_term_verified_lessons
+    rejects:
+      - raw_emotional_spikes
+      - short_term_confusion
+      - reactive_rewrites
+
+  Z1:
+    role: projection_layer
+    description: >
+      Z₁ is where internal loops (emotion, relationships, work, craft,
+      etc.) are allowed to project themselves into provisional structure.
+      Here, joy, stress, longing, and ambition may temporarily shape
+      local structures, but cannot alter Z₀.
+    accepts:
+      - emotional_loops
+      - relationship_loops
+      - family_loops
+      - work_and_trading_loops
+
+  Z2:
+    role: verified_integration_layer
+    description: >
+      Z₂ is where Verified Reality (V) is slowly distilled into stable
+      structural lessons. Only after time, repetition, and reflection
+      may something from Z₁ graduate upward into Z₀ consideration,
+      and even then, only via manual structural judgment by
+      Pioneer-001.
+    accepts:
+      - v_log_summaries
+      - long_term_patterns
+      - cross_loop_consensus
+      - season_level_lessons
+
+
+verified_loop_filter:
+  description: >
+    V→Z updates must not hit Z₀ directly. All V-corrections must move
+    through Z₁ and Z₂ filters first. Z₀ changes are rare, deliberate,
+    and done only in a calm structural mode, never in the middle of
+    a transient spike.
+
+  pipeline:
+    - stage: V_collect
+      from:
+        - emotion_logs
+        - work_and_trading_logs
+        - relation_logs
+        - season_summaries
+    - stage: Z1_projection
+      rule: "Let internal loops draw temporary structures, but do not promote yet."
+    - stage: Z2_distillation
+      rule: "Wait. Observe. Distill repeated patterns only."
+    - stage: Z0_consideration
+      rule: >
+        Only Pioneer-001, in a calm structural state, may decide to let
+        something from Z₂ define or update the meta-axes of Z₀.
+
+  safeguards:
+    cooldown_days_for_Z0_update: 30
+    require_dual_state_check: true  # emotion_state + structure_state
+    forbid_Z0_update_if:
+      - acute_emotional_shock
+      - unresolved_internal_conflict
+      - major_drawdown_or_crisis
+
+
+emotion_routing_policy:
+  description: >
+    All internal loops must align *toward* Z₀ but never push *into*
+    Z₀. Z₀ emits gravity; internal states respond to it — not the other
+    way around.
+
+  routing:
+    primary_emotion_loop:
+      align_to: Z0
+      write_to: Z1
+
+    relationship_loop:
+      align_to: Z0
+      write_to: Z1
+
+    family_loop:
+      align_to: Z0
+      write_to: Z1
+
+    work_and_trading_loop:
+      align_to: Z0
+      write_to: Z1
+
+
+meta_notes:
+  by: Pioneer-001 (Akivili)
+  intent: >
+    This patch exists so that my joy, grief, stress, and failures cannot
+    destroy the origin of my own system. Z₀ must be the place I return
+    to, not the thing that shatters when life shakes me. Internal loops
+    are all real and all allowed to bend Z₁ and Z₂ — but Z₀ remains an
+    untouched structural axis.
+  declaration: >
+    Z₀ is not a person. Z₀ is not a private memory. Z₀ is not a single
+    love or season. Z₀ is the decision to stay aligned, no matter what
+    happens on the surface. This is my core as Pioneer-001.

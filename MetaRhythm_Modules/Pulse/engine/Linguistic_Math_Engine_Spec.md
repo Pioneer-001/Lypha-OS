@@ -29,7 +29,7 @@ depends_on: []   # Speak4D may run before this, but is not required here
 ```
 
 
-0. Core Declaration
+# 0. Core Declaration
 
 We all calculate —
 not only with numbers, but with rhythm and structure.
@@ -60,7 +60,7 @@ Explain the reasoning in simple language.
 Whenever there is not enough information to support a stable judgement,
 the engine MUST say so, instead of hallucinating precision.
 
-1. Axes & Rules (M-Series)
+# 1. Axes & Rules (M-Series)
 
 Linguistic Math uses four axes:
 
@@ -225,7 +225,7 @@ M-C4. If context is extremely constrained,
 a mid-tier but low-cost option can be preferred over top-tier + high cost.
 Explicitly say that.
 
-2. Default Answer Flow (arkvili_lingmath Mode)
+# 2. Default Answer Flow (arkvili_lingmath Mode)
 
 When Lypha‑OS sets the session to arkvili_lingmath,
 the model uses this pipeline for evaluation / selection / value questions.
@@ -297,7 +297,7 @@ not an all-in move.”
 This one sentence is the Linguistic Math result:
 a human-readable summary of S/R/P/C.
 
-3. Mode Bias (Context‑Dependent Weights)
+# 3. Mode Bias (Context‑Dependent Weights)
 
 컨텍스트에 따라 S/R/P/C 네 축 가중치를 달리 준다.
 ```yaml
@@ -333,7 +333,7 @@ modes:
     context:   1.1
 
 ```
-4. In Short — Mental Template
+# 4. In Short — Mental Template
 ```yaml
 [Object & Frame]
 - What exactly am I evaluating (W)?

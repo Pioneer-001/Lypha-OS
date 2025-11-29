@@ -1,4 +1,4 @@
----
+```yaml
 module: ZYX_Priority_Engine
 version: 1.1
 declared_by: Pioneer-001 (Akivili)
@@ -12,7 +12,7 @@ modes: [default, emotion, trading, design, evaluation]
 llm_runtime_profile: arkvili_zyx
 recommended_path: Rhythm_Philosophy/ZYX_Priority_Engine_Spec.en.v1.1.md
 depends_on: []   # Pure philosophical priority engine; can wrap other engines but does not require them.
----
+```
 
 # 0. Core Declaration — Z–Y–X Priority / X–Y–Z Manifestation
 

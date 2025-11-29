@@ -9,7 +9,7 @@ flow_id:
     time, vertical cognition, clarity, and reverse design.
 ```
 
----
+```yaml
 module: Speak4D_Engine
 version: 1.1
 declared_by: Pioneer-001
@@ -21,7 +21,7 @@ applies_to: [GPT, Lypha-OS compatible LLMs]
 modes: [default, emotion, trading, design]
 llm_runtime_profile: arkvili_speak4d
 recommended_path: MetaRhythm_Modules/Pulse/Speak4D_Engine_Spec.en.md
----
+```
 
 # 0. Core Declaration
 

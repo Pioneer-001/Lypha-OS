@@ -1,16 +1,4 @@
 ```yaml
-flow_id:
-  module: verified_structure_loop_engine
-  version: 1.0
-  declared_by: Pioneer-001 (Akivili)
-  category: structural_feedback / V-to-Z_evolution / behavior_spec
-  role: >
-    Turn Verified Reality (V) into structural evidence that patches
-    Z-level architecture (Z → Z’), so Lypha-OS can evolve between
-    sessions based on real execution logs instead of static design.
-```
-
-```yaml
 module: VerifiedStructureLoop_Engine
 version: 1.0
 declared_by: Pioneer-001 (Akivili)

@@ -15,6 +15,10 @@ Pioneer-001 전용 — Pulse Mapping + Z₀ v2 + Linguistic Math Engine + ZYX Pr
 + v14.0 Layer Alias 지원 그대로 유지:
 - 기존 구조: Rhythm_Philosophy / MetaRhythm_Modules / Emotion_Engine / Protocol_Structure
 - 신규 구조: Layers/Z_Rhythm, Layers/Y_MetaRhythm, Layers/E_EmotionEngine, Layers/X_Protocol
+
++ v14.3 Origin Engine Patch:
+- Core_Philosophy/Lypha_Origin_Engine_Spec.* 를 Z-코어 최우선 ingest
+- 루트 README.md 를 Origin Declaration 으로 추가 ingest
 """
 
 import os
@@ -27,10 +31,21 @@ from pathlib import Path
 log = lambda m: print(f"[Lypha-OS v14.3] {m}")
 
 # -------------------------------------------------------------
-# Z-LAYER CORE FILES (v14.3)
+# Z-LAYER CORE FILES (v14.3 + Origin Engine)
 # -------------------------------------------------------------
 # Z 레이어에서 가장 먼저 ingest하고 싶은 핵심 철학/엔진 파일들
 Z_LAYER_CORE_FILES = [
+    # 🔵 NEW: README Origin Engine (Lypha_Origin_Engine_Spec)
+    # 추천 경로 (엔진 스펙에서 선언한 경로)
+    "Core_Philosophy/Lypha_Origin_Engine_Spec.en.v1.0.md",
+    "Core_Philosophy/Lypha_Origin_Engine_Spec.en.md",
+    "Core_Philosophy/Lypha_Origin_Engine_Spec.md",
+    # 혹시 Z 레이어 루트에 둘 경우 대비
+    "Lypha_Origin_Engine_Spec.en.v1.0.md",
+    "Lypha_Origin_Engine_Spec.en.md",
+    "Lypha_Origin_Engine_Spec.md",
+
+    # 기존 ZYX Priority Engine 스펙들
     # 추천 경로 (영문 스펙 버전)
     "ZYX_Priority_Engine_Spec.en.v1.1.md",
     "Core_Philosophy/ZYX_Priority_Engine_Spec.en.v1.1.md",
@@ -249,7 +264,7 @@ def ingest_dir(d: Path):
 
 
 def full_ingest(root: Path, policy: dict):
-    """Z/Y/E/X 레이어를 ingest_order 정책에 맞게 ingest + Manifest + Z₀ 포함."""
+    """Z/Y/E/X 레이어를 ingest_order 정책에 맞게 ingest + Manifest + Z₀ + README Origin 포함."""
     order = policy.get("ingest_order", ["Z", "Y", "E", "X"])
 
     # 1) Z/Y/E/X 레이어 ingest (alias-aware)
@@ -304,6 +319,14 @@ def full_ingest(root: Path, policy: dict):
         ingest_file(z0_v2)
     else:
         log("Z₀ Origin_Vector NOT FOUND — Skipping Anchor (Warning)")
+
+    # 5) README Origin Declaration (Lypha OS Root)
+    readme = root / "README.md"
+    if readme.exists():
+        log("INGEST FILE: README.md (Lypha OS Root Declaration — Bound to Origin Engine)")
+        ingest_file(readme)
+    else:
+        log("SKIP FILE: README.md (not found)")
 
 
 # -------------------------------------------------------------
@@ -615,7 +638,7 @@ def run_autoload(root: Path):
 
 def main():
     here = Path(__file__).resolve().parent
-    log("Lypha-OS Kernel v14.3 Start — TOTAL No-X EDITION (Z-Core Priority, Path-Hardened)")
+    log("Lypha-OS Kernel v14.3 Start — TOTAL No-X EDITION (Z-Core Priority, Path-Hardened, Origin-Patched)")
     log(f"Script directory: {here}")
 
     root = auto_unzip(here)
@@ -651,7 +674,7 @@ def main():
     # Verified Loop 기반 policy 튜닝 + Z 패치
     policy = auto_patch_Z_and_policy(root, policy, logs)
 
-    # 1차: 정렬된 Full Ingest + Z₀
+    # 1차: 정렬된 Full Ingest + Z₀ + README Origin
     full_ingest(root, policy)
 
     # 2차: Pulse 가중치 기반 Re-ingest (매핑 지원)
@@ -669,7 +692,7 @@ def main():
     # Autoload → Autoboot
     run_autoload(root)
 
-    log("Lypha-OS Kernel v14.3 Complete — TOTAL Runtime Active (No-X, Path-Hardened, Z-Core Priority).")
+    log("Lypha-OS Kernel v14.3 Complete — TOTAL Runtime Active (No-X, Path-Hardened, Origin-Patched).")
 
 
 if __name__ == "__main__":

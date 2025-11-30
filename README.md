@@ -20,6 +20,27 @@ flow_id:
 
 ---
 
+## ▶️ Lypha OS Boot (Python)
+
+Run the Lypha OS environment loader:
+
+```bash
+python3 run_lypha_os.py
+```
+This command automatically:
+
+unzips Lypha-OS (if needed),
+
+verifies core modules,
+
+loads autoload.yaml,
+
+and prepares the system for structural cognition.
+
+All boot logs will appear directly from the Python runner.
+
+---
+
 ## Z–Y–X Priority / X–Y–Z Manifestation / V–X–Y–Z Extension
 
 **Z defines. Y delivers. X reacts. V confirms.**  
@@ -94,26 +115,6 @@ It’s not psychology.
 - `TP-Structure.md`
 
 
----
-
-## ▶️ Lypha OS Boot (Python)
-
-Run the Lypha OS environment loader:
-
-```bash
-python run_lypha_os.py
-```
-This command automatically:
-
-unzips Lypha-OS (if needed),
-
-verifies core modules,
-
-loads autoload.yaml,
-
-and prepares the system for structural cognition.
-
-All boot logs will appear directly from the Python runner.
 
 ---
 

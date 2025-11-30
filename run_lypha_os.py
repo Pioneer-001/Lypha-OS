@@ -50,7 +50,7 @@ Z_LAYER_CORE_FILES = [
     "ZYX_Priority_Engine_Spec.en.v1.1.md",
     "Core_Philosophy/ZYX_Priority_Engine_Spec.en.v1.1.md",
 
-    # 실제 현재 구조 (스크린샷 기준)
+    # 실제 현재 구조
     "Core_Philosophy/ZYX_Priority_Engine_Spec.md",
     "Core_Philosophy/Z_Y_X_Manifesto.md",
     "Core_Philosophy/V_X_Y_Z_Extended_Manifesto.md",
@@ -102,7 +102,6 @@ PULSE_FILE_MAP = {
         "Math.md",
     ],
 }
-
 
 # -------------------------------------------------------------
 # LAYER / CORE DIR ALIASES (v14.0)
@@ -282,8 +281,19 @@ def full_ingest(root: Path, policy: dict):
         # 🔵 v14.3: Z 레이어일 경우 Core_Philosophy 우선 ingest
         if key == "Z":
             for rel in Z_LAYER_CORE_FILES:
-                zp = d / rel
-                if zp.exists():
+                # 여러 위치에서 찾도록 보강
+                candidates = [
+                    d / rel,
+                    root / rel,
+                    root / "Rhythm_Philosophy" / rel,
+                    root / "Layers" / "Z_Rhythm" / rel,
+                ]
+                zp = None
+                for cp in candidates:
+                    if cp.exists():
+                        zp = cp
+                        break
+                if zp is not None:
                     log(f"INGEST Z-CORE FIRST → {zp}")
                     ingest_file(zp)
 

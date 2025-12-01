@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Lypha-OS Kernel v15.0 — Season 7 EDITION
-=========================================
+Lypha-OS Kernel v16.0 — Season 7 CORE+
+======================================
 
 Pioneer-001 전용 — Origin Engine + ZYX Priority + Speak4D
 + Linguistic Math + Verified Structure Loop + VXYZ Extended Engine
-+ FlowGraph Engine (Flow → Path 엔진)까지 완전 연동된 버전.
++ Collapse Engine + DualOutcome Simulation Engine + FlowGraph Engine
+(Flow → Essence → Risk Envelope → Path)까지 완전 연동된 내장형 코어 버전.
 
 기술 포인트:
 - Path-Hardening: 어디서 실행해도 Lypha-OS 루트/zip 자동 인식 & 압축해제
 - Z-Core Priority: Origin / ZYX / VerifiedLoop / VXYZ / Manifestos 먼저 ingest
 - Verified Structure Loop: v_log 기반으로 z_patch.json 생성 + policy 튜닝
 - VXYZ Extended Engine: V(과거)–X(현재)–Y(리듬)–Z(미래구조) projection 생성
-- FlowGraph Engine: Flow(Z/Y/E) → Essence Word → Path(Direction, Timing, Coordinate) 생성
-- Cognitive Graph: context + policy + rhythm + flowgraph 정보를 기반으로 가중치 그래프 생성
+- Collapse Engine: 복잡한 흐름을 하나의 Essence Word로 축약 (축 기반 압축)
+- DualOutcome SimEngine: 성공/실패 두 미래를 구조적으로 시뮬레이션해 Risk Envelope 생성
+- FlowGraph Engine: Flow(Z/Y/E/Collapse) → Path(Direction, Timing, Coordinate) 생성
+- Cognitive Graph: context + policy + rhythm + collapse + flowgraph (+ dual_outcome) 기반 가중치 그래프 생성
 - Pulse Re-ingest: Speak4D / Math / Collapse / FlowGraph 문서 2-pass ingest
 """
 
@@ -28,7 +31,7 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-log = lambda m: print(f"[Lypha-OS v15.0] {m}")
+log = lambda m: print(f"[Lypha-OS v16.0] {m}")
 
 # -------------------------------------------------------------
 # Z-LAYER CORE FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)
@@ -92,6 +95,7 @@ PULSE_FILE_MAP = {
         "Speak_Word_In_Four_Dimensions.md",
     ],
     "Collapse": [
+        "engine/Collapse_Engine_Spec.md",
         "concept/Collapse_Flow_Into_Word.md",
         "Collapse_Flow_Into_Word.md",
         "Collapse.md",
@@ -372,7 +376,7 @@ def detect_context(msg: str) -> str:
 
 def load_logs(root: Path) -> Dict[str, Any]:
     """
-    v15.0: root/v_logs + root/logs/v_logs + root/v_log.json + root/logs/v_log.json 모두 지원.
+    v16.0: root/v_logs + root/logs/v_logs + root/v_log.json + root/logs/v_log.json 모두 지원.
     """
     merged: Dict[str, Any] = {}
 
@@ -400,6 +404,7 @@ def build_graph(
     logs: Dict[str, Any],
     vxyz_projection: Optional[Dict[str, Any]],
     flowgraph: Optional[Dict[str, Any]],
+    collapse: Optional[Dict[str, Any]],
 ) -> Dict[str, Any]:
     base_emo = policy.get("emotion_weight", 1.0)
     base_str = policy.get("structure_weight", 1.0)
@@ -435,6 +440,16 @@ def build_graph(
             "timing_window": timing_window,
         }
 
+    collapse_info = {}
+    if collapse:
+        ess = collapse.get("essence") or {}
+        comp = collapse.get("compression") or {}
+        collapse_info = {
+            "essence_word": ess.get("word"),
+            "confidence": ess.get("confidence"),
+            "compression_band": comp.get("band"),
+        }
+
     g: Dict[str, Any] = {
         "nodes": nodes,
         "edges": edges,
@@ -447,6 +462,7 @@ def build_graph(
         "verified_log_keys": list(logs.keys()) if logs else [],
         "rhythm": rhythm_info,
         "flowgraph": fg_info,
+        "collapse": collapse_info,
         "macro_reason": {
             "mode": "planning" if context in ("trading", "design", "evaluation") else "support",
             "intent_bias": {
@@ -522,6 +538,24 @@ def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
         weights["FlowGraph"] += 0.1
     elif timing_window in ("wait", "abandon"):
         weights["Collapse"] += 0.1
+
+    # CollapseEngine compression band 기반 가중치
+    collapse = graph.get("collapse") or {}
+    band = collapse.get("compression_band")
+    if band == "hard":
+        weights["Collapse"] += 0.3
+    elif band == "normal":
+        weights["Collapse"] += 0.1
+    # light는 추가 가중치 없음
+
+    # DualOutcome 기반 가중치 (stance)
+    dual = graph.get("dual_outcome") or {}
+    stance = dual.get("recommended_stance")
+    if stance == "enter":
+        weights["FlowGraph"] += 0.1
+    elif stance in ("reduce", "skip"):
+        weights["Collapse"] += 0.15
+        weights["Math"] += 0.1
 
     # edge 기반 weight 보정
     for u, v, w in graph.get("edges", []):
@@ -891,18 +925,457 @@ def run_vxyz_engine(root: Path, logs: Dict[str, Any], context: str) -> Dict[str,
 
 
 # -------------------------------------------------------------
-# FLOWGRAPH ENGINE RUNNER (Flow → Essence Word → Path)
+# COLLAPSE ENGINE (Flow → Essence Word)
 # -------------------------------------------------------------
-def run_flowgraph_engine(
+def run_collapse_engine(
     root: Path,
     logs: Dict[str, Any],
     vxyz_projection_inner: Optional[Dict[str, Any]],
     context: str,
 ) -> Dict[str, Any]:
     """
-    Season 7 FlowGraph Engine Runner
+    Season 7 CollapseEngine Runner
+    - 복잡한 흐름(flow_description + logs + tags)을 단일 Essence Word로 축약
+    - collapse_output.json 생성
+    """
+    context_lower = context or "default"
+
+    auto = load_yaml(root / "autoload.yaml") or {}
+    on_start_msg = (auto.get("autoload", auto).get("on_start", {}) or {}).get("message")
+    flow_description = on_start_msg or f"Session-level flow in context='{context_lower}'."
+
+    # tags & dominant tags
+    tag_counts: Dict[str, int] = {}
+    for payload in logs.values():
+        for entry in _iter_v_entries(payload):
+            tags = entry.get("tags") or []
+            if isinstance(tags, str):
+                tags = [tags]
+            for t in tags:
+                tag_counts[t] = tag_counts.get(t, 0) + 1
+
+    dominant_tags = sorted(tag_counts.items(), key=lambda x: -x[1])
+    all_tags = [t for t, _ in dominant_tags]
+
+    # context-based axis templates
+    axis_templates = {
+        "emotion": ["trust", "belonging", "abandonment", "safety", "power"],
+        "trading": ["risk", "liquidity", "regime", "leverage", "conviction"],
+        "design": ["structure", "rhythm", "clarity", "coherence", "latency"],
+        "evaluation": ["value", "rank", "worth", "signal", "noise"],
+        "default": ["structure", "rhythm", "signal", "human"],
+    }
+    axes = axis_templates.get(context_lower, axis_templates["default"])
+
+    text_lower = (flow_description or "").lower() + " " + " ".join(all_tags).lower()
+
+    # candidate generation
+    candidates = []
+    used_words = set()
+
+    # 1) axis-based candidates
+    for ax in axes:
+        if ax.lower() in text_lower:
+            candidates.append({
+                "word": ax,
+                "score": 0.9,
+                "axes": {
+                    "axis_label": ax,
+                    "justification": f"Axis '{ax}' appears in flow/tags and matches context.",
+                },
+            })
+            used_words.add(ax)
+
+    # 2) tag-based candidate
+    if dominant_tags:
+        top_tag = dominant_tags[0][0]
+        if top_tag not in used_words:
+            candidates.append({
+                "word": top_tag,
+                "score": 0.8,
+                "axes": {
+                    "axis_label": "tag",
+                    "justification": f"Dominant tag '{top_tag}' in logs.",
+                },
+            })
+            used_words.add(top_tag)
+
+    # 3) fallback candidate based on context
+    if not candidates:
+        fallback_word = context_lower if context_lower not in ("neutral", "default") else "structure"
+        candidates.append({
+            "word": fallback_word,
+            "score": 0.7,
+            "axes": {
+                "axis_label": "context",
+                "justification": f"Using context '{context_lower}' as fallback axis.",
+            },
+        })
+        used_words.add(fallback_word)
+
+    # ensure not too many
+    candidates = candidates[:5]
+
+    # choose essence word
+    best = max(candidates, key=lambda c: c.get("score", 0.0))
+    essence_word = best["word"]
+    max_score = best.get("score", 0.0)
+
+    if max_score >= 0.88:
+        confidence = "high"
+    elif max_score >= 0.75:
+        confidence = "medium"
+    else:
+        confidence = "low"
+
+    # compression band: based on flow_description length
+    length = len((flow_description or "").split())
+    if length < 12:
+        band = "light"
+    elif length < 40:
+        band = "normal"
+    else:
+        band = "hard"
+
+    collapse_inner: Dict[str, Any] = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "context": context_lower,
+        "input": {
+            "flow_description": flow_description,
+            "context": context_lower,
+            "tags_used": all_tags,
+        },
+        "candidates": candidates,
+        "essence": {
+            "word": essence_word,
+            "confidence": confidence,
+            "axis": {
+                "label": best["axes"].get("axis_label"),
+                "description": best["axes"].get("justification"),
+            },
+            "notes": [
+                "Essence Word chosen by CollapseEngine v1.0 from flow_description + tags + context."
+            ],
+        },
+        "compression": {
+            "band": band,
+            "comment": (
+                "'normal' means enough compression to get a single axis "
+                "without erasing decision-relevant nuance."
+            ),
+        },
+        "links": {
+            "vxyz_used": bool(vxyz_projection_inner),
+            "flowgraph_used": False,
+            "linguistic_math_used": False,
+        },
+        "notes": [
+            "CollapseEngine is advisory; Pioneer-001 may override the Essence Word.",
+            "This Essence Word can be passed to FlowGraph.essence_word and Speak4D.",
+        ],
+    }
+
+    out = {"collapse_output": collapse_inner}
+    out_path = root / "collapse_output.json"
+    write_json(out_path, out)
+    log(
+        f"CollapseEngine output written → {out_path} "
+        f"(essence='{essence_word}', confidence={confidence}, band={band})"
+    )
+
+    return out
+
+
+# -------------------------------------------------------------
+# DUALOUTCOME SIMULATION ENGINE (Success/Failure Risk Envelope)
+# -------------------------------------------------------------
+def run_dualoutcome_engine(
+    root: Path,
+    logs: Dict[str, Any],
+    vxyz_projection_inner: Optional[Dict[str, Any]],
+    context: str,
+) -> Dict[str, Any]:
+    """
+    Season 7 DualOutcome Simulation Engine Runner
+    - 성공/실패 두 경로를 구조적으로 시뮬레이션
+    - dual_sim_output.json 생성 (Risk Envelope)
+    """
+    context_lower = context or "default"
+
+    # CollapseEngine output (optional, for nicer action frame)
+    collapse_json = read_json(root / "collapse_output.json")
+    collapse_inner = collapse_json.get("collapse_output") if collapse_json else None
+    collapse_ess = (collapse_inner or {}).get("essence") or {}
+    collapse_word = collapse_ess.get("word")
+
+    # 1) Action description/frame (세션 단위 결정을 대상으로)
+    auto = load_yaml(root / "autoload.yaml") or {}
+    on_start_msg = (auto.get("autoload", auto).get("on_start", {}) or {}).get("message")
+
+    base_desc = on_start_msg or f"Lypha-OS session decision in context='{context_lower}'"
+    if collapse_word:
+        action_description = f"[{collapse_word}] {base_desc}"
+    else:
+        action_description = base_desc
+
+    action_frame = "Session-level decision about how aggressively to engage this context."
+
+    # 2) 로그 기반 실패/리스크 시그널 집계
+    total_emotion_fail = 0
+    total_structure_fail = 0
+    total_timing_miss = 0.0
+    total_rhythm_desync = 0.0
+    total_entries = 0
+    total_emotional_collapse = 0.0
+    collapse_count = 0
+
+    for payload in logs.values():
+        for entry in _iter_v_entries(payload):
+
+            total_entries += 1
+
+            def _get_num(key: str, default: float = 0.0) -> float:
+                v = entry.get(key, default)
+                if isinstance(v, bool):
+                    return 1.0 if v else 0.0
+                try:
+                    return float(v)
+                except Exception:
+                    return default
+
+            total_emotion_fail += int(_get_num("emotion_fail", 0.0))
+            total_structure_fail += int(_get_num("structure_fail", 0.0))
+            total_timing_miss += _get_num("timing_miss", 0.0)
+            total_rhythm_desync += _get_num("rhythm_desync", 0.0)
+
+            ec = entry.get("emotional_collapse", 0.0)
+            try:
+                ec_val = float(ec)
+                total_emotional_collapse += ec_val
+                collapse_count += 1
+            except Exception:
+                pass
+
+    avg_emotional_collapse = total_emotional_collapse / collapse_count if collapse_count > 0 else 0.0
+    avg_timing_miss = total_timing_miss / total_entries if total_entries > 0 else 0.0
+    avg_desync = total_rhythm_desync / total_entries if total_entries > 0 else 0.0
+    fail_score = (total_emotion_fail + total_structure_fail) / max(total_entries, 1)
+
+    def _band_from_value(v: float) -> str:
+        if v <= 0.05:
+            return "none"
+        elif v < 0.35:
+            return "low"
+        elif v < 0.75:
+            return "medium"
+        else:
+            return "high"
+
+    # 3) Failure Path 손실 밴드 추정
+    loss_time = _band_from_value(avg_timing_miss)
+    loss_energy = _band_from_value(avg_emotional_collapse)
+    loss_money = _band_from_value(total_structure_fail / max(total_entries, 1))
+    loss_reputation = _band_from_value(total_emotion_fail / max(total_entries, 1))
+
+    # 4) Risk Envelope width/skew/capacity_fit 계산
+    if total_entries > 0:
+        risk_score = (avg_emotional_collapse + avg_timing_miss + avg_desync) / 3.0
+    else:
+        risk_score = 0.3  # 로그 없을 때는 적당한 중간값
+
+    # width
+    if risk_score < 0.25:
+        width = "narrow"
+    elif risk_score < 0.6:
+        width = "moderate"
+    else:
+        width = "wide"
+
+    # skew
+    if fail_score < 0.5:
+        skew = "upside"
+    elif fail_score > 1.5:
+        skew = "downside"
+    else:
+        skew = "symmetric"
+
+    # capacity_fit (컨텍스트별)
+    if total_entries == 0:
+        capacity_fit = "inside_capacity"
+    else:
+        if context_lower == "emotion":
+            if avg_emotional_collapse < 0.4:
+                capacity_fit = "inside_capacity"
+            elif avg_emotional_collapse < 0.8:
+                capacity_fit = "at_edge"
+            else:
+                capacity_fit = "beyond_capacity"
+        elif context_lower == "trading":
+            if risk_score < 0.4:
+                capacity_fit = "inside_capacity"
+            elif risk_score < 0.8:
+                capacity_fit = "at_edge"
+            else:
+                capacity_fit = "beyond_capacity"
+        else:
+            # 일반 컨텍스트: wide면 edge, 아니면 inside
+            capacity_fit = "at_edge" if width == "wide" else "inside_capacity"
+
+    # stance_rules (spec 그대로 적용)
+    if capacity_fit == "beyond_capacity":
+        recommended_stance = "skip"
+    elif width == "wide" and skew == "downside":
+        recommended_stance = "reduce"
+    elif skew == "upside" and width in ("narrow", "moderate"):
+        recommended_stance = "enter"
+    else:
+        recommended_stance = "hedge"
+
+    # 5) Success Path rough 구조
+    if context_lower == "trading":
+        success_structure = "More structurally aligned risk-taking and clearer regime memory."
+        success_scope = "self | broader_system"
+    elif context_lower == "emotion":
+        success_structure = "Deeper but bounded emotional connection and cleaner patterns of contact."
+        success_scope = "self | close_circle"
+    elif context_lower == "design":
+        success_structure = "Richer structural OS and more consistent execution rhythm."
+        success_scope = "self | close_circle | broader_system"
+    elif context_lower == "evaluation":
+        success_structure = "Sharper value tiers and cleaner selection rules."
+        success_scope = "self | close_circle"
+    else:
+        success_structure = "Incremental structural learning in this context."
+        success_scope = "self"
+
+    # VXYZ rhythm → success horizon/pattern
+    horizon = "mid_term"
+    pattern = "steady_wave"
+
+    if vxyz_projection_inner:
+        phase = vxyz_projection_inner.get("rhythm", {}).get("phase", "")
+        tempo = vxyz_projection_inner.get("rhythm", {}).get("tempo", "")
+        if phase == "early_cycle":
+            horizon = "short_term"
+        elif phase == "mid_cycle":
+            horizon = "mid_term"
+        elif phase == "late_cycle":
+            horizon = "long_term"
+
+        if tempo == "compressed":
+            pattern = "spike"
+        elif tempo == "extended":
+            pattern = "slow_build"
+        elif tempo == "normal":
+            pattern = "steady_wave"
+        else:
+            pattern = "uncertain"
+
+    # Failure echo scope
+    if context_lower == "emotion":
+        failure_scope = "self+close_circle"
+    elif context_lower == "trading":
+        failure_scope = "self_only"
+    else:
+        failure_scope = "self_only"
+
+    # Recovery Path
+    if capacity_fit == "beyond_capacity" and width == "wide" and skew == "downside":
+        recovery_possible = True  # 여전히 가능하지만 길고 힘든 루트
+        recovery_horizon = "long_term"
+    elif width == "narrow":
+        recovery_possible = True
+        recovery_horizon = "short_term"
+    else:
+        recovery_possible = True
+        recovery_horizon = "mid_term"
+
+    dual_inner: Dict[str, Any] = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "context": context_lower,
+        "action": {
+            "description": action_description,
+            "frame": action_frame,
+        },
+        "success_path": {
+            "structure_gain": success_structure,
+            "rhythm": {
+                "horizon": horizon,
+                "pattern": pattern,
+            },
+            "echo": {
+                "scope": success_scope,
+                "notes": [
+                    "Success primarily strengthens your structural capacity inside this context."
+                ],
+            },
+        },
+        "failure_path": {
+            "loss_band": {
+                "time": loss_time,
+                "energy": loss_energy,
+                "money": loss_money,
+                "reputation": loss_reputation,
+            },
+            "echo": {
+                "scope": failure_scope,
+                "notes": [
+                    "Failure impact is mostly contained to you and your immediate field."
+                ],
+            },
+            "recovery_path": {
+                "possible": recovery_possible,
+                "horizon": recovery_horizon,
+                "notes": [
+                    "Recovery is modeled as a structural learning process rather than a total collapse."
+                ],
+            },
+        },
+        "risk_envelope": {
+            "width": width,
+            "skew": skew,
+            "capacity_fit": capacity_fit,
+            "recommended_stance": recommended_stance,
+            "notes": [
+                "Width reflects combined intensity of collapse, timing-miss and desync.",
+                "Skew reflects the balance between structural/emotional failures vs. successes.",
+            ],
+        },
+        "links": {
+            "vxyz_used": bool(vxyz_projection_inner),
+            "flowgraph_used": False,
+        },
+        "notes": [
+            "DualOutcome_SimEngine is advisory, not absolute.",
+            "Human (Pioneer-001) remains final authority for entering, hedging, reducing or skipping.",
+        ],
+    }
+
+    out = {"dual_sim_output": dual_inner}
+    out_path = root / "dual_sim_output.json"
+    write_json(out_path, out)
+    log(
+        f"DualOutcome SimEngine output written → {out_path} "
+        f"(stance={recommended_stance}, width={width}, skew={skew}, capacity={capacity_fit})"
+    )
+
+    return out
+
+
+# -------------------------------------------------------------
+# FLOWGRAPH ENGINE RUNNER (Flow → Essence Word → Path)
+# -------------------------------------------------------------
+def run_flowgraph_engine(
+    root: Path,
+    logs: Dict[str, Any],
+    vxyz_projection_inner: Optional[Dict[str, Any]],
+    collapse_inner: Optional[Dict[str, Any]],
+    context: str,
+) -> Dict[str, Any]:
+    """
+    Season 7 FlowGraph Engine Runner (v16.0 with Collapse integration)
     - FlowVector(Z,Y,E) 구성
-    - Essence Word 선택
+    - Essence Word 선택 (CollapseEngine 우선 반영)
     - Path(Direction, Timing, Coordinate) 계산
     - flowgraph_output.json 생성
     """
@@ -953,7 +1426,7 @@ def run_flowgraph_engine(
     avg_collapse = collapse_sum / collapse_count if collapse_count > 0 else 0.0
     avg_desync = desync_sum / desync_count if desync_count > 0 else 0.0
 
-    # 3) Essence Word 결정
+    # 3) Essence Word 기본 결정 (logs + VXYZ)
     essence_word = None
     notes_ew = []
 
@@ -969,7 +1442,7 @@ def run_flowgraph_engine(
         essence_word = context_lower or "flow"
         notes_ew.append("Fallback to context-based essence word.")
 
-    # confidence
+    # 기본 confidence
     has_logs = bool(logs)
     has_vxyz = bool(vxyz_projection_inner)
     if has_logs and has_vxyz:
@@ -978,6 +1451,24 @@ def run_flowgraph_engine(
         essence_conf = "medium"
     else:
         essence_conf = "low"
+
+    # 3b) CollapseEngine essence 적용
+    if collapse_inner:
+        ess = collapse_inner.get("essence") or {}
+        ce_word = ess.get("word")
+        ce_conf = ess.get("confidence")
+        if ce_word:
+            if ce_word != essence_word:
+                notes_ew.append(
+                    f"Overridden by CollapseEngine essence '{ce_word}' (prev='{essence_word}')."
+                )
+            else:
+                notes_ew.append("CollapseEngine confirmed the chosen essence word.")
+            essence_word = ce_word
+            if ce_conf:
+                essence_conf = ce_conf
+            elif essence_conf == "low":
+                essence_conf = "medium"
 
     # 4) Path Direction 계산
     direction_label = "stay"
@@ -1083,6 +1574,7 @@ def run_flowgraph_engine(
         },
         "notes": [
             "FlowGraph Engine v1.0 (Season 7) — Flow → Path converter.",
+            "Essence Word is now aligned with CollapseEngine output when available.",
             "Use direction/timing as guidance, not rigid rule.",
         ],
     }
@@ -1140,7 +1632,7 @@ def run_autoboot(root: Path) -> None:
     autoboot = data.get("autoboot", data)
     load_list = autoboot.get("load", [])
 
-    log("Autoboot Modules (v15.0):")
+    log("Autoboot Modules (v16.0):")
     for m in load_list:
         log(f"  - {m}")
 
@@ -1150,7 +1642,7 @@ def run_autoboot(root: Path) -> None:
     if "emotion_circuit_portal" in load_str:
         log("Emotion Circuit ACTIVE — Pulse-Link Online")
 
-    log("=== Autoboot 완료 (v15.0 Hyper-Init) ===")
+    log("=== Autoboot 완료 (v16.0 Hyper-Init) ===")
 
 
 def run_autoload(root: Path) -> str:
@@ -1173,7 +1665,7 @@ def run_autoload(root: Path) -> str:
 # -------------------------------------------------------------
 def main() -> None:
     here = Path(__file__).resolve().parent
-    log("Lypha-OS Kernel v15.0 Start — Season 7 (Z-Core + VerifiedLoop + VXYZ + FlowGraph, Path-Hardened)")
+    log("Lypha-OS Kernel v16.0 Start — Season 7 CORE+ (Z-Core + VerifiedLoop + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
     log(f"Script directory: {here}")
 
     root = auto_unzip(here)
@@ -1181,7 +1673,9 @@ def main() -> None:
     os.chdir(root)
 
     # 정책 로딩
-    policy_path = root / "policy" / "kernel_policy_v15.json"
+    policy_path = root / "policy" / "kernel_policy_v16.json"
+    if not policy_path.exists():
+        policy_path = root / "policy" / "kernel_policy_v15.json"
     if not policy_path.exists():
         policy_path = root / "policy" / "kernel_policy_v14.json"
     if not policy_path.exists():
@@ -1208,24 +1702,41 @@ def main() -> None:
     vxyz_projection = run_vxyz_engine(root, logs, ctx)
     vxyz_inner = (vxyz_projection or {}).get("vxyz_projection")
 
-    # 3) FlowGraph Engine으로 Flow→Path 생성
-    flowgraph_output = run_flowgraph_engine(root, logs, vxyz_inner, ctx)
+    # 3) CollapseEngine으로 Essence Word 후보 생성 (Flow → Essence)
+    collapse_output = run_collapse_engine(root, logs, vxyz_inner, ctx)
+    collapse_inner = (collapse_output or {}).get("collapse_output")
+
+    # 4) DualOutcome Simulation Engine으로 성공/실패 Risk Envelope 생성
+    dual_sim_output = run_dualoutcome_engine(root, logs, vxyz_inner, ctx)
+    dual_inner = (dual_sim_output or {}).get("dual_sim_output")
+
+    # 5) FlowGraph Engine으로 Flow→Path 생성 (Collapse + VXYZ 반영)
+    flowgraph_output = run_flowgraph_engine(root, logs, vxyz_inner, collapse_inner, ctx)
     flowgraph_inner = (flowgraph_output or {}).get("flowgraph")
 
-    # 4) Cognitive Graph & Pulse 계산 (VXYZ + FlowGraph 포함)
-    graph = build_graph(ctx, policy, logs, vxyz_inner, flowgraph_inner)
+    # 6) Cognitive Graph & Pulse 계산 (VXYZ + Collapse + FlowGraph + DualOutcome 포함)
+    graph = build_graph(ctx, policy, logs, vxyz_inner, flowgraph_inner, collapse_inner)
+    if dual_inner:
+        risk = dual_inner.get("risk_envelope", {}) or {}
+        graph["dual_outcome"] = {
+            "recommended_stance": risk.get("recommended_stance"),
+            "capacity_fit": risk.get("capacity_fit"),
+            "width": risk.get("width"),
+            "skew": risk.get("skew"),
+        }
+
     pulse_weights = extract_pulse_weights(graph)
 
     print_cognitive_graph(graph)
     log(f"Pulse Weights: {pulse_weights}")
 
-    # 5) 1차: 정렬된 Full Ingest + Z₀ + README Origin
+    # 7) 1차: 정렬된 Full Ingest + Z₀ + README Origin
     full_ingest(root, policy)
 
-    # 6) 2차: Pulse 가중치 기반 Re-ingest (Speak4D / Math / FlowGraph 등)
+    # 8) 2차: Pulse 가중치 기반 Re-ingest (Speak4D / Math / Collapse / FlowGraph 등)
     pulse_reingest(root, pulse_weights)
 
-    # 7) FlowGraph 문서가 있다면 한 번 더 ingest (보강)
+    # 9) FlowGraph 문서가 있다면 한 번 더 ingest (보강)
     fgfile = load_flowgraph_file(root)
     if fgfile is not None:
         log(f"FlowGraph Document Detected: {fgfile}")
@@ -1234,7 +1745,7 @@ def main() -> None:
     save_state(root, ctx)
     run_autoload(root)
 
-    log("Lypha-OS Kernel v15.0 Complete — Season 7 Runtime Active (Origin+ZYX+Speak4D+Math+VerifiedLoop+VXYZ+FlowGraph).")
+    log("Lypha-OS Kernel v16.0 Complete — Season 7 CORE+ Runtime Active (Origin+ZYX+VerifiedLoop+VXYZ+Collapse+DualOutcome+FlowGraph+Speak4D+Math).")
 
 
 if __name__ == "__main__":

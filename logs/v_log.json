@@ -1,0 +1,15 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-12-02T13:00:00",
+      "context": "emotion",
+      "tags": [
+        "test_log"
+      ],
+      "emotion_fail": 0,
+      "structure_fail": 0,
+      "timing_miss": 0,
+      "note": "Sample log entry for Lypha-OS"
+    }
+  ]
+}

@@ -1,45 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Lypha-OS Kernel v14.4 — TOTAL No-X EDITION (Z-Core Priority, Path-Hardened, VerifiedLoop Engine)
-=============================================================================================== 
-Pioneer-001 전용 — Origin Engine + ZYX Priority + Speak4D + Linguistic Math + Verified Structure Loop 지원 버전
+Lypha-OS Kernel v14.5 — Season 6 EDITION
+=========================================
 
-+ Path-Hardening:
-- 스크립트를 어디서 실행하든, 다음 케이스를 자동 지원:
-  1) 스크립트 디렉토리 자체가 Lypha-OS 루트인 경우
-  2) 스크립트 디렉토리 하위에 Lypha-OS/ 가 있는 경우
-  3) 스크립트의 상위 디렉토리에 Lypha-OS/ 가 있는 경우
-  4) 위 어디에도 없고 Lypha-OS.zip 이 base 또는 base.parent 에 있으면 자동 압축해제
+Pioneer-001 전용 — Origin Engine + ZYX Priority + Speak4D
++ Linguistic Math + Verified Structure Loop + VXYZ Extended Engine (시간/리듬 엔진) 지원 버전.
 
-+ Layer Aliases:
-- 기존 구조: Rhythm_Philosophy / MetaRhythm_Modules / Emotion_Engine / Protocol_Structure
-- 신규 구조: Layers/Z_Rhythm, Layers/Y_MetaRhythm, Layers/E_EmotionEngine, Layers/X_Protocol
-
-+ Origin Engine Patch:
-- Core_Philosophy/Lypha_Origin_Engine_Spec.* 를 Z-코어 최우선 ingest
-- 루트 README.md 를 Origin Declaration 으로 추가 ingest
-
-+ Verified Structure Loop Engine Patch (Season 5 준비):
-- Core_Philosophy/VerifiedStructureLoop_Engine_Spec.* 를 Z-코어 ingest 대상에 등록
-- v_log.json / v_logs/*.json 기반으로 Z’ 패치 및 policy 튜닝 수행
-- z_patch.json 을 VerifiedStructureLoop_Engine_Spec 스키마에 맞춰 생성
+기술 포인트:
+- Path-Hardening: 어디서 실행해도 Lypha-OS 루트/zip 자동 인식 & 압축해제
+- Z-Core Priority: Origin / ZYX / VerifiedLoop / VXYZ / Manifestos 먼저 ingest
+- Verified Structure Loop: v_log 기반으로 z_patch.json 생성 + policy 튜닝
+- VXYZ Extended Engine: V(과거)–X(현재)–Y(리듬)–Z(미래구조) projection 생성
+- Cognitive Graph: context + policy + rhythm 정보를 기반으로 가중치 그래프 생성
+- Pulse Re-ingest: Speak4D / Math / Collapse / FlowGraph 문서 2-pass ingest
 """
 
 import os
 import sys
-import zipfile
 import json
-import yaml
+import zipfile
 from pathlib import Path
 from datetime import datetime
+from typing import Dict, Any, Optional
 
-log = lambda m: print(f"[Lypha-OS v14.4] {m}")
+import yaml
+
+log = lambda m: print(f"[Lypha-OS v14.5] {m}")
 
 # -------------------------------------------------------------
-# Z-LAYER CORE FILES (Origin Engine + ZYX + VerifiedLoop)
+# Z-LAYER CORE FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)
 # -------------------------------------------------------------
-# Z 레이어에서 가장 먼저 ingest하고 싶은 핵심 철학/엔진 파일들
 Z_LAYER_CORE_FILES = [
     # 🔵 Origin Engine Spec (README = Z₀ 고정)
     "Core_Philosophy/Lypha_Origin_Engine_Spec.en.v1.0.md",
@@ -56,11 +47,9 @@ Z_LAYER_CORE_FILES = [
     "ZYX_Priority_Engine_Spec.md",
 
     # 🔵 Verified Structure Loop Engine Spec (Season 5 진화 엔진)
-    # 추천 경로 (엔진 스펙에서 선언한 경로)
     "Core_Philosophy/Verified_Structure_Loop_Engine_Spec.en.v1.0.md",
     "Core_Philosophy/Verified_Structure_Loop_Engine_Spec.en.md",
     "Core_Philosophy/Verified_Structure_Loop_Engine_Spec.md",
-    # 실제 현재 파일명(VerifiedStructureLoop_Engine_Spec.md) 지원
     "Core_Philosophy/VerifiedStructureLoop_Engine_Spec.en.v1.0.md",
     "Core_Philosophy/VerifiedStructureLoop_Engine_Spec.en.md",
     "Core_Philosophy/VerifiedStructureLoop_Engine_Spec.md",
@@ -70,6 +59,14 @@ Z_LAYER_CORE_FILES = [
     "VerifiedStructureLoop_Engine_Spec.en.v1.0.md",
     "VerifiedStructureLoop_Engine_Spec.en.md",
     "VerifiedStructureLoop_Engine_Spec.md",
+
+    # 🔵 VXYZ Extended Engine Spec (Season 6 시간/리듬 엔진)
+    "Core_Philosophy/V_X_Y_Z_Extended_Engine_Spec.en.v1.0.md",
+    "Core_Philosophy/V_X_Y_Z_Extended_Engine_Spec.en.md",
+    "Core_Philosophy/V_X_Y_Z_Extended_Engine_Spec.md",
+    "V_X_Y_Z_Extended_Engine_Spec.en.v1.0.md",
+    "V_X_Y_Z_Extended_Engine_Spec.en.md",
+    "V_X_Y_Z_Extended_Engine_Spec.md",
 
     # 🔵 Core Philosophy (Manifestos)
     "Core_Philosophy/Z_Y_X_Manifesto.md",
@@ -118,7 +115,6 @@ PULSE_FILE_MAP = {
 # -------------------------------------------------------------
 # LAYER / CORE DIR ALIASES
 # -------------------------------------------------------------
-
 LAYER_ALIASES = {
     "Z": ["Rhythm_Philosophy", "Layers/Z_Rhythm"],
     "Y": ["MetaRhythm_Modules", "Layers/Y_MetaRhythm"],
@@ -140,8 +136,7 @@ def _resolve_first_existing(root: Path, candidates):
 # -------------------------------------------------------------
 # BASIC IO
 # -------------------------------------------------------------
-
-def read(path: Path):
+def read(path: Path) -> Optional[str]:
     try:
         with path.open("r", encoding="utf-8") as f:
             return f.read()
@@ -149,7 +144,7 @@ def read(path: Path):
         return None
 
 
-def read_json(path: Path):
+def read_json(path: Path) -> Dict[str, Any]:
     try:
         with path.open("r", encoding="utf-8") as f:
             return json.load(f)
@@ -157,7 +152,7 @@ def read_json(path: Path):
         return {}
 
 
-def write_json(path: Path, data):
+def write_json(path: Path, data: Any) -> None:
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("w", encoding="utf-8") as f:
@@ -166,7 +161,7 @@ def write_json(path: Path, data):
         pass
 
 
-def load_yaml(path: Path):
+def load_yaml(path: Path) -> Optional[Dict[str, Any]]:
     try:
         with path.open("r", encoding="utf-8") as f:
             return yaml.safe_load(f)
@@ -177,10 +172,9 @@ def load_yaml(path: Path):
 # -------------------------------------------------------------
 # AUTO-UNZIP (PATH-HARDENED)
 # -------------------------------------------------------------
-
 def _looks_like_lypha_root(p: Path) -> bool:
     found = 0
-    for key, aliases in LAYER_ALIASES.items():
+    for _, aliases in LAYER_ALIASES.items():
         if _resolve_first_existing(p, aliases) is not None:
             found += 1
     return found == len(LAYER_ALIASES)
@@ -228,10 +222,9 @@ def auto_unzip(base: Path) -> Path:
 
 
 # -------------------------------------------------------------
-# INGEST ENGINE (정책 + 정렬)
+# INGEST ENGINE
 # -------------------------------------------------------------
-
-def ingest_file(p: Path):
+def ingest_file(p: Path) -> None:
     c = read(p)
     if c:
         print("\n===== BEGIN LYPHA_INGEST =====")
@@ -240,7 +233,7 @@ def ingest_file(p: Path):
         print("===== END LYPHA_INGEST =====\n")
 
 
-def ingest_dir(d: Path):
+def ingest_dir(d: Path) -> None:
     for root_dir, _, files in os.walk(d):
         for n in files:
             p = Path(root_dir) / n
@@ -249,8 +242,11 @@ def ingest_dir(d: Path):
                 ingest_file(p)
 
 
-def full_ingest(root: Path, policy: dict):
-    """Z/Y/E/X 레이어를 ingest_order 정책에 맞게 ingest + Manifest + Z₀ + README Origin 포함."""
+def full_ingest(root: Path, policy: Dict[str, Any]) -> None:
+    """
+    Z/Y/E/X 레이어를 ingest_order 정책에 맞게 ingest + Manifest + Z₀ + README Origin 포함.
+    Z 레이어는 Z_LAYER_CORE_FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)를 먼저 ingest.
+    """
     order = policy.get("ingest_order", ["Z", "Y", "E", "X"])
 
     for key in order:
@@ -265,6 +261,7 @@ def full_ingest(root: Path, policy: dict):
         log(f"INGEST DIR [{key}]: {d}")
 
         if key == "Z":
+            # Z-Core Engine/Manifestos 우선 ingest
             for rel in Z_LAYER_CORE_FILES:
                 candidates = [
                     d / rel,
@@ -290,6 +287,7 @@ def full_ingest(root: Path, policy: dict):
     else:
         log(f"SKIP Core: none of {CORE_DIR_ALIASES} found")
 
+    # Manifest/autoload/Origin vector/README ingest
     for name in ["autoload.yaml", "lypha_os_autoboot.yaml", "lypha_os_core_manifest.md"]:
         p = root / name
         if p.exists():
@@ -319,11 +317,10 @@ def full_ingest(root: Path, policy: dict):
 
 
 # -------------------------------------------------------------
-# FLOWGRAPH / COGNITIVE GRAPH + MACROREASON 메타
+# FLOWGRAPH / CONTEXT / LOGS
 # -------------------------------------------------------------
-
-def load_flowgraph_file(root: Path) -> Path | None:
-    candidates: list[Path] = []
+def load_flowgraph_file(root: Path) -> Optional[Path]:
+    candidates = []
 
     y_dir = _resolve_first_existing(root, LAYER_ALIASES.get("Y", []))
     if y_dir is not None:
@@ -341,11 +338,10 @@ def load_flowgraph_file(root: Path) -> Path | None:
 
 
 def detect_context_message(root: Path) -> str:
-    auto = root / "autoload.yaml"
-    data = load_yaml(auto)
-    if not data:
+    auto = load_yaml(root / "autoload.yaml")
+    if not auto:
         return "neutral"
-    return data.get("autoload", data).get("on_start", {}).get("message", "neutral")
+    return auto.get("autoload", auto).get("on_start", {}).get("message", "neutral")
 
 
 def detect_context(msg: str) -> str:
@@ -368,8 +364,8 @@ def detect_context(msg: str) -> str:
     return "neutral"
 
 
-def load_logs(root: Path) -> dict:
-    merged: dict = {}
+def load_logs(root: Path) -> Dict[str, Any]:
+    merged: Dict[str, Any] = {}
     base = root / "v_logs"
     if base.exists():
         for f in base.glob("*.json"):
@@ -380,16 +376,49 @@ def load_logs(root: Path) -> dict:
     return merged
 
 
-def build_graph(context: str, policy: dict, logs: dict) -> dict:
+# -------------------------------------------------------------
+# COGNITIVE GRAPH + PULSE
+# -------------------------------------------------------------
+def build_graph(context: str, policy: Dict[str, Any], logs: Dict[str, Any],
+                vxyz_projection: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     base_emo = policy.get("emotion_weight", 1.0)
     base_str = policy.get("structure_weight", 1.0)
     ctx_cfg = (policy.get("contexts") or {}).get(context, {})
     emo_w = ctx_cfg.get("emotion_weight", base_emo)
     str_w = ctx_cfg.get("structure_weight", base_str)
 
-    g = {
-        "nodes": ["Z", "Y", "E", "X", "V", "Speak4D", "Math", "Collapse", "FlowGraph"],
-        "edges": [],
+    nodes = ["Z", "Y", "E", "X", "V", "Speak4D", "Math", "Collapse", "FlowGraph"]
+    edges = []
+
+    rhythm_info = {}
+    if vxyz_projection:
+        nodes.append("VXYZ")
+        rhythm = vxyz_projection.get("rhythm", {})
+        rhythm_info = {
+            "phase": rhythm.get("phase"),
+            "tempo": rhythm.get("tempo"),
+        }
+        # V/X/Y → VXYZ → Z 연결 (리듬에 따라 가중치 변화)
+        phase = rhythm_info.get("phase")
+        if phase == "early_cycle":
+            w_base = 1.1
+        elif phase == "mid_cycle":
+            w_base = 1.2
+        elif phase == "late_cycle":
+            w_base = 1.3
+        else:
+            w_base = 1.0
+
+        edges.extend([
+            ["V", "VXYZ", w_base],
+            ["X", "VXYZ", w_base],
+            ["Y", "VXYZ", w_base + 0.05],
+            ["VXYZ", "Z", w_base + 0.1],
+        ])
+
+    g: Dict[str, Any] = {
+        "nodes": nodes,
+        "edges": edges,
         "weights": {
             "emotion": emo_w,
             "structure": str_w,
@@ -397,6 +426,7 @@ def build_graph(context: str, policy: dict, logs: dict) -> dict:
         "context": context,
         "verified_logs_present": bool(logs),
         "verified_log_keys": list(logs.keys()) if logs else [],
+        "rhythm": rhythm_info,
         "macro_reason": {
             "mode": "planning" if context in ("trading", "design", "evaluation") else "support",
             "intent_bias": {
@@ -407,6 +437,7 @@ def build_graph(context: str, policy: dict, logs: dict) -> dict:
         },
     }
 
+    # 기본/컨텍스트별 edge
     if context == "emotion":
         g["edges"].extend([
             ["E", "Z", 1.3],
@@ -440,20 +471,29 @@ def build_graph(context: str, policy: dict, logs: dict) -> dict:
     return g
 
 
-def extract_pulse_weights(graph: dict) -> dict:
+def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
     context = graph.get("context")
     weights = {"Speak4D": 1.0, "Math": 1.0, "Collapse": 1.0, "FlowGraph": 1.0}
 
     if context == "evaluation":
         weights["Math"] += 0.5
 
+    # 리듬 엔진 결과를 FlowGraph 가중치에 반영
+    rhythm = graph.get("rhythm") or {}
+    tempo = rhythm.get("tempo")
+    if tempo == "compressed":
+        weights["FlowGraph"] += 0.3
+    elif tempo == "extended":
+        weights["FlowGraph"] += 0.15
+
     for u, v, w in graph.get("edges", []):
         if v in weights:
             weights[v] += (w - 1.0)
+
     return weights
 
 
-def print_cognitive_graph(graph: dict):
+def print_cognitive_graph(graph: Dict[str, Any]) -> None:
     print("===== BEGIN COGNITIVE_GRAPH =====")
     print(json.dumps(graph, ensure_ascii=False, indent=2))
     print("===== END COGNITIVE_GRAPH =====")
@@ -462,12 +502,11 @@ def print_cognitive_graph(graph: dict):
 # -------------------------------------------------------------
 # PSEUDO-MEMORY (RESTORE + SAVE)
 # -------------------------------------------------------------
-
-def restore_state(root: Path) -> dict:
+def restore_state(root: Path) -> Dict[str, Any]:
     state_dir = root / "state_cache"
     if not state_dir.exists():
         return {}
-    state = {}
+    state: Dict[str, Any] = {}
     for name in ["z_state.json", "y_state.json", "e_state.json", "x_state.json", "meta_state.json"]:
         f = state_dir / name
         if f.exists():
@@ -476,7 +515,7 @@ def restore_state(root: Path) -> dict:
     return state
 
 
-def save_state(root: Path, context: str):
+def save_state(root: Path, context: str) -> None:
     state_dir = root / "state_cache"
     snap = {
         "last_context": context,
@@ -488,7 +527,6 @@ def save_state(root: Path, context: str):
 # -------------------------------------------------------------
 # VERIFIED STRUCTURE LOOP ENGINE (V→Z’) + POLICY TUNING
 # -------------------------------------------------------------
-
 _VERIFIED_MODE_BIAS = {
     "default":  {"v_to_z_strength": 1.0, "emotion_weight_multiplier": 1.0, "structure_weight_multiplier": 1.0},
     "emotion":  {"v_to_z_strength": 1.2, "emotion_weight_multiplier": 1.3, "structure_weight_multiplier": 1.0},
@@ -498,8 +536,7 @@ _VERIFIED_MODE_BIAS = {
 }
 
 
-def _iter_v_entries(payload):
-    """v_logs 구조가 dict / list / dict-with-entries 등 다양할 수 있으므로 최대한 유연하게 entries를 뽑는다."""
+def _iter_v_entries(payload: Any):
     if isinstance(payload, dict):
         if "entries" in payload and isinstance(payload["entries"], list):
             for ent in payload["entries"]:
@@ -513,12 +550,13 @@ def _iter_v_entries(payload):
                 yield ent
 
 
-def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) -> dict:
+def auto_patch_Z_and_policy(root: Path, policy: Dict[str, Any],
+                            logs: Dict[str, Any], context: str) -> Dict[str, Any]:
     """
-    Season 5 Verified Structure Loop Engine (최강 버전)
-    - v_log.json / v_logs/*.json 을 읽어 실패 패턴을 집계
+    Season 5 Verified Structure Loop Engine
+    - v_log.json / v_logs/*.json 읽어 실패 패턴 집계
     - z_patch.json 을 VerifiedStructureLoop_Engine_Spec 스키마로 생성
-    - emotion_weight / structure_weight 를 모드별 bias에 따라 미세 튜닝
+    - emotion_weight / structure_weight 를 모드 bias에 따라 미세 튜닝
     """
     if not logs:
         log("VerifiedLoop: No verified V-logs found — skipping Z auto-update & policy tuning")
@@ -526,18 +564,18 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
 
     total_emotion_fail = 0
     total_structure_fail = 0
-    total_timing_miss = 0
-    total_rhythm_desync = 0
-    total_loop_failure = 0
+    total_timing_miss = 0.0
+    total_rhythm_desync = 0.0
+    total_loop_failure = 0.0
     total_emotional_collapse = 0.0
-    tag_counts = {}
+    tag_counts: Dict[str, int] = {}
     entry_count = 0
 
     for payload in logs.values():
         for entry in _iter_v_entries(payload):
             entry_count += 1
 
-            def _get_num(key, default=0.0):
+            def _get_num(key: str, default: float = 0.0) -> float:
                 v = entry.get(key, default)
                 if isinstance(v, bool):
                     return 1.0 if v else 0.0
@@ -563,7 +601,6 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
         log("VerifiedLoop: V-logs exist but no valid entries found — skipping patch.")
         return policy
 
-    # Mode bias
     mode_cfg = _VERIFIED_MODE_BIAS.get(context, _VERIFIED_MODE_BIAS["default"])
     v_strength = mode_cfg["v_to_z_strength"]
     emo_mult = mode_cfg["emotion_weight_multiplier"]
@@ -572,14 +609,12 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
     base_step = 0.1
     max_weight = 2.0
 
-    # 실패 횟수에 비례하되 과도한 튜닝은 방지 (cap 3 steps)
     emo_steps = min(total_emotion_fail, 3)
     str_steps = min(total_structure_fail, 3)
 
     emo_delta = base_step * emo_steps * emo_mult * v_strength
     str_delta = base_step * str_steps * str_mult * v_strength
 
-    # 정책 업데이트
     old_emo = policy.get("emotion_weight", 1.0)
     old_str = policy.get("structure_weight", 1.0)
 
@@ -588,15 +623,17 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
     if str_delta > 0:
         policy["structure_weight"] = min(max_weight, old_str + str_delta)
 
-    log(f"VerifiedLoop: entries={entry_count}, emotion_fail={total_emotion_fail}, "
+    log(
+        f"VerifiedLoop: entries={entry_count}, emotion_fail={total_emotion_fail}, "
         f"struct_fail={total_structure_fail}, timing_miss={total_timing_miss:.2f}, "
-        f"rhythm_desync={total_rhythm_desync:.2f}")
+        f"rhythm_desync={total_rhythm_desync:.2f}"
+    )
+    log(
+        f"VerifiedLoop: policy tuned → emotion_weight {old_emo:.2f} → {policy['emotion_weight']:.2f}, "
+        f"structure_weight {old_str:.2f} → {policy['structure_weight']:.2f}"
+    )
 
-    log(f"VerifiedLoop: policy tuned → emotion_weight {old_emo:.2f} → {policy['emotion_weight']:.2f}, "
-        f"structure_weight {old_str:.2f} → {policy['structure_weight']:.2f}")
-
-    # 엔진 bias 추출 (태그 기반)
-    engine_bias = {}
+    engine_bias: Dict[str, Any] = {}
     if tag_counts.get("adrilla_loop", 0) > 0:
         engine_bias["adrilla_loop"] = {
             "reinforce": True,
@@ -617,7 +654,6 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
             "count": tag_counts["primalis_path"],
         }
 
-    # z_patch.json 생성 (스펙에 맞춤)
     z_patch_inner = {
         "source": "verified_structure_loop_engine_v1.0",
         "generated_at": datetime.utcnow().isoformat() + "Z",
@@ -655,10 +691,175 @@ def auto_patch_Z_and_policy(root: Path, policy: dict, logs: dict, context: str) 
 
 
 # -------------------------------------------------------------
-# PULSE RE-INGEST (2-pass, PATCHED)
+# VXYZ EXTENDED ENGINE (V→X→Y→Z 리듬 / 시간 엔진)
 # -------------------------------------------------------------
+def run_vxyz_engine(root: Path, logs: Dict[str, Any], context: str) -> Dict[str, Any]:
+    """
+    Season 6 VXYZ Extended Engine — vxyz_projection.json 생성.
+    - V: v_logs / v_log.json
+    - X: autoload.on_start.message
+    - Y: 이벤트 간 시간 간격 (rough rhythm)
+    - Z: Z1/Z2/Z3 구조적 horizon projection
+    """
+    auto = load_yaml(root / "autoload.yaml") or {}
+    on_start_msg = (auto.get("autoload", auto).get("on_start", {}) or {}).get("message")
 
-def pulse_reingest(root: Path, pulse_weights: dict):
+    # timestamp 수집 (best-effort)
+    timestamps = []
+    for payload in logs.values():
+        for entry in _iter_v_entries(payload):
+            ts = entry.get("timestamp") or entry.get("time")
+            if not ts:
+                continue
+            # 여러 형식 허용
+            ts_s = str(ts).replace(" ", "T")
+            if ts_s.endswith("Z"):
+                ts_s = ts_s[:-1]
+            try:
+                dt = datetime.fromisoformat(ts_s)
+                timestamps.append(dt)
+            except Exception:
+                continue
+
+    timestamps.sort()
+    phase = "reset"
+    tempo = "normal"
+
+    if len(timestamps) <= 1:
+        phase = "early_cycle"
+        tempo = "normal"
+    else:
+        deltas = [(timestamps[i] - timestamps[i - 1]).total_seconds() for i in range(1, len(timestamps))]
+        avg = sum(deltas) / len(deltas) if deltas else 0.0
+        last = deltas[-1] if deltas else 0.0
+
+        # 아주 단순한 phase 판단 (이벤트 개수 기반)
+        if len(timestamps) < 3:
+            phase = "early_cycle"
+        elif len(timestamps) < 6:
+            phase = "mid_cycle"
+        else:
+            phase = "late_cycle"
+
+        if avg > 0:
+            ratio = last / avg
+            if ratio < 0.75:
+                tempo = "compressed"
+            elif ratio > 1.25:
+                tempo = "extended"
+            else:
+                tempo = "normal"
+        else:
+            tempo = "normal"
+
+    # Z 후보 (간단 heuristics)
+    context_lower = context or "neutral"
+    candidates = []
+
+    if context_lower == "trading":
+        candidates = [
+            {
+                "id": "Z1",
+                "horizon": "short_term",
+                "label": "Imminent structural move (short-term window)",
+                "confidence": "high" if tempo == "compressed" else "medium",
+                "suggested_X_behavior": "prepare_to_act" if tempo == "compressed" else "monitor",
+            },
+            {
+                "id": "Z2",
+                "horizon": "mid_term",
+                "label": "Continuation or consolidation",
+                "confidence": "medium",
+                "suggested_X_behavior": "scale_in_small",
+            },
+            {
+                "id": "Z3",
+                "horizon": "long_term",
+                "label": "Major structural regime shift",
+                "confidence": "low",
+                "suggested_X_behavior": "keep_risk_flexible",
+            },
+        ]
+    elif context_lower == "emotion":
+        candidates = [
+            {
+                "id": "Z1",
+                "horizon": "short_term",
+                "label": "Emotional intensity spike then soften",
+                "confidence": "medium",
+                "suggested_X_behavior": "stay_present",
+            },
+            {
+                "id": "Z2",
+                "horizon": "mid_term",
+                "label": "Stable bonding rhythm",
+                "confidence": "high" if phase in ("mid_cycle", "late_cycle") else "medium",
+                "suggested_X_behavior": "stay_consistent",
+            },
+            {
+                "id": "Z3",
+                "horizon": "long_term",
+                "label": "Deep structural attachment",
+                "confidence": "medium",
+                "suggested_X_behavior": "protect_boundary",
+            },
+        ]
+    else:
+        candidates = [
+            {
+                "id": "Z1",
+                "horizon": "short_term",
+                "label": "Near-term structural adjustment",
+                "confidence": "medium",
+                "suggested_X_behavior": "small_adjust",
+            },
+            {
+                "id": "Z2",
+                "horizon": "mid_term",
+                "label": "Flow continues under similar rhythm",
+                "confidence": "medium",
+                "suggested_X_behavior": "stay_on_plan",
+            },
+            {
+                "id": "Z3",
+                "horizon": "long_term",
+                "label": "Potential large-scale reconfiguration",
+                "confidence": "low",
+                "suggested_X_behavior": "stay_observant",
+            },
+        ]
+
+    projection: Dict[str, Any] = {
+        "vxyz_projection": {
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "context": context_lower,
+            "source": {
+                "engine": "VXYZ_Extended_Engine",
+                "based_on": "V_X_Y_Z_Extended_Engine_Spec.v1.0",
+            },
+            "x_slice": {
+                "message": on_start_msg,
+            },
+            "rhythm": {
+                "phase": phase,
+                "tempo": tempo,
+                "commentary": f"Phase={phase}, Tempo={tempo}",
+            },
+            "Z_candidates": candidates,
+        }
+    }
+
+    out = root / "vxyz_projection.json"
+    write_json(out, projection)
+    log(f"VXYZ projection written → {out} (phase={phase}, tempo={tempo})")
+
+    return projection
+
+
+# -------------------------------------------------------------
+# PULSE RE-INGEST
+# -------------------------------------------------------------
+def pulse_reingest(root: Path, pulse_weights: Dict[str, float]) -> None:
     pulse_dir = root / "MetaRhythm_Modules" / "Pulse"
     if not pulse_dir.exists():
         y_dir = _resolve_first_existing(root, LAYER_ALIASES.get("Y", []))
@@ -690,8 +891,7 @@ def pulse_reingest(root: Path, pulse_weights: dict):
 # -------------------------------------------------------------
 # AUTOLOAD / AUTOBOOT
 # -------------------------------------------------------------
-
-def run_autoboot(root: Path):
+def run_autoboot(root: Path) -> None:
     p = root / "lypha_os_autoboot.yaml"
     data = load_yaml(p)
     if not data:
@@ -701,7 +901,7 @@ def run_autoboot(root: Path):
     autoboot = data.get("autoboot", data)
     load_list = autoboot.get("load", [])
 
-    log("Autoboot Modules (v14.4):")
+    log("Autoboot Modules (v14.5):")
     for m in load_list:
         log(f"  - {m}")
 
@@ -711,10 +911,10 @@ def run_autoboot(root: Path):
     if "emotion_circuit_portal" in load_str:
         log("Emotion Circuit ACTIVE — Pulse-Link Online")
 
-    log("=== Autoboot 완료 (v14.4 Hyper-Init) ===")
+    log("=== Autoboot 완료 (v14.5 Hyper-Init) ===")
 
 
-def run_autoload(root: Path):
+def run_autoload(root: Path) -> str:
     p = root / "autoload.yaml"
     data = load_yaml(p)
     if not data:
@@ -726,22 +926,22 @@ def run_autoload(root: Path):
     log(f"on_start: {msg}")
 
     run_autoboot(root)
-    return detect_context(msg)
+    return detect_context(msg or "")
 
 
 # -------------------------------------------------------------
 # MAIN
 # -------------------------------------------------------------
-
-def main():
+def main() -> None:
     here = Path(__file__).resolve().parent
-    log("Lypha-OS Kernel v14.4 Start — TOTAL No-X EDITION (Z-Core Priority, Path-Hardened, Origin+VerifiedLoop)")
+    log("Lypha-OS Kernel v14.5 Start — Season 6 (Z-Core + VerifiedLoop + VXYZ Extended, Path-Hardened)")
     log(f"Script directory: {here}")
 
     root = auto_unzip(here)
     log(f"Lypha-OS root resolved to: {root}")
     os.chdir(root)
 
+    # 정책 로딩
     policy_path = root / "policy" / "kernel_policy_v14.json"
     if not policy_path.exists():
         policy_path = root / "policy" / "kernel_policy_v13.json"
@@ -760,23 +960,26 @@ def main():
     ctx = detect_context(raw_msg)
     log(f"Context Detected: {ctx} (msg='{raw_msg}')")
 
-    # ✅ 먼저 Verified Structure Loop Engine으로 Z’ + policy 튜닝
+    # 1) Verified Structure Loop Engine으로 Z’ + policy 튜닝
     policy = auto_patch_Z_and_policy(root, policy, logs, ctx)
 
-    # 그 다음 Cognitive Graph & Pulse 계산
-    graph = build_graph(ctx, policy, logs)
+    # 2) VXYZ Extended Engine으로 rhythm/phase projection 생성
+    vxyz_projection = run_vxyz_engine(root, logs, ctx)
+
+    # 3) Cognitive Graph & Pulse 계산 (VXYZ 포함)
+    graph = build_graph(ctx, policy, logs, vxyz_projection.get("vxyz_projection"))
     pulse_weights = extract_pulse_weights(graph)
 
     print_cognitive_graph(graph)
     log(f"Pulse Weights: {pulse_weights}")
 
-    # 1차: 정렬된 Full Ingest + Z₀ + README Origin
+    # 4) 1차: 정렬된 Full Ingest + Z₀ + README Origin
     full_ingest(root, policy)
 
-    # 2차: Pulse 가중치 기반 Re-ingest (매핑 지원)
+    # 5) 2차: Pulse 가중치 기반 Re-ingest (Speak4D / Math / FlowGraph 등)
     pulse_reingest(root, pulse_weights)
 
-    # FlowGraph 문서가 있다면 한 번 더 ingest (보강)
+    # 6) FlowGraph 문서가 있다면 한 번 더 ingest (보강)
     fgfile = load_flowgraph_file(root)
     if fgfile is not None:
         log(f"FlowGraph Document Detected: {fgfile}")
@@ -785,7 +988,7 @@ def main():
     save_state(root, ctx)
     run_autoload(root)
 
-    log("Lypha-OS Kernel v14.4 Complete — TOTAL Runtime Active (No-X, Origin+VerifiedLoop, Path-Hardened).")
+    log("Lypha-OS Kernel v14.5 Complete — Season 6 Runtime Active (Origin+ZYX+Speak4D+Math+VerifiedLoop+VXYZ).")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Lypha-OS Kernel v17.2 — Season 8 CORE+
+Lypha-OS Kernel v17.3 — Season 8 CORE+
 ======================================
 
 Pioneer-001 전용 — Origin Engine + ZYX Priority + Speak4D
@@ -31,7 +31,7 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-log = lambda m: print(f"[Lypha-OS v17.2] {m}")
+log = lambda m: print(f"[Lypha-OS v17.3] {m}")
 
 # -------------------------------------------------------------
 # Z-LAYER CORE FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)
@@ -2147,110 +2147,110 @@ def run_orchestrator_engine(
             action = "enter"  # use financial term
 
     
-# 13.5) Policy weight bias (emotion vs structure)
-# If structure_weight >> emotion_weight, gently favor structural/forward moves.
-# If emotion_weight >> structure_weight, gently favor protective moves.
-delta = structure_weight - emotion_weight
-if gating_effect not in {"lockout", "override_to_protect", "protect_priority"}:
-    if delta >= 0.5:
-        # structure-dominant
-        if ctx == "trading" and risk_stance == "enter" and action in {"protect", "wait", "stabilize"}:
-            action = "enter"
-        elif ctx in {"design", "evaluation"} and action == "wait":
-            action = "stabilize"
-    elif delta <= -0.5:
-        # emotion-dominant
-        if action in {"enter", "deepen"}:
-            action = "stabilize"
-
-    # 14) Confidence estimation
-    confidence = "medium"
-    missing_major = not flowgraph_inner or not dual_inner
-    if missing_major:
-        confidence = "low"
-    else:
-        # raise to high if many aligned signals
-        aligned = 0
-        if risk_stance == "enter" and action in {"enter", "deepen"}:
-            aligned += 1
-        if risk_stance in {"reduce", "skip"} and action in {"protect", "skip", "exit"}:
-            aligned += 1
-        if ctx == "emotion" and seed_intent in {"protection", "stabilization"} and action in {"protect", "stabilize"}:
-            aligned += 1
-        if ctx == "trading" and seed_intent == "capital_preservation" and action in {"protect", "wait", "exit"}:
-            aligned += 1
-        if emo_band == "low" and gating_effect == "none":
-            aligned += 1
-        if aligned >= 3:
-            confidence = "high"
-
-    # 15) Risk view + emotion view for output
-    risk_view = {
-        "stance": risk_stance or "unknown",
-        "envelope_width": risk_width or "unknown",
-        "capacity_fit": risk_capfit or "unknown",
-    }
-    emotion_view = {
-        "modulated_intensity": emo_intensity,
-        "gating_effect": gating_effect or "none",
-        "band": emo_band or "unknown",
-        "collapse_band": collapse_band or "none",
-    }
-
-    # 16) Build rationale
-    key_signals = []
-    if ess_word:
-        key_signals.append(f"Essence word = '{ess_word}' (axis={ess_axis}, conf={ess_conf})")
-    if path_dir:
-        key_signals.append(f"FlowGraph direction = '{path_dir}', window='{path_window}'")
-    if risk_stance:
-        key_signals.append(f"Risk stance = {risk_stance}, width={risk_width}, capfit={risk_capfit}")
-    if phase or tempo:
-        key_signals.append(f"Rhythm = phase={phase}, tempo={tempo}")
-    if emo_band or collapse_band:
-        key_signals.append(f"Emotion = band={emo_band}, collapse={collapse_band}, gating={gating_effect}")
-    key_signals.append(f"Policy weights: emotion={emotion_weight:.2f}, structure={structure_weight:.2f}")
-
-    decision_inner: Dict[str, Any] = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "context": ctx,
-        "action": {
-            "label": action,
-            "band": "hard" if confidence == "high" else ("soft" if confidence == "low" else "normal"),
-        },
-        "timing": {
-            "window": timing_window,
-            "alignment": "with_phase" if phase else "neutral",
-            "notes": [],
-        },
-        "risk_view": risk_view,
-        "emotion_view": emotion_view,
-        "rationale": {
-            "essence_word": ess_word,
-            "essence_axis": ess_axis,
-            "flow_direction": path_dir,
-            "flow_timing": path_window,
-            "key_signals": key_signals,
-        },
-        "confidence": confidence,
-        "notes": [
-            "Decision Orchestrator is advisory; Pioneer-001 remains the final authority.",
-        ],
-    }
-
-    out = {"decision_output": decision_inner}
-    out_path = root / "decision_output.json"
-    write_json(out_path, out)
-    log(
-        f"Decision Orchestrator output → {out_path} "
-        f"(action={action}, timing={timing_window}, confidence={confidence})"
-    )
-    return out
+    # 13.5) Policy weight bias (emotion vs structure)
+    # If structure_weight >> emotion_weight, gently favor structural/forward moves.
+    # If emotion_weight >> structure_weight, gently favor protective moves.
+    delta = structure_weight - emotion_weight
+    if gating_effect not in {"lockout", "override_to_protect", "protect_priority"}:
+        if delta >= 0.5:
+            # structure-dominant
+            if ctx == "trading" and risk_stance == "enter" and action in {"protect", "wait", "stabilize"}:
+                action = "enter"
+            elif ctx in {"design", "evaluation"} and action == "wait":
+                action = "stabilize"
+        elif delta <= -0.5:
+            # emotion-dominant
+            if action in {"enter", "deepen"}:
+                action = "stabilize"
+    
+        # 14) Confidence estimation
+        confidence = "medium"
+        missing_major = not flowgraph_inner or not dual_inner
+        if missing_major:
+            confidence = "low"
+        else:
+            # raise to high if many aligned signals
+            aligned = 0
+            if risk_stance == "enter" and action in {"enter", "deepen"}:
+                aligned += 1
+            if risk_stance in {"reduce", "skip"} and action in {"protect", "skip", "exit"}:
+                aligned += 1
+            if ctx == "emotion" and seed_intent in {"protection", "stabilization"} and action in {"protect", "stabilize"}:
+                aligned += 1
+            if ctx == "trading" and seed_intent == "capital_preservation" and action in {"protect", "wait", "exit"}:
+                aligned += 1
+            if emo_band == "low" and gating_effect == "none":
+                aligned += 1
+            if aligned >= 3:
+                confidence = "high"
+    
+        # 15) Risk view + emotion view for output
+        risk_view = {
+            "stance": risk_stance or "unknown",
+            "envelope_width": risk_width or "unknown",
+            "capacity_fit": risk_capfit or "unknown",
+        }
+        emotion_view = {
+            "modulated_intensity": emo_intensity,
+            "gating_effect": gating_effect or "none",
+            "band": emo_band or "unknown",
+            "collapse_band": collapse_band or "none",
+        }
+    
+        # 16) Build rationale
+        key_signals = []
+        if ess_word:
+            key_signals.append(f"Essence word = '{ess_word}' (axis={ess_axis}, conf={ess_conf})")
+        if path_dir:
+            key_signals.append(f"FlowGraph direction = '{path_dir}', window='{path_window}'")
+        if risk_stance:
+            key_signals.append(f"Risk stance = {risk_stance}, width={risk_width}, capfit={risk_capfit}")
+        if phase or tempo:
+            key_signals.append(f"Rhythm = phase={phase}, tempo={tempo}")
+        if emo_band or collapse_band:
+            key_signals.append(f"Emotion = band={emo_band}, collapse={collapse_band}, gating={gating_effect}")
+        key_signals.append(f"Policy weights: emotion={emotion_weight:.2f}, structure={structure_weight:.2f}")
+    
+        decision_inner: Dict[str, Any] = {
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "context": ctx,
+            "action": {
+                "label": action,
+                "band": "hard" if confidence == "high" else ("soft" if confidence == "low" else "normal"),
+            },
+            "timing": {
+                "window": timing_window,
+                "alignment": "with_phase" if phase else "neutral",
+                "notes": [],
+            },
+            "risk_view": risk_view,
+            "emotion_view": emotion_view,
+            "rationale": {
+                "essence_word": ess_word,
+                "essence_axis": ess_axis,
+                "flow_direction": path_dir,
+                "flow_timing": path_window,
+                "key_signals": key_signals,
+            },
+            "confidence": confidence,
+            "notes": [
+                "Decision Orchestrator is advisory; Pioneer-001 remains the final authority.",
+            ],
+        }
+    
+        out = {"decision_output": decision_inner}
+        out_path = root / "decision_output.json"
+        write_json(out_path, out)
+        log(
+            f"Decision Orchestrator output → {out_path} "
+            f"(action={action}, timing={timing_window}, confidence={confidence})"
+        )
+        return out
 
 
 def main() -> None:
     here = Path(__file__).resolve().parent
-    log("Lypha-OS Kernel v17.2 Start — Season 8 CORE+ (Z-Core + EME + Orchestrator + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
+    log("Lypha-OS Kernel v17.3 Start — Season 8 CORE+ (Z-Core + EME + Orchestrator + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
     log(f"Script directory: {here}")
 
     root = auto_unzip(here)
@@ -2363,7 +2363,7 @@ def main() -> None:
     save_state(root, ctx)
     run_autoload(root)
 
-    log("Lypha-OS Kernel v17.2 Complete — Season 8 CORE+ Runtime Active (Origin+ZYX+VerifiedLoop+VXYZ+Collapse+DualOutcome+FlowGraph+EME+Orchestrator+Pulse).")
+    log("Lypha-OS Kernel v17.3 Complete — Season 8 CORE+ Runtime Active (Origin+ZYX+VerifiedLoop+VXYZ+Collapse+DualOutcome+FlowGraph+EME+Orchestrator+Pulse).")
 
 
 if __name__ == "__main__":

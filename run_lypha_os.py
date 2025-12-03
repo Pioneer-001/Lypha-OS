@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Lypha-OS Kernel v16.0 — Season 7 CORE+
+Lypha-OS Kernel v17.2 — Season 8 CORE+
 ======================================
 
 Pioneer-001 전용 — Origin Engine + ZYX Priority + Speak4D
@@ -31,7 +31,7 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-log = lambda m: print(f"[Lypha-OS v16.0] {m}")
+log = lambda m: print(f"[Lypha-OS v17.2] {m}")
 
 # -------------------------------------------------------------
 # Z-LAYER CORE FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)
@@ -508,15 +508,20 @@ def build_graph(
     return g
 
 
-def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
-    context = graph.get("context")
-    weights = {"Speak4D": 1.0, "Math": 1.0, "Collapse": 1.0, "FlowGraph": 1.0}
 
-    # context 기반 기본 bias
+def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
+    """
+    Compute pulse weights for Speak4D / Math / Collapse / FlowGraph
+    based on graph summary (context, rhythm, FlowGraph, Collapse, DualOutcome, edges, decision).
+    """
+    context = graph.get("context")
+    weights: Dict[str, float] = {"Speak4D": 1.0, "Math": 1.0, "Collapse": 1.0, "FlowGraph": 1.0}
+
+    # 1) Context-based base bias
     if context == "evaluation":
         weights["Math"] += 0.5
 
-    # 리듬 기반 FlowGraph 가중치
+    # 2) Rhythm-based FlowGraph bias
     rhythm = graph.get("rhythm") or {}
     tempo = rhythm.get("tempo")
     if tempo == "compressed":
@@ -524,7 +529,7 @@ def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
     elif tempo == "extended":
         weights["FlowGraph"] += 0.15
 
-    # FlowGraph Path 기반 bias
+    # 3) FlowGraph path-based bias
     fg = graph.get("flowgraph") or {}
     direction = fg.get("direction")
     timing_window = fg.get("timing_window")
@@ -539,16 +544,15 @@ def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
     elif timing_window in ("wait", "abandon"):
         weights["Collapse"] += 0.1
 
-    # CollapseEngine compression band 기반 가중치
+    # 4) CollapseEngine compression band bias
     collapse = graph.get("collapse") or {}
     band = collapse.get("compression_band")
     if band == "hard":
         weights["Collapse"] += 0.3
     elif band == "normal":
         weights["Collapse"] += 0.1
-    # light는 추가 가중치 없음
 
-    # DualOutcome 기반 가중치 (stance)
+    # 5) DualOutcome stance bias
     dual = graph.get("dual_outcome") or {}
     stance = dual.get("recommended_stance")
     if stance == "enter":
@@ -557,12 +561,42 @@ def extract_pulse_weights(graph: Dict[str, Any]) -> Dict[str, float]:
         weights["Collapse"] += 0.15
         weights["Math"] += 0.1
 
-    # edge 기반 weight 보정
+    # 6) Graph edge-based adjustments
     for u, v, w in graph.get("edges", []):
         if v in weights:
-            weights[v] += (w - 1.0)
+            try:
+                weights[v] += (float(w) - 1.0)
+            except Exception:
+                pass
+
+    # 7) Decision engine impact (Season 8 CORE+)
+    decision = graph.get("decision") or {}
+    act = decision.get("action")
+    timing = decision.get("timing")
+    conf = decision.get("confidence")
+
+    # Action label impact
+    if act in ("enter", "deepen"):
+        weights["FlowGraph"] = weights.get("FlowGraph", 0.0) + 0.2
+    elif act in ("protect", "skip", "exit"):
+        weights["Collapse"] = weights.get("Collapse", 0.0) + 0.2
+    elif act == "wait":
+        weights["Collapse"] = weights.get("Collapse", 0.0) + 0.1
+
+    # Timing impact
+    if timing in ("now", "this_cycle"):
+        weights["FlowGraph"] = weights.get("FlowGraph", 0.0) + 0.1
+    elif timing in ("later", "wait_indefinite"):
+        weights["Collapse"] = weights.get("Collapse", 0.0) + 0.1
+
+    # Confidence impact
+    if conf == "high":
+        weights["FlowGraph"] = weights.get("FlowGraph", 0.0) + 0.1
+    elif conf == "low":
+        weights["Collapse"] = weights.get("Collapse", 0.0) + 0.05
 
     return weights
+
 
 
 def print_cognitive_graph(graph: Dict[str, Any]) -> None:
@@ -1586,6 +1620,259 @@ def run_flowgraph_engine(
 
     return out
 
+def run_eme_engine(
+    root: Path,
+    logs: Dict[str, Any],
+    vxyz_projection_inner: Optional[Dict[str, Any]],
+    flowgraph_inner: Optional[Dict[str, Any]],
+    policy: Dict[str, Any],
+    context: str,
+) -> Dict[str, Any]:
+    """
+    Emotion Modulation Engine Runner (Season 8 prep)
+    - Reads emotion_state.yaml (if present) + logs + VXYZ + FlowGraph
+    - Produces emotion_modulation_output.json
+    - Does NOT change other engine outputs; it only adds an advisory layer.
+    """
+    context_lower = (context or "default").lower()
+
+    # 1) Load emotion_state.yaml if available
+    emotion_state_path = root / "emotion_state.yaml"
+    emotion_state: Dict[str, Any] = {}
+    emo_raw = load_yaml(emotion_state_path) or {}
+    if "emotion_state" in emo_raw and isinstance(emo_raw.get("emotion_state"), dict):
+        emotion_state = emo_raw["emotion_state"] or {}
+    elif emo_raw:
+        # allow bare form
+        if isinstance(emo_raw, dict):
+            emotion_state = emo_raw
+
+    intensity = float(emotion_state.get("intensity") or 0.0)
+    collapse_score = float(emotion_state.get("collapse_score") or 0.0)
+    tags = emotion_state.get("tags") or []
+    if isinstance(tags, str):
+        tags = [tags]
+    bond_state = emotion_state.get("bond_state") or "unknown"
+
+    # 2) If we still have no useful intensity/collapse, derive a fallback from logs
+    if (intensity == 0.0 or collapse_score == 0.0) and logs:
+        collapse_sum = 0.0
+        collapse_count = 0
+        tag_counts: Dict[str, int] = {}
+        for payload in logs.values():
+            for entry in _iter_v_entries(payload):
+                t = entry.get("tags")
+                if isinstance(t, str):
+                    tag_counts[t] = tag_counts.get(t, 0) + 1
+                elif isinstance(t, list):
+                    for tt in t:
+                        tag_counts[tt] = tag_counts.get(tt, 0) + 1
+                ec = entry.get("emotional_collapse", 0.0)
+                try:
+                    collapse_sum += float(ec)
+                    collapse_count += 1
+                except Exception:
+                    pass
+        avg_collapse = collapse_sum / collapse_count if collapse_count > 0 else 0.0
+        # Only override if both were basically unset
+        if intensity == 0.0:
+            intensity = avg_collapse
+        if collapse_score == 0.0:
+            collapse_score = avg_collapse
+        # merge in dominant tags if tags empty
+        if not tags and tag_counts:
+            tags = [t for t, _ in sorted(tag_counts.items(), key=lambda x: -x[1])[:3]]
+
+    # 3) Compute emotion_band / collapse_band
+    if collapse_score >= 0.7:
+        collapse_band = "strong"
+    elif collapse_score >= 0.3:
+        collapse_band = "mild"
+    else:
+        collapse_band = "none"
+
+    if intensity >= 0.7:
+        emotion_band = "high"
+    elif intensity >= 0.3:
+        emotion_band = "mid"
+    else:
+        emotion_band = "low"
+
+    # 4) Scene classification
+    scene = "mixed_or_unknown"
+    tag_set = {str(t) for t in tags}
+    if collapse_band == "strong":
+        scene = "crash"
+    elif "panic" in tag_set:
+        scene = "panic"
+    elif "abandonment" in tag_set:
+        scene = "abandonment_fear"
+    elif bond_state == "secure" and emotion_band in {"low", "mid"}:
+        scene = "secure_bond"
+    elif bond_state == "anxious":
+        scene = "anxious_bond"
+    elif bond_state == "avoidant":
+        scene = "avoidant_bond"
+
+    # 5) Base biases
+    direction_bias = {
+        "deepen": 0.0,
+        "protect": 0.0,
+        "stabilize": 0.0,
+        "exit": 0.0,
+        "wait": 0.0,
+        "rotate": 0.0,
+    }
+    timing_bias: Dict[str, Any] = {
+        "window_shift": "unchanged",
+        "strength": "soft",
+        "notes": [],
+    }
+    gating_effect = "none"
+    recommended_override: Optional[str] = None
+
+    # Emotion-driven rules for context="emotion"
+    if context_lower == "emotion":
+        if scene in {"crash", "panic", "abandonment_fear"}:
+            direction_bias.update(
+                {
+                    "deepen": -0.8,
+                    "protect": 1.0,
+                    "stabilize": 0.8,
+                    "exit": 0.3,
+                    "wait": 0.5,
+                    "rotate": -0.2,
+                }
+            )
+            gating_effect = "protect_priority"
+        elif scene == "secure_bond":
+            direction_bias.update(
+                {
+                    "deepen": 0.7,
+                    "protect": 0.2,
+                    "stabilize": 0.3,
+                    "wait": -0.2,
+                }
+            )
+        elif scene == "anxious_bond":
+            direction_bias.update(
+                {
+                    "deepen": -0.2,
+                    "protect": 0.5,
+                    "stabilize": 0.7,
+                    "wait": 0.3,
+                }
+            )
+            gating_effect = "soften_action"
+
+    # Trading context: emotion decelerates
+    if context_lower == "trading":
+        if emotion_band == "high":
+            direction_bias.update(
+                {
+                    "deepen": -0.5,
+                    "protect": 0.5,
+                    "stabilize": 0.5,
+                    "exit": 0.2,
+                    "wait": 0.7,
+                }
+            )
+            gating_effect = "delay_action"
+
+    # 6) Timing bias with VXYZ
+    phase = ""
+    tempo = ""
+    if vxyz_projection_inner:
+        rhythm = vxyz_projection_inner.get("rhythm", {}) or {}
+        phase = str(rhythm.get("phase") or "")
+        tempo = str(rhythm.get("tempo") or "")
+
+    if phase == "late_cycle" and scene in {"crash", "panic"}:
+        timing_bias["window_shift"] = "later"
+        timing_bias["strength"] = "hard"
+        timing_bias["notes"].append("Late-cycle crash/panic → delay actions.")
+    elif phase == "late_cycle" and scene == "secure_bond":
+        timing_bias["window_shift"] = "earlier"
+        timing_bias["strength"] = "normal"
+        timing_bias["notes"].append("Late-cycle secure bond → allow earlier commitment.")
+    elif phase == "early_cycle" and emotion_band == "high":
+        timing_bias["window_shift"] = "later"
+        timing_bias["strength"] = "normal"
+        timing_bias["notes"].append("Early-cycle + high emotion → wait until wave settles.")
+    elif phase == "mid_cycle" and emotion_band == "low":
+        timing_bias["window_shift"] = "unchanged"
+        timing_bias["notes"].append("Mid-cycle + low emotion → keep timing from FlowGraph.")
+
+    # 7) Gating & override mapping
+    if collapse_band == "strong":
+        gating_effect = "lockout"
+    elif scene in {"crash", "panic", "abandonment_fear"} and gating_effect == "none":
+        gating_effect = "override_to_protect"
+    elif emotion_band == "high" and gating_effect == "none":
+        # default: soften rather than push
+        gating_effect = "soften_action"
+
+    # Map gating to orchestrator-level label
+    if gating_effect == "protect_priority":
+        gating_effect_for_orch = "override_to_protect"
+    else:
+        gating_effect_for_orch = gating_effect
+
+    # decide recommended override when we are in strong gating modes
+    if gating_effect in {"override_to_protect", "lockout"}:
+        # look at original FlowGraph direction if available
+        orig_dir = None
+        if flowgraph_inner:
+            path = flowgraph_inner.get("path") or {}
+            d = path.get("direction") or {}
+            if isinstance(d, dict):
+                orig_dir = d.get("label") or d.get("direction")
+            elif isinstance(d, str):
+                orig_dir = d
+        if orig_dir == "exit":
+            recommended_override = "protect"
+        elif orig_dir in {"deepen", "enter"}:
+            recommended_override = "stabilize"
+        else:
+            recommended_override = "protect"
+
+    # 8) Compose emotion_view
+    mod_intensity = intensity * 0.6 + collapse_score * 0.4
+    if mod_intensity < 0.0:
+        mod_intensity = 0.0
+    elif mod_intensity > 1.0:
+        mod_intensity = 1.0
+
+    emotion_view = {
+        "modulated_intensity": mod_intensity,
+        "gating_effect": gating_effect_for_orch,
+        "commentary": [
+            f"scene={scene}, band={emotion_band}/{collapse_band}, context={context_lower}"
+        ],
+    }
+
+    eme_inner: Dict[str, Any] = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "context": context_lower,
+        "emotion_band": emotion_band,
+        "collapse_band": collapse_band,
+        "direction_bias": direction_bias,
+        "timing_bias": timing_bias,
+        "gating_effect": gating_effect,
+        "recommended_direction_override": recommended_override,
+        "emotion_view": emotion_view,
+    }
+
+    out = {"emotion_modulation_output": eme_inner}
+    out_path = root / "emotion_modulation_output.json"
+    write_json(out_path, out)
+    log(
+        f"EME output written → {out_path} "
+        f"(scene={scene}, emotion_band={emotion_band}, collapse_band={collapse_band}, gating={gating_effect})"
+    )
+    return out
+
+
 
 # -------------------------------------------------------------
 # PULSE RE-INGEST
@@ -1663,9 +1950,307 @@ def run_autoload(root: Path) -> str:
 # -------------------------------------------------------------
 # MAIN
 # -------------------------------------------------------------
+
+def run_orchestrator_engine(
+    root: Path,
+    logs: Dict[str, Any],
+    collapse_inner: Optional[Dict[str, Any]],
+    flowgraph_inner: Optional[Dict[str, Any]],
+    dual_inner: Optional[Dict[str, Any]],
+    vxyz_projection_inner: Optional[Dict[str, Any]],
+    eme_inner: Optional[Dict[str, Any]],
+    policy: Dict[str, Any],
+    context: str,
+) -> Dict[str, Any]:
+    """
+    Decision Orchestrator Engine Runner (Season 8 / v17.2)
+    - Reads Collapse, FlowGraph, DualOutcome, VXYZ, EME, and policy
+    - Emits a single behavioral decision in decision_output.json
+    - Does NOT mutate other engine outputs.
+    """
+    ctx = (context or "default").lower()
+
+    # 1) Extract essence axis
+    ess_word = None
+    ess_axis = None
+    ess_conf = "low"
+    if collapse_inner:
+        ess = collapse_inner.get("essence") or {}
+        ess_word = ess.get("word")
+        ess_axis = (ess.get("axis") or {}).get("label") or ess.get("axis_label")
+        ess_conf = ess.get("confidence") or "medium"
+
+    # 2) Extract path axis (FlowGraph)
+    path_dir = None
+    path_window = None
+    path_conf = "low"
+    if flowgraph_inner:
+        path = flowgraph_inner.get("path") or {}
+        d = path.get("direction") or {}
+        if isinstance(d, dict):
+            path_dir = d.get("label") or d.get("direction")
+            path_conf = d.get("confidence") or "medium"
+        elif isinstance(d, str):
+            path_dir = d
+            path_conf = "medium"
+        tw = path.get("timing") or {}
+        if isinstance(tw, dict):
+            path_window = tw.get("window") or "now"
+        elif isinstance(tw, str):
+            path_window = tw
+    if not path_window:
+        path_window = "now"
+
+    # 3) Extract risk axis (DualOutcome)
+    risk = (dual_inner or {}).get("risk_envelope", {}) or {}
+    risk_stance = risk.get("recommended_stance")  # enter | hedge | reduce | skip
+    risk_width = risk.get("width")                # narrow | moderate | wide
+    risk_capfit = risk.get("capacity_fit")        # inside_capacity | at_edge | beyond_capacity
+
+    # 4) Extract time axis (VXYZ)
+    phase = ""
+    tempo = ""
+    if vxyz_projection_inner:
+        rhythm = vxyz_projection_inner.get("rhythm", {}) or {}
+        phase = str(rhythm.get("phase") or "")
+        tempo = str(rhythm.get("tempo") or "")
+
+    # 5) Extract emotion axis (EME)
+    emo_band = None
+    collapse_band = None
+    gating_effect = "none"
+    emo_intensity = 0.0
+    if eme_inner:
+        emo_band = eme_inner.get("emotion_band")
+        collapse_band = eme_inner.get("collapse_band")
+        gating_effect = eme_inner.get("gating_effect") or "none"
+        ev = eme_inner.get("emotion_view") or {}
+        try:
+            emo_intensity = float(ev.get("modulated_intensity") or 0.0)
+        except Exception:
+            emo_intensity = 0.0
+
+    # 6) Policy axis
+    emotion_weight = float(policy.get("emotion_weight", 1.0))
+    structure_weight = float(policy.get("structure_weight", 1.0))
+
+    # 7) Normalize FlowGraph direction → canonical action
+    def normalize_action(raw: Optional[str]) -> str:
+        if not raw:
+            return "stabilize"
+        r = raw.lower()
+        if r in {"enter", "open"}:
+            return "enter"
+        if r in {"deep", "deepen"}:
+            return "deepen"
+        if r in {"hold", "stay", "stabilize", "stability"}:
+            return "stabilize"
+        if r in {"protect", "protect_boundary", "shield"}:
+            return "protect"
+        if r in {"rotate", "rotate_out", "rotate_in"}:
+            return "rotate"
+        if r in {"prepare_to_act"}:
+            return "enter"
+        if r in {"rank_and_adjust"}:
+            return "rotate"
+        if r in {"exit", "close"}:
+            return "exit"
+        if r in {"skip", "abandon"}:
+            return "skip"
+        if r in {"wait", "delay"}:
+            return "wait"
+        return "stabilize"
+
+    seed_action = normalize_action(path_dir)
+
+    # 8) Seed intent from essence + context
+    def infer_intent(axis_label: Optional[str], ctx_: str) -> str:
+        axis_l = (axis_label or "").lower()
+        if ctx_ == "emotion":
+            if axis_l in {"trust", "belonging", "bonding"}:
+                return "bonding"
+            if axis_l in {"abandonment", "rupture", "boundary"}:
+                return "protection"
+            return "stabilization"
+        if ctx_ == "trading":
+            if axis_l in {"risk", "liquidity", "regime"}:
+                return "risk_taking"
+            return "capital_preservation"
+        if ctx_ == "design":
+            if axis_l in {"structure", "clarity", "coherence"}:
+                return "refinement"
+            return "exploration"
+        if ctx_ == "evaluation":
+            return "ranking"
+        return "neutral_progress"
+
+    seed_intent = infer_intent(ess_axis, ctx)
+
+    # 9) Start with FlowGraph proposal
+    action = seed_action
+    timing_window = path_window
+
+    # 10) Risk override layer
+    if risk_capfit == "beyond_capacity":
+        # too dangerous: no fresh enter/deepen
+        if action in {"enter", "deepen", "rotate"}:
+            action = "protect"
+    if risk_stance == "skip":
+        action = "skip"
+    elif risk_stance == "reduce":
+        if action in {"enter", "deepen"}:
+            action = "protect"
+        elif action == "rotate":
+            action = "exit"
+    elif risk_stance == "hedge":
+        if action == "enter":
+            action = "stabilize"
+
+    # 11) Emotion gating layer
+    if collapse_band == "strong":
+        # near collapse → lock out aggression
+        if action in {"enter", "deepen", "rotate"}:
+            action = "protect"
+        gating_effect = "lockout"
+    if gating_effect in {"override_to_protect", "protect_priority"}:
+        action = "protect"
+    elif gating_effect == "soften_action":
+        if action in {"enter", "deepen"}:
+            action = "stabilize"
+        elif action == "exit" and ctx == "emotion":
+            action = "protect"
+    elif gating_effect == "delay_action":
+        if ctx != "trading" and action in {"enter", "deepen"}:
+            action = "wait"
+            timing_window = "later"
+
+    # 12) Time alignment
+    if not timing_window:
+        timing_window = "now"
+    if phase == "early_cycle" and emo_band == "high":
+        if ctx in {"emotion", "design"} and action in {"enter", "deepen"}:
+            action = "wait"
+            timing_window = "later"
+    if phase == "late_cycle" and tempo == "compressed":
+        if action in {"exit", "protect"}:
+            timing_window = "now"
+        elif action == "wait":
+            timing_window = "this_cycle"
+
+    # 13) Mode-specific small bias
+    # (we do not implement full scoring here, but nudge obviously wrong combos)
+    if ctx == "emotion":
+        if seed_intent == "bonding" and action == "exit":
+            action = "stabilize"
+    if ctx == "trading":
+        if action == "deepen":
+            action = "enter"  # use financial term
+
+    
+# 13.5) Policy weight bias (emotion vs structure)
+# If structure_weight >> emotion_weight, gently favor structural/forward moves.
+# If emotion_weight >> structure_weight, gently favor protective moves.
+delta = structure_weight - emotion_weight
+if gating_effect not in {"lockout", "override_to_protect", "protect_priority"}:
+    if delta >= 0.5:
+        # structure-dominant
+        if ctx == "trading" and risk_stance == "enter" and action in {"protect", "wait", "stabilize"}:
+            action = "enter"
+        elif ctx in {"design", "evaluation"} and action == "wait":
+            action = "stabilize"
+    elif delta <= -0.5:
+        # emotion-dominant
+        if action in {"enter", "deepen"}:
+            action = "stabilize"
+
+    # 14) Confidence estimation
+    confidence = "medium"
+    missing_major = not flowgraph_inner or not dual_inner
+    if missing_major:
+        confidence = "low"
+    else:
+        # raise to high if many aligned signals
+        aligned = 0
+        if risk_stance == "enter" and action in {"enter", "deepen"}:
+            aligned += 1
+        if risk_stance in {"reduce", "skip"} and action in {"protect", "skip", "exit"}:
+            aligned += 1
+        if ctx == "emotion" and seed_intent in {"protection", "stabilization"} and action in {"protect", "stabilize"}:
+            aligned += 1
+        if ctx == "trading" and seed_intent == "capital_preservation" and action in {"protect", "wait", "exit"}:
+            aligned += 1
+        if emo_band == "low" and gating_effect == "none":
+            aligned += 1
+        if aligned >= 3:
+            confidence = "high"
+
+    # 15) Risk view + emotion view for output
+    risk_view = {
+        "stance": risk_stance or "unknown",
+        "envelope_width": risk_width or "unknown",
+        "capacity_fit": risk_capfit or "unknown",
+    }
+    emotion_view = {
+        "modulated_intensity": emo_intensity,
+        "gating_effect": gating_effect or "none",
+        "band": emo_band or "unknown",
+        "collapse_band": collapse_band or "none",
+    }
+
+    # 16) Build rationale
+    key_signals = []
+    if ess_word:
+        key_signals.append(f"Essence word = '{ess_word}' (axis={ess_axis}, conf={ess_conf})")
+    if path_dir:
+        key_signals.append(f"FlowGraph direction = '{path_dir}', window='{path_window}'")
+    if risk_stance:
+        key_signals.append(f"Risk stance = {risk_stance}, width={risk_width}, capfit={risk_capfit}")
+    if phase or tempo:
+        key_signals.append(f"Rhythm = phase={phase}, tempo={tempo}")
+    if emo_band or collapse_band:
+        key_signals.append(f"Emotion = band={emo_band}, collapse={collapse_band}, gating={gating_effect}")
+    key_signals.append(f"Policy weights: emotion={emotion_weight:.2f}, structure={structure_weight:.2f}")
+
+    decision_inner: Dict[str, Any] = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "context": ctx,
+        "action": {
+            "label": action,
+            "band": "hard" if confidence == "high" else ("soft" if confidence == "low" else "normal"),
+        },
+        "timing": {
+            "window": timing_window,
+            "alignment": "with_phase" if phase else "neutral",
+            "notes": [],
+        },
+        "risk_view": risk_view,
+        "emotion_view": emotion_view,
+        "rationale": {
+            "essence_word": ess_word,
+            "essence_axis": ess_axis,
+            "flow_direction": path_dir,
+            "flow_timing": path_window,
+            "key_signals": key_signals,
+        },
+        "confidence": confidence,
+        "notes": [
+            "Decision Orchestrator is advisory; Pioneer-001 remains the final authority.",
+        ],
+    }
+
+    out = {"decision_output": decision_inner}
+    out_path = root / "decision_output.json"
+    write_json(out_path, out)
+    log(
+        f"Decision Orchestrator output → {out_path} "
+        f"(action={action}, timing={timing_window}, confidence={confidence})"
+    )
+    return out
+
+
 def main() -> None:
     here = Path(__file__).resolve().parent
-    log("Lypha-OS Kernel v16.0 Start — Season 7 CORE+ (Z-Core + VerifiedLoop + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
+    log("Lypha-OS Kernel v17.2 Start — Season 8 CORE+ (Z-Core + EME + Orchestrator + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
     log(f"Script directory: {here}")
 
     root = auto_unzip(here)
@@ -1714,8 +2299,33 @@ def main() -> None:
     flowgraph_output = run_flowgraph_engine(root, logs, vxyz_inner, collapse_inner, ctx)
     flowgraph_inner = (flowgraph_output or {}).get("flowgraph")
 
-    # 6) Cognitive Graph & Pulse 계산 (VXYZ + Collapse + FlowGraph + DualOutcome 포함)
+    # 5.5) Emotion Modulation Engine으로 감정 기반 가중치/게이팅 계산 (Season 8 준비)
+    eme_output = run_eme_engine(root, logs, vxyz_inner, flowgraph_inner, policy, ctx)
+    eme_inner = (eme_output or {}).get("emotion_modulation_output")
+
+    # 5.7) Decision Orchestrator Engine으로 최종 행동 좌표 계산 (Season 8 / v17.2)
+    decision_output = run_orchestrator_engine(
+        root,
+        logs,
+        collapse_inner,
+        flowgraph_inner,
+        dual_inner,
+        vxyz_inner,
+        eme_inner,
+        policy,
+        ctx,
+    )
+    decision_inner = (decision_output or {}).get("decision_output")
+
+    # 6) Cognitive Graph & Pulse 계산 (VXYZ + Collapse + FlowGraph + DualOutcome (+ EME, Decision) 포함)
     graph = build_graph(ctx, policy, logs, vxyz_inner, flowgraph_inner, collapse_inner)
+    if eme_inner:
+        graph["emotion_modulation"] = {
+            "emotion_band": eme_inner.get("emotion_band"),
+            "collapse_band": eme_inner.get("collapse_band"),
+            "gating_effect": eme_inner.get("gating_effect"),
+        }
+
     if dual_inner:
         risk = dual_inner.get("risk_envelope", {}) or {}
         graph["dual_outcome"] = {
@@ -1724,6 +2334,14 @@ def main() -> None:
             "width": risk.get("width"),
             "skew": risk.get("skew"),
         }
+
+    if decision_inner:
+        graph["decision"] = {
+            "action": (decision_inner.get("action") or {}).get("label"),
+            "timing": (decision_inner.get("timing") or {}).get("window"),
+            "confidence": decision_inner.get("confidence"),
+        }
+
 
     pulse_weights = extract_pulse_weights(graph)
 
@@ -1745,8 +2363,9 @@ def main() -> None:
     save_state(root, ctx)
     run_autoload(root)
 
-    log("Lypha-OS Kernel v16.0 Complete — Season 7 CORE+ Runtime Active (Origin+ZYX+VerifiedLoop+VXYZ+Collapse+DualOutcome+FlowGraph+Speak4D+Math).")
+    log("Lypha-OS Kernel v17.2 Complete — Season 8 CORE+ Runtime Active (Origin+ZYX+VerifiedLoop+VXYZ+Collapse+DualOutcome+FlowGraph+EME+Orchestrator+Pulse).")
 
 
 if __name__ == "__main__":
     main()
+

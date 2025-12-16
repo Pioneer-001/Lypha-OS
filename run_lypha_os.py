@@ -25,6 +25,7 @@ import os
 import sys
 import json
 import zipfile
+import argparse
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Optional
@@ -2249,11 +2250,62 @@ def run_orchestrator_engine(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Run Lypha-OS kernel with optional root override and unzip control.",
+    )
+    parser.add_argument(
+        "--root",
+        type=Path,
+        help="Explicit Lypha-OS root directory. Defaults to script directory auto-detection.",
+    )
+    parser.add_argument(
+        "--skip-auto-unzip",
+        action="store_true",
+        help="Disable auto-unzip fallback when the root hint is missing the expected structure.",
+    )
+    args = parser.parse_args()
+
     here = Path(__file__).resolve().parent
     log("Lypha-OS Kernel v17.3 Start — Season 8 CORE+ (Z-Core + EME + Orchestrator + VXYZ + Collapse + DualOutcome + FlowGraph, Path-Hardened)")
     log(f"Script directory: {here}")
 
-    root = auto_unzip(here)
+    if args.root:
+        root_hint = args.root.resolve()
+        log(f"CLI root override received: {root_hint}")
+
+        # Allow passing either the Lypha-OS root directory, a parent directory that
+        # contains Lypha-OS/, or the Lypha-OS.zip file itself.
+        hint_is_zip = root_hint.is_file() and root_hint.name.lower() == "lypha-os.zip"
+        hint_base = root_hint.parent if hint_is_zip else root_hint
+
+        root = None
+        if root_hint.is_file() and not hint_is_zip:
+            if args.skip_auto_unzip:
+                log("ERROR: Provided root hint is a file (expected directory) and auto-unzip is disabled.")
+                sys.exit(1)
+            log("Provided root hint is a file; attempting auto-unzip around its parent directory.")
+            root = auto_unzip(root_hint.parent)
+
+        direct_root = root_hint if _looks_like_lypha_root(root_hint) else None
+        nested_root = hint_base / "Lypha-OS"
+
+        if root is not None:
+            log("Using parent directory auto-unzip result from file hint.")
+        elif direct_root:
+            root = direct_root
+            log("Using provided root directory (structure verified).")
+        elif nested_root.exists() and _looks_like_lypha_root(nested_root):
+            root = nested_root
+            log(f"Detected Lypha-OS root at {nested_root} (from provided parent).")
+        elif args.skip_auto_unzip:
+            log("ERROR: Provided root hint is not a Lypha-OS directory and auto-unzip is disabled.")
+            sys.exit(1)
+        else:
+            log(f"Provided root missing structure — attempting auto-unzip around {hint_base}.")
+            root = auto_unzip(hint_base)
+    else:
+        root = auto_unzip(here)
+
     log(f"Lypha-OS root resolved to: {root}")
     os.chdir(root)
 

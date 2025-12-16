@@ -26,13 +26,24 @@ import sys
 import json
 import zipfile
 import argparse
+import importlib
+import importlib.util
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Optional
 
-import yaml
-
 log = lambda m: print(f"[Lypha-OS v17.3] {m}")
+
+
+def _load_yaml_module():
+    spec = importlib.util.find_spec("yaml")
+    if spec is None:
+        log("PyYAML not installed; YAML files will be skipped (safe defaults).")
+        return None
+    return importlib.import_module("yaml")
+
+
+_YAML = _load_yaml_module()
 
 # -------------------------------------------------------------
 # Z-LAYER CORE FILES (Origin / ZYX / VerifiedLoop / VXYZ / Manifestos)
@@ -170,9 +181,13 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def load_yaml(path: Path) -> Optional[Dict[str, Any]]:
+    if _YAML is None:
+        log(f"SKIP YAML load (PyYAML missing): {path}")
+        return None
+
     try:
         with path.open("r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
+            return _YAML.safe_load(f)
     except Exception:
         return None
 
